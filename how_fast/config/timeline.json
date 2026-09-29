@@ -1,0 +1,1799 @@
+{
+ "sections": [
+  {
+   "name": "hook",
+   "start": 0.45,
+   "end": 7.83
+  },
+  {
+   "name": "spin",
+   "start": 7.83,
+   "end": 35.226
+  },
+  {
+   "name": "orbit",
+   "start": 35.226,
+   "end": 49.264
+  },
+  {
+   "name": "galaxy",
+   "start": 49.264,
+   "end": 68.286
+  },
+  {
+   "name": "payoff",
+   "start": 68.286,
+   "end": 78.854
+  }
+ ],
+ "sentences": [
+  {
+   "section": "hook",
+   "start": 0.45,
+   "end": 2.479,
+   "display": "Imagine you're sitting perfectly still.",
+   "spoken": "Imagine you're sitting perfectly still.",
+   "words": [
+    {
+     "text": "Imagine",
+     "start": 0.55,
+     "end": 1.025
+    },
+    {
+     "text": "you're",
+     "start": 1.075,
+     "end": 1.175
+    },
+    {
+     "text": "sitting",
+     "start": 1.25,
+     "end": 1.55
+    },
+    {
+     "text": "perfectly",
+     "start": 1.6,
+     "end": 2.05
+    },
+    {
+     "text": "still.",
+     "start": 2.125,
+     "end": 2.479
+    }
+   ]
+  },
+  {
+   "section": "hook",
+   "start": 3.779,
+   "end": 6.23,
+   "display": "But you're moving in at least three ways at once.",
+   "spoken": "But you're moving in at least three ways at once.",
+   "words": [
+    {
+     "text": "But",
+     "start": 3.827,
+     "end": 3.927
+    },
+    {
+     "text": "you're",
+     "start": 3.977,
+     "end": 4.077
+    },
+    {
+     "text": "moving",
+     "start": 4.127,
+     "end": 4.452
+    },
+    {
+     "text": "in",
+     "start": 4.502,
+     "end": 4.677
+    },
+    {
+     "text": "at",
+     "start": 4.727,
+     "end": 4.777
+    },
+    {
+     "text": "least",
+     "start": 4.827,
+     "end": 5.027
+    },
+    {
+     "text": "three",
+     "start": 5.102,
+     "end": 5.302
+    },
+    {
+     "text": "ways",
+     "start": 5.352,
+     "end": 5.677
+    },
+    {
+     "text": "at",
+     "start": 5.727,
+     "end": 5.777
+    },
+    {
+     "text": "once.",
+     "start": 5.827,
+     "end": 6.23
+    }
+   ]
+  },
+  {
+   "section": "spin",
+   "start": 7.83,
+   "end": 9.256,
+   "display": "First, Earth spins.",
+   "spoken": "First, Earth spins.",
+   "words": [
+    {
+     "text": "First,",
+     "start": 7.977,
+     "end": 8.352
+    },
+    {
+     "text": "Earth",
+     "start": 8.452,
+     "end": 8.652
+    },
+    {
+     "text": "spins.",
+     "start": 8.702,
+     "end": 9.255
+    }
+   ]
+  },
+  {
+   "section": "spin",
+   "start": 9.806,
+   "end": 12.848,
+   "display": "Think of a merry-go-round. The edge moves fastest.",
+   "spoken": "Think of a merry-go-round. The edge moves fastest.",
+   "words": [
+    {
+     "text": "Think",
+     "start": 9.951,
+     "end": 10.101
+    },
+    {
+     "text": "of",
+     "start": 10.126,
+     "end": 10.176
+    },
+    {
+     "text": "a",
+     "start": 10.201,
+     "end": 10.226
+    },
+    {
+     "text": "merry-go-round.",
+     "start": 10.276,
+     "end": 11.201
+    },
+    {
+     "text": "The",
+     "start": 11.351,
+     "end": 11.451
+    },
+    {
+     "text": "edge",
+     "start": 11.526,
+     "end": 11.751
+    },
+    {
+     "text": "moves",
+     "start": 11.801,
+     "end": 12.076
+    },
+    {
+     "text": "fastest.",
+     "start": 12.126,
+     "end": 12.848
+    }
+   ]
+  },
+  {
+   "section": "spin",
+   "start": 13.848,
+   "end": 19.274,
+   "display": "On Earth, that's the equator, at about 1,670 km/h.",
+   "spoken": "On Earth, that's the equator, at about sixteen hundred and seventy kilometers an hour.",
+   "words": [
+    {
+     "text": "On",
+     "start": 13.924,
+     "end": 14.099
+    },
+    {
+     "text": "Earth,",
+     "start": 14.149,
+     "end": 14.574
+    },
+    {
+     "text": "that's",
+     "start": 14.724,
+     "end": 14.974
+    },
+    {
+     "text": "the",
+     "start": 14.999,
+     "end": 15.099
+    },
+    {
+     "text": "equator,",
+     "start": 15.149,
+     "end": 15.974
+    },
+    {
+     "text": "at",
+     "start": 16.149,
+     "end": 16.199
+    },
+    {
+     "text": "about",
+     "start": 16.224,
+     "end": 16.499
+    },
+    {
+     "text": "1,670",
+     "start": 16.574,
+     "end": 18.049
+    },
+    {
+     "text": "km/h.",
+     "start": 18.124,
+     "end": 19.274
+    }
+   ]
+  },
+  {
+   "section": "spin",
+   "start": 21.074,
+   "end": 23.926,
+   "display": "Nearly twice as fast as a passenger jet.",
+   "spoken": "Nearly twice as fast as a passenger jet.",
+   "words": [
+    {
+     "text": "Nearly",
+     "start": 21.212,
+     "end": 21.537
+    },
+    {
+     "text": "twice",
+     "start": 21.587,
+     "end": 22.187
+    },
+    {
+     "text": "as",
+     "start": 22.287,
+     "end": 22.412
+    },
+    {
+     "text": "fast",
+     "start": 22.487,
+     "end": 22.762
+    },
+    {
+     "text": "as",
+     "start": 22.787,
+     "end": 22.862
+    },
+    {
+     "text": "a",
+     "start": 22.887,
+     "end": 22.912
+    },
+    {
+     "text": "passenger",
+     "start": 22.962,
+     "end": 23.537
+    },
+    {
+     "text": "jet.",
+     "start": 23.612,
+     "end": 23.926
+    }
+   ]
+  },
+  {
+   "section": "spin",
+   "start": 25.226,
+   "end": 26.625,
+   "display": "So why don't we feel it?",
+   "spoken": "So why don't we feel it?",
+   "words": [
+    {
+     "text": "So",
+     "start": 25.382,
+     "end": 25.532
+    },
+    {
+     "text": "why",
+     "start": 25.607,
+     "end": 25.757
+    },
+    {
+     "text": "don't",
+     "start": 25.782,
+     "end": 25.907
+    },
+    {
+     "text": "we",
+     "start": 25.932,
+     "end": 26.032
+    },
+    {
+     "text": "feel",
+     "start": 26.132,
+     "end": 26.357
+    },
+    {
+     "text": "it?",
+     "start": 26.407,
+     "end": 26.624
+    }
+   ]
+  },
+  {
+   "section": "spin",
+   "start": 27.524,
+   "end": 30.766,
+   "display": "On a smooth flight, you can pour a drink without spilling.",
+   "spoken": "On a smooth flight, you can pour a drink without spilling.",
+   "words": [
+    {
+     "text": "On",
+     "start": 27.6,
+     "end": 27.7
+    },
+    {
+     "text": "a",
+     "start": 27.726,
+     "end": 27.776
+    },
+    {
+     "text": "smooth",
+     "start": 27.876,
+     "end": 28.25
+    },
+    {
+     "text": "flight,",
+     "start": 28.3,
+     "end": 28.825
+    },
+    {
+     "text": "you",
+     "start": 28.95,
+     "end": 29.026
+    },
+    {
+     "text": "can",
+     "start": 29.075,
+     "end": 29.2
+    },
+    {
+     "text": "pour",
+     "start": 29.25,
+     "end": 29.426
+    },
+    {
+     "text": "a",
+     "start": 29.45,
+     "end": 29.5
+    },
+    {
+     "text": "drink",
+     "start": 29.575,
+     "end": 29.876
+    },
+    {
+     "text": "without",
+     "start": 29.9,
+     "end": 30.2
+    },
+    {
+     "text": "spilling.",
+     "start": 30.25,
+     "end": 30.766
+    }
+   ]
+  },
+  {
+   "section": "spin",
+   "start": 31.316,
+   "end": 33.626,
+   "display": "Steady motion feels like standing still.",
+   "spoken": "Steady motion feels like standing still.",
+   "words": [
+    {
+     "text": "Steady",
+     "start": 31.448,
+     "end": 31.748
+    },
+    {
+     "text": "motion",
+     "start": 31.798,
+     "end": 32.223
+    },
+    {
+     "text": "feels",
+     "start": 32.298,
+     "end": 32.623
+    },
+    {
+     "text": "like",
+     "start": 32.648,
+     "end": 32.773
+    },
+    {
+     "text": "standing",
+     "start": 32.823,
+     "end": 33.198
+    },
+    {
+     "text": "still.",
+     "start": 33.273,
+     "end": 33.627
+    }
+   ]
+  },
+  {
+   "section": "orbit",
+   "start": 35.226,
+   "end": 37.181,
+   "display": "Second, Earth circles the Sun.",
+   "spoken": "Second, Earth circles the Sun.",
+   "words": [
+    {
+     "text": "Second,",
+     "start": 35.398,
+     "end": 35.898
+    },
+    {
+     "text": "Earth",
+     "start": 36.023,
+     "end": 36.248
+    },
+    {
+     "text": "circles",
+     "start": 36.298,
+     "end": 36.648
+    },
+    {
+     "text": "the",
+     "start": 36.673,
+     "end": 36.748
+    },
+    {
+     "text": "Sun.",
+     "start": 36.823,
+     "end": 37.181
+    }
+   ]
+  },
+  {
+   "section": "orbit",
+   "start": 37.731,
+   "end": 39.382,
+   "display": "Picture running a marathon.",
+   "spoken": "Picture running a marathon.",
+   "words": [
+    {
+     "text": "Picture",
+     "start": 37.807,
+     "end": 38.257
+    },
+    {
+     "text": "running",
+     "start": 38.307,
+     "end": 38.557
+    },
+    {
+     "text": "a",
+     "start": 38.582,
+     "end": 38.632
+    },
+    {
+     "text": "marathon.",
+     "start": 38.682,
+     "end": 39.382
+    }
+   ]
+  },
+  {
+   "section": "orbit",
+   "start": 40.282,
+   "end": 43.086,
+   "display": "Earth covers that in about a second and a half.",
+   "spoken": "Earth covers that in about a second and a half.",
+   "words": [
+    {
+     "text": "Earth",
+     "start": 40.402,
+     "end": 40.627
+    },
+    {
+     "text": "covers",
+     "start": 40.702,
+     "end": 41.077
+    },
+    {
+     "text": "that",
+     "start": 41.127,
+     "end": 41.552
+    },
+    {
+     "text": "in",
+     "start": 41.652,
+     "end": 41.727
+    },
+    {
+     "text": "about",
+     "start": 41.777,
+     "end": 42.027
+    },
+    {
+     "text": "a",
+     "start": 42.052,
+     "end": 42.102
+    },
+    {
+     "text": "second",
+     "start": 42.202,
+     "end": 42.477
+    },
+    {
+     "text": "and",
+     "start": 42.502,
+     "end": 42.577
+    },
+    {
+     "text": "a",
+     "start": 42.602,
+     "end": 42.627
+    },
+    {
+     "text": "half.",
+     "start": 42.677,
+     "end": 43.086
+    }
+   ]
+  },
+  {
+   "section": "orbit",
+   "start": 44.586,
+   "end": 47.564,
+   "display": "That's more than 100,000 km/h.",
+   "spoken": "That's more than a hundred thousand kilometers an hour.",
+   "words": [
+    {
+     "text": "That's",
+     "start": 44.676,
+     "end": 44.951
+    },
+    {
+     "text": "more",
+     "start": 45.001,
+     "end": 45.176
+    },
+    {
+     "text": "than",
+     "start": 45.201,
+     "end": 45.276
+    },
+    {
+     "text": "100,000",
+     "start": 45.326,
+     "end": 46.351
+    },
+    {
+     "text": "km/h.",
+     "start": 46.401,
+     "end": 47.564
+    }
+   ]
+  },
+  {
+   "section": "galaxy",
+   "start": 49.264,
+   "end": 56.23,
+   "display": "Third, the Sun carries us around the centre of the Milky Way, at about 800,000 km/h.",
+   "spoken": "Third, the Sun carries us around the center of the Milky Way, at about eight hundred thousand kilometers an hour.",
+   "words": [
+    {
+     "text": "Third,",
+     "start": 49.413,
+     "end": 49.938
+    },
+    {
+     "text": "the",
+     "start": 50.038,
+     "end": 50.113
+    },
+    {
+     "text": "Sun",
+     "start": 50.213,
+     "end": 50.488
+    },
+    {
+     "text": "carries",
+     "start": 50.563,
+     "end": 50.938
+    },
+    {
+     "text": "us",
+     "start": 50.963,
+     "end": 51.163
+    },
+    {
+     "text": "around",
+     "start": 51.213,
+     "end": 51.538
+    },
+    {
+     "text": "the",
+     "start": 51.563,
+     "end": 51.613
+    },
+    {
+     "text": "centre",
+     "start": 51.688,
+     "end": 52.013
+    },
+    {
+     "text": "of",
+     "start": 52.063,
+     "end": 52.113
+    },
+    {
+     "text": "the",
+     "start": 52.138,
+     "end": 52.188
+    },
+    {
+     "text": "Milky",
+     "start": 52.238,
+     "end": 52.563
+    },
+    {
+     "text": "Way,",
+     "start": 52.613,
+     "end": 53.288
+    },
+    {
+     "text": "at",
+     "start": 53.488,
+     "end": 53.538
+    },
+    {
+     "text": "about",
+     "start": 53.563,
+     "end": 53.863
+    },
+    {
+     "text": "800,000",
+     "start": 53.963,
+     "end": 55.013
+    },
+    {
+     "text": "km/h.",
+     "start": 55.063,
+     "end": 56.229
+    }
+   ]
+  },
+  {
+   "section": "galaxy",
+   "start": 58.03,
+   "end": 61.258,
+   "display": "One lap takes around 230 million years.",
+   "spoken": "One lap takes around two hundred and thirty million years.",
+   "words": [
+    {
+     "text": "One",
+     "start": 58.145,
+     "end": 58.345
+    },
+    {
+     "text": "lap",
+     "start": 58.395,
+     "end": 58.645
+    },
+    {
+     "text": "takes",
+     "start": 58.695,
+     "end": 58.92
+    },
+    {
+     "text": "around",
+     "start": 58.945,
+     "end": 59.22
+    },
+    {
+     "text": "230 million",
+     "start": 59.32,
+     "end": 60.795
+    },
+    {
+     "text": "years.",
+     "start": 60.845,
+     "end": 61.259
+    }
+   ]
+  },
+  {
+   "section": "galaxy",
+   "start": 62.458,
+   "end": 66.386,
+   "display": "The last time we were here, the first dinosaurs were just starting out.",
+   "spoken": "The last time we were here, the first dinosaurs were just starting out.",
+   "words": [
+    {
+     "text": "The",
+     "start": 62.555,
+     "end": 62.655
+    },
+    {
+     "text": "last",
+     "start": 62.705,
+     "end": 63.005
+    },
+    {
+     "text": "time",
+     "start": 63.055,
+     "end": 63.28
+    },
+    {
+     "text": "we",
+     "start": 63.305,
+     "end": 63.405
+    },
+    {
+     "text": "were",
+     "start": 63.455,
+     "end": 63.53
+    },
+    {
+     "text": "here,",
+     "start": 63.58,
+     "end": 64.08
+    },
+    {
+     "text": "the",
+     "start": 64.23,
+     "end": 64.305
+    },
+    {
+     "text": "first",
+     "start": 64.405,
+     "end": 64.68
+    },
+    {
+     "text": "dinosaurs",
+     "start": 64.73,
+     "end": 65.28
+    },
+    {
+     "text": "were",
+     "start": 65.305,
+     "end": 65.38
+    },
+    {
+     "text": "just",
+     "start": 65.43,
+     "end": 65.605
+    },
+    {
+     "text": "starting",
+     "start": 65.655,
+     "end": 66.03
+    },
+    {
+     "text": "out.",
+     "start": 66.08,
+     "end": 66.386
+    }
+   ]
+  },
+  {
+   "section": "payoff",
+   "start": 68.286,
+   "end": 73.219,
+   "display": "So while you watched this, you've travelled about 2,000 km around the Sun.",
+   "spoken": "So while you watched this, you've traveled about two thousand kilometers around the Sun.",
+   "words": [
+    {
+     "text": "So",
+     "start": 68.406,
+     "end": 68.506
+    },
+    {
+     "text": "while",
+     "start": 68.556,
+     "end": 68.706
+    },
+    {
+     "text": "you",
+     "start": 68.756,
+     "end": 68.856
+    },
+    {
+     "text": "watched",
+     "start": 68.931,
+     "end": 69.306
+    },
+    {
+     "text": "this,",
+     "start": 69.356,
+     "end": 69.931
+    },
+    {
+     "text": "you've",
+     "start": 70.081,
+     "end": 70.231
+    },
+    {
+     "text": "travelled",
+     "start": 70.281,
+     "end": 70.656
+    },
+    {
+     "text": "about",
+     "start": 70.681,
+     "end": 70.956
+    },
+    {
+     "text": "2,000",
+     "start": 71.056,
+     "end": 71.756
+    },
+    {
+     "text": "km",
+     "start": 71.806,
+     "end": 72.431
+    },
+    {
+     "text": "around",
+     "start": 72.481,
+     "end": 72.731
+    },
+    {
+     "text": "the",
+     "start": 72.756,
+     "end": 72.806
+    },
+    {
+     "text": "Sun.",
+     "start": 72.881,
+     "end": 73.219
+    }
+   ]
+  },
+  {
+   "section": "payoff",
+   "start": 74.719,
+   "end": 76.254,
+   "display": "Not bad for sitting still.",
+   "spoken": "Not bad for sitting still.",
+   "words": [
+    {
+     "text": "Not",
+     "start": 74.851,
+     "end": 75.051
+    },
+    {
+     "text": "bad",
+     "start": 75.101,
+     "end": 75.351
+    },
+    {
+     "text": "for",
+     "start": 75.401,
+     "end": 75.501
+    },
+    {
+     "text": "sitting",
+     "start": 75.551,
+     "end": 75.801
+    },
+    {
+     "text": "still.",
+     "start": 75.851,
+     "end": 76.254
+    }
+   ]
+  }
+ ],
+ "events": {
+  "hook": 0.55,
+  "still_word": 1.6,
+  "three": 4.127,
+  "spin": 7.977,
+  "merry": 9.951,
+  "edge": 11.526,
+  "equator": 13.924,
+  "spin_num": 16.574,
+  "jet": 21.212,
+  "jet_word": 22.962,
+  "feel": 25.382,
+  "flight": 27.6,
+  "pour": 29.9,
+  "steady": 31.448,
+  "orbit": 35.398,
+  "marathon": 37.807,
+  "marathon_earth": 40.402,
+  "sec": 42.052,
+  "orbit_num": 44.676,
+  "galaxy": 49.413,
+  "gal_num": 53.963,
+  "lap": 58.145,
+  "lap_num": 59.32,
+  "dinos": 62.555,
+  "dino_word": 64.73,
+  "payoff": 68.406,
+  "payoff_num": 71.056,
+  "end": 74.851
+ },
+ "words": [
+  {
+   "text": "Imagine",
+   "start": 0.55,
+   "end": 1.025,
+   "section": "hook"
+  },
+  {
+   "text": "you're",
+   "start": 1.075,
+   "end": 1.175,
+   "section": "hook"
+  },
+  {
+   "text": "sitting",
+   "start": 1.25,
+   "end": 1.55,
+   "section": "hook"
+  },
+  {
+   "text": "perfectly",
+   "start": 1.6,
+   "end": 2.05,
+   "section": "hook"
+  },
+  {
+   "text": "still.",
+   "start": 2.125,
+   "end": 2.479,
+   "section": "hook"
+  },
+  {
+   "text": "But",
+   "start": 3.827,
+   "end": 3.927,
+   "section": "hook"
+  },
+  {
+   "text": "you're",
+   "start": 3.977,
+   "end": 4.077,
+   "section": "hook"
+  },
+  {
+   "text": "moving",
+   "start": 4.127,
+   "end": 4.452,
+   "section": "hook"
+  },
+  {
+   "text": "in",
+   "start": 4.502,
+   "end": 4.677,
+   "section": "hook"
+  },
+  {
+   "text": "at",
+   "start": 4.727,
+   "end": 4.777,
+   "section": "hook"
+  },
+  {
+   "text": "least",
+   "start": 4.827,
+   "end": 5.027,
+   "section": "hook"
+  },
+  {
+   "text": "three",
+   "start": 5.102,
+   "end": 5.302,
+   "section": "hook"
+  },
+  {
+   "text": "ways",
+   "start": 5.352,
+   "end": 5.677,
+   "section": "hook"
+  },
+  {
+   "text": "at",
+   "start": 5.727,
+   "end": 5.777,
+   "section": "hook"
+  },
+  {
+   "text": "once.",
+   "start": 5.827,
+   "end": 6.23,
+   "section": "hook"
+  },
+  {
+   "text": "First,",
+   "start": 7.977,
+   "end": 8.352,
+   "section": "spin"
+  },
+  {
+   "text": "Earth",
+   "start": 8.452,
+   "end": 8.652,
+   "section": "spin"
+  },
+  {
+   "text": "spins.",
+   "start": 8.702,
+   "end": 9.255,
+   "section": "spin"
+  },
+  {
+   "text": "Think",
+   "start": 9.951,
+   "end": 10.101,
+   "section": "spin"
+  },
+  {
+   "text": "of",
+   "start": 10.126,
+   "end": 10.176,
+   "section": "spin"
+  },
+  {
+   "text": "a",
+   "start": 10.201,
+   "end": 10.226,
+   "section": "spin"
+  },
+  {
+   "text": "merry-go-round.",
+   "start": 10.276,
+   "end": 11.201,
+   "section": "spin"
+  },
+  {
+   "text": "The",
+   "start": 11.351,
+   "end": 11.451,
+   "section": "spin"
+  },
+  {
+   "text": "edge",
+   "start": 11.526,
+   "end": 11.751,
+   "section": "spin"
+  },
+  {
+   "text": "moves",
+   "start": 11.801,
+   "end": 12.076,
+   "section": "spin"
+  },
+  {
+   "text": "fastest.",
+   "start": 12.126,
+   "end": 12.848,
+   "section": "spin"
+  },
+  {
+   "text": "On",
+   "start": 13.924,
+   "end": 14.099,
+   "section": "spin"
+  },
+  {
+   "text": "Earth,",
+   "start": 14.149,
+   "end": 14.574,
+   "section": "spin"
+  },
+  {
+   "text": "that's",
+   "start": 14.724,
+   "end": 14.974,
+   "section": "spin"
+  },
+  {
+   "text": "the",
+   "start": 14.999,
+   "end": 15.099,
+   "section": "spin"
+  },
+  {
+   "text": "equator,",
+   "start": 15.149,
+   "end": 15.974,
+   "section": "spin"
+  },
+  {
+   "text": "at",
+   "start": 16.149,
+   "end": 16.199,
+   "section": "spin"
+  },
+  {
+   "text": "about",
+   "start": 16.224,
+   "end": 16.499,
+   "section": "spin"
+  },
+  {
+   "text": "1,670",
+   "start": 16.574,
+   "end": 18.049,
+   "section": "spin"
+  },
+  {
+   "text": "km/h.",
+   "start": 18.124,
+   "end": 19.274,
+   "section": "spin"
+  },
+  {
+   "text": "Nearly",
+   "start": 21.212,
+   "end": 21.537,
+   "section": "spin"
+  },
+  {
+   "text": "twice",
+   "start": 21.587,
+   "end": 22.187,
+   "section": "spin"
+  },
+  {
+   "text": "as",
+   "start": 22.287,
+   "end": 22.412,
+   "section": "spin"
+  },
+  {
+   "text": "fast",
+   "start": 22.487,
+   "end": 22.762,
+   "section": "spin"
+  },
+  {
+   "text": "as",
+   "start": 22.787,
+   "end": 22.862,
+   "section": "spin"
+  },
+  {
+   "text": "a",
+   "start": 22.887,
+   "end": 22.912,
+   "section": "spin"
+  },
+  {
+   "text": "passenger",
+   "start": 22.962,
+   "end": 23.537,
+   "section": "spin"
+  },
+  {
+   "text": "jet.",
+   "start": 23.612,
+   "end": 23.926,
+   "section": "spin"
+  },
+  {
+   "text": "So",
+   "start": 25.382,
+   "end": 25.532,
+   "section": "spin"
+  },
+  {
+   "text": "why",
+   "start": 25.607,
+   "end": 25.757,
+   "section": "spin"
+  },
+  {
+   "text": "don't",
+   "start": 25.782,
+   "end": 25.907,
+   "section": "spin"
+  },
+  {
+   "text": "we",
+   "start": 25.932,
+   "end": 26.032,
+   "section": "spin"
+  },
+  {
+   "text": "feel",
+   "start": 26.132,
+   "end": 26.357,
+   "section": "spin"
+  },
+  {
+   "text": "it?",
+   "start": 26.407,
+   "end": 26.624,
+   "section": "spin"
+  },
+  {
+   "text": "On",
+   "start": 27.6,
+   "end": 27.7,
+   "section": "spin"
+  },
+  {
+   "text": "a",
+   "start": 27.726,
+   "end": 27.776,
+   "section": "spin"
+  },
+  {
+   "text": "smooth",
+   "start": 27.876,
+   "end": 28.25,
+   "section": "spin"
+  },
+  {
+   "text": "flight,",
+   "start": 28.3,
+   "end": 28.825,
+   "section": "spin"
+  },
+  {
+   "text": "you",
+   "start": 28.95,
+   "end": 29.026,
+   "section": "spin"
+  },
+  {
+   "text": "can",
+   "start": 29.075,
+   "end": 29.2,
+   "section": "spin"
+  },
+  {
+   "text": "pour",
+   "start": 29.25,
+   "end": 29.426,
+   "section": "spin"
+  },
+  {
+   "text": "a",
+   "start": 29.45,
+   "end": 29.5,
+   "section": "spin"
+  },
+  {
+   "text": "drink",
+   "start": 29.575,
+   "end": 29.876,
+   "section": "spin"
+  },
+  {
+   "text": "without",
+   "start": 29.9,
+   "end": 30.2,
+   "section": "spin"
+  },
+  {
+   "text": "spilling.",
+   "start": 30.25,
+   "end": 30.766,
+   "section": "spin"
+  },
+  {
+   "text": "Steady",
+   "start": 31.448,
+   "end": 31.748,
+   "section": "spin"
+  },
+  {
+   "text": "motion",
+   "start": 31.798,
+   "end": 32.223,
+   "section": "spin"
+  },
+  {
+   "text": "feels",
+   "start": 32.298,
+   "end": 32.623,
+   "section": "spin"
+  },
+  {
+   "text": "like",
+   "start": 32.648,
+   "end": 32.773,
+   "section": "spin"
+  },
+  {
+   "text": "standing",
+   "start": 32.823,
+   "end": 33.198,
+   "section": "spin"
+  },
+  {
+   "text": "still.",
+   "start": 33.273,
+   "end": 33.627,
+   "section": "spin"
+  },
+  {
+   "text": "Second,",
+   "start": 35.398,
+   "end": 35.898,
+   "section": "orbit"
+  },
+  {
+   "text": "Earth",
+   "start": 36.023,
+   "end": 36.248,
+   "section": "orbit"
+  },
+  {
+   "text": "circles",
+   "start": 36.298,
+   "end": 36.648,
+   "section": "orbit"
+  },
+  {
+   "text": "the",
+   "start": 36.673,
+   "end": 36.748,
+   "section": "orbit"
+  },
+  {
+   "text": "Sun.",
+   "start": 36.823,
+   "end": 37.181,
+   "section": "orbit"
+  },
+  {
+   "text": "Picture",
+   "start": 37.807,
+   "end": 38.257,
+   "section": "orbit"
+  },
+  {
+   "text": "running",
+   "start": 38.307,
+   "end": 38.557,
+   "section": "orbit"
+  },
+  {
+   "text": "a",
+   "start": 38.582,
+   "end": 38.632,
+   "section": "orbit"
+  },
+  {
+   "text": "marathon.",
+   "start": 38.682,
+   "end": 39.382,
+   "section": "orbit"
+  },
+  {
+   "text": "Earth",
+   "start": 40.402,
+   "end": 40.627,
+   "section": "orbit"
+  },
+  {
+   "text": "covers",
+   "start": 40.702,
+   "end": 41.077,
+   "section": "orbit"
+  },
+  {
+   "text": "that",
+   "start": 41.127,
+   "end": 41.552,
+   "section": "orbit"
+  },
+  {
+   "text": "in",
+   "start": 41.652,
+   "end": 41.727,
+   "section": "orbit"
+  },
+  {
+   "text": "about",
+   "start": 41.777,
+   "end": 42.027,
+   "section": "orbit"
+  },
+  {
+   "text": "a",
+   "start": 42.052,
+   "end": 42.102,
+   "section": "orbit"
+  },
+  {
+   "text": "second",
+   "start": 42.202,
+   "end": 42.477,
+   "section": "orbit"
+  },
+  {
+   "text": "and",
+   "start": 42.502,
+   "end": 42.577,
+   "section": "orbit"
+  },
+  {
+   "text": "a",
+   "start": 42.602,
+   "end": 42.627,
+   "section": "orbit"
+  },
+  {
+   "text": "half.",
+   "start": 42.677,
+   "end": 43.086,
+   "section": "orbit"
+  },
+  {
+   "text": "That's",
+   "start": 44.676,
+   "end": 44.951,
+   "section": "orbit"
+  },
+  {
+   "text": "more",
+   "start": 45.001,
+   "end": 45.176,
+   "section": "orbit"
+  },
+  {
+   "text": "than",
+   "start": 45.201,
+   "end": 45.276,
+   "section": "orbit"
+  },
+  {
+   "text": "100,000",
+   "start": 45.326,
+   "end": 46.351,
+   "section": "orbit"
+  },
+  {
+   "text": "km/h.",
+   "start": 46.401,
+   "end": 47.564,
+   "section": "orbit"
+  },
+  {
+   "text": "Third,",
+   "start": 49.413,
+   "end": 49.938,
+   "section": "galaxy"
+  },
+  {
+   "text": "the",
+   "start": 50.038,
+   "end": 50.113,
+   "section": "galaxy"
+  },
+  {
+   "text": "Sun",
+   "start": 50.213,
+   "end": 50.488,
+   "section": "galaxy"
+  },
+  {
+   "text": "carries",
+   "start": 50.563,
+   "end": 50.938,
+   "section": "galaxy"
+  },
+  {
+   "text": "us",
+   "start": 50.963,
+   "end": 51.163,
+   "section": "galaxy"
+  },
+  {
+   "text": "around",
+   "start": 51.213,
+   "end": 51.538,
+   "section": "galaxy"
+  },
+  {
+   "text": "the",
+   "start": 51.563,
+   "end": 51.613,
+   "section": "galaxy"
+  },
+  {
+   "text": "centre",
+   "start": 51.688,
+   "end": 52.013,
+   "section": "galaxy"
+  },
+  {
+   "text": "of",
+   "start": 52.063,
+   "end": 52.113,
+   "section": "galaxy"
+  },
+  {
+   "text": "the",
+   "start": 52.138,
+   "end": 52.188,
+   "section": "galaxy"
+  },
+  {
+   "text": "Milky",
+   "start": 52.238,
+   "end": 52.563,
+   "section": "galaxy"
+  },
+  {
+   "text": "Way,",
+   "start": 52.613,
+   "end": 53.288,
+   "section": "galaxy"
+  },
+  {
+   "text": "at",
+   "start": 53.488,
+   "end": 53.538,
+   "section": "galaxy"
+  },
+  {
+   "text": "about",
+   "start": 53.563,
+   "end": 53.863,
+   "section": "galaxy"
+  },
+  {
+   "text": "800,000",
+   "start": 53.963,
+   "end": 55.013,
+   "section": "galaxy"
+  },
+  {
+   "text": "km/h.",
+   "start": 55.063,
+   "end": 56.229,
+   "section": "galaxy"
+  },
+  {
+   "text": "One",
+   "start": 58.145,
+   "end": 58.345,
+   "section": "galaxy"
+  },
+  {
+   "text": "lap",
+   "start": 58.395,
+   "end": 58.645,
+   "section": "galaxy"
+  },
+  {
+   "text": "takes",
+   "start": 58.695,
+   "end": 58.92,
+   "section": "galaxy"
+  },
+  {
+   "text": "around",
+   "start": 58.945,
+   "end": 59.22,
+   "section": "galaxy"
+  },
+  {
+   "text": "230 million",
+   "start": 59.32,
+   "end": 60.795,
+   "section": "galaxy"
+  },
+  {
+   "text": "years.",
+   "start": 60.845,
+   "end": 61.259,
+   "section": "galaxy"
+  },
+  {
+   "text": "The",
+   "start": 62.555,
+   "end": 62.655,
+   "section": "galaxy"
+  },
+  {
+   "text": "last",
+   "start": 62.705,
+   "end": 63.005,
+   "section": "galaxy"
+  },
+  {
+   "text": "time",
+   "start": 63.055,
+   "end": 63.28,
+   "section": "galaxy"
+  },
+  {
+   "text": "we",
+   "start": 63.305,
+   "end": 63.405,
+   "section": "galaxy"
+  },
+  {
+   "text": "were",
+   "start": 63.455,
+   "end": 63.53,
+   "section": "galaxy"
+  },
+  {
+   "text": "here,",
+   "start": 63.58,
+   "end": 64.08,
+   "section": "galaxy"
+  },
+  {
+   "text": "the",
+   "start": 64.23,
+   "end": 64.305,
+   "section": "galaxy"
+  },
+  {
+   "text": "first",
+   "start": 64.405,
+   "end": 64.68,
+   "section": "galaxy"
+  },
+  {
+   "text": "dinosaurs",
+   "start": 64.73,
+   "end": 65.28,
+   "section": "galaxy"
+  },
+  {
+   "text": "were",
+   "start": 65.305,
+   "end": 65.38,
+   "section": "galaxy"
+  },
+  {
+   "text": "just",
+   "start": 65.43,
+   "end": 65.605,
+   "section": "galaxy"
+  },
+  {
+   "text": "starting",
+   "start": 65.655,
+   "end": 66.03,
+   "section": "galaxy"
+  },
+  {
+   "text": "out.",
+   "start": 66.08,
+   "end": 66.386,
+   "section": "galaxy"
+  },
+  {
+   "text": "So",
+   "start": 68.406,
+   "end": 68.506,
+   "section": "payoff"
+  },
+  {
+   "text": "while",
+   "start": 68.556,
+   "end": 68.706,
+   "section": "payoff"
+  },
+  {
+   "text": "you",
+   "start": 68.756,
+   "end": 68.856,
+   "section": "payoff"
+  },
+  {
+   "text": "watched",
+   "start": 68.931,
+   "end": 69.306,
+   "section": "payoff"
+  },
+  {
+   "text": "this,",
+   "start": 69.356,
+   "end": 69.931,
+   "section": "payoff"
+  },
+  {
+   "text": "you've",
+   "start": 70.081,
+   "end": 70.231,
+   "section": "payoff"
+  },
+  {
+   "text": "travelled",
+   "start": 70.281,
+   "end": 70.656,
+   "section": "payoff"
+  },
+  {
+   "text": "about",
+   "start": 70.681,
+   "end": 70.956,
+   "section": "payoff"
+  },
+  {
+   "text": "2,000",
+   "start": 71.056,
+   "end": 71.756,
+   "section": "payoff"
+  },
+  {
+   "text": "km",
+   "start": 71.806,
+   "end": 72.431,
+   "section": "payoff"
+  },
+  {
+   "text": "around",
+   "start": 72.481,
+   "end": 72.731,
+   "section": "payoff"
+  },
+  {
+   "text": "the",
+   "start": 72.756,
+   "end": 72.806,
+   "section": "payoff"
+  },
+  {
+   "text": "Sun.",
+   "start": 72.881,
+   "end": 73.219,
+   "section": "payoff"
+  },
+  {
+   "text": "Not",
+   "start": 74.851,
+   "end": 75.051,
+   "section": "payoff"
+  },
+  {
+   "text": "bad",
+   "start": 75.101,
+   "end": 75.351,
+   "section": "payoff"
+  },
+  {
+   "text": "for",
+   "start": 75.401,
+   "end": 75.501,
+   "section": "payoff"
+  },
+  {
+   "text": "sitting",
+   "start": 75.551,
+   "end": 75.801,
+   "section": "payoff"
+  },
+  {
+   "text": "still.",
+   "start": 75.851,
+   "end": 76.254,
+   "section": "payoff"
+  }
+ ],
+ "duration": 78.854
+}

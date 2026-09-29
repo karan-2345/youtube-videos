@@ -1,0 +1,27 @@
+{
+ "spin_eq_kmh": 1674.3619747886307,
+ "spin_30_kmh": 1450.040005297634,
+ "spin_60_kmh": 837.1809873943156,
+ "orbit_kms": 29.78,
+ "orbit_kmh": 107208.0,
+ "gal_kmh": 828000,
+ "gal_kms": 230.0,
+ "gal_range_kmh": [
+  782000,
+  900000
+ ],
+ "gal_year_myr": 230,
+ "gal_year_range": [
+  210,
+  250
+ ],
+ "dinos_mya": [
+  231,
+  245
+ ],
+ "jet_kmh": 903,
+ "marathon_km": 42.195,
+ "marathon_s": 1.416890530557421,
+ "earth_diameter_km": 12756.274,
+ "spin_accel_pct_g": 0.34584315495313334
+}
