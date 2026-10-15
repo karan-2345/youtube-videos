@@ -1,0 +1,2463 @@
+{
+ "sections": [
+  {
+   "name": "hook",
+   "start": 0.45,
+   "end": 18.213
+  },
+  {
+   "name": "steer",
+   "start": 18.213,
+   "end": 26.053
+  },
+  {
+   "name": "ripples",
+   "start": 26.053,
+   "end": 43.182
+  },
+  {
+   "name": "delay",
+   "start": 43.182,
+   "end": 60.344
+  },
+  {
+   "name": "follow",
+   "start": 60.344,
+   "end": 71.412
+  },
+  {
+   "name": "payoff",
+   "start": 71.412,
+   "end": 82.607
+  }
+ ],
+ "sentences": [
+  {
+   "section": "hook",
+   "start": 0.45,
+   "end": 5.575,
+   "display": "A flat white panel sits bolted to a roof, and it never turns to follow anything.",
+   "spoken": "A flat white panel sits bolted to a roof, and it never turns to follow anything.",
+   "words": [
+    {
+     "text": "A",
+     "start": 0.544,
+     "end": 0.594
+    },
+    {
+     "text": "flat",
+     "start": 0.719,
+     "end": 1.019
+    },
+    {
+     "text": "white",
+     "start": 1.094,
+     "end": 1.344
+    },
+    {
+     "text": "panel",
+     "start": 1.394,
+     "end": 1.794
+    },
+    {
+     "text": "sits",
+     "start": 1.894,
+     "end": 2.144
+    },
+    {
+     "text": "bolted",
+     "start": 2.219,
+     "end": 2.594
+    },
+    {
+     "text": "to",
+     "start": 2.644,
+     "end": 2.744
+    },
+    {
+     "text": "a",
+     "start": 2.794,
+     "end": 2.844
+    },
+    {
+     "text": "roof,",
+     "start": 2.894,
+     "end": 3.594
+    },
+    {
+     "text": "and",
+     "start": 3.719,
+     "end": 3.794
+    },
+    {
+     "text": "it",
+     "start": 3.819,
+     "end": 3.869
+    },
+    {
+     "text": "never",
+     "start": 3.919,
+     "end": 4.169
+    },
+    {
+     "text": "turns",
+     "start": 4.219,
+     "end": 4.569
+    },
+    {
+     "text": "to",
+     "start": 4.619,
+     "end": 4.694
+    },
+    {
+     "text": "follow",
+     "start": 4.744,
+     "end": 5.019
+    },
+    {
+     "text": "anything.",
+     "start": 5.069,
+     "end": 5.575
+    }
+   ]
+  },
+  {
+   "section": "hook",
+   "start": 6.375,
+   "end": 14.324,
+   "display": "Yet the satellite it listens to crosses the sky at 27,000 km/h, and in a few minutes it will be gone.",
+   "spoken": "Yet the satellite it listens to crosses the sky at twenty-seven thousand kilometers an hour, and in a few minutes it will be gone.",
+   "words": [
+    {
+     "text": "Yet",
+     "start": 6.477,
+     "end": 6.652
+    },
+    {
+     "text": "the",
+     "start": 6.702,
+     "end": 6.777
+    },
+    {
+     "text": "satellite",
+     "start": 6.877,
+     "end": 7.377
+    },
+    {
+     "text": "it",
+     "start": 7.452,
+     "end": 7.552
+    },
+    {
+     "text": "listens",
+     "start": 7.602,
+     "end": 8.052
+    },
+    {
+     "text": "to",
+     "start": 8.102,
+     "end": 8.177
+    },
+    {
+     "text": "crosses",
+     "start": 8.227,
+     "end": 8.702
+    },
+    {
+     "text": "the",
+     "start": 8.752,
+     "end": 8.827
+    },
+    {
+     "text": "sky",
+     "start": 8.902,
+     "end": 9.352
+    },
+    {
+     "text": "at",
+     "start": 9.427,
+     "end": 9.502
+    },
+    {
+     "text": "27,000 km/h,",
+     "start": 9.577,
+     "end": 12.352
+    },
+    {
+     "text": "and",
+     "start": 12.527,
+     "end": 12.602
+    },
+    {
+     "text": "in",
+     "start": 12.627,
+     "end": 12.677
+    },
+    {
+     "text": "a",
+     "start": 12.702,
+     "end": 12.727
+    },
+    {
+     "text": "few",
+     "start": 12.802,
+     "end": 12.952
+    },
+    {
+     "text": "minutes",
+     "start": 13.002,
+     "end": 13.452
+    },
+    {
+     "text": "it",
+     "start": 13.552,
+     "end": 13.627
+    },
+    {
+     "text": "will",
+     "start": 13.652,
+     "end": 13.727
+    },
+    {
+     "text": "be",
+     "start": 13.777,
+     "end": 13.877
+    },
+    {
+     "text": "gone.",
+     "start": 13.927,
+     "end": 14.323
+    }
+   ]
+  },
+  {
+   "section": "hook",
+   "start": 15.224,
+   "end": 17.013,
+   "display": "So how does the panel keep up?",
+   "spoken": "So how does the panel keep up?",
+   "words": [
+    {
+     "text": "So",
+     "start": 15.373,
+     "end": 15.523
+    },
+    {
+     "text": "how",
+     "start": 15.598,
+     "end": 15.773
+    },
+    {
+     "text": "does",
+     "start": 15.798,
+     "end": 15.948
+    },
+    {
+     "text": "the",
+     "start": 15.973,
+     "end": 16.023
+    },
+    {
+     "text": "panel",
+     "start": 16.073,
+     "end": 16.423
+    },
+    {
+     "text": "keep",
+     "start": 16.473,
+     "end": 16.698
+    },
+    {
+     "text": "up?",
+     "start": 16.748,
+     "end": 17.013
+    }
+   ]
+  },
+  {
+   "section": "steer",
+   "start": 18.213,
+   "end": 24.853,
+   "display": "A motor would always be a step behind, so Starlink steers the signal itself, and a pond shows how.",
+   "spoken": "A motor would always be a step behind, so Starlink steers the signal itself, and a pond shows how.",
+   "words": [
+    {
+     "text": "A",
+     "start": 18.311,
+     "end": 18.361
+    },
+    {
+     "text": "motor",
+     "start": 18.436,
+     "end": 18.836
+    },
+    {
+     "text": "would",
+     "start": 18.886,
+     "end": 18.986
+    },
+    {
+     "text": "always",
+     "start": 19.061,
+     "end": 19.386
+    },
+    {
+     "text": "be",
+     "start": 19.436,
+     "end": 19.511
+    },
+    {
+     "text": "a",
+     "start": 19.536,
+     "end": 19.561
+    },
+    {
+     "text": "step",
+     "start": 19.611,
+     "end": 19.861
+    },
+    {
+     "text": "behind,",
+     "start": 19.911,
+     "end": 20.711
+    },
+    {
+     "text": "so",
+     "start": 20.886,
+     "end": 21.011
+    },
+    {
+     "text": "Starlink",
+     "start": 21.086,
+     "end": 21.586
+    },
+    {
+     "text": "steers",
+     "start": 21.661,
+     "end": 22.061
+    },
+    {
+     "text": "the",
+     "start": 22.111,
+     "end": 22.186
+    },
+    {
+     "text": "signal",
+     "start": 22.261,
+     "end": 22.586
+    },
+    {
+     "text": "itself,",
+     "start": 22.636,
+     "end": 23.386
+    },
+    {
+     "text": "and",
+     "start": 23.511,
+     "end": 23.586
+    },
+    {
+     "text": "a",
+     "start": 23.611,
+     "end": 23.636
+    },
+    {
+     "text": "pond",
+     "start": 23.711,
+     "end": 24.111
+    },
+    {
+     "text": "shows",
+     "start": 24.211,
+     "end": 24.536
+    },
+    {
+     "text": "how.",
+     "start": 24.586,
+     "end": 24.854
+    }
+   ]
+  },
+  {
+   "section": "ripples",
+   "start": 26.053,
+   "end": 35.073,
+   "display": "Throw two stones into the water, and where their ripples cross, crest meets crest and the water jumps, while crest meets trough and it goes flat.",
+   "spoken": "Throw two stones into the water, and where their ripples cross, crest meets crest and the water jumps, while crest meets trough and it goes flat.",
+   "words": [
+    {
+     "text": "Throw",
+     "start": 26.201,
+     "end": 26.526
+    },
+    {
+     "text": "two",
+     "start": 26.626,
+     "end": 26.901
+    },
+    {
+     "text": "stones",
+     "start": 26.976,
+     "end": 27.376
+    },
+    {
+     "text": "into",
+     "start": 27.401,
+     "end": 27.551
+    },
+    {
+     "text": "the",
+     "start": 27.576,
+     "end": 27.626
+    },
+    {
+     "text": "water,",
+     "start": 27.676,
+     "end": 28.326
+    },
+    {
+     "text": "and",
+     "start": 28.501,
+     "end": 28.576
+    },
+    {
+     "text": "where",
+     "start": 28.601,
+     "end": 28.701
+    },
+    {
+     "text": "their",
+     "start": 28.751,
+     "end": 28.876
+    },
+    {
+     "text": "ripples",
+     "start": 28.951,
+     "end": 29.276
+    },
+    {
+     "text": "cross,",
+     "start": 29.326,
+     "end": 29.976
+    },
+    {
+     "text": "crest",
+     "start": 30.151,
+     "end": 30.451
+    },
+    {
+     "text": "meets",
+     "start": 30.501,
+     "end": 30.726
+    },
+    {
+     "text": "crest",
+     "start": 30.801,
+     "end": 31.251
+    },
+    {
+     "text": "and",
+     "start": 31.301,
+     "end": 31.376
+    },
+    {
+     "text": "the",
+     "start": 31.401,
+     "end": 31.451
+    },
+    {
+     "text": "water",
+     "start": 31.501,
+     "end": 31.776
+    },
+    {
+     "text": "jumps,",
+     "start": 31.851,
+     "end": 32.576
+    },
+    {
+     "text": "while",
+     "start": 32.726,
+     "end": 32.901
+    },
+    {
+     "text": "crest",
+     "start": 32.976,
+     "end": 33.326
+    },
+    {
+     "text": "meets",
+     "start": 33.376,
+     "end": 33.601
+    },
+    {
+     "text": "trough",
+     "start": 33.651,
+     "end": 34.076
+    },
+    {
+     "text": "and",
+     "start": 34.151,
+     "end": 34.226
+    },
+    {
+     "text": "it",
+     "start": 34.251,
+     "end": 34.301
+    },
+    {
+     "text": "goes",
+     "start": 34.351,
+     "end": 34.601
+    },
+    {
+     "text": "flat.",
+     "start": 34.676,
+     "end": 35.072
+    }
+   ]
+  },
+  {
+   "section": "ripples",
+   "start": 35.973,
+   "end": 41.982,
+   "display": "Then line up a whole row of stones and drop them together, and the ripples add up only straight ahead.",
+   "spoken": "Then line up a whole row of stones and drop them together, and the ripples add up only straight ahead.",
+   "words": [
+    {
+     "text": "Then",
+     "start": 36.08,
+     "end": 36.255
+    },
+    {
+     "text": "line",
+     "start": 36.305,
+     "end": 36.53
+    },
+    {
+     "text": "up",
+     "start": 36.555,
+     "end": 36.68
+    },
+    {
+     "text": "a",
+     "start": 36.73,
+     "end": 36.78
+    },
+    {
+     "text": "whole",
+     "start": 36.88,
+     "end": 37.155
+    },
+    {
+     "text": "row",
+     "start": 37.205,
+     "end": 37.405
+    },
+    {
+     "text": "of",
+     "start": 37.43,
+     "end": 37.505
+    },
+    {
+     "text": "stones",
+     "start": 37.555,
+     "end": 38.23
+    },
+    {
+     "text": "and",
+     "start": 38.305,
+     "end": 38.38
+    },
+    {
+     "text": "drop",
+     "start": 38.43,
+     "end": 38.68
+    },
+    {
+     "text": "them",
+     "start": 38.705,
+     "end": 38.805
+    },
+    {
+     "text": "together,",
+     "start": 38.855,
+     "end": 39.63
+    },
+    {
+     "text": "and",
+     "start": 39.805,
+     "end": 39.88
+    },
+    {
+     "text": "the",
+     "start": 39.905,
+     "end": 39.955
+    },
+    {
+     "text": "ripples",
+     "start": 40.005,
+     "end": 40.405
+    },
+    {
+     "text": "add",
+     "start": 40.505,
+     "end": 40.68
+    },
+    {
+     "text": "up",
+     "start": 40.705,
+     "end": 40.88
+    },
+    {
+     "text": "only",
+     "start": 40.955,
+     "end": 41.205
+    },
+    {
+     "text": "straight",
+     "start": 41.28,
+     "end": 41.53
+    },
+    {
+     "text": "ahead.",
+     "start": 41.58,
+     "end": 41.983
+    }
+   ]
+  },
+  {
+   "section": "delay",
+   "start": 43.182,
+   "end": 48.921,
+   "display": "But let each stone land a split second after its neighbor, and the whole wave leans to one side.",
+   "spoken": "But let each stone land a split second after its neighbor, and the whole wave leans to one side.",
+   "words": [
+    {
+     "text": "But",
+     "start": 43.234,
+     "end": 43.334
+    },
+    {
+     "text": "let",
+     "start": 43.384,
+     "end": 43.559
+    },
+    {
+     "text": "each",
+     "start": 43.634,
+     "end": 43.859
+    },
+    {
+     "text": "stone",
+     "start": 43.934,
+     "end": 44.309
+    },
+    {
+     "text": "land",
+     "start": 44.359,
+     "end": 44.609
+    },
+    {
+     "text": "a",
+     "start": 44.634,
+     "end": 44.659
+    },
+    {
+     "text": "split",
+     "start": 44.734,
+     "end": 45.034
+    },
+    {
+     "text": "second",
+     "start": 45.109,
+     "end": 45.434
+    },
+    {
+     "text": "after",
+     "start": 45.484,
+     "end": 45.734
+    },
+    {
+     "text": "its",
+     "start": 45.759,
+     "end": 45.909
+    },
+    {
+     "text": "neighbor,",
+     "start": 45.959,
+     "end": 46.634
+    },
+    {
+     "text": "and",
+     "start": 46.784,
+     "end": 46.859
+    },
+    {
+     "text": "the",
+     "start": 46.884,
+     "end": 46.934
+    },
+    {
+     "text": "whole",
+     "start": 47.009,
+     "end": 47.209
+    },
+    {
+     "text": "wave",
+     "start": 47.259,
+     "end": 47.634
+    },
+    {
+     "text": "leans",
+     "start": 47.709,
+     "end": 48.084
+    },
+    {
+     "text": "to",
+     "start": 48.134,
+     "end": 48.209
+    },
+    {
+     "text": "one",
+     "start": 48.259,
+     "end": 48.434
+    },
+    {
+     "text": "side.",
+     "start": 48.509,
+     "end": 48.92
+    }
+   ]
+  },
+  {
+   "section": "delay",
+   "start": 49.721,
+   "end": 59.144,
+   "display": "The panel does that with radio waves, firing each tiny antenna trillionths of a second after its neighbor, so the beam tilts toward the satellite.",
+   "spoken": "The panel does that with radio waves, firing each tiny antenna trillionths of a second after its neighbor, so the beam tilts toward the satellite.",
+   "words": [
+    {
+     "text": "The",
+     "start": 49.787,
+     "end": 49.837
+    },
+    {
+     "text": "panel",
+     "start": 49.887,
+     "end": 50.262
+    },
+    {
+     "text": "does",
+     "start": 50.312,
+     "end": 50.487
+    },
+    {
+     "text": "that",
+     "start": 50.537,
+     "end": 50.762
+    },
+    {
+     "text": "with",
+     "start": 50.812,
+     "end": 50.937
+    },
+    {
+     "text": "radio",
+     "start": 51.037,
+     "end": 51.462
+    },
+    {
+     "text": "waves,",
+     "start": 51.537,
+     "end": 52.312
+    },
+    {
+     "text": "firing",
+     "start": 52.537,
+     "end": 53.012
+    },
+    {
+     "text": "each",
+     "start": 53.112,
+     "end": 53.412
+    },
+    {
+     "text": "tiny",
+     "start": 53.512,
+     "end": 53.912
+    },
+    {
+     "text": "antenna",
+     "start": 54.012,
+     "end": 54.412
+    },
+    {
+     "text": "trillionths",
+     "start": 54.487,
+     "end": 54.962
+    },
+    {
+     "text": "of",
+     "start": 54.987,
+     "end": 55.037
+    },
+    {
+     "text": "a",
+     "start": 55.062,
+     "end": 55.112
+    },
+    {
+     "text": "second",
+     "start": 55.187,
+     "end": 55.562
+    },
+    {
+     "text": "after",
+     "start": 55.637,
+     "end": 55.912
+    },
+    {
+     "text": "its",
+     "start": 55.937,
+     "end": 56.087
+    },
+    {
+     "text": "neighbor,",
+     "start": 56.137,
+     "end": 56.887
+    },
+    {
+     "text": "so",
+     "start": 57.087,
+     "end": 57.212
+    },
+    {
+     "text": "the",
+     "start": 57.262,
+     "end": 57.337
+    },
+    {
+     "text": "beam",
+     "start": 57.412,
+     "end": 57.712
+    },
+    {
+     "text": "tilts",
+     "start": 57.787,
+     "end": 58.137
+    },
+    {
+     "text": "toward",
+     "start": 58.212,
+     "end": 58.437
+    },
+    {
+     "text": "the",
+     "start": 58.462,
+     "end": 58.512
+    },
+    {
+     "text": "satellite.",
+     "start": 58.587,
+     "end": 59.144
+    }
+   ]
+  },
+  {
+   "section": "follow",
+   "start": 60.344,
+   "end": 70.212,
+   "display": "As the satellite crosses the sky, the delays shift a little at a time and the beam glides along, until the next satellite rises and the panel aims there.",
+   "spoken": "As the satellite crosses the sky, the delays shift a little at a time and the beam glides along, until the next satellite rises and the panel aims there.",
+   "words": [
+    {
+     "text": "As",
+     "start": 60.42,
+     "end": 60.595
+    },
+    {
+     "text": "the",
+     "start": 60.645,
+     "end": 60.72
+    },
+    {
+     "text": "satellite",
+     "start": 60.82,
+     "end": 61.32
+    },
+    {
+     "text": "crosses",
+     "start": 61.37,
+     "end": 61.795
+    },
+    {
+     "text": "the",
+     "start": 61.845,
+     "end": 61.895
+    },
+    {
+     "text": "sky,",
+     "start": 61.97,
+     "end": 62.645
+    },
+    {
+     "text": "the",
+     "start": 62.82,
+     "end": 62.87
+    },
+    {
+     "text": "delays",
+     "start": 62.92,
+     "end": 63.445
+    },
+    {
+     "text": "shift",
+     "start": 63.545,
+     "end": 63.77
+    },
+    {
+     "text": "a",
+     "start": 63.795,
+     "end": 63.82
+    },
+    {
+     "text": "little",
+     "start": 63.87,
+     "end": 64.07
+    },
+    {
+     "text": "at",
+     "start": 64.095,
+     "end": 64.145
+    },
+    {
+     "text": "a",
+     "start": 64.17,
+     "end": 64.22
+    },
+    {
+     "text": "time",
+     "start": 64.295,
+     "end": 64.82
+    },
+    {
+     "text": "and",
+     "start": 64.92,
+     "end": 64.995
+    },
+    {
+     "text": "the",
+     "start": 65.02,
+     "end": 65.07
+    },
+    {
+     "text": "beam",
+     "start": 65.145,
+     "end": 65.445
+    },
+    {
+     "text": "glides",
+     "start": 65.52,
+     "end": 65.87
+    },
+    {
+     "text": "along,",
+     "start": 65.92,
+     "end": 66.745
+    },
+    {
+     "text": "until",
+     "start": 66.895,
+     "end": 67.12
+    },
+    {
+     "text": "the",
+     "start": 67.145,
+     "end": 67.195
+    },
+    {
+     "text": "next",
+     "start": 67.245,
+     "end": 67.545
+    },
+    {
+     "text": "satellite",
+     "start": 67.62,
+     "end": 68.07
+    },
+    {
+     "text": "rises",
+     "start": 68.12,
+     "end": 68.82
+    },
+    {
+     "text": "and",
+     "start": 68.92,
+     "end": 68.995
+    },
+    {
+     "text": "the",
+     "start": 69.02,
+     "end": 69.07
+    },
+    {
+     "text": "panel",
+     "start": 69.12,
+     "end": 69.495
+    },
+    {
+     "text": "aims",
+     "start": 69.545,
+     "end": 69.87
+    },
+    {
+     "text": "there.",
+     "start": 69.92,
+     "end": 70.212
+    }
+   ]
+  },
+  {
+   "section": "payoff",
+   "start": 71.412,
+   "end": 73.491,
+   "display": "So the only thing that moves is time.",
+   "spoken": "So the only thing that moves is time.",
+   "words": [
+    {
+     "text": "So",
+     "start": 71.54,
+     "end": 71.616
+    },
+    {
+     "text": "the",
+     "start": 71.641,
+     "end": 71.74
+    },
+    {
+     "text": "only",
+     "start": 71.791,
+     "end": 72.041
+    },
+    {
+     "text": "thing",
+     "start": 72.09,
+     "end": 72.265
+    },
+    {
+     "text": "that",
+     "start": 72.316,
+     "end": 72.44
+    },
+    {
+     "text": "moves",
+     "start": 72.49,
+     "end": 72.84
+    },
+    {
+     "text": "is",
+     "start": 72.89,
+     "end": 72.99
+    },
+    {
+     "text": "time.",
+     "start": 73.066,
+     "end": 73.492
+    }
+   ]
+  },
+  {
+   "section": "payoff",
+   "start": 74.591,
+   "end": 80.407,
+   "display": "And that is enough for a panel that never turns to keep up with a satellite that never slows down.",
+   "spoken": "And that is enough for a panel that never turns to keep up with a satellite that never slows down.",
+   "words": [
+    {
+     "text": "And",
+     "start": 74.66,
+     "end": 74.785
+    },
+    {
+     "text": "that",
+     "start": 74.86,
+     "end": 75.085
+    },
+    {
+     "text": "is",
+     "start": 75.135,
+     "end": 75.235
+    },
+    {
+     "text": "enough",
+     "start": 75.285,
+     "end": 75.56
+    },
+    {
+     "text": "for",
+     "start": 75.61,
+     "end": 75.685
+    },
+    {
+     "text": "a",
+     "start": 75.71,
+     "end": 75.735
+    },
+    {
+     "text": "panel",
+     "start": 75.785,
+     "end": 76.36
+    },
+    {
+     "text": "that",
+     "start": 76.435,
+     "end": 76.585
+    },
+    {
+     "text": "never",
+     "start": 76.685,
+     "end": 76.935
+    },
+    {
+     "text": "turns",
+     "start": 76.985,
+     "end": 77.335
+    },
+    {
+     "text": "to",
+     "start": 77.385,
+     "end": 77.435
+    },
+    {
+     "text": "keep",
+     "start": 77.485,
+     "end": 77.685
+    },
+    {
+     "text": "up",
+     "start": 77.71,
+     "end": 77.86
+    },
+    {
+     "text": "with",
+     "start": 77.885,
+     "end": 77.985
+    },
+    {
+     "text": "a",
+     "start": 78.01,
+     "end": 78.06
+    },
+    {
+     "text": "satellite",
+     "start": 78.135,
+     "end": 78.91
+    },
+    {
+     "text": "that",
+     "start": 78.985,
+     "end": 79.135
+    },
+    {
+     "text": "never",
+     "start": 79.21,
+     "end": 79.485
+    },
+    {
+     "text": "slows",
+     "start": 79.56,
+     "end": 79.96
+    },
+    {
+     "text": "down.",
+     "start": 80.01,
+     "end": 80.407
+    }
+   ]
+  }
+ ],
+ "events": {
+  "roof": 0.544,
+  "sat": 6.477,
+  "sat_num": 9.577,
+  "gone": 13.552,
+  "how": 15.373,
+  "motor": 18.311,
+  "steer": 21.661,
+  "pond": 23.611,
+  "stones": 26.201,
+  "cross": 28.601,
+  "up": 30.151,
+  "down": 32.976,
+  "row": 36.08,
+  "ahead": 40.955,
+  "late": 43.234,
+  "slant": 46.884,
+  "panel": 49.787,
+  "ps": 54.487,
+  "tilt": 57.787,
+  "follow": 60.42,
+  "glide": 65.52,
+  "next": 67.145,
+  "payoff": 71.54,
+  "end": 74.66
+ },
+ "words": [
+  {
+   "text": "A",
+   "start": 0.544,
+   "end": 0.594,
+   "section": "hook"
+  },
+  {
+   "text": "flat",
+   "start": 0.719,
+   "end": 1.019,
+   "section": "hook"
+  },
+  {
+   "text": "white",
+   "start": 1.094,
+   "end": 1.344,
+   "section": "hook"
+  },
+  {
+   "text": "panel",
+   "start": 1.394,
+   "end": 1.794,
+   "section": "hook"
+  },
+  {
+   "text": "sits",
+   "start": 1.894,
+   "end": 2.144,
+   "section": "hook"
+  },
+  {
+   "text": "bolted",
+   "start": 2.219,
+   "end": 2.594,
+   "section": "hook"
+  },
+  {
+   "text": "to",
+   "start": 2.644,
+   "end": 2.744,
+   "section": "hook"
+  },
+  {
+   "text": "a",
+   "start": 2.794,
+   "end": 2.844,
+   "section": "hook"
+  },
+  {
+   "text": "roof,",
+   "start": 2.894,
+   "end": 3.594,
+   "section": "hook"
+  },
+  {
+   "text": "and",
+   "start": 3.719,
+   "end": 3.794,
+   "section": "hook"
+  },
+  {
+   "text": "it",
+   "start": 3.819,
+   "end": 3.869,
+   "section": "hook"
+  },
+  {
+   "text": "never",
+   "start": 3.919,
+   "end": 4.169,
+   "section": "hook"
+  },
+  {
+   "text": "turns",
+   "start": 4.219,
+   "end": 4.569,
+   "section": "hook"
+  },
+  {
+   "text": "to",
+   "start": 4.619,
+   "end": 4.694,
+   "section": "hook"
+  },
+  {
+   "text": "follow",
+   "start": 4.744,
+   "end": 5.019,
+   "section": "hook"
+  },
+  {
+   "text": "anything.",
+   "start": 5.069,
+   "end": 5.575,
+   "section": "hook"
+  },
+  {
+   "text": "Yet",
+   "start": 6.477,
+   "end": 6.652,
+   "section": "hook"
+  },
+  {
+   "text": "the",
+   "start": 6.702,
+   "end": 6.777,
+   "section": "hook"
+  },
+  {
+   "text": "satellite",
+   "start": 6.877,
+   "end": 7.377,
+   "section": "hook"
+  },
+  {
+   "text": "it",
+   "start": 7.452,
+   "end": 7.552,
+   "section": "hook"
+  },
+  {
+   "text": "listens",
+   "start": 7.602,
+   "end": 8.052,
+   "section": "hook"
+  },
+  {
+   "text": "to",
+   "start": 8.102,
+   "end": 8.177,
+   "section": "hook"
+  },
+  {
+   "text": "crosses",
+   "start": 8.227,
+   "end": 8.702,
+   "section": "hook"
+  },
+  {
+   "text": "the",
+   "start": 8.752,
+   "end": 8.827,
+   "section": "hook"
+  },
+  {
+   "text": "sky",
+   "start": 8.902,
+   "end": 9.352,
+   "section": "hook"
+  },
+  {
+   "text": "at",
+   "start": 9.427,
+   "end": 9.502,
+   "section": "hook"
+  },
+  {
+   "text": "27,000 km/h,",
+   "start": 9.577,
+   "end": 12.352,
+   "section": "hook"
+  },
+  {
+   "text": "and",
+   "start": 12.527,
+   "end": 12.602,
+   "section": "hook"
+  },
+  {
+   "text": "in",
+   "start": 12.627,
+   "end": 12.677,
+   "section": "hook"
+  },
+  {
+   "text": "a",
+   "start": 12.702,
+   "end": 12.727,
+   "section": "hook"
+  },
+  {
+   "text": "few",
+   "start": 12.802,
+   "end": 12.952,
+   "section": "hook"
+  },
+  {
+   "text": "minutes",
+   "start": 13.002,
+   "end": 13.452,
+   "section": "hook"
+  },
+  {
+   "text": "it",
+   "start": 13.552,
+   "end": 13.627,
+   "section": "hook"
+  },
+  {
+   "text": "will",
+   "start": 13.652,
+   "end": 13.727,
+   "section": "hook"
+  },
+  {
+   "text": "be",
+   "start": 13.777,
+   "end": 13.877,
+   "section": "hook"
+  },
+  {
+   "text": "gone.",
+   "start": 13.927,
+   "end": 14.323,
+   "section": "hook"
+  },
+  {
+   "text": "So",
+   "start": 15.373,
+   "end": 15.523,
+   "section": "hook"
+  },
+  {
+   "text": "how",
+   "start": 15.598,
+   "end": 15.773,
+   "section": "hook"
+  },
+  {
+   "text": "does",
+   "start": 15.798,
+   "end": 15.948,
+   "section": "hook"
+  },
+  {
+   "text": "the",
+   "start": 15.973,
+   "end": 16.023,
+   "section": "hook"
+  },
+  {
+   "text": "panel",
+   "start": 16.073,
+   "end": 16.423,
+   "section": "hook"
+  },
+  {
+   "text": "keep",
+   "start": 16.473,
+   "end": 16.698,
+   "section": "hook"
+  },
+  {
+   "text": "up?",
+   "start": 16.748,
+   "end": 17.013,
+   "section": "hook"
+  },
+  {
+   "text": "A",
+   "start": 18.311,
+   "end": 18.361,
+   "section": "steer"
+  },
+  {
+   "text": "motor",
+   "start": 18.436,
+   "end": 18.836,
+   "section": "steer"
+  },
+  {
+   "text": "would",
+   "start": 18.886,
+   "end": 18.986,
+   "section": "steer"
+  },
+  {
+   "text": "always",
+   "start": 19.061,
+   "end": 19.386,
+   "section": "steer"
+  },
+  {
+   "text": "be",
+   "start": 19.436,
+   "end": 19.511,
+   "section": "steer"
+  },
+  {
+   "text": "a",
+   "start": 19.536,
+   "end": 19.561,
+   "section": "steer"
+  },
+  {
+   "text": "step",
+   "start": 19.611,
+   "end": 19.861,
+   "section": "steer"
+  },
+  {
+   "text": "behind,",
+   "start": 19.911,
+   "end": 20.711,
+   "section": "steer"
+  },
+  {
+   "text": "so",
+   "start": 20.886,
+   "end": 21.011,
+   "section": "steer"
+  },
+  {
+   "text": "Starlink",
+   "start": 21.086,
+   "end": 21.586,
+   "section": "steer"
+  },
+  {
+   "text": "steers",
+   "start": 21.661,
+   "end": 22.061,
+   "section": "steer"
+  },
+  {
+   "text": "the",
+   "start": 22.111,
+   "end": 22.186,
+   "section": "steer"
+  },
+  {
+   "text": "signal",
+   "start": 22.261,
+   "end": 22.586,
+   "section": "steer"
+  },
+  {
+   "text": "itself,",
+   "start": 22.636,
+   "end": 23.386,
+   "section": "steer"
+  },
+  {
+   "text": "and",
+   "start": 23.511,
+   "end": 23.586,
+   "section": "steer"
+  },
+  {
+   "text": "a",
+   "start": 23.611,
+   "end": 23.636,
+   "section": "steer"
+  },
+  {
+   "text": "pond",
+   "start": 23.711,
+   "end": 24.111,
+   "section": "steer"
+  },
+  {
+   "text": "shows",
+   "start": 24.211,
+   "end": 24.536,
+   "section": "steer"
+  },
+  {
+   "text": "how.",
+   "start": 24.586,
+   "end": 24.854,
+   "section": "steer"
+  },
+  {
+   "text": "Throw",
+   "start": 26.201,
+   "end": 26.526,
+   "section": "ripples"
+  },
+  {
+   "text": "two",
+   "start": 26.626,
+   "end": 26.901,
+   "section": "ripples"
+  },
+  {
+   "text": "stones",
+   "start": 26.976,
+   "end": 27.376,
+   "section": "ripples"
+  },
+  {
+   "text": "into",
+   "start": 27.401,
+   "end": 27.551,
+   "section": "ripples"
+  },
+  {
+   "text": "the",
+   "start": 27.576,
+   "end": 27.626,
+   "section": "ripples"
+  },
+  {
+   "text": "water,",
+   "start": 27.676,
+   "end": 28.326,
+   "section": "ripples"
+  },
+  {
+   "text": "and",
+   "start": 28.501,
+   "end": 28.576,
+   "section": "ripples"
+  },
+  {
+   "text": "where",
+   "start": 28.601,
+   "end": 28.701,
+   "section": "ripples"
+  },
+  {
+   "text": "their",
+   "start": 28.751,
+   "end": 28.876,
+   "section": "ripples"
+  },
+  {
+   "text": "ripples",
+   "start": 28.951,
+   "end": 29.276,
+   "section": "ripples"
+  },
+  {
+   "text": "cross,",
+   "start": 29.326,
+   "end": 29.976,
+   "section": "ripples"
+  },
+  {
+   "text": "crest",
+   "start": 30.151,
+   "end": 30.451,
+   "section": "ripples"
+  },
+  {
+   "text": "meets",
+   "start": 30.501,
+   "end": 30.726,
+   "section": "ripples"
+  },
+  {
+   "text": "crest",
+   "start": 30.801,
+   "end": 31.251,
+   "section": "ripples"
+  },
+  {
+   "text": "and",
+   "start": 31.301,
+   "end": 31.376,
+   "section": "ripples"
+  },
+  {
+   "text": "the",
+   "start": 31.401,
+   "end": 31.451,
+   "section": "ripples"
+  },
+  {
+   "text": "water",
+   "start": 31.501,
+   "end": 31.776,
+   "section": "ripples"
+  },
+  {
+   "text": "jumps,",
+   "start": 31.851,
+   "end": 32.576,
+   "section": "ripples"
+  },
+  {
+   "text": "while",
+   "start": 32.726,
+   "end": 32.901,
+   "section": "ripples"
+  },
+  {
+   "text": "crest",
+   "start": 32.976,
+   "end": 33.326,
+   "section": "ripples"
+  },
+  {
+   "text": "meets",
+   "start": 33.376,
+   "end": 33.601,
+   "section": "ripples"
+  },
+  {
+   "text": "trough",
+   "start": 33.651,
+   "end": 34.076,
+   "section": "ripples"
+  },
+  {
+   "text": "and",
+   "start": 34.151,
+   "end": 34.226,
+   "section": "ripples"
+  },
+  {
+   "text": "it",
+   "start": 34.251,
+   "end": 34.301,
+   "section": "ripples"
+  },
+  {
+   "text": "goes",
+   "start": 34.351,
+   "end": 34.601,
+   "section": "ripples"
+  },
+  {
+   "text": "flat.",
+   "start": 34.676,
+   "end": 35.072,
+   "section": "ripples"
+  },
+  {
+   "text": "Then",
+   "start": 36.08,
+   "end": 36.255,
+   "section": "ripples"
+  },
+  {
+   "text": "line",
+   "start": 36.305,
+   "end": 36.53,
+   "section": "ripples"
+  },
+  {
+   "text": "up",
+   "start": 36.555,
+   "end": 36.68,
+   "section": "ripples"
+  },
+  {
+   "text": "a",
+   "start": 36.73,
+   "end": 36.78,
+   "section": "ripples"
+  },
+  {
+   "text": "whole",
+   "start": 36.88,
+   "end": 37.155,
+   "section": "ripples"
+  },
+  {
+   "text": "row",
+   "start": 37.205,
+   "end": 37.405,
+   "section": "ripples"
+  },
+  {
+   "text": "of",
+   "start": 37.43,
+   "end": 37.505,
+   "section": "ripples"
+  },
+  {
+   "text": "stones",
+   "start": 37.555,
+   "end": 38.23,
+   "section": "ripples"
+  },
+  {
+   "text": "and",
+   "start": 38.305,
+   "end": 38.38,
+   "section": "ripples"
+  },
+  {
+   "text": "drop",
+   "start": 38.43,
+   "end": 38.68,
+   "section": "ripples"
+  },
+  {
+   "text": "them",
+   "start": 38.705,
+   "end": 38.805,
+   "section": "ripples"
+  },
+  {
+   "text": "together,",
+   "start": 38.855,
+   "end": 39.63,
+   "section": "ripples"
+  },
+  {
+   "text": "and",
+   "start": 39.805,
+   "end": 39.88,
+   "section": "ripples"
+  },
+  {
+   "text": "the",
+   "start": 39.905,
+   "end": 39.955,
+   "section": "ripples"
+  },
+  {
+   "text": "ripples",
+   "start": 40.005,
+   "end": 40.405,
+   "section": "ripples"
+  },
+  {
+   "text": "add",
+   "start": 40.505,
+   "end": 40.68,
+   "section": "ripples"
+  },
+  {
+   "text": "up",
+   "start": 40.705,
+   "end": 40.88,
+   "section": "ripples"
+  },
+  {
+   "text": "only",
+   "start": 40.955,
+   "end": 41.205,
+   "section": "ripples"
+  },
+  {
+   "text": "straight",
+   "start": 41.28,
+   "end": 41.53,
+   "section": "ripples"
+  },
+  {
+   "text": "ahead.",
+   "start": 41.58,
+   "end": 41.983,
+   "section": "ripples"
+  },
+  {
+   "text": "But",
+   "start": 43.234,
+   "end": 43.334,
+   "section": "delay"
+  },
+  {
+   "text": "let",
+   "start": 43.384,
+   "end": 43.559,
+   "section": "delay"
+  },
+  {
+   "text": "each",
+   "start": 43.634,
+   "end": 43.859,
+   "section": "delay"
+  },
+  {
+   "text": "stone",
+   "start": 43.934,
+   "end": 44.309,
+   "section": "delay"
+  },
+  {
+   "text": "land",
+   "start": 44.359,
+   "end": 44.609,
+   "section": "delay"
+  },
+  {
+   "text": "a",
+   "start": 44.634,
+   "end": 44.659,
+   "section": "delay"
+  },
+  {
+   "text": "split",
+   "start": 44.734,
+   "end": 45.034,
+   "section": "delay"
+  },
+  {
+   "text": "second",
+   "start": 45.109,
+   "end": 45.434,
+   "section": "delay"
+  },
+  {
+   "text": "after",
+   "start": 45.484,
+   "end": 45.734,
+   "section": "delay"
+  },
+  {
+   "text": "its",
+   "start": 45.759,
+   "end": 45.909,
+   "section": "delay"
+  },
+  {
+   "text": "neighbor,",
+   "start": 45.959,
+   "end": 46.634,
+   "section": "delay"
+  },
+  {
+   "text": "and",
+   "start": 46.784,
+   "end": 46.859,
+   "section": "delay"
+  },
+  {
+   "text": "the",
+   "start": 46.884,
+   "end": 46.934,
+   "section": "delay"
+  },
+  {
+   "text": "whole",
+   "start": 47.009,
+   "end": 47.209,
+   "section": "delay"
+  },
+  {
+   "text": "wave",
+   "start": 47.259,
+   "end": 47.634,
+   "section": "delay"
+  },
+  {
+   "text": "leans",
+   "start": 47.709,
+   "end": 48.084,
+   "section": "delay"
+  },
+  {
+   "text": "to",
+   "start": 48.134,
+   "end": 48.209,
+   "section": "delay"
+  },
+  {
+   "text": "one",
+   "start": 48.259,
+   "end": 48.434,
+   "section": "delay"
+  },
+  {
+   "text": "side.",
+   "start": 48.509,
+   "end": 48.92,
+   "section": "delay"
+  },
+  {
+   "text": "The",
+   "start": 49.787,
+   "end": 49.837,
+   "section": "delay"
+  },
+  {
+   "text": "panel",
+   "start": 49.887,
+   "end": 50.262,
+   "section": "delay"
+  },
+  {
+   "text": "does",
+   "start": 50.312,
+   "end": 50.487,
+   "section": "delay"
+  },
+  {
+   "text": "that",
+   "start": 50.537,
+   "end": 50.762,
+   "section": "delay"
+  },
+  {
+   "text": "with",
+   "start": 50.812,
+   "end": 50.937,
+   "section": "delay"
+  },
+  {
+   "text": "radio",
+   "start": 51.037,
+   "end": 51.462,
+   "section": "delay"
+  },
+  {
+   "text": "waves,",
+   "start": 51.537,
+   "end": 52.312,
+   "section": "delay"
+  },
+  {
+   "text": "firing",
+   "start": 52.537,
+   "end": 53.012,
+   "section": "delay"
+  },
+  {
+   "text": "each",
+   "start": 53.112,
+   "end": 53.412,
+   "section": "delay"
+  },
+  {
+   "text": "tiny",
+   "start": 53.512,
+   "end": 53.912,
+   "section": "delay"
+  },
+  {
+   "text": "antenna",
+   "start": 54.012,
+   "end": 54.412,
+   "section": "delay"
+  },
+  {
+   "text": "trillionths",
+   "start": 54.487,
+   "end": 54.962,
+   "section": "delay"
+  },
+  {
+   "text": "of",
+   "start": 54.987,
+   "end": 55.037,
+   "section": "delay"
+  },
+  {
+   "text": "a",
+   "start": 55.062,
+   "end": 55.112,
+   "section": "delay"
+  },
+  {
+   "text": "second",
+   "start": 55.187,
+   "end": 55.562,
+   "section": "delay"
+  },
+  {
+   "text": "after",
+   "start": 55.637,
+   "end": 55.912,
+   "section": "delay"
+  },
+  {
+   "text": "its",
+   "start": 55.937,
+   "end": 56.087,
+   "section": "delay"
+  },
+  {
+   "text": "neighbor,",
+   "start": 56.137,
+   "end": 56.887,
+   "section": "delay"
+  },
+  {
+   "text": "so",
+   "start": 57.087,
+   "end": 57.212,
+   "section": "delay"
+  },
+  {
+   "text": "the",
+   "start": 57.262,
+   "end": 57.337,
+   "section": "delay"
+  },
+  {
+   "text": "beam",
+   "start": 57.412,
+   "end": 57.712,
+   "section": "delay"
+  },
+  {
+   "text": "tilts",
+   "start": 57.787,
+   "end": 58.137,
+   "section": "delay"
+  },
+  {
+   "text": "toward",
+   "start": 58.212,
+   "end": 58.437,
+   "section": "delay"
+  },
+  {
+   "text": "the",
+   "start": 58.462,
+   "end": 58.512,
+   "section": "delay"
+  },
+  {
+   "text": "satellite.",
+   "start": 58.587,
+   "end": 59.144,
+   "section": "delay"
+  },
+  {
+   "text": "As",
+   "start": 60.42,
+   "end": 60.595,
+   "section": "follow"
+  },
+  {
+   "text": "the",
+   "start": 60.645,
+   "end": 60.72,
+   "section": "follow"
+  },
+  {
+   "text": "satellite",
+   "start": 60.82,
+   "end": 61.32,
+   "section": "follow"
+  },
+  {
+   "text": "crosses",
+   "start": 61.37,
+   "end": 61.795,
+   "section": "follow"
+  },
+  {
+   "text": "the",
+   "start": 61.845,
+   "end": 61.895,
+   "section": "follow"
+  },
+  {
+   "text": "sky,",
+   "start": 61.97,
+   "end": 62.645,
+   "section": "follow"
+  },
+  {
+   "text": "the",
+   "start": 62.82,
+   "end": 62.87,
+   "section": "follow"
+  },
+  {
+   "text": "delays",
+   "start": 62.92,
+   "end": 63.445,
+   "section": "follow"
+  },
+  {
+   "text": "shift",
+   "start": 63.545,
+   "end": 63.77,
+   "section": "follow"
+  },
+  {
+   "text": "a",
+   "start": 63.795,
+   "end": 63.82,
+   "section": "follow"
+  },
+  {
+   "text": "little",
+   "start": 63.87,
+   "end": 64.07,
+   "section": "follow"
+  },
+  {
+   "text": "at",
+   "start": 64.095,
+   "end": 64.145,
+   "section": "follow"
+  },
+  {
+   "text": "a",
+   "start": 64.17,
+   "end": 64.22,
+   "section": "follow"
+  },
+  {
+   "text": "time",
+   "start": 64.295,
+   "end": 64.82,
+   "section": "follow"
+  },
+  {
+   "text": "and",
+   "start": 64.92,
+   "end": 64.995,
+   "section": "follow"
+  },
+  {
+   "text": "the",
+   "start": 65.02,
+   "end": 65.07,
+   "section": "follow"
+  },
+  {
+   "text": "beam",
+   "start": 65.145,
+   "end": 65.445,
+   "section": "follow"
+  },
+  {
+   "text": "glides",
+   "start": 65.52,
+   "end": 65.87,
+   "section": "follow"
+  },
+  {
+   "text": "along,",
+   "start": 65.92,
+   "end": 66.745,
+   "section": "follow"
+  },
+  {
+   "text": "until",
+   "start": 66.895,
+   "end": 67.12,
+   "section": "follow"
+  },
+  {
+   "text": "the",
+   "start": 67.145,
+   "end": 67.195,
+   "section": "follow"
+  },
+  {
+   "text": "next",
+   "start": 67.245,
+   "end": 67.545,
+   "section": "follow"
+  },
+  {
+   "text": "satellite",
+   "start": 67.62,
+   "end": 68.07,
+   "section": "follow"
+  },
+  {
+   "text": "rises",
+   "start": 68.12,
+   "end": 68.82,
+   "section": "follow"
+  },
+  {
+   "text": "and",
+   "start": 68.92,
+   "end": 68.995,
+   "section": "follow"
+  },
+  {
+   "text": "the",
+   "start": 69.02,
+   "end": 69.07,
+   "section": "follow"
+  },
+  {
+   "text": "panel",
+   "start": 69.12,
+   "end": 69.495,
+   "section": "follow"
+  },
+  {
+   "text": "aims",
+   "start": 69.545,
+   "end": 69.87,
+   "section": "follow"
+  },
+  {
+   "text": "there.",
+   "start": 69.92,
+   "end": 70.212,
+   "section": "follow"
+  },
+  {
+   "text": "So",
+   "start": 71.54,
+   "end": 71.616,
+   "section": "payoff"
+  },
+  {
+   "text": "the",
+   "start": 71.641,
+   "end": 71.74,
+   "section": "payoff"
+  },
+  {
+   "text": "only",
+   "start": 71.791,
+   "end": 72.041,
+   "section": "payoff"
+  },
+  {
+   "text": "thing",
+   "start": 72.09,
+   "end": 72.265,
+   "section": "payoff"
+  },
+  {
+   "text": "that",
+   "start": 72.316,
+   "end": 72.44,
+   "section": "payoff"
+  },
+  {
+   "text": "moves",
+   "start": 72.49,
+   "end": 72.84,
+   "section": "payoff"
+  },
+  {
+   "text": "is",
+   "start": 72.89,
+   "end": 72.99,
+   "section": "payoff"
+  },
+  {
+   "text": "time.",
+   "start": 73.066,
+   "end": 73.492,
+   "section": "payoff"
+  },
+  {
+   "text": "And",
+   "start": 74.66,
+   "end": 74.785,
+   "section": "payoff"
+  },
+  {
+   "text": "that",
+   "start": 74.86,
+   "end": 75.085,
+   "section": "payoff"
+  },
+  {
+   "text": "is",
+   "start": 75.135,
+   "end": 75.235,
+   "section": "payoff"
+  },
+  {
+   "text": "enough",
+   "start": 75.285,
+   "end": 75.56,
+   "section": "payoff"
+  },
+  {
+   "text": "for",
+   "start": 75.61,
+   "end": 75.685,
+   "section": "payoff"
+  },
+  {
+   "text": "a",
+   "start": 75.71,
+   "end": 75.735,
+   "section": "payoff"
+  },
+  {
+   "text": "panel",
+   "start": 75.785,
+   "end": 76.36,
+   "section": "payoff"
+  },
+  {
+   "text": "that",
+   "start": 76.435,
+   "end": 76.585,
+   "section": "payoff"
+  },
+  {
+   "text": "never",
+   "start": 76.685,
+   "end": 76.935,
+   "section": "payoff"
+  },
+  {
+   "text": "turns",
+   "start": 76.985,
+   "end": 77.335,
+   "section": "payoff"
+  },
+  {
+   "text": "to",
+   "start": 77.385,
+   "end": 77.435,
+   "section": "payoff"
+  },
+  {
+   "text": "keep",
+   "start": 77.485,
+   "end": 77.685,
+   "section": "payoff"
+  },
+  {
+   "text": "up",
+   "start": 77.71,
+   "end": 77.86,
+   "section": "payoff"
+  },
+  {
+   "text": "with",
+   "start": 77.885,
+   "end": 77.985,
+   "section": "payoff"
+  },
+  {
+   "text": "a",
+   "start": 78.01,
+   "end": 78.06,
+   "section": "payoff"
+  },
+  {
+   "text": "satellite",
+   "start": 78.135,
+   "end": 78.91,
+   "section": "payoff"
+  },
+  {
+   "text": "that",
+   "start": 78.985,
+   "end": 79.135,
+   "section": "payoff"
+  },
+  {
+   "text": "never",
+   "start": 79.21,
+   "end": 79.485,
+   "section": "payoff"
+  },
+  {
+   "text": "slows",
+   "start": 79.56,
+   "end": 79.96,
+   "section": "payoff"
+  },
+  {
+   "text": "down.",
+   "start": 80.01,
+   "end": 80.407,
+   "section": "payoff"
+  }
+ ],
+ "duration": 82.607
+}

@@ -1,0 +1,43 @@
+1
+00:00:00,450 --> 00:00:05,875
+A flat white panel sits bolted to a roof, and it never turns to follow anything.
+
+2
+00:00:06,375 --> 00:00:14,624
+Yet the satellite it listens to crosses the sky at 27,000 km/h, and in a few minutes it will be gone.
+
+3
+00:00:15,224 --> 00:00:17,313
+So how does the panel keep up?
+
+4
+00:00:18,213 --> 00:00:25,153
+A motor would always be a step behind, so Starlink steers the signal itself, and a pond shows how.
+
+5
+00:00:26,053 --> 00:00:35,373
+Throw two stones into the water, and where their ripples cross, crest meets crest and the water jumps, while crest meets trough and it goes flat.
+
+6
+00:00:35,973 --> 00:00:42,282
+Then line up a whole row of stones and drop them together, and the ripples add up only straight ahead.
+
+7
+00:00:43,182 --> 00:00:49,221
+But let each stone land a split second after its neighbor, and the whole wave leans to one side.
+
+8
+00:00:49,721 --> 00:00:59,444
+The panel does that with radio waves, firing each tiny antenna trillionths of a second after its neighbor, so the beam tilts toward the satellite.
+
+9
+00:01:00,344 --> 00:01:10,512
+As the satellite crosses the sky, the delays shift a little at a time and the beam glides along, until the next satellite rises and the panel aims there.
+
+10
+00:01:11,412 --> 00:01:13,791
+So the only thing that moves is time.
+
+11
+00:01:14,591 --> 00:01:20,707
+And that is enough for a panel that never turns to keep up with a satellite that never slows down.

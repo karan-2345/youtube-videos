@@ -1,0 +1,223 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.709
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Cap,Inter ExtraBold,76,&H00FFFFFF,&H00FFFFFF,&H90000000,&H00000000,0,0,0,0,100,100,0,0,1,5,0,5,60,60,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.48,0:00:00.72,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}A {\c&HFFFFFF&}flat {\c&HFFFFFF&}white
+Dialogue: 0,0:00:00.72,0:00:01.09,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}A {\c&H48C0FC&}flat {\c&HFFFFFF&}white
+Dialogue: 0,0:00:01.09,0:00:01.31,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}A {\c&HFFFFFF&}flat {\c&H48C0FC&}white
+Dialogue: 0,0:00:01.33,0:00:01.89,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}panel {\c&HFFFFFF&}sits {\c&HFFFFFF&}bolted
+Dialogue: 0,0:00:01.89,0:00:02.22,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}panel {\c&H48C0FC&}sits {\c&HFFFFFF&}bolted
+Dialogue: 0,0:00:02.22,0:00:02.56,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}panel {\c&HFFFFFF&}sits {\c&H48C0FC&}bolted
+Dialogue: 0,0:00:02.58,0:00:02.79,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}to {\c&HFFFFFF&}a {\c&HFFFFFF&}roof,
+Dialogue: 0,0:00:02.79,0:00:02.89,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}to {\c&H48C0FC&}a {\c&HFFFFFF&}roof,
+Dialogue: 0,0:00:02.89,0:00:03.64,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}to {\c&HFFFFFF&}a {\c&H48C0FC&}roof,
+Dialogue: 0,0:00:03.66,0:00:03.82,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}and {\c&HFFFFFF&}it {\c&HFFFFFF&}never {\c&HFFFFFF&}turns
+Dialogue: 0,0:00:03.82,0:00:03.92,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}and {\c&H48C0FC&}it {\c&HFFFFFF&}never {\c&HFFFFFF&}turns
+Dialogue: 0,0:00:03.92,0:00:04.22,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}and {\c&HFFFFFF&}it {\c&H48C0FC&}never {\c&HFFFFFF&}turns
+Dialogue: 0,0:00:04.22,0:00:04.54,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}and {\c&HFFFFFF&}it {\c&HFFFFFF&}never {\c&H48C0FC&}turns
+Dialogue: 0,0:00:04.56,0:00:04.74,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}to {\c&HFFFFFF&}follow {\c&HFFFFFF&}anything.
+Dialogue: 0,0:00:04.74,0:00:05.07,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}to {\c&H48C0FC&}follow {\c&HFFFFFF&}anything.
+Dialogue: 0,0:00:05.07,0:00:06.03,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}to {\c&HFFFFFF&}follow {\c&H48C0FC&}anything.
+Dialogue: 0,0:00:06.42,0:00:06.70,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}Yet {\c&HFFFFFF&}the {\c&HFFFFFF&}satellite
+Dialogue: 0,0:00:06.70,0:00:06.88,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}Yet {\c&H48C0FC&}the {\c&HFFFFFF&}satellite
+Dialogue: 0,0:00:06.88,0:00:07.37,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}Yet {\c&HFFFFFF&}the {\c&H48C0FC&}satellite
+Dialogue: 0,0:00:07.39,0:00:07.60,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}it {\c&HFFFFFF&}listens {\c&HFFFFFF&}to {\c&HFFFFFF&}crosses
+Dialogue: 0,0:00:07.60,0:00:08.10,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}it {\c&H48C0FC&}listens {\c&HFFFFFF&}to {\c&HFFFFFF&}crosses
+Dialogue: 0,0:00:08.10,0:00:08.23,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}it {\c&HFFFFFF&}listens {\c&H48C0FC&}to {\c&HFFFFFF&}crosses
+Dialogue: 0,0:00:08.23,0:00:08.67,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}it {\c&HFFFFFF&}listens {\c&HFFFFFF&}to {\c&H48C0FC&}crosses
+Dialogue: 0,0:00:08.69,0:00:08.90,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}the {\c&HFFFFFF&}sky {\c&HFFFFFF&}at {\c&HFFFFFF&}27,000 km/h,
+Dialogue: 0,0:00:08.90,0:00:09.43,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}the {\c&H48C0FC&}sky {\c&HFFFFFF&}at {\c&HFFFFFF&}27,000 km/h,
+Dialogue: 0,0:00:09.43,0:00:09.58,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}the {\c&HFFFFFF&}sky {\c&H48C0FC&}at {\c&HFFFFFF&}27,000 km/h,
+Dialogue: 0,0:00:09.58,0:00:12.45,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}the {\c&HFFFFFF&}sky {\c&HFFFFFF&}at {\c&H48C0FC&}27,000 km/h,
+Dialogue: 0,0:00:12.47,0:00:12.63,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}and {\c&HFFFFFF&}in {\c&HFFFFFF&}a {\c&HFFFFFF&}few {\c&HFFFFFF&}minutes
+Dialogue: 0,0:00:12.63,0:00:12.70,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}and {\c&H48C0FC&}in {\c&HFFFFFF&}a {\c&HFFFFFF&}few {\c&HFFFFFF&}minutes
+Dialogue: 0,0:00:12.70,0:00:12.80,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}and {\c&HFFFFFF&}in {\c&H48C0FC&}a {\c&HFFFFFF&}few {\c&HFFFFFF&}minutes
+Dialogue: 0,0:00:12.80,0:00:13.00,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}and {\c&HFFFFFF&}in {\c&HFFFFFF&}a {\c&H48C0FC&}few {\c&HFFFFFF&}minutes
+Dialogue: 0,0:00:13.00,0:00:13.47,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}and {\c&HFFFFFF&}in {\c&HFFFFFF&}a {\c&HFFFFFF&}few {\c&H48C0FC&}minutes
+Dialogue: 0,0:00:13.49,0:00:13.65,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}it {\c&HFFFFFF&}will {\c&HFFFFFF&}be {\c&HFFFFFF&}gone.
+Dialogue: 0,0:00:13.65,0:00:13.78,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}it {\c&H48C0FC&}will {\c&HFFFFFF&}be {\c&HFFFFFF&}gone.
+Dialogue: 0,0:00:13.78,0:00:13.93,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}it {\c&HFFFFFF&}will {\c&H48C0FC&}be {\c&HFFFFFF&}gone.
+Dialogue: 0,0:00:13.93,0:00:14.77,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}it {\c&HFFFFFF&}will {\c&HFFFFFF&}be {\c&H48C0FC&}gone.
+Dialogue: 0,0:00:15.31,0:00:15.60,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}So {\c&HFFFFFF&}how {\c&HFFFFFF&}does
+Dialogue: 0,0:00:15.60,0:00:15.80,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}So {\c&H48C0FC&}how {\c&HFFFFFF&}does
+Dialogue: 0,0:00:15.80,0:00:15.89,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}So {\c&HFFFFFF&}how {\c&H48C0FC&}does
+Dialogue: 0,0:00:15.91,0:00:16.07,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}the {\c&HFFFFFF&}panel {\c&HFFFFFF&}keep {\c&HFFFFFF&}up?
+Dialogue: 0,0:00:16.07,0:00:16.47,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}the {\c&H48C0FC&}panel {\c&HFFFFFF&}keep {\c&HFFFFFF&}up?
+Dialogue: 0,0:00:16.47,0:00:16.75,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}the {\c&HFFFFFF&}panel {\c&H48C0FC&}keep {\c&HFFFFFF&}up?
+Dialogue: 0,0:00:16.75,0:00:17.46,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}the {\c&HFFFFFF&}panel {\c&HFFFFFF&}keep {\c&H48C0FC&}up?
+Dialogue: 0,0:00:18.25,0:00:18.44,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}A {\c&HFFFFFF&}motor
+Dialogue: 0,0:00:18.44,0:00:18.81,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}A {\c&H48C0FC&}motor
+Dialogue: 0,0:00:18.83,0:00:19.06,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}would {\c&HFFFFFF&}always {\c&HFFFFFF&}be
+Dialogue: 0,0:00:19.06,0:00:19.44,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}would {\c&H48C0FC&}always {\c&HFFFFFF&}be
+Dialogue: 0,0:00:19.44,0:00:19.46,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}would {\c&HFFFFFF&}always {\c&H48C0FC&}be
+Dialogue: 0,0:00:19.48,0:00:19.61,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}a {\c&HFFFFFF&}step {\c&HFFFFFF&}behind,
+Dialogue: 0,0:00:19.61,0:00:19.91,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}a {\c&H48C0FC&}step {\c&HFFFFFF&}behind,
+Dialogue: 0,0:00:19.91,0:00:20.81,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}a {\c&HFFFFFF&}step {\c&H48C0FC&}behind,
+Dialogue: 0,0:00:20.83,0:00:21.09,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}so {\c&HFFFFFF&}Starlink {\c&HFFFFFF&}steers
+Dialogue: 0,0:00:21.09,0:00:21.66,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}so {\c&H48C0FC&}Starlink {\c&HFFFFFF&}steers
+Dialogue: 0,0:00:21.66,0:00:22.03,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}so {\c&HFFFFFF&}Starlink {\c&H48C0FC&}steers
+Dialogue: 0,0:00:22.05,0:00:22.26,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}the {\c&HFFFFFF&}signal {\c&HFFFFFF&}itself,
+Dialogue: 0,0:00:22.26,0:00:22.64,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}the {\c&H48C0FC&}signal {\c&HFFFFFF&}itself,
+Dialogue: 0,0:00:22.64,0:00:23.43,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}the {\c&HFFFFFF&}signal {\c&H48C0FC&}itself,
+Dialogue: 0,0:00:23.45,0:00:23.61,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}and {\c&HFFFFFF&}a {\c&HFFFFFF&}pond
+Dialogue: 0,0:00:23.61,0:00:23.71,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}and {\c&H48C0FC&}a {\c&HFFFFFF&}pond
+Dialogue: 0,0:00:23.71,0:00:24.13,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}and {\c&HFFFFFF&}a {\c&H48C0FC&}pond
+Dialogue: 0,0:00:24.15,0:00:24.59,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}shows {\c&HFFFFFF&}how.
+Dialogue: 0,0:00:24.59,0:00:25.30,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}shows {\c&H48C0FC&}how.
+Dialogue: 0,0:00:26.14,0:00:26.63,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}Throw {\c&HFFFFFF&}two {\c&HFFFFFF&}stones
+Dialogue: 0,0:00:26.63,0:00:26.98,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}Throw {\c&H48C0FC&}two {\c&HFFFFFF&}stones
+Dialogue: 0,0:00:26.98,0:00:27.32,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}Throw {\c&HFFFFFF&}two {\c&H48C0FC&}stones
+Dialogue: 0,0:00:27.34,0:00:27.58,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}into {\c&HFFFFFF&}the {\c&HFFFFFF&}water,
+Dialogue: 0,0:00:27.58,0:00:27.68,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}into {\c&H48C0FC&}the {\c&HFFFFFF&}water,
+Dialogue: 0,0:00:27.68,0:00:28.42,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}into {\c&HFFFFFF&}the {\c&H48C0FC&}water,
+Dialogue: 0,0:00:28.44,0:00:28.60,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}and {\c&HFFFFFF&}where
+Dialogue: 0,0:00:28.60,0:00:28.67,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}and {\c&H48C0FC&}where
+Dialogue: 0,0:00:28.69,0:00:28.95,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}their {\c&HFFFFFF&}ripples {\c&HFFFFFF&}cross,
+Dialogue: 0,0:00:28.95,0:00:29.33,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}their {\c&H48C0FC&}ripples {\c&HFFFFFF&}cross,
+Dialogue: 0,0:00:29.33,0:00:30.07,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}their {\c&HFFFFFF&}ripples {\c&H48C0FC&}cross,
+Dialogue: 0,0:00:30.09,0:00:30.50,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}crest {\c&HFFFFFF&}meets {\c&HFFFFFF&}crest
+Dialogue: 0,0:00:30.50,0:00:30.80,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}crest {\c&H48C0FC&}meets {\c&HFFFFFF&}crest
+Dialogue: 0,0:00:30.80,0:00:31.22,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}crest {\c&HFFFFFF&}meets {\c&H48C0FC&}crest
+Dialogue: 0,0:00:31.24,0:00:31.40,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}and {\c&HFFFFFF&}the {\c&HFFFFFF&}water {\c&HFFFFFF&}jumps,
+Dialogue: 0,0:00:31.40,0:00:31.50,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}and {\c&H48C0FC&}the {\c&HFFFFFF&}water {\c&HFFFFFF&}jumps,
+Dialogue: 0,0:00:31.50,0:00:31.85,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}and {\c&HFFFFFF&}the {\c&H48C0FC&}water {\c&HFFFFFF&}jumps,
+Dialogue: 0,0:00:31.85,0:00:32.65,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}and {\c&HFFFFFF&}the {\c&HFFFFFF&}water {\c&H48C0FC&}jumps,
+Dialogue: 0,0:00:32.67,0:00:32.98,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}while {\c&HFFFFFF&}crest {\c&HFFFFFF&}meets {\c&HFFFFFF&}trough
+Dialogue: 0,0:00:32.98,0:00:33.38,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}while {\c&H48C0FC&}crest {\c&HFFFFFF&}meets {\c&HFFFFFF&}trough
+Dialogue: 0,0:00:33.38,0:00:33.65,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}while {\c&HFFFFFF&}crest {\c&H48C0FC&}meets {\c&HFFFFFF&}trough
+Dialogue: 0,0:00:33.65,0:00:34.07,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}while {\c&HFFFFFF&}crest {\c&HFFFFFF&}meets {\c&H48C0FC&}trough
+Dialogue: 0,0:00:34.09,0:00:34.25,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}and {\c&HFFFFFF&}it {\c&HFFFFFF&}goes {\c&HFFFFFF&}flat.
+Dialogue: 0,0:00:34.25,0:00:34.35,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}and {\c&H48C0FC&}it {\c&HFFFFFF&}goes {\c&HFFFFFF&}flat.
+Dialogue: 0,0:00:34.35,0:00:34.68,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}and {\c&HFFFFFF&}it {\c&H48C0FC&}goes {\c&HFFFFFF&}flat.
+Dialogue: 0,0:00:34.68,0:00:35.52,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}and {\c&HFFFFFF&}it {\c&HFFFFFF&}goes {\c&H48C0FC&}flat.
+Dialogue: 0,0:00:36.02,0:00:36.30,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}Then {\c&HFFFFFF&}line {\c&HFFFFFF&}up
+Dialogue: 0,0:00:36.30,0:00:36.55,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}Then {\c&H48C0FC&}line {\c&HFFFFFF&}up
+Dialogue: 0,0:00:36.55,0:00:36.65,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}Then {\c&HFFFFFF&}line {\c&H48C0FC&}up
+Dialogue: 0,0:00:36.67,0:00:36.88,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}a {\c&HFFFFFF&}whole {\c&HFFFFFF&}row
+Dialogue: 0,0:00:36.88,0:00:37.20,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}a {\c&H48C0FC&}whole {\c&HFFFFFF&}row
+Dialogue: 0,0:00:37.20,0:00:37.35,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}a {\c&HFFFFFF&}whole {\c&H48C0FC&}row
+Dialogue: 0,0:00:37.37,0:00:37.55,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}of {\c&HFFFFFF&}stones {\c&HFFFFFF&}and {\c&HFFFFFF&}drop
+Dialogue: 0,0:00:37.55,0:00:38.30,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}of {\c&H48C0FC&}stones {\c&HFFFFFF&}and {\c&HFFFFFF&}drop
+Dialogue: 0,0:00:38.30,0:00:38.43,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}of {\c&HFFFFFF&}stones {\c&H48C0FC&}and {\c&HFFFFFF&}drop
+Dialogue: 0,0:00:38.43,0:00:38.62,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}of {\c&HFFFFFF&}stones {\c&HFFFFFF&}and {\c&H48C0FC&}drop
+Dialogue: 0,0:00:38.64,0:00:38.85,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}them {\c&HFFFFFF&}together,
+Dialogue: 0,0:00:38.85,0:00:39.72,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}them {\c&H48C0FC&}together,
+Dialogue: 0,0:00:39.74,0:00:39.91,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}and {\c&HFFFFFF&}the {\c&HFFFFFF&}ripples
+Dialogue: 0,0:00:39.91,0:00:40.01,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}and {\c&H48C0FC&}the {\c&HFFFFFF&}ripples
+Dialogue: 0,0:00:40.01,0:00:40.42,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}and {\c&HFFFFFF&}the {\c&H48C0FC&}ripples
+Dialogue: 0,0:00:40.45,0:00:40.70,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}add {\c&HFFFFFF&}up
+Dialogue: 0,0:00:40.70,0:00:40.87,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}add {\c&H48C0FC&}up
+Dialogue: 0,0:00:40.89,0:00:41.28,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}only {\c&HFFFFFF&}straight {\c&HFFFFFF&}ahead.
+Dialogue: 0,0:00:41.28,0:00:41.58,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}only {\c&H48C0FC&}straight {\c&HFFFFFF&}ahead.
+Dialogue: 0,0:00:41.58,0:00:42.43,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}only {\c&HFFFFFF&}straight {\c&H48C0FC&}ahead.
+Dialogue: 0,0:00:43.17,0:00:43.38,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}But {\c&HFFFFFF&}let
+Dialogue: 0,0:00:43.38,0:00:43.55,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}But {\c&H48C0FC&}let
+Dialogue: 0,0:00:43.57,0:00:43.93,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}each {\c&HFFFFFF&}stone {\c&HFFFFFF&}land
+Dialogue: 0,0:00:43.93,0:00:44.36,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}each {\c&H48C0FC&}stone {\c&HFFFFFF&}land
+Dialogue: 0,0:00:44.36,0:00:44.55,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}each {\c&HFFFFFF&}stone {\c&H48C0FC&}land
+Dialogue: 0,0:00:44.57,0:00:44.73,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}a {\c&HFFFFFF&}split {\c&HFFFFFF&}second
+Dialogue: 0,0:00:44.73,0:00:45.11,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}a {\c&H48C0FC&}split {\c&HFFFFFF&}second
+Dialogue: 0,0:00:45.11,0:00:45.40,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}a {\c&HFFFFFF&}split {\c&H48C0FC&}second
+Dialogue: 0,0:00:45.42,0:00:45.76,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}after {\c&HFFFFFF&}its {\c&HFFFFFF&}neighbor,
+Dialogue: 0,0:00:45.76,0:00:45.96,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}after {\c&H48C0FC&}its {\c&HFFFFFF&}neighbor,
+Dialogue: 0,0:00:45.96,0:00:46.70,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}after {\c&HFFFFFF&}its {\c&H48C0FC&}neighbor,
+Dialogue: 0,0:00:46.72,0:00:46.88,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}and {\c&HFFFFFF&}the {\c&HFFFFFF&}whole
+Dialogue: 0,0:00:46.88,0:00:47.01,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}and {\c&H48C0FC&}the {\c&HFFFFFF&}whole
+Dialogue: 0,0:00:47.01,0:00:47.18,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}and {\c&HFFFFFF&}the {\c&H48C0FC&}whole
+Dialogue: 0,0:00:47.20,0:00:47.71,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}wave {\c&HFFFFFF&}leans
+Dialogue: 0,0:00:47.71,0:00:48.05,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}wave {\c&H48C0FC&}leans
+Dialogue: 0,0:00:48.07,0:00:48.26,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}to {\c&HFFFFFF&}one {\c&HFFFFFF&}side.
+Dialogue: 0,0:00:48.26,0:00:48.51,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}to {\c&H48C0FC&}one {\c&HFFFFFF&}side.
+Dialogue: 0,0:00:48.51,0:00:49.37,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}to {\c&HFFFFFF&}one {\c&H48C0FC&}side.
+Dialogue: 0,0:00:49.73,0:00:49.89,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}The {\c&HFFFFFF&}panel {\c&HFFFFFF&}does
+Dialogue: 0,0:00:49.89,0:00:50.31,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}The {\c&H48C0FC&}panel {\c&HFFFFFF&}does
+Dialogue: 0,0:00:50.31,0:00:50.46,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}The {\c&HFFFFFF&}panel {\c&H48C0FC&}does
+Dialogue: 0,0:00:50.48,0:00:50.81,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}that {\c&HFFFFFF&}with {\c&HFFFFFF&}radio {\c&HFFFFFF&}waves,
+Dialogue: 0,0:00:50.81,0:00:51.04,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}that {\c&H48C0FC&}with {\c&HFFFFFF&}radio {\c&HFFFFFF&}waves,
+Dialogue: 0,0:00:51.04,0:00:51.54,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}that {\c&HFFFFFF&}with {\c&H48C0FC&}radio {\c&HFFFFFF&}waves,
+Dialogue: 0,0:00:51.54,0:00:52.46,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}that {\c&HFFFFFF&}with {\c&HFFFFFF&}radio {\c&H48C0FC&}waves,
+Dialogue: 0,0:00:52.48,0:00:53.11,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}firing {\c&HFFFFFF&}each {\c&HFFFFFF&}tiny
+Dialogue: 0,0:00:53.11,0:00:53.51,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}firing {\c&H48C0FC&}each {\c&HFFFFFF&}tiny
+Dialogue: 0,0:00:53.51,0:00:53.93,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}firing {\c&HFFFFFF&}each {\c&H48C0FC&}tiny
+Dialogue: 0,0:00:53.95,0:00:54.49,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}antenna {\c&HFFFFFF&}trillionths
+Dialogue: 0,0:00:54.49,0:00:54.91,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}antenna {\c&H48C0FC&}trillionths
+Dialogue: 0,0:00:54.93,0:00:55.06,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}of {\c&HFFFFFF&}a {\c&HFFFFFF&}second
+Dialogue: 0,0:00:55.06,0:00:55.19,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}of {\c&H48C0FC&}a {\c&HFFFFFF&}second
+Dialogue: 0,0:00:55.19,0:00:55.56,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}of {\c&HFFFFFF&}a {\c&H48C0FC&}second
+Dialogue: 0,0:00:55.58,0:00:55.94,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}after {\c&HFFFFFF&}its {\c&HFFFFFF&}neighbor,
+Dialogue: 0,0:00:55.94,0:00:56.14,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}after {\c&H48C0FC&}its {\c&HFFFFFF&}neighbor,
+Dialogue: 0,0:00:56.14,0:00:57.01,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}after {\c&HFFFFFF&}its {\c&H48C0FC&}neighbor,
+Dialogue: 0,0:00:57.03,0:00:57.26,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}so {\c&HFFFFFF&}the {\c&HFFFFFF&}beam {\c&HFFFFFF&}tilts
+Dialogue: 0,0:00:57.26,0:00:57.41,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}so {\c&H48C0FC&}the {\c&HFFFFFF&}beam {\c&HFFFFFF&}tilts
+Dialogue: 0,0:00:57.41,0:00:57.79,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}so {\c&HFFFFFF&}the {\c&H48C0FC&}beam {\c&HFFFFFF&}tilts
+Dialogue: 0,0:00:57.79,0:00:58.13,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}so {\c&HFFFFFF&}the {\c&HFFFFFF&}beam {\c&H48C0FC&}tilts
+Dialogue: 0,0:00:58.15,0:00:58.46,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}toward {\c&HFFFFFF&}the {\c&HFFFFFF&}satellite.
+Dialogue: 0,0:00:58.46,0:00:58.59,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}toward {\c&H48C0FC&}the {\c&HFFFFFF&}satellite.
+Dialogue: 0,0:00:58.59,0:00:59.59,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}toward {\c&HFFFFFF&}the {\c&H48C0FC&}satellite.
+Dialogue: 0,0:01:00.36,0:01:00.65,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}As {\c&HFFFFFF&}the {\c&HFFFFFF&}satellite
+Dialogue: 0,0:01:00.65,0:01:00.82,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}As {\c&H48C0FC&}the {\c&HFFFFFF&}satellite
+Dialogue: 0,0:01:00.82,0:01:01.29,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}As {\c&HFFFFFF&}the {\c&H48C0FC&}satellite
+Dialogue: 0,0:01:01.31,0:01:01.84,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}crosses {\c&HFFFFFF&}the {\c&HFFFFFF&}sky,
+Dialogue: 0,0:01:01.84,0:01:01.97,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}crosses {\c&H48C0FC&}the {\c&HFFFFFF&}sky,
+Dialogue: 0,0:01:01.97,0:01:02.74,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}crosses {\c&HFFFFFF&}the {\c&H48C0FC&}sky,
+Dialogue: 0,0:01:02.76,0:01:02.92,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}the {\c&HFFFFFF&}delays {\c&HFFFFFF&}shift
+Dialogue: 0,0:01:02.92,0:01:03.55,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}the {\c&H48C0FC&}delays {\c&HFFFFFF&}shift
+Dialogue: 0,0:01:03.55,0:01:03.71,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}the {\c&HFFFFFF&}delays {\c&H48C0FC&}shift
+Dialogue: 0,0:01:03.73,0:01:03.87,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}a {\c&HFFFFFF&}little
+Dialogue: 0,0:01:03.87,0:01:04.02,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}a {\c&H48C0FC&}little
+Dialogue: 0,0:01:04.03,0:01:04.17,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}at {\c&HFFFFFF&}a {\c&HFFFFFF&}time
+Dialogue: 0,0:01:04.17,0:01:04.30,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}at {\c&H48C0FC&}a {\c&HFFFFFF&}time
+Dialogue: 0,0:01:04.30,0:01:04.84,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}at {\c&HFFFFFF&}a {\c&H48C0FC&}time
+Dialogue: 0,0:01:04.86,0:01:05.02,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}and {\c&HFFFFFF&}the {\c&HFFFFFF&}beam
+Dialogue: 0,0:01:05.02,0:01:05.14,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}and {\c&H48C0FC&}the {\c&HFFFFFF&}beam
+Dialogue: 0,0:01:05.14,0:01:05.44,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}and {\c&HFFFFFF&}the {\c&H48C0FC&}beam
+Dialogue: 0,0:01:05.46,0:01:05.92,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}glides {\c&HFFFFFF&}along,
+Dialogue: 0,0:01:05.92,0:01:06.81,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}glides {\c&H48C0FC&}along,
+Dialogue: 0,0:01:06.83,0:01:07.14,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}until {\c&HFFFFFF&}the {\c&HFFFFFF&}next
+Dialogue: 0,0:01:07.14,0:01:07.25,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}until {\c&H48C0FC&}the {\c&HFFFFFF&}next
+Dialogue: 0,0:01:07.25,0:01:07.54,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}until {\c&HFFFFFF&}the {\c&H48C0FC&}next
+Dialogue: 0,0:01:07.56,0:01:08.12,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}satellite {\c&HFFFFFF&}rises
+Dialogue: 0,0:01:08.12,0:01:08.84,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}satellite {\c&H48C0FC&}rises
+Dialogue: 0,0:01:08.86,0:01:09.02,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}and {\c&HFFFFFF&}the {\c&HFFFFFF&}panel
+Dialogue: 0,0:01:09.02,0:01:09.12,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}and {\c&H48C0FC&}the {\c&HFFFFFF&}panel
+Dialogue: 0,0:01:09.12,0:01:09.47,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}and {\c&HFFFFFF&}the {\c&H48C0FC&}panel
+Dialogue: 0,0:01:09.48,0:01:09.92,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}aims {\c&HFFFFFF&}there.
+Dialogue: 0,0:01:09.92,0:01:10.66,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}aims {\c&H48C0FC&}there.
+Dialogue: 0,0:01:11.48,0:01:11.64,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}So {\c&HFFFFFF&}the {\c&HFFFFFF&}only {\c&HFFFFFF&}thing
+Dialogue: 0,0:01:11.64,0:01:11.79,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}So {\c&H48C0FC&}the {\c&HFFFFFF&}only {\c&HFFFFFF&}thing
+Dialogue: 0,0:01:11.79,0:01:12.09,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}So {\c&HFFFFFF&}the {\c&H48C0FC&}only {\c&HFFFFFF&}thing
+Dialogue: 0,0:01:12.09,0:01:12.24,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}So {\c&HFFFFFF&}the {\c&HFFFFFF&}only {\c&H48C0FC&}thing
+Dialogue: 0,0:01:12.26,0:01:12.49,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}that {\c&HFFFFFF&}moves {\c&HFFFFFF&}is {\c&HFFFFFF&}time.
+Dialogue: 0,0:01:12.49,0:01:12.89,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}that {\c&H48C0FC&}moves {\c&HFFFFFF&}is {\c&HFFFFFF&}time.
+Dialogue: 0,0:01:12.89,0:01:13.07,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}that {\c&HFFFFFF&}moves {\c&H48C0FC&}is {\c&HFFFFFF&}time.
+Dialogue: 0,0:01:13.07,0:01:13.94,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}that {\c&HFFFFFF&}moves {\c&HFFFFFF&}is {\c&H48C0FC&}time.
+Dialogue: 0,0:01:14.60,0:01:14.86,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}And {\c&HFFFFFF&}that {\c&HFFFFFF&}is {\c&HFFFFFF&}enough
+Dialogue: 0,0:01:14.86,0:01:15.14,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}And {\c&H48C0FC&}that {\c&HFFFFFF&}is {\c&HFFFFFF&}enough
+Dialogue: 0,0:01:15.14,0:01:15.28,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}And {\c&HFFFFFF&}that {\c&H48C0FC&}is {\c&HFFFFFF&}enough
+Dialogue: 0,0:01:15.28,0:01:15.53,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}And {\c&HFFFFFF&}that {\c&HFFFFFF&}is {\c&H48C0FC&}enough
+Dialogue: 0,0:01:15.55,0:01:15.71,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}for {\c&HFFFFFF&}a {\c&HFFFFFF&}panel
+Dialogue: 0,0:01:15.71,0:01:15.78,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}for {\c&H48C0FC&}a {\c&HFFFFFF&}panel
+Dialogue: 0,0:01:15.78,0:01:16.36,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}for {\c&HFFFFFF&}a {\c&H48C0FC&}panel
+Dialogue: 0,0:01:16.38,0:01:16.69,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}that {\c&HFFFFFF&}never {\c&HFFFFFF&}turns
+Dialogue: 0,0:01:16.69,0:01:16.98,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}that {\c&H48C0FC&}never {\c&HFFFFFF&}turns
+Dialogue: 0,0:01:16.98,0:01:17.31,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}that {\c&HFFFFFF&}never {\c&H48C0FC&}turns
+Dialogue: 0,0:01:17.33,0:01:17.48,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}to {\c&HFFFFFF&}keep {\c&HFFFFFF&}up
+Dialogue: 0,0:01:17.48,0:01:17.71,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}to {\c&H48C0FC&}keep {\c&HFFFFFF&}up
+Dialogue: 0,0:01:17.71,0:01:17.81,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}to {\c&HFFFFFF&}keep {\c&H48C0FC&}up
+Dialogue: 0,0:01:17.83,0:01:18.01,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}with {\c&HFFFFFF&}a {\c&HFFFFFF&}satellite
+Dialogue: 0,0:01:18.01,0:01:18.14,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}with {\c&H48C0FC&}a {\c&HFFFFFF&}satellite
+Dialogue: 0,0:01:18.14,0:01:18.91,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}with {\c&HFFFFFF&}a {\c&H48C0FC&}satellite
+Dialogue: 0,0:01:18.92,0:01:19.21,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\fscx90\fscy90\t(0,110,\fscx100\fscy100)}{\c&H48C0FC&}that {\c&HFFFFFF&}never {\c&HFFFFFF&}slows {\c&HFFFFFF&}down.
+Dialogue: 0,0:01:19.21,0:01:19.56,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}that {\c&H48C0FC&}never {\c&HFFFFFF&}slows {\c&HFFFFFF&}down.
+Dialogue: 0,0:01:19.56,0:01:20.01,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}that {\c&HFFFFFF&}never {\c&H48C0FC&}slows {\c&HFFFFFF&}down.
+Dialogue: 0,0:01:20.01,0:01:20.86,Cap,,0,0,0,,{\pos(540,1380)\blur7}{\c&HFFFFFF&}that {\c&HFFFFFF&}never {\c&HFFFFFF&}slows {\c&H48C0FC&}down.

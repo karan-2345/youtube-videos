@@ -1,0 +1,7 @@
+.venv/
+web/node_modules/
+renders/
+audio/
+assets/models/
+logs/
+__pycache__/
