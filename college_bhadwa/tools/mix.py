@@ -166,8 +166,10 @@ def main():
     with wave.open(master, "wb") as w:
         w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR); w.writeframes(pcm.tobytes())
 
-    out = os.path.join(ROOT, "final/college_bhadwa_demo.mp4")
-    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", os.path.join(ROOT, "renders/video.mp4"), "-i", master,
+    # python tools/mix.py [renders/<video>.mp4 final/<out>.mp4]
+    video = os.path.join(ROOT, sys.argv[1] if len(sys.argv) > 2 else "renders/video.mp4")
+    out = os.path.join(ROOT, sys.argv[2] if len(sys.argv) > 2 else "final/college_bhadwa_demo.mp4")
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", video, "-i", master,
                     "-af", "loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000", "-ac", "2",
                     "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", out],
                    check=True)
