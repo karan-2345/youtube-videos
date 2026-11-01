@@ -1,0 +1,5 @@
+node_modules/
+.venv/
+models/
+out/*.png
+out/stills/
