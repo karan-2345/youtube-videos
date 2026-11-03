@@ -3,8 +3,11 @@ frames/full/seg0.mp4                0       0      330
 frames/patches/p_330_420.mp4        0       330    420
 frames/full/seg0.mp4                420     420    2308
 frames/full/seg1.mp4                0       2308   3908
-frames/full2/s_3908_4591.mp4        0       3908   4591
-frames/full2/s_4591_5274.mp4        0       4591   5274
+frames/full2/s_3908_4591.mp4        0       3908   4508
+frames/full2/s_4508_4591.mp4        0       4508   4591
+frames/full2/s_4591_5274.mp4        0       4591   5191
+frames/full2/s_5191_5274.mp4        0       5191   5274
 frames/full2/s_5274_6099.mp4        0       5274   6099
 frames/full2/s_6099_6924.mp4        0       6099   6924
-frames/full/seg3.mp4                0       6924   9232
+frames/full/seg3_fixed.mp4          0       6924   9053
+frames/patches/p_9053_9232.mp4      0       9053   9232
