@@ -20,7 +20,12 @@ frames/patches/p_6353_6496.mp4      90      6443   6496
 frames/patches/p_6496_6639.mp4      0       6496   6639
 frames/patches/p_6639_6782.mp4      0       6639   6782
 frames/patches/p_6782_6924.mp4      0       6782   6924
-frames/full/seg3_fixed.mp4          0       6924   7350
+frames/full/seg3_fixed.mp4          0       6924   6962
+frames/patches/k_6962_7009.mp4      0       6962   7009
+frames/patches/k_7009_7056.mp4      0       7009   7056
+frames/patches/k_7056_7103.mp4      0       7056   7103
+frames/patches/k_7103_7150.mp4      0       7103   7150
+frames/full/seg3_fixed.mp4          226     7150   7350
 frames/patches/r_7350_7395.mp4      0       7350   7395
 frames/full/seg3_fixed.mp4          471     7395   8318
 frames/patches/r_8318_8332.mp4      0       8318   8332

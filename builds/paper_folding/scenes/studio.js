@@ -61,6 +61,7 @@ export class Studio {
     this.spot.position.set(...lp); this.spot.target.position.set(tg[0], 0, tg[2]);
     this.spot.shadow.camera.near = 0.3 * ls; this.spot.shadow.camera.far = 6 * ls; this.spot.shadow.camera.updateProjectionMatrix();
     for (const l of [this.lineA, this.lineB]) l.material.resolution.set(1080, 1920);
+    c.updateMatrixWorld();
     if (window.DRY) return;
     this.R.setViewport(0, 0, 1080, 1920);
     this.R.render(this.scene, c);
@@ -315,7 +316,8 @@ export class Studio {
         view = { target: tA.map((v, i) => lerp(v, tB[i], bl)), D, az: -Math.PI / 2 + 0.06 + 0.5 * (1 - bl), el: keyed(t, [[tC0, 0.75], [t2011 + 0.2, 1.3]]), shiftY: 150 * (1 - ramp(t, tC0, tC0 + 1.2)) };
         this.render(view, { lampScale: Math.max(1, D / 1.2) });
         const pA = this.screen([xA, 0, off]), pB = this.screen([xB, 0, -off]);
-        T.put(lA, `${String(L0 / 1000).replace(/\.0$/, '')} km`, { x: pA.x + 105, y: pA.y, op: win(t, tC0 + 0.6, CUT[5] + 1) });
+        window.__pAy = pA.y;
+        T.put(lA, `${String(L0 / 1000).replace(/\.0$/, '')} km`, { x: pA.x + 105, y: Math.min(pA.y, 1470), op: win(t, tC0 + 0.6, CUT[5] + 1) });
         T.put(lB, `${commas(L16 / 1000)} km`, { x: pB.x - 95, y: pB.y, op: win(t, t16 - 0.2, CUT[5] + 1) });
         T.put(yr2, String(F.YEAR_2011), { y: 400, op: win(t, t2011 - 0.1, CUT[5] + 1) });
         T.put(more, `<span style="color:${PAL.accent}">${F.FOLDS_2011}</span> FOLDS`, { y: 580, op: win(t, tMore, CUT[5] + 1) });
