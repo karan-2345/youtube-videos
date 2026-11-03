@@ -7,3 +7,5 @@ renders/
 audio/
 *.wav
 !final.mp4
+stills/t*/
+stills/test/
