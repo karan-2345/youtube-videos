@@ -50,6 +50,14 @@ export function anchors(sentences) {
   };
 }
 
+// ------------------------------------------------------------------ sound cues: recorded from the same timeline in a dry pass
+// cue(channel, value, t): when a channel's value changes, the sound sheet gets a row (tools/cues.js -> cache/cues.json).
+const _last = {};
+export function cue(ch, value, t) {
+  if (!window.DRY) return;
+  if (_last[ch] !== value) { if (_last[ch] !== undefined) (window.__cues ||= []).push([+t.toFixed(4), ch, value]); _last[ch] = value; }
+}
+
 // ------------------------------------------------------------------ numbers (all values arrive from data.json)
 export const commas = (n) => Math.round(n).toLocaleString('en-US');
 export function sig(n, k = 3) { const p = Math.pow(10, Math.floor(Math.log10(Math.abs(n))) - k + 1); return Math.round(n / p) * p; }

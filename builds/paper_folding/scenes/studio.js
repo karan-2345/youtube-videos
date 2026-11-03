@@ -3,7 +3,7 @@ import * as THREE from 'three';
 import { Line2 } from 'three/addons/lines/Line2.js';
 import { LineGeometry } from 'three/addons/lines/LineGeometry.js';
 import { LineMaterial } from 'three/addons/lines/LineMaterial.js';
-import { PAL, ease, ramp, keyed, win, lerp, clamp01, commas, length, floorTexture, layerTexture, Folder, person, roll } from './lib.js';
+import { PAL, ease, ramp, keyed, win, lerp, clamp01, commas, length, floorTexture, layerTexture, Folder, person, roll, cue } from './lib.js';
 
 export class Studio {
   constructor(renderer, F, env) {
@@ -59,6 +59,7 @@ export class Studio {
     this.spot.position.set(...lp); this.spot.target.position.set(tg[0], 0, tg[2]);
     this.spot.shadow.camera.near = 0.3 * ls; this.spot.shadow.camera.far = 6 * ls; this.spot.shadow.camera.updateProjectionMatrix();
     for (const l of [this.lineA, this.lineB]) l.material.resolution.set(1080, 1920);
+    if (window.DRY) return;
     this.R.setViewport(0, 0, 1080, 1920);
     this.R.render(this.scene, c);
   }
@@ -133,6 +134,7 @@ export class Studio {
       const el = keyed(t, [[t0, 0.98], [t7 + 0.4, 0.55], [CUT[2], 0.5]]);
       this.render({ target: [c[0], c[1], c[2]], D, az, el });
       const k = Math.floor(f + 1e-6);
+      cue('s01fold', Math.floor(f + 0.35), t); cue('s01strain', tryU > 0.3 ? 1 : 0, t);
       const op = win(t, tA + 0.62 * dt - 0.1, t2001 - 0.2, 0.25, 0.4);
       T.put(big, commas(Math.pow(2, k)), { y: 400, op });
       big.style.color = k >= 7 ? PAL.accent : PAL.ink;
@@ -165,6 +167,7 @@ export class Studio {
       const el = keyed(t, [[t0, 1.05], [tF0 + 12 * dt, 0.62], [CUT[3], 0.55]]);
       this.render({ target: [c[0], c[1], c[2]], D, az, el }, { lampScale: Math.max(0.05, D / 0.9) });
       const k = Math.floor(f + 1e-6);
+      cue('s02fold', Math.floor(f + 0.35), t);
       const op = win(t, tF0 + 0.5 * dt, tMis - 0.3, 0.25, 0.4);
       T.put(big, String(k), { y: 400, op });
       big.style.color = k >= 12 ? PAL.accent : PAL.ink;
@@ -177,6 +180,7 @@ export class Studio {
       T.put(l1b, `FOLD <span style="color:${PAL.accent}">PAPER</span>`, { y: 700 - 50 * swap + 50, op: opL * swap });
       T.put(l2, `IN HALF ${this.F.FOLDS_GOAL} TIMES`, { y: 680 + 140 * swap, op: opL });
       const sU = ramp(t, tMis, tMis + 0.45, ease.out);
+      cue('s02strike', sU > 0 ? 1 : 0, t); cue('s02swap', swap > 0.05 ? 1 : 0, t);
       if (opL > 0.01 && sU > 0) {
         // the strike sits over "SOMETHING" (the right part of line 1)
         const w = l1._w, x0 = 540 - w / 2 + w * 0.36, x1 = 540 + w / 2;
@@ -222,6 +226,7 @@ export class Studio {
       this.render({ target: [tx, keyed(t, [[t0, 0.05], [sStart, 0.05], [tEnd, 0.0]]), 0.05], D, az: keyed(t, [[t0, 0.18], [CUT[4], 0.05]]), el },
         { lampScale: Math.max(1, D / 0.7) });
       const step = Math.round(Math.log(mult) / Math.log(4));
+      cue('s03step', step, t); cue('s03glow', (glowAll > 0.5 ? 1 : 0) + (glowNew > 0.5 ? 2 : 0), t);
       const op = win(t, sStart - 0.2, CUT[4] + 1, 0.3, 0.3);
       T.put(big, `${commas(Math.pow(4, step))}×`, { y: 400, op });
       big.style.color = step >= 3 ? PAL.accent : PAL.ink;
@@ -281,6 +286,7 @@ export class Studio {
         this.lineA.geometry.setPositions([0, 0.0003 * view.D, 0, b, 0.0003 * view.D, 0]); this.lineA.material.linewidth = 4;
         this.render(view, { lampScale: Math.max(1, view.D / 1.2) });
         const kk = Math.floor(fk + 1e-6);
+        cue('s04fold', kk, t);
         T.put(big, String(kk), { y: 400, op: win(t, tF0 + 0.2, tC0, 0.25, 0.3) });
         big.style.color = kk >= 12 ? PAL.accent : PAL.ink;
         T.put(lbl, kk === 1 ? 'FOLD' : 'FOLDS', { y: 560, op: win(t, tF0 + 0.2, tC0, 0.25, 0.3) });
@@ -292,6 +298,7 @@ export class Studio {
         const grow = ramp(t, t16 - 1.2, t16 + 0.5, ease.inOut);
         const xA = keyed(t, [[tC0, 0.3], [t2011, L0]], { log: true });
         const xB = keyed(t, [[t2011 + 0.2, 1], [t16 + 0.6, L16]], { log: true });
+        cue('s04bar', t > t2011 + 0.2 ? 1 : 0, t);
         const D = keyed(t, [[tC0, 5.5], [t2011 + 0.2, 1.3 * L0], [t16 + 0.9, 2.1 * L16], [CUT[5], 2.2 * L16]], { log: true });
         const off = Math.max(D * 0.012, 0.25);
         this.lineA.geometry.setPositions([0, 0.002, off, xA, 0.002, off]); this.lineA.material.opacity = 1; this.lineA.material.linewidth = 10;

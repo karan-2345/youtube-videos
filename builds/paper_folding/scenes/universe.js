@@ -241,10 +241,11 @@ export class Universe {
 
     const fogOn = 1 - ramp(Math.log10(D), 1.3, 1.8);
     this.scene.fog.near = fogOn > 0 ? 1.7 / fogOn : 1e9; this.scene.fog.far = fogOn > 0 ? 5.5 / fogOn : 2e9;
+    this.view = { eye, k, vp, cam };
+    if (window.DRY) return;
     renderer.setViewport(...vp); renderer.setScissor(...vp); renderer.setScissorTest(true);
     renderer.render(this.scene, cam);
     renderer.setScissorTest(false);
-    this.view = { eye, k, vp, cam };
   }
 
   /** Screen position (CSS pixels, top-left origin) of a world point, after render(). */

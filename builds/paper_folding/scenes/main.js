@@ -3,7 +3,7 @@
 // narration (cache/data.json); every number on screen is formatted from data.json (config/facts.py) or from the same
 // formulas evaluated at the fold being shown.
 import * as THREE from 'three';
-import { PAL, W, H, ease, ramp, keyed, win, lerp, clamp01, anchors, commas, sig, length, Type } from './lib.js';
+import { PAL, W, H, ease, ramp, keyed, win, lerp, clamp01, anchors, commas, sig, length, Type, cue } from './lib.js';
 import { Universe } from './universe.js';
 import { Studio } from './studio.js';
 
@@ -106,6 +106,7 @@ function shotHook({ at, U, T, F, CUT, renderer }) {
     U.render(renderer, view);
     // ---- type
     const nShown = Math.floor(n + 1e-6);
+    cue('s00fold', n <= 7 ? Math.floor(n + 0.35) : nShown, t); cue('s00strip', t > tStrip ? 1 : 0, t); cue('s00galaxy', view.D > 1e20 ? 1 : 0, t);
     const opCount = win(t, tFold0 - 0.2, tStrip + 0.1, 0.3, 0.3);
     T.put(big, String(nShown), { y: 400, op: opCount });
     big.style.color = nShown >= 42 ? PAL.accent : PAL.ink;
@@ -113,7 +114,7 @@ function shotHook({ at, U, T, F, CUT, renderer }) {
     const [hv, hu] = length(U.stack(nShown));
     T.put(sub, `${hv} ${hu}`, { y: 680, op: opCount * ramp(t, tFold0 + 0.2, tFold0 + 0.6) });
     const mp = U.screen(U.P.moon);
-    T.put(moonL, 'Moon', { x: mp.x - 90, y: mp.y, op: win(t, tMoon - 0.9, tStrip + 1.6) * (mp.front ? 1 : 0) * clamp01(2 - Math.abs(Math.log10(view.D) - 9.3)) });
+    T.put(moonL, 'Moon', { x: mp.x - 90, y: mp.y, op: win(t, tMoon - 0.9, tStrip + 1.6) * (mp.front ? 1 : 0) * clamp01(2 - Math.abs(Math.log10(view.D) - 9.3)) * clamp01((mp.y - 760) / 80) });
     const sp = U.screen(U.P.sun);
     T.put(sunL, 'Sun', { x: sp.x + 80, y: sp.y, op: sp.front ? clamp01(1.2 - Math.abs(Math.log10(view.D) - 11.9) / 1.2) : 0 });
     const L = U.state.strip;
@@ -148,6 +149,7 @@ function shotBack({ at, U, T, F, CUT, data, renderer }) {
   return (t) => {
     if (t < tSplitEnd) {
       const n = nAt(t), h = U.stack(n), L = U.gallivan(n);
+      cue('s05fold', Math.floor(n + 1e-6), t);
       const lgh = Math.log10(h), lgL = Math.log10(L);
       // left: the stack, seen from the side; right: the strip, measured straight up beside it (same world, same scale rule)
       U.state = { n, strip: 0, cloud: 1, end: 0, lamp: 0.6, stackLine: 1 };
@@ -191,6 +193,7 @@ function shotBack({ at, U, T, F, CUT, data, renderer }) {
               az: lerp(vB.az, OPEN.az, u), el: lerp(vB.el, OPEN.el, u), fov: 34 };
         if (t >= tBack1) { v = { ...OPEN }; }   // the props stay where they are, out of this frame
       }
+      cue('s05end', t >= tBack0 ? 2 : 1, t);
       U.render(renderer, v);
     }
   };

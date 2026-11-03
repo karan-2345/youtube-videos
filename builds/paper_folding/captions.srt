@@ -1,0 +1,55 @@
+1
+00:00:00,600 --> 00:00:12,510
+If you could fold a normal sheet of paper in half just 42 times, the stack would reach the Moon, but to make those folds you'd need a strip of paper about as long as the whole Milky Way is wide.
+
+2
+00:00:12,910 --> 00:00:21,788
+And we know that because of a formula worked out by a high school student, who then went and broke the rule everyone had been repeating about folding paper.
+
+3
+00:00:22,588 --> 00:00:36,903
+Because for years people said that paper can't be folded more than seven times, and if you try it with an office sheet you'll see why it feels true, since after seven folds you're pushing against a stiff little block that's 128 layers thick.
+
+4
+00:00:37,303 --> 00:00:46,314
+So it looked like a law of nature, until a teacher in California challenged a class in 2001 to fold something in half 12 times.
+
+5
+00:00:47,114 --> 00:00:55,553
+Then one of those students, Britney Gallivan, took the word "something" literally and did it with gold foil, thinner than the wavelength of visible light.
+
+6
+00:00:55,953 --> 00:01:04,732
+But her teacher said he'd misspoken and that he meant paper, so instead of just trying harder, she sat down and worked out what really stops a fold.
+
+7
+00:01:05,532 --> 00:01:16,236
+And what really stops you is the curve rather than your strength, because every fold has to wrap the outer layers around the inner ones, and the paper in that bend is paper you can't use.
+
+8
+00:01:16,636 --> 00:01:27,496
+So when the stack gets twice as thick, the bend gets twice as big and twice as many layers have to go around it, which means each new fold needs about four times as much paper.
+
+9
+00:01:28,296 --> 00:01:40,665
+Once she had her formula, she could work out the length she needed, so in January 2002 she took a single roll of toilet paper about 1.2 kilometres long and laid it out along the floor.
+
+10
+00:01:41,065 --> 00:01:47,600
+And after about eight hours of crawling along it, she made fold number 12, and the seven-fold rule was finished.
+
+11
+00:01:48,000 --> 00:01:58,753
+Even so, the wall only moves slowly, because when a school team tried again in 2011, they got one more fold using about 16 kilometres of paper taped together.
+
+12
+00:01:59,553 --> 00:02:06,891
+Which brings us back to those 42 folds, because if you put them into her formula, the numbers come apart almost straight away.
+
+13
+00:02:07,291 --> 00:02:20,851
+For example, by fold 22 the stack is only about as tall as a skyscraper, but the strip you need is already longer than the distance to the Moon, and by fold 42 it stretches about 100,000 light years.
+
+14
+00:02:21,251 --> 00:02:32,865
+So the stack would reach the Moon on paper, but the paper itself never could, and if you want to beat seven at home, you don't need stronger hands, you just need a longer roll and a very long corridor.
