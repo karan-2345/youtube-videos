@@ -11,6 +11,11 @@ EARTH_R_M = 6.371e6
 MOON_R_M = 1.7374e6
 ROLL_2002_M = 1200          # Gallivan's toilet-paper roll, ~4,000 ft
 TAPE_2011_M = 16_000        # St Mark's School 2011, ~10 miles
+FOLDS_2011 = 13
+YEAR_CHALLENGE, YEAR_RECORD, YEAR_2011 = 2001, 2002, 2011
+FOLDS_GOAL = 12             # the class challenge / Gallivan's record
+HOURS_2002 = 8              # as narrated ("about eight hours"); see REPORT.md flag
+GOLD_T = 1e-7               # gold leaf ~0.1 um (visible light: 380-700 nm)
 
 
 def stack(n):            # height of n folds, m
