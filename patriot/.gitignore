@@ -1,0 +1,7 @@
+.venv/
+renders/
+audio/
+assets/models/
+logs/
+__pycache__/
+final/*_clean.mp4

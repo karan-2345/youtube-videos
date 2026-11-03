@@ -1,0 +1,5237 @@
+{
+ "sections": [
+  {
+   "name": "S00",
+   "start": 0.9,
+   "end": 29.79
+  },
+  {
+   "name": "S01",
+   "start": 29.79,
+   "end": 50.646
+  },
+  {
+   "name": "S02",
+   "start": 50.646,
+   "end": 83.391
+  },
+  {
+   "name": "S03",
+   "start": 83.391,
+   "end": 103.31
+  },
+  {
+   "name": "S04",
+   "start": 103.31,
+   "end": 141.281
+  },
+  {
+   "name": "S05",
+   "start": 141.281,
+   "end": 170.23
+  }
+ ],
+ "sentences": [
+  {
+   "section": "S00",
+   "start": 0.9,
+   "end": 19.808,
+   "display": "If you type 0.1 plus 0.2 into most programming languages, the answer comes back as 0.3, then fifteen zeros, then a four, and in 1991 a flaw from the same family helped a missile get through an air defence system and kill 28 American soldiers.",
+   "spoken": "If you type zero point one plus zero point two into most programming languages, the answer comes back as zero point three, then fifteen zeros, then a four, and in nineteen ninety-one a flaw from the same family helped a missile get through an air defense system and kill 28 American soldiers.",
+   "words": [
+    {
+     "text": "If",
+     "start": 0.948,
+     "end": 1.073
+    },
+    {
+     "text": "you",
+     "start": 1.123,
+     "end": 1.198
+    },
+    {
+     "text": "type",
+     "start": 1.273,
+     "end": 1.523
+    },
+    {
+     "text": "0.1",
+     "start": 1.598,
+     "end": 2.473
+    },
+    {
+     "text": "plus",
+     "start": 2.523,
+     "end": 2.748
+    },
+    {
+     "text": "0.2",
+     "start": 2.823,
+     "end": 3.773
+    },
+    {
+     "text": "into",
+     "start": 3.823,
+     "end": 3.998
+    },
+    {
+     "text": "most",
+     "start": 4.048,
+     "end": 4.248
+    },
+    {
+     "text": "programming",
+     "start": 4.298,
+     "end": 4.773
+    },
+    {
+     "text": "languages,",
+     "start": 4.823,
+     "end": 5.698
+    },
+    {
+     "text": "the",
+     "start": 5.823,
+     "end": 5.923
+    },
+    {
+     "text": "answer",
+     "start": 5.998,
+     "end": 6.323
+    },
+    {
+     "text": "comes",
+     "start": 6.373,
+     "end": 6.598
+    },
+    {
+     "text": "back",
+     "start": 6.648,
+     "end": 6.973
+    },
+    {
+     "text": "as",
+     "start": 7.073,
+     "end": 7.173
+    },
+    {
+     "text": "0.3,",
+     "start": 7.273,
+     "end": 8.623
+    },
+    {
+     "text": "then",
+     "start": 8.798,
+     "end": 8.973
+    },
+    {
+     "text": "fifteen",
+     "start": 9.073,
+     "end": 9.473
+    },
+    {
+     "text": "zeros,",
+     "start": 9.523,
+     "end": 10.273
+    },
+    {
+     "text": "then",
+     "start": 10.398,
+     "end": 10.498
+    },
+    {
+     "text": "a",
+     "start": 10.548,
+     "end": 10.598
+    },
+    {
+     "text": "four,",
+     "start": 10.698,
+     "end": 11.473
+    },
+    {
+     "text": "and",
+     "start": 11.673,
+     "end": 11.748
+    },
+    {
+     "text": "in",
+     "start": 11.798,
+     "end": 11.873
+    },
+    {
+     "text": "1991",
+     "start": 11.923,
+     "end": 12.998
+    },
+    {
+     "text": "a",
+     "start": 13.073,
+     "end": 13.123
+    },
+    {
+     "text": "flaw",
+     "start": 13.223,
+     "end": 13.523
+    },
+    {
+     "text": "from",
+     "start": 13.573,
+     "end": 13.673
+    },
+    {
+     "text": "the",
+     "start": 13.698,
+     "end": 13.748
+    },
+    {
+     "text": "same",
+     "start": 13.823,
+     "end": 14.098
+    },
+    {
+     "text": "family",
+     "start": 14.173,
+     "end": 14.723
+    },
+    {
+     "text": "helped",
+     "start": 14.823,
+     "end": 15.048
+    },
+    {
+     "text": "a",
+     "start": 15.073,
+     "end": 15.098
+    },
+    {
+     "text": "missile",
+     "start": 15.148,
+     "end": 15.448
+    },
+    {
+     "text": "get",
+     "start": 15.498,
+     "end": 15.648
+    },
+    {
+     "text": "through",
+     "start": 15.723,
+     "end": 15.898
+    },
+    {
+     "text": "an",
+     "start": 15.948,
+     "end": 16.023
+    },
+    {
+     "text": "air",
+     "start": 16.098,
+     "end": 16.248
+    },
+    {
+     "text": "defence",
+     "start": 16.298,
+     "end": 16.648
+    },
+    {
+     "text": "system",
+     "start": 16.698,
+     "end": 17.423
+    },
+    {
+     "text": "and",
+     "start": 17.523,
+     "end": 17.598
+    },
+    {
+     "text": "kill",
+     "start": 17.673,
+     "end": 17.923
+    },
+    {
+     "text": "28",
+     "start": 18.023,
+     "end": 18.623
+    },
+    {
+     "text": "American",
+     "start": 18.673,
+     "end": 19.148
+    },
+    {
+     "text": "soldiers.",
+     "start": 19.198,
+     "end": 19.808
+    }
+   ]
+  },
+  {
+   "section": "S00",
+   "start": 20.408,
+   "end": 28.59,
+   "display": "But the strangest part is that the tiny error wasn't enough on its own, because it took an attempt to improve the software to bring it to the surface.",
+   "spoken": "But the strangest part is that the tiny error wasn't enough on its own, because it took an attempt to improve the software to bring it to the surface.",
+   "words": [
+    {
+     "text": "But",
+     "start": 20.454,
+     "end": 20.554
+    },
+    {
+     "text": "the",
+     "start": 20.579,
+     "end": 20.629
+    },
+    {
+     "text": "strangest",
+     "start": 20.704,
+     "end": 21.204
+    },
+    {
+     "text": "part",
+     "start": 21.254,
+     "end": 21.579
+    },
+    {
+     "text": "is",
+     "start": 21.654,
+     "end": 21.754
+    },
+    {
+     "text": "that",
+     "start": 21.804,
+     "end": 21.929
+    },
+    {
+     "text": "the",
+     "start": 21.979,
+     "end": 22.054
+    },
+    {
+     "text": "tiny",
+     "start": 22.129,
+     "end": 22.529
+    },
+    {
+     "text": "error",
+     "start": 22.604,
+     "end": 23.004
+    },
+    {
+     "text": "wasn't",
+     "start": 23.079,
+     "end": 23.329
+    },
+    {
+     "text": "enough",
+     "start": 23.354,
+     "end": 23.629
+    },
+    {
+     "text": "on",
+     "start": 23.654,
+     "end": 23.754
+    },
+    {
+     "text": "its",
+     "start": 23.779,
+     "end": 23.904
+    },
+    {
+     "text": "own,",
+     "start": 23.954,
+     "end": 24.629
+    },
+    {
+     "text": "because",
+     "start": 24.754,
+     "end": 25.004
+    },
+    {
+     "text": "it",
+     "start": 25.054,
+     "end": 25.104
+    },
+    {
+     "text": "took",
+     "start": 25.154,
+     "end": 25.279
+    },
+    {
+     "text": "an",
+     "start": 25.304,
+     "end": 25.354
+    },
+    {
+     "text": "attempt",
+     "start": 25.404,
+     "end": 25.804
+    },
+    {
+     "text": "to",
+     "start": 25.854,
+     "end": 25.929
+    },
+    {
+     "text": "improve",
+     "start": 25.979,
+     "end": 26.429
+    },
+    {
+     "text": "the",
+     "start": 26.479,
+     "end": 26.554
+    },
+    {
+     "text": "software",
+     "start": 26.629,
+     "end": 27.254
+    },
+    {
+     "text": "to",
+     "start": 27.329,
+     "end": 27.404
+    },
+    {
+     "text": "bring",
+     "start": 27.454,
+     "end": 27.629
+    },
+    {
+     "text": "it",
+     "start": 27.679,
+     "end": 27.754
+    },
+    {
+     "text": "to",
+     "start": 27.804,
+     "end": 27.854
+    },
+    {
+     "text": "the",
+     "start": 27.879,
+     "end": 27.954
+    },
+    {
+     "text": "surface.",
+     "start": 28.029,
+     "end": 28.59
+    }
+   ]
+  },
+  {
+   "section": "S01",
+   "start": 29.79,
+   "end": 42.704,
+   "display": "And it starts with a simple problem, because just as one third never ends in decimal, where it's 0.333 forever, one tenth never ends in binary, so a computer has to chop it off somewhere.",
+   "spoken": "And it starts with a simple problem, because just as one third never ends in decimal, where it's zero point three three three forever, one tenth never ends in binary, so a computer has to chop it off somewhere.",
+   "words": [
+    {
+     "text": "And",
+     "start": 29.84,
+     "end": 29.965
+    },
+    {
+     "text": "it",
+     "start": 29.99,
+     "end": 30.04
+    },
+    {
+     "text": "starts",
+     "start": 30.09,
+     "end": 30.415
+    },
+    {
+     "text": "with",
+     "start": 30.44,
+     "end": 30.54
+    },
+    {
+     "text": "a",
+     "start": 30.565,
+     "end": 30.615
+    },
+    {
+     "text": "simple",
+     "start": 30.69,
+     "end": 30.965
+    },
+    {
+     "text": "problem,",
+     "start": 31.015,
+     "end": 31.765
+    },
+    {
+     "text": "because",
+     "start": 31.89,
+     "end": 32.14
+    },
+    {
+     "text": "just",
+     "start": 32.215,
+     "end": 32.44
+    },
+    {
+     "text": "as",
+     "start": 32.49,
+     "end": 32.59
+    },
+    {
+     "text": "one",
+     "start": 32.665,
+     "end": 32.865
+    },
+    {
+     "text": "third",
+     "start": 32.94,
+     "end": 33.29
+    },
+    {
+     "text": "never",
+     "start": 33.39,
+     "end": 33.665
+    },
+    {
+     "text": "ends",
+     "start": 33.74,
+     "end": 34.015
+    },
+    {
+     "text": "in",
+     "start": 34.065,
+     "end": 34.165
+    },
+    {
+     "text": "decimal,",
+     "start": 34.215,
+     "end": 35.015
+    },
+    {
+     "text": "where",
+     "start": 35.14,
+     "end": 35.265
+    },
+    {
+     "text": "it's",
+     "start": 35.315,
+     "end": 35.44
+    },
+    {
+     "text": "0.333",
+     "start": 35.515,
+     "end": 37.115
+    },
+    {
+     "text": "forever,",
+     "start": 37.19,
+     "end": 37.89
+    },
+    {
+     "text": "one",
+     "start": 38.065,
+     "end": 38.315
+    },
+    {
+     "text": "tenth",
+     "start": 38.39,
+     "end": 38.74
+    },
+    {
+     "text": "never",
+     "start": 38.84,
+     "end": 39.115
+    },
+    {
+     "text": "ends",
+     "start": 39.19,
+     "end": 39.415
+    },
+    {
+     "text": "in",
+     "start": 39.465,
+     "end": 39.565
+    },
+    {
+     "text": "binary,",
+     "start": 39.615,
+     "end": 40.315
+    },
+    {
+     "text": "so",
+     "start": 40.49,
+     "end": 40.59
+    },
+    {
+     "text": "a",
+     "start": 40.615,
+     "end": 40.64
+    },
+    {
+     "text": "computer",
+     "start": 40.69,
+     "end": 41.265
+    },
+    {
+     "text": "has",
+     "start": 41.315,
+     "end": 41.515
+    },
+    {
+     "text": "to",
+     "start": 41.565,
+     "end": 41.64
+    },
+    {
+     "text": "chop",
+     "start": 41.715,
+     "end": 41.915
+    },
+    {
+     "text": "it",
+     "start": 41.94,
+     "end": 41.99
+    },
+    {
+     "text": "off",
+     "start": 42.04,
+     "end": 42.215
+    },
+    {
+     "text": "somewhere.",
+     "start": 42.265,
+     "end": 42.704
+    }
+   ]
+  },
+  {
+   "section": "S01",
+   "start": 43.304,
+   "end": 49.446,
+   "display": "That means the 0.1 inside a machine is very slightly wrong, which usually doesn't matter at all.",
+   "spoken": "That means the zero point one inside a machine is very slightly wrong, which usually doesn't matter at all.",
+   "words": [
+    {
+     "text": "That",
+     "start": 43.355,
+     "end": 43.555
+    },
+    {
+     "text": "means",
+     "start": 43.605,
+     "end": 43.88
+    },
+    {
+     "text": "the",
+     "start": 43.93,
+     "end": 44.005
+    },
+    {
+     "text": "0.1",
+     "start": 44.08,
+     "end": 45.03
+    },
+    {
+     "text": "inside",
+     "start": 45.105,
+     "end": 45.53
+    },
+    {
+     "text": "a",
+     "start": 45.555,
+     "end": 45.58
+    },
+    {
+     "text": "machine",
+     "start": 45.605,
+     "end": 46.105
+    },
+    {
+     "text": "is",
+     "start": 46.18,
+     "end": 46.28
+    },
+    {
+     "text": "very",
+     "start": 46.33,
+     "end": 46.58
+    },
+    {
+     "text": "slightly",
+     "start": 46.655,
+     "end": 47.03
+    },
+    {
+     "text": "wrong,",
+     "start": 47.08,
+     "end": 47.705
+    },
+    {
+     "text": "which",
+     "start": 47.83,
+     "end": 47.98
+    },
+    {
+     "text": "usually",
+     "start": 48.055,
+     "end": 48.43
+    },
+    {
+     "text": "doesn't",
+     "start": 48.48,
+     "end": 48.73
+    },
+    {
+     "text": "matter",
+     "start": 48.78,
+     "end": 49.08
+    },
+    {
+     "text": "at",
+     "start": 49.105,
+     "end": 49.155
+    },
+    {
+     "text": "all.",
+     "start": 49.205,
+     "end": 49.445
+    }
+   ]
+  },
+  {
+   "section": "S02",
+   "start": 50.646,
+   "end": 62.863,
+   "display": "So picture a Patriot missile battery in Saudi Arabia in February 1991, whose clock counted tenths of a second, and which multiplied that count by its own chopped-off 0.1.",
+   "spoken": "So picture a Patriot missile battery in Saudi Arabia in February nineteen ninety-one, whose clock counted tenths of a second, and which multiplied that count by its own chopped-off zero point one.",
+   "words": [
+    {
+     "text": "So",
+     "start": 50.763,
+     "end": 50.913
+    },
+    {
+     "text": "picture",
+     "start": 50.988,
+     "end": 51.338
+    },
+    {
+     "text": "a",
+     "start": 51.388,
+     "end": 51.438
+    },
+    {
+     "text": "Patriot",
+     "start": 51.513,
+     "end": 52.013
+    },
+    {
+     "text": "missile",
+     "start": 52.063,
+     "end": 52.313
+    },
+    {
+     "text": "battery",
+     "start": 52.363,
+     "end": 52.813
+    },
+    {
+     "text": "in",
+     "start": 52.888,
+     "end": 52.988
+    },
+    {
+     "text": "Saudi",
+     "start": 53.063,
+     "end": 53.338
+    },
+    {
+     "text": "Arabia",
+     "start": 53.388,
+     "end": 54.113
+    },
+    {
+     "text": "in",
+     "start": 54.213,
+     "end": 54.313
+    },
+    {
+     "text": "February",
+     "start": 54.388,
+     "end": 54.813
+    },
+    {
+     "text": "1991,",
+     "start": 54.863,
+     "end": 56.213
+    },
+    {
+     "text": "whose",
+     "start": 56.338,
+     "end": 56.488
+    },
+    {
+     "text": "clock",
+     "start": 56.563,
+     "end": 56.888
+    },
+    {
+     "text": "counted",
+     "start": 56.963,
+     "end": 57.338
+    },
+    {
+     "text": "tenths",
+     "start": 57.413,
+     "end": 57.688
+    },
+    {
+     "text": "of",
+     "start": 57.713,
+     "end": 57.763
+    },
+    {
+     "text": "a",
+     "start": 57.788,
+     "end": 57.813
+    },
+    {
+     "text": "second,",
+     "start": 57.863,
+     "end": 58.613
+    },
+    {
+     "text": "and",
+     "start": 58.738,
+     "end": 58.813
+    },
+    {
+     "text": "which",
+     "start": 58.838,
+     "end": 59.013
+    },
+    {
+     "text": "multiplied",
+     "start": 59.088,
+     "end": 59.713
+    },
+    {
+     "text": "that",
+     "start": 59.763,
+     "end": 59.963
+    },
+    {
+     "text": "count",
+     "start": 60.038,
+     "end": 60.388
+    },
+    {
+     "text": "by",
+     "start": 60.463,
+     "end": 60.588
+    },
+    {
+     "text": "its",
+     "start": 60.638,
+     "end": 60.788
+    },
+    {
+     "text": "own",
+     "start": 60.863,
+     "end": 61.088
+    },
+    {
+     "text": "chopped-off",
+     "start": 61.163,
+     "end": 61.763
+    },
+    {
+     "text": "0.1.",
+     "start": 61.888,
+     "end": 62.863
+    }
+   ]
+  },
+  {
+   "section": "S02",
+   "start": 63.463,
+   "end": 78.221,
+   "display": "Because that stored value was short by about one part in a million, the clock fell further behind the longer it stayed on, and although the system was designed to run for only a few hours at one site, this one had been running for about 100 hours.",
+   "spoken": "Because that stored value was short by about one part in a million, the clock fell further behind the longer it stayed on, and although the system was designed to run for only a few hours at one site, this one had been running for about a hundred hours.",
+   "words": [
+    {
+     "text": "Because",
+     "start": 63.511,
+     "end": 63.836
+    },
+    {
+     "text": "that",
+     "start": 63.886,
+     "end": 64.086
+    },
+    {
+     "text": "stored",
+     "start": 64.161,
+     "end": 64.511
+    },
+    {
+     "text": "value",
+     "start": 64.561,
+     "end": 64.961
+    },
+    {
+     "text": "was",
+     "start": 65.011,
+     "end": 65.136
+    },
+    {
+     "text": "short",
+     "start": 65.261,
+     "end": 65.536
+    },
+    {
+     "text": "by",
+     "start": 65.586,
+     "end": 65.736
+    },
+    {
+     "text": "about",
+     "start": 65.786,
+     "end": 66.061
+    },
+    {
+     "text": "one",
+     "start": 66.136,
+     "end": 66.311
+    },
+    {
+     "text": "part",
+     "start": 66.361,
+     "end": 66.611
+    },
+    {
+     "text": "in",
+     "start": 66.661,
+     "end": 66.711
+    },
+    {
+     "text": "a",
+     "start": 66.736,
+     "end": 66.786
+    },
+    {
+     "text": "million,",
+     "start": 66.836,
+     "end": 67.561
+    },
+    {
+     "text": "the",
+     "start": 67.686,
+     "end": 67.761
+    },
+    {
+     "text": "clock",
+     "start": 67.836,
+     "end": 68.161
+    },
+    {
+     "text": "fell",
+     "start": 68.236,
+     "end": 68.411
+    },
+    {
+     "text": "further",
+     "start": 68.486,
+     "end": 68.811
+    },
+    {
+     "text": "behind",
+     "start": 68.861,
+     "end": 69.236
+    },
+    {
+     "text": "the",
+     "start": 69.261,
+     "end": 69.311
+    },
+    {
+     "text": "longer",
+     "start": 69.361,
+     "end": 69.711
+    },
+    {
+     "text": "it",
+     "start": 69.761,
+     "end": 69.836
+    },
+    {
+     "text": "stayed",
+     "start": 69.886,
+     "end": 70.136
+    },
+    {
+     "text": "on,",
+     "start": 70.186,
+     "end": 70.861
+    },
+    {
+     "text": "and",
+     "start": 71.011,
+     "end": 71.086
+    },
+    {
+     "text": "although",
+     "start": 71.136,
+     "end": 71.411
+    },
+    {
+     "text": "the",
+     "start": 71.461,
+     "end": 71.536
+    },
+    {
+     "text": "system",
+     "start": 71.611,
+     "end": 72.011
+    },
+    {
+     "text": "was",
+     "start": 72.061,
+     "end": 72.186
+    },
+    {
+     "text": "designed",
+     "start": 72.236,
+     "end": 72.636
+    },
+    {
+     "text": "to",
+     "start": 72.686,
+     "end": 72.761
+    },
+    {
+     "text": "run",
+     "start": 72.836,
+     "end": 73.111
+    },
+    {
+     "text": "for",
+     "start": 73.161,
+     "end": 73.261
+    },
+    {
+     "text": "only",
+     "start": 73.336,
+     "end": 73.636
+    },
+    {
+     "text": "a",
+     "start": 73.686,
+     "end": 73.711
+    },
+    {
+     "text": "few",
+     "start": 73.786,
+     "end": 73.961
+    },
+    {
+     "text": "hours",
+     "start": 74.036,
+     "end": 74.436
+    },
+    {
+     "text": "at",
+     "start": 74.486,
+     "end": 74.536
+    },
+    {
+     "text": "one",
+     "start": 74.586,
+     "end": 74.761
+    },
+    {
+     "text": "site,",
+     "start": 74.836,
+     "end": 75.461
+    },
+    {
+     "text": "this",
+     "start": 75.636,
+     "end": 75.811
+    },
+    {
+     "text": "one",
+     "start": 75.861,
+     "end": 75.961
+    },
+    {
+     "text": "had",
+     "start": 76.011,
+     "end": 76.111
+    },
+    {
+     "text": "been",
+     "start": 76.161,
+     "end": 76.311
+    },
+    {
+     "text": "running",
+     "start": 76.361,
+     "end": 76.686
+    },
+    {
+     "text": "for",
+     "start": 76.736,
+     "end": 76.861
+    },
+    {
+     "text": "about",
+     "start": 76.911,
+     "end": 77.161
+    },
+    {
+     "text": "100",
+     "start": 77.211,
+     "end": 77.686
+    },
+    {
+     "text": "hours.",
+     "start": 77.736,
+     "end": 78.221
+    }
+   ]
+  },
+  {
+   "section": "S02",
+   "start": 78.821,
+   "end": 82.191,
+   "display": "By then the clock was behind by about a third of a second.",
+   "spoken": "By then the clock was behind by about a third of a second.",
+   "words": [
+    {
+     "text": "By",
+     "start": 78.864,
+     "end": 79.039
+    },
+    {
+     "text": "then",
+     "start": 79.089,
+     "end": 79.264
+    },
+    {
+     "text": "the",
+     "start": 79.314,
+     "end": 79.364
+    },
+    {
+     "text": "clock",
+     "start": 79.414,
+     "end": 79.714
+    },
+    {
+     "text": "was",
+     "start": 79.739,
+     "end": 79.864
+    },
+    {
+     "text": "behind",
+     "start": 79.914,
+     "end": 80.664
+    },
+    {
+     "text": "by",
+     "start": 80.764,
+     "end": 80.889
+    },
+    {
+     "text": "about",
+     "start": 80.939,
+     "end": 81.164
+    },
+    {
+     "text": "a",
+     "start": 81.189,
+     "end": 81.239
+    },
+    {
+     "text": "third",
+     "start": 81.339,
+     "end": 81.564
+    },
+    {
+     "text": "of",
+     "start": 81.589,
+     "end": 81.639
+    },
+    {
+     "text": "a",
+     "start": 81.664,
+     "end": 81.689
+    },
+    {
+     "text": "second.",
+     "start": 81.739,
+     "end": 82.191
+    }
+   ]
+  },
+  {
+   "section": "S03",
+   "start": 83.391,
+   "end": 95.114,
+   "display": "But here's the puzzle, because a slow clock shouldn't matter at all, since the radar finds a missile from the time between two pulses, and if both times are slow by the same amount, the error cancels.",
+   "spoken": "But here's the puzzle, because a slow clock shouldn't matter at all, since the radar finds a missile from the time between two pulses, and if both times are slow by the same amount, the error cancels.",
+   "words": [
+    {
+     "text": "But",
+     "start": 83.436,
+     "end": 83.536
+    },
+    {
+     "text": "here's",
+     "start": 83.586,
+     "end": 83.836
+    },
+    {
+     "text": "the",
+     "start": 83.886,
+     "end": 83.936
+    },
+    {
+     "text": "puzzle,",
+     "start": 84.011,
+     "end": 84.586
+    },
+    {
+     "text": "because",
+     "start": 84.686,
+     "end": 84.911
+    },
+    {
+     "text": "a",
+     "start": 84.961,
+     "end": 85.011
+    },
+    {
+     "text": "slow",
+     "start": 85.136,
+     "end": 85.436
+    },
+    {
+     "text": "clock",
+     "start": 85.511,
+     "end": 85.836
+    },
+    {
+     "text": "shouldn't",
+     "start": 85.911,
+     "end": 86.161
+    },
+    {
+     "text": "matter",
+     "start": 86.211,
+     "end": 86.511
+    },
+    {
+     "text": "at",
+     "start": 86.561,
+     "end": 86.611
+    },
+    {
+     "text": "all,",
+     "start": 86.661,
+     "end": 87.236
+    },
+    {
+     "text": "since",
+     "start": 87.411,
+     "end": 87.586
+    },
+    {
+     "text": "the",
+     "start": 87.636,
+     "end": 87.711
+    },
+    {
+     "text": "radar",
+     "start": 87.761,
+     "end": 88.186
+    },
+    {
+     "text": "finds",
+     "start": 88.261,
+     "end": 88.511
+    },
+    {
+     "text": "a",
+     "start": 88.536,
+     "end": 88.561
+    },
+    {
+     "text": "missile",
+     "start": 88.611,
+     "end": 88.911
+    },
+    {
+     "text": "from",
+     "start": 88.961,
+     "end": 89.061
+    },
+    {
+     "text": "the",
+     "start": 89.086,
+     "end": 89.136
+    },
+    {
+     "text": "time",
+     "start": 89.186,
+     "end": 89.486
+    },
+    {
+     "text": "between",
+     "start": 89.536,
+     "end": 89.836
+    },
+    {
+     "text": "two",
+     "start": 89.911,
+     "end": 90.061
+    },
+    {
+     "text": "pulses,",
+     "start": 90.111,
+     "end": 91.086
+    },
+    {
+     "text": "and",
+     "start": 91.236,
+     "end": 91.311
+    },
+    {
+     "text": "if",
+     "start": 91.361,
+     "end": 91.461
+    },
+    {
+     "text": "both",
+     "start": 91.536,
+     "end": 91.761
+    },
+    {
+     "text": "times",
+     "start": 91.811,
+     "end": 92.161
+    },
+    {
+     "text": "are",
+     "start": 92.211,
+     "end": 92.286
+    },
+    {
+     "text": "slow",
+     "start": 92.386,
+     "end": 92.761
+    },
+    {
+     "text": "by",
+     "start": 92.811,
+     "end": 92.911
+    },
+    {
+     "text": "the",
+     "start": 92.936,
+     "end": 93.011
+    },
+    {
+     "text": "same",
+     "start": 93.086,
+     "end": 93.286
+    },
+    {
+     "text": "amount,",
+     "start": 93.311,
+     "end": 93.886
+    },
+    {
+     "text": "the",
+     "start": 94.011,
+     "end": 94.111
+    },
+    {
+     "text": "error",
+     "start": 94.186,
+     "end": 94.436
+    },
+    {
+     "text": "cancels.",
+     "start": 94.486,
+     "end": 95.114
+    }
+   ]
+  },
+  {
+   "section": "S03",
+   "start": 95.714,
+   "end": 102.11,
+   "display": "It's like a watch that's an hour wrong, which can still time a race perfectly, because you only care about the difference.",
+   "spoken": "It's like a watch that's an hour wrong, which can still time a race perfectly, because you only care about the difference.",
+   "words": [
+    {
+     "text": "It's",
+     "start": 95.764,
+     "end": 95.914
+    },
+    {
+     "text": "like",
+     "start": 95.939,
+     "end": 96.064
+    },
+    {
+     "text": "a",
+     "start": 96.089,
+     "end": 96.139
+    },
+    {
+     "text": "watch",
+     "start": 96.214,
+     "end": 96.564
+    },
+    {
+     "text": "that's",
+     "start": 96.614,
+     "end": 96.789
+    },
+    {
+     "text": "an",
+     "start": 96.814,
+     "end": 96.889
+    },
+    {
+     "text": "hour",
+     "start": 96.964,
+     "end": 97.214
+    },
+    {
+     "text": "wrong,",
+     "start": 97.264,
+     "end": 97.864
+    },
+    {
+     "text": "which",
+     "start": 97.989,
+     "end": 98.139
+    },
+    {
+     "text": "can",
+     "start": 98.189,
+     "end": 98.314
+    },
+    {
+     "text": "still",
+     "start": 98.389,
+     "end": 98.614
+    },
+    {
+     "text": "time",
+     "start": 98.689,
+     "end": 98.914
+    },
+    {
+     "text": "a",
+     "start": 98.939,
+     "end": 98.989
+    },
+    {
+     "text": "race",
+     "start": 99.039,
+     "end": 99.289
+    },
+    {
+     "text": "perfectly,",
+     "start": 99.339,
+     "end": 100.164
+    },
+    {
+     "text": "because",
+     "start": 100.289,
+     "end": 100.539
+    },
+    {
+     "text": "you",
+     "start": 100.589,
+     "end": 100.664
+    },
+    {
+     "text": "only",
+     "start": 100.714,
+     "end": 100.964
+    },
+    {
+     "text": "care",
+     "start": 101.039,
+     "end": 101.239
+    },
+    {
+     "text": "about",
+     "start": 101.264,
+     "end": 101.489
+    },
+    {
+     "text": "the",
+     "start": 101.514,
+     "end": 101.564
+    },
+    {
+     "text": "difference.",
+     "start": 101.614,
+     "end": 102.11
+    }
+   ]
+  },
+  {
+   "section": "S04",
+   "start": 103.31,
+   "end": 114.868,
+   "display": "And the error did cancel until the old code was patched to handle fast ballistic missiles, when a more accurate way of converting the time was added, but it wasn't added in every place that needed it.",
+   "spoken": "And the error did cancel until the old code was patched to handle fast ballistic missiles, when a more accurate way of converting the time was added, but it wasn't added in every place that needed it.",
+   "words": [
+    {
+     "text": "And",
+     "start": 103.358,
+     "end": 103.483
+    },
+    {
+     "text": "the",
+     "start": 103.508,
+     "end": 103.583
+    },
+    {
+     "text": "error",
+     "start": 103.658,
+     "end": 103.958
+    },
+    {
+     "text": "did",
+     "start": 104.033,
+     "end": 104.183
+    },
+    {
+     "text": "cancel",
+     "start": 104.258,
+     "end": 104.883
+    },
+    {
+     "text": "until",
+     "start": 104.958,
+     "end": 105.158
+    },
+    {
+     "text": "the",
+     "start": 105.183,
+     "end": 105.283
+    },
+    {
+     "text": "old",
+     "start": 105.358,
+     "end": 105.608
+    },
+    {
+     "text": "code",
+     "start": 105.683,
+     "end": 105.983
+    },
+    {
+     "text": "was",
+     "start": 106.008,
+     "end": 106.133
+    },
+    {
+     "text": "patched",
+     "start": 106.208,
+     "end": 106.608
+    },
+    {
+     "text": "to",
+     "start": 106.658,
+     "end": 106.733
+    },
+    {
+     "text": "handle",
+     "start": 106.783,
+     "end": 107.133
+    },
+    {
+     "text": "fast",
+     "start": 107.233,
+     "end": 107.583
+    },
+    {
+     "text": "ballistic",
+     "start": 107.633,
+     "end": 108.058
+    },
+    {
+     "text": "missiles,",
+     "start": 108.108,
+     "end": 108.933
+    },
+    {
+     "text": "when",
+     "start": 109.058,
+     "end": 109.158
+    },
+    {
+     "text": "a",
+     "start": 109.183,
+     "end": 109.208
+    },
+    {
+     "text": "more",
+     "start": 109.258,
+     "end": 109.433
+    },
+    {
+     "text": "accurate",
+     "start": 109.533,
+     "end": 109.908
+    },
+    {
+     "text": "way",
+     "start": 109.958,
+     "end": 110.233
+    },
+    {
+     "text": "of",
+     "start": 110.283,
+     "end": 110.383
+    },
+    {
+     "text": "converting",
+     "start": 110.433,
+     "end": 110.933
+    },
+    {
+     "text": "the",
+     "start": 110.958,
+     "end": 111.008
+    },
+    {
+     "text": "time",
+     "start": 111.083,
+     "end": 111.408
+    },
+    {
+     "text": "was",
+     "start": 111.458,
+     "end": 111.583
+    },
+    {
+     "text": "added,",
+     "start": 111.658,
+     "end": 112.358
+    },
+    {
+     "text": "but",
+     "start": 112.483,
+     "end": 112.583
+    },
+    {
+     "text": "it",
+     "start": 112.608,
+     "end": 112.658
+    },
+    {
+     "text": "wasn't",
+     "start": 112.708,
+     "end": 113.008
+    },
+    {
+     "text": "added",
+     "start": 113.083,
+     "end": 113.383
+    },
+    {
+     "text": "in",
+     "start": 113.433,
+     "end": 113.533
+    },
+    {
+     "text": "every",
+     "start": 113.608,
+     "end": 113.883
+    },
+    {
+     "text": "place",
+     "start": 113.933,
+     "end": 114.233
+    },
+    {
+     "text": "that",
+     "start": 114.283,
+     "end": 114.408
+    },
+    {
+     "text": "needed",
+     "start": 114.458,
+     "end": 114.708
+    },
+    {
+     "text": "it.",
+     "start": 114.758,
+     "end": 114.868
+    }
+   ]
+  },
+  {
+   "section": "S04",
+   "start": 115.468,
+   "end": 123.596,
+   "display": "So now the system was subtracting a sloppy time from an accurate one, which meant the whole third of a second suddenly appeared in the answer.",
+   "spoken": "So now the system was subtracting a sloppy time from an accurate one, which meant the whole third of a second suddenly appeared in the answer.",
+   "words": [
+    {
+     "text": "So",
+     "start": 115.578,
+     "end": 115.728
+    },
+    {
+     "text": "now",
+     "start": 115.778,
+     "end": 116.078
+    },
+    {
+     "text": "the",
+     "start": 116.128,
+     "end": 116.203
+    },
+    {
+     "text": "system",
+     "start": 116.278,
+     "end": 116.603
+    },
+    {
+     "text": "was",
+     "start": 116.653,
+     "end": 116.728
+    },
+    {
+     "text": "subtracting",
+     "start": 116.778,
+     "end": 117.353
+    },
+    {
+     "text": "a",
+     "start": 117.403,
+     "end": 117.453
+    },
+    {
+     "text": "sloppy",
+     "start": 117.553,
+     "end": 117.978
+    },
+    {
+     "text": "time",
+     "start": 118.053,
+     "end": 118.428
+    },
+    {
+     "text": "from",
+     "start": 118.478,
+     "end": 118.578
+    },
+    {
+     "text": "an",
+     "start": 118.603,
+     "end": 118.678
+    },
+    {
+     "text": "accurate",
+     "start": 118.753,
+     "end": 119.103
+    },
+    {
+     "text": "one,",
+     "start": 119.153,
+     "end": 119.778
+    },
+    {
+     "text": "which",
+     "start": 119.928,
+     "end": 120.078
+    },
+    {
+     "text": "meant",
+     "start": 120.128,
+     "end": 120.278
+    },
+    {
+     "text": "the",
+     "start": 120.328,
+     "end": 120.378
+    },
+    {
+     "text": "whole",
+     "start": 120.453,
+     "end": 120.678
+    },
+    {
+     "text": "third",
+     "start": 120.753,
+     "end": 120.953
+    },
+    {
+     "text": "of",
+     "start": 120.978,
+     "end": 121.028
+    },
+    {
+     "text": "a",
+     "start": 121.053,
+     "end": 121.103
+    },
+    {
+     "text": "second",
+     "start": 121.178,
+     "end": 121.828
+    },
+    {
+     "text": "suddenly",
+     "start": 122.003,
+     "end": 122.453
+    },
+    {
+     "text": "appeared",
+     "start": 122.503,
+     "end": 122.953
+    },
+    {
+     "text": "in",
+     "start": 122.978,
+     "end": 123.028
+    },
+    {
+     "text": "the",
+     "start": 123.053,
+     "end": 123.128
+    },
+    {
+     "text": "answer.",
+     "start": 123.178,
+     "end": 123.596
+    }
+   ]
+  },
+  {
+   "section": "S04",
+   "start": 124.196,
+   "end": 139.481,
+   "display": "Since a Scud flies at about Mach 5, that was enough to shift the radar's search window by 687 metres, so it looked in the wrong place, and on 25 February the battery never engaged the missile that struck an Army barracks.",
+   "spoken": "Since a Scud flies at about Mach five, that was enough to shift the radar's search window by six hundred and eighty-seven meters, so it looked in the wrong place, and on the twenty-fifth of February the battery never engaged the missile that struck an Army barracks.",
+   "words": [
+    {
+     "text": "Since",
+     "start": 124.303,
+     "end": 124.453
+    },
+    {
+     "text": "a",
+     "start": 124.478,
+     "end": 124.528
+    },
+    {
+     "text": "Scud",
+     "start": 124.603,
+     "end": 124.928
+    },
+    {
+     "text": "flies",
+     "start": 125.003,
+     "end": 125.428
+    },
+    {
+     "text": "at",
+     "start": 125.503,
+     "end": 125.553
+    },
+    {
+     "text": "about",
+     "start": 125.578,
+     "end": 125.853
+    },
+    {
+     "text": "Mach 5,",
+     "start": 125.903,
+     "end": 126.903
+    },
+    {
+     "text": "that",
+     "start": 127.028,
+     "end": 127.178
+    },
+    {
+     "text": "was",
+     "start": 127.203,
+     "end": 127.303
+    },
+    {
+     "text": "enough",
+     "start": 127.328,
+     "end": 127.578
+    },
+    {
+     "text": "to",
+     "start": 127.628,
+     "end": 127.703
+    },
+    {
+     "text": "shift",
+     "start": 127.803,
+     "end": 128.053
+    },
+    {
+     "text": "the",
+     "start": 128.103,
+     "end": 128.178
+    },
+    {
+     "text": "radar's",
+     "start": 128.253,
+     "end": 128.778
+    },
+    {
+     "text": "search",
+     "start": 128.878,
+     "end": 129.153
+    },
+    {
+     "text": "window",
+     "start": 129.228,
+     "end": 129.653
+    },
+    {
+     "text": "by",
+     "start": 129.703,
+     "end": 129.853
+    },
+    {
+     "text": "687 metres,",
+     "start": 129.953,
+     "end": 132.103
+    },
+    {
+     "text": "so",
+     "start": 132.278,
+     "end": 132.378
+    },
+    {
+     "text": "it",
+     "start": 132.428,
+     "end": 132.478
+    },
+    {
+     "text": "looked",
+     "start": 132.528,
+     "end": 132.728
+    },
+    {
+     "text": "in",
+     "start": 132.753,
+     "end": 132.803
+    },
+    {
+     "text": "the",
+     "start": 132.828,
+     "end": 132.878
+    },
+    {
+     "text": "wrong",
+     "start": 132.928,
+     "end": 133.203
+    },
+    {
+     "text": "place,",
+     "start": 133.253,
+     "end": 134.053
+    },
+    {
+     "text": "and",
+     "start": 134.203,
+     "end": 134.278
+    },
+    {
+     "text": "on",
+     "start": 134.303,
+     "end": 134.378
+    },
+    {
+     "text": "25 February",
+     "start": 134.403,
+     "end": 135.803
+    },
+    {
+     "text": "the",
+     "start": 135.903,
+     "end": 135.953
+    },
+    {
+     "text": "battery",
+     "start": 136.003,
+     "end": 136.478
+    },
+    {
+     "text": "never",
+     "start": 136.553,
+     "end": 136.828
+    },
+    {
+     "text": "engaged",
+     "start": 136.878,
+     "end": 137.378
+    },
+    {
+     "text": "the",
+     "start": 137.428,
+     "end": 137.478
+    },
+    {
+     "text": "missile",
+     "start": 137.528,
+     "end": 137.953
+    },
+    {
+     "text": "that",
+     "start": 138.003,
+     "end": 138.153
+    },
+    {
+     "text": "struck",
+     "start": 138.203,
+     "end": 138.478
+    },
+    {
+     "text": "an",
+     "start": 138.528,
+     "end": 138.628
+    },
+    {
+     "text": "Army",
+     "start": 138.703,
+     "end": 138.953
+    },
+    {
+     "text": "barracks.",
+     "start": 139.003,
+     "end": 139.481
+    }
+   ]
+  },
+  {
+   "section": "S05",
+   "start": 141.281,
+   "end": 151.957,
+   "display": "And it came painfully close, because Israeli data had flagged the drift two weeks earlier, and the corrected software arrived on 26 February, one day too late.",
+   "spoken": "And it came painfully close, because Israeli data had flagged the drift two weeks earlier, and the corrected software arrived on the twenty-sixth of February, one day too late.",
+   "words": [
+    {
+     "text": "And",
+     "start": 141.329,
+     "end": 141.454
+    },
+    {
+     "text": "it",
+     "start": 141.479,
+     "end": 141.529
+    },
+    {
+     "text": "came",
+     "start": 141.579,
+     "end": 141.804
+    },
+    {
+     "text": "painfully",
+     "start": 141.879,
+     "end": 142.379
+    },
+    {
+     "text": "close,",
+     "start": 142.454,
+     "end": 143.104
+    },
+    {
+     "text": "because",
+     "start": 143.229,
+     "end": 143.504
+    },
+    {
+     "text": "Israeli",
+     "start": 143.579,
+     "end": 144.104
+    },
+    {
+     "text": "data",
+     "start": 144.179,
+     "end": 144.454
+    },
+    {
+     "text": "had",
+     "start": 144.504,
+     "end": 144.629
+    },
+    {
+     "text": "flagged",
+     "start": 144.704,
+     "end": 145.029
+    },
+    {
+     "text": "the",
+     "start": 145.079,
+     "end": 145.129
+    },
+    {
+     "text": "drift",
+     "start": 145.179,
+     "end": 145.529
+    },
+    {
+     "text": "two",
+     "start": 145.629,
+     "end": 145.804
+    },
+    {
+     "text": "weeks",
+     "start": 145.854,
+     "end": 146.104
+    },
+    {
+     "text": "earlier,",
+     "start": 146.154,
+     "end": 147.029
+    },
+    {
+     "text": "and",
+     "start": 147.154,
+     "end": 147.229
+    },
+    {
+     "text": "the",
+     "start": 147.254,
+     "end": 147.304
+    },
+    {
+     "text": "corrected",
+     "start": 147.354,
+     "end": 147.804
+    },
+    {
+     "text": "software",
+     "start": 147.879,
+     "end": 148.429
+    },
+    {
+     "text": "arrived",
+     "start": 148.504,
+     "end": 148.954
+    },
+    {
+     "text": "on",
+     "start": 148.979,
+     "end": 149.054
+    },
+    {
+     "text": "26 February,",
+     "start": 149.079,
+     "end": 150.679
+    },
+    {
+     "text": "one",
+     "start": 150.879,
+     "end": 151.154
+    },
+    {
+     "text": "day",
+     "start": 151.204,
+     "end": 151.379
+    },
+    {
+     "text": "too",
+     "start": 151.454,
+     "end": 151.604
+    },
+    {
+     "text": "late.",
+     "start": 151.654,
+     "end": 151.957
+    }
+   ]
+  },
+  {
+   "section": "S05",
+   "start": 152.557,
+   "end": 161.133,
+   "display": "Even a reboot, which took about a minute and a half at most, would have reset the clock, although nobody can say whether the Patriot would then have hit the Scud.",
+   "spoken": "Even a reboot, which took about a minute and a half at most, would have reset the clock, although nobody can say whether the Patriot would then have hit the Scud.",
+   "words": [
+    {
+     "text": "Even",
+     "start": 152.634,
+     "end": 152.909
+    },
+    {
+     "text": "a",
+     "start": 152.959,
+     "end": 153.009
+    },
+    {
+     "text": "reboot,",
+     "start": 153.084,
+     "end": 153.709
+    },
+    {
+     "text": "which",
+     "start": 153.809,
+     "end": 153.959
+    },
+    {
+     "text": "took",
+     "start": 154.009,
+     "end": 154.134
+    },
+    {
+     "text": "about",
+     "start": 154.159,
+     "end": 154.409
+    },
+    {
+     "text": "a",
+     "start": 154.434,
+     "end": 154.484
+    },
+    {
+     "text": "minute",
+     "start": 154.534,
+     "end": 154.734
+    },
+    {
+     "text": "and",
+     "start": 154.759,
+     "end": 154.834
+    },
+    {
+     "text": "a",
+     "start": 154.859,
+     "end": 154.884
+    },
+    {
+     "text": "half",
+     "start": 154.934,
+     "end": 155.159
+    },
+    {
+     "text": "at",
+     "start": 155.184,
+     "end": 155.234
+    },
+    {
+     "text": "most,",
+     "start": 155.284,
+     "end": 155.934
+    },
+    {
+     "text": "would",
+     "start": 156.059,
+     "end": 156.134
+    },
+    {
+     "text": "have",
+     "start": 156.159,
+     "end": 156.234
+    },
+    {
+     "text": "reset",
+     "start": 156.284,
+     "end": 156.634
+    },
+    {
+     "text": "the",
+     "start": 156.684,
+     "end": 156.734
+    },
+    {
+     "text": "clock,",
+     "start": 156.784,
+     "end": 157.509
+    },
+    {
+     "text": "although",
+     "start": 157.684,
+     "end": 157.934
+    },
+    {
+     "text": "nobody",
+     "start": 158.009,
+     "end": 158.434
+    },
+    {
+     "text": "can",
+     "start": 158.484,
+     "end": 158.634
+    },
+    {
+     "text": "say",
+     "start": 158.709,
+     "end": 158.959
+    },
+    {
+     "text": "whether",
+     "start": 159.009,
+     "end": 159.234
+    },
+    {
+     "text": "the",
+     "start": 159.259,
+     "end": 159.309
+    },
+    {
+     "text": "Patriot",
+     "start": 159.359,
+     "end": 159.884
+    },
+    {
+     "text": "would",
+     "start": 159.934,
+     "end": 160.034
+    },
+    {
+     "text": "then",
+     "start": 160.084,
+     "end": 160.259
+    },
+    {
+     "text": "have",
+     "start": 160.309,
+     "end": 160.384
+    },
+    {
+     "text": "hit",
+     "start": 160.434,
+     "end": 160.584
+    },
+    {
+     "text": "the",
+     "start": 160.634,
+     "end": 160.684
+    },
+    {
+     "text": "Scud.",
+     "start": 160.759,
+     "end": 161.132
+    }
+   ]
+  },
+  {
+   "section": "S05",
+   "start": 161.733,
+   "end": 168.23,
+   "display": "So that stray four on your screen is almost always harmless, but it comes from the same kind of chopped-off fraction.",
+   "spoken": "So that stray four on your screen is almost always harmless, but it comes from the same kind of chopped-off fraction.",
+   "words": [
+    {
+     "text": "So",
+     "start": 161.84,
+     "end": 161.99
+    },
+    {
+     "text": "that",
+     "start": 162.04,
+     "end": 162.215
+    },
+    {
+     "text": "stray",
+     "start": 162.29,
+     "end": 162.59
+    },
+    {
+     "text": "four",
+     "start": 162.665,
+     "end": 162.865
+    },
+    {
+     "text": "on",
+     "start": 162.89,
+     "end": 162.965
+    },
+    {
+     "text": "your",
+     "start": 162.99,
+     "end": 163.065
+    },
+    {
+     "text": "screen",
+     "start": 163.115,
+     "end": 163.565
+    },
+    {
+     "text": "is",
+     "start": 163.64,
+     "end": 163.74
+    },
+    {
+     "text": "almost",
+     "start": 163.815,
+     "end": 164.215
+    },
+    {
+     "text": "always",
+     "start": 164.29,
+     "end": 164.64
+    },
+    {
+     "text": "harmless,",
+     "start": 164.69,
+     "end": 165.565
+    },
+    {
+     "text": "but",
+     "start": 165.69,
+     "end": 165.79
+    },
+    {
+     "text": "it",
+     "start": 165.815,
+     "end": 165.865
+    },
+    {
+     "text": "comes",
+     "start": 165.915,
+     "end": 166.215
+    },
+    {
+     "text": "from",
+     "start": 166.265,
+     "end": 166.365
+    },
+    {
+     "text": "the",
+     "start": 166.39,
+     "end": 166.44
+    },
+    {
+     "text": "same",
+     "start": 166.515,
+     "end": 166.79
+    },
+    {
+     "text": "kind",
+     "start": 166.84,
+     "end": 167.04
+    },
+    {
+     "text": "of",
+     "start": 167.065,
+     "end": 167.115
+    },
+    {
+     "text": "chopped-off",
+     "start": 167.19,
+     "end": 167.665
+    },
+    {
+     "text": "fraction.",
+     "start": 167.715,
+     "end": 168.231
+    }
+   ]
+  }
+ ],
+ "events": {
+  "type": 0.948,
+  "into": 3.823,
+  "answer": 7.273,
+  "zeros": 9.073,
+  "four": 10.698,
+  "y1991": 11.923,
+  "dead": 18.023,
+  "strange": 20.704,
+  "improve": 25.404,
+  "third": 29.84,
+  "third_num": 35.515,
+  "tenth": 38.065,
+  "chop": 41.715,
+  "slight": 43.355,
+  "harmless": 48.48,
+  "battery": 50.763,
+  "saudi": 53.063,
+  "feb": 54.388,
+  "clock": 56.563,
+  "multiply": 59.088,
+  "short": 63.511,
+  "ppm": 66.136,
+  "behind": 68.236,
+  "design": 72.236,
+  "h100": 76.911,
+  "third_s": 78.864,
+  "third_sec": 81.189,
+  "puzzle": 83.436,
+  "pulses": 89.186,
+  "both": 91.536,
+  "cancel": 94.186,
+  "watch": 95.764,
+  "race": 98.689,
+  "diff": 101.614,
+  "did": 103.358,
+  "patched": 106.208,
+  "accurate": 109.258,
+  "missed": 112.708,
+  "subtract": 115.578,
+  "pop": 120.453,
+  "mach": 124.303,
+  "shift": 127.803,
+  "wrong": 132.528,
+  "d25": 134.403,
+  "never": 136.553,
+  "struck": 138.203,
+  "close": 141.329,
+  "israel": 143.579,
+  "fix": 147.354,
+  "d26": 149.079,
+  "reboot": 152.634,
+  "reboot_t": 154.434,
+  "nobody": 158.009,
+  "back": 161.84,
+  "four2": 162.665,
+  "same": 167.19
+ },
+ "words": [
+  {
+   "text": "If",
+   "start": 0.948,
+   "end": 1.073,
+   "section": "S00"
+  },
+  {
+   "text": "you",
+   "start": 1.123,
+   "end": 1.198,
+   "section": "S00"
+  },
+  {
+   "text": "type",
+   "start": 1.273,
+   "end": 1.523,
+   "section": "S00"
+  },
+  {
+   "text": "0.1",
+   "start": 1.598,
+   "end": 2.473,
+   "section": "S00"
+  },
+  {
+   "text": "plus",
+   "start": 2.523,
+   "end": 2.748,
+   "section": "S00"
+  },
+  {
+   "text": "0.2",
+   "start": 2.823,
+   "end": 3.773,
+   "section": "S00"
+  },
+  {
+   "text": "into",
+   "start": 3.823,
+   "end": 3.998,
+   "section": "S00"
+  },
+  {
+   "text": "most",
+   "start": 4.048,
+   "end": 4.248,
+   "section": "S00"
+  },
+  {
+   "text": "programming",
+   "start": 4.298,
+   "end": 4.773,
+   "section": "S00"
+  },
+  {
+   "text": "languages,",
+   "start": 4.823,
+   "end": 5.698,
+   "section": "S00"
+  },
+  {
+   "text": "the",
+   "start": 5.823,
+   "end": 5.923,
+   "section": "S00"
+  },
+  {
+   "text": "answer",
+   "start": 5.998,
+   "end": 6.323,
+   "section": "S00"
+  },
+  {
+   "text": "comes",
+   "start": 6.373,
+   "end": 6.598,
+   "section": "S00"
+  },
+  {
+   "text": "back",
+   "start": 6.648,
+   "end": 6.973,
+   "section": "S00"
+  },
+  {
+   "text": "as",
+   "start": 7.073,
+   "end": 7.173,
+   "section": "S00"
+  },
+  {
+   "text": "0.3,",
+   "start": 7.273,
+   "end": 8.623,
+   "section": "S00"
+  },
+  {
+   "text": "then",
+   "start": 8.798,
+   "end": 8.973,
+   "section": "S00"
+  },
+  {
+   "text": "fifteen",
+   "start": 9.073,
+   "end": 9.473,
+   "section": "S00"
+  },
+  {
+   "text": "zeros,",
+   "start": 9.523,
+   "end": 10.273,
+   "section": "S00"
+  },
+  {
+   "text": "then",
+   "start": 10.398,
+   "end": 10.498,
+   "section": "S00"
+  },
+  {
+   "text": "a",
+   "start": 10.548,
+   "end": 10.598,
+   "section": "S00"
+  },
+  {
+   "text": "four,",
+   "start": 10.698,
+   "end": 11.473,
+   "section": "S00"
+  },
+  {
+   "text": "and",
+   "start": 11.673,
+   "end": 11.748,
+   "section": "S00"
+  },
+  {
+   "text": "in",
+   "start": 11.798,
+   "end": 11.873,
+   "section": "S00"
+  },
+  {
+   "text": "1991",
+   "start": 11.923,
+   "end": 12.998,
+   "section": "S00"
+  },
+  {
+   "text": "a",
+   "start": 13.073,
+   "end": 13.123,
+   "section": "S00"
+  },
+  {
+   "text": "flaw",
+   "start": 13.223,
+   "end": 13.523,
+   "section": "S00"
+  },
+  {
+   "text": "from",
+   "start": 13.573,
+   "end": 13.673,
+   "section": "S00"
+  },
+  {
+   "text": "the",
+   "start": 13.698,
+   "end": 13.748,
+   "section": "S00"
+  },
+  {
+   "text": "same",
+   "start": 13.823,
+   "end": 14.098,
+   "section": "S00"
+  },
+  {
+   "text": "family",
+   "start": 14.173,
+   "end": 14.723,
+   "section": "S00"
+  },
+  {
+   "text": "helped",
+   "start": 14.823,
+   "end": 15.048,
+   "section": "S00"
+  },
+  {
+   "text": "a",
+   "start": 15.073,
+   "end": 15.098,
+   "section": "S00"
+  },
+  {
+   "text": "missile",
+   "start": 15.148,
+   "end": 15.448,
+   "section": "S00"
+  },
+  {
+   "text": "get",
+   "start": 15.498,
+   "end": 15.648,
+   "section": "S00"
+  },
+  {
+   "text": "through",
+   "start": 15.723,
+   "end": 15.898,
+   "section": "S00"
+  },
+  {
+   "text": "an",
+   "start": 15.948,
+   "end": 16.023,
+   "section": "S00"
+  },
+  {
+   "text": "air",
+   "start": 16.098,
+   "end": 16.248,
+   "section": "S00"
+  },
+  {
+   "text": "defence",
+   "start": 16.298,
+   "end": 16.648,
+   "section": "S00"
+  },
+  {
+   "text": "system",
+   "start": 16.698,
+   "end": 17.423,
+   "section": "S00"
+  },
+  {
+   "text": "and",
+   "start": 17.523,
+   "end": 17.598,
+   "section": "S00"
+  },
+  {
+   "text": "kill",
+   "start": 17.673,
+   "end": 17.923,
+   "section": "S00"
+  },
+  {
+   "text": "28",
+   "start": 18.023,
+   "end": 18.623,
+   "section": "S00"
+  },
+  {
+   "text": "American",
+   "start": 18.673,
+   "end": 19.148,
+   "section": "S00"
+  },
+  {
+   "text": "soldiers.",
+   "start": 19.198,
+   "end": 19.808,
+   "section": "S00"
+  },
+  {
+   "text": "But",
+   "start": 20.454,
+   "end": 20.554,
+   "section": "S00"
+  },
+  {
+   "text": "the",
+   "start": 20.579,
+   "end": 20.629,
+   "section": "S00"
+  },
+  {
+   "text": "strangest",
+   "start": 20.704,
+   "end": 21.204,
+   "section": "S00"
+  },
+  {
+   "text": "part",
+   "start": 21.254,
+   "end": 21.579,
+   "section": "S00"
+  },
+  {
+   "text": "is",
+   "start": 21.654,
+   "end": 21.754,
+   "section": "S00"
+  },
+  {
+   "text": "that",
+   "start": 21.804,
+   "end": 21.929,
+   "section": "S00"
+  },
+  {
+   "text": "the",
+   "start": 21.979,
+   "end": 22.054,
+   "section": "S00"
+  },
+  {
+   "text": "tiny",
+   "start": 22.129,
+   "end": 22.529,
+   "section": "S00"
+  },
+  {
+   "text": "error",
+   "start": 22.604,
+   "end": 23.004,
+   "section": "S00"
+  },
+  {
+   "text": "wasn't",
+   "start": 23.079,
+   "end": 23.329,
+   "section": "S00"
+  },
+  {
+   "text": "enough",
+   "start": 23.354,
+   "end": 23.629,
+   "section": "S00"
+  },
+  {
+   "text": "on",
+   "start": 23.654,
+   "end": 23.754,
+   "section": "S00"
+  },
+  {
+   "text": "its",
+   "start": 23.779,
+   "end": 23.904,
+   "section": "S00"
+  },
+  {
+   "text": "own,",
+   "start": 23.954,
+   "end": 24.629,
+   "section": "S00"
+  },
+  {
+   "text": "because",
+   "start": 24.754,
+   "end": 25.004,
+   "section": "S00"
+  },
+  {
+   "text": "it",
+   "start": 25.054,
+   "end": 25.104,
+   "section": "S00"
+  },
+  {
+   "text": "took",
+   "start": 25.154,
+   "end": 25.279,
+   "section": "S00"
+  },
+  {
+   "text": "an",
+   "start": 25.304,
+   "end": 25.354,
+   "section": "S00"
+  },
+  {
+   "text": "attempt",
+   "start": 25.404,
+   "end": 25.804,
+   "section": "S00"
+  },
+  {
+   "text": "to",
+   "start": 25.854,
+   "end": 25.929,
+   "section": "S00"
+  },
+  {
+   "text": "improve",
+   "start": 25.979,
+   "end": 26.429,
+   "section": "S00"
+  },
+  {
+   "text": "the",
+   "start": 26.479,
+   "end": 26.554,
+   "section": "S00"
+  },
+  {
+   "text": "software",
+   "start": 26.629,
+   "end": 27.254,
+   "section": "S00"
+  },
+  {
+   "text": "to",
+   "start": 27.329,
+   "end": 27.404,
+   "section": "S00"
+  },
+  {
+   "text": "bring",
+   "start": 27.454,
+   "end": 27.629,
+   "section": "S00"
+  },
+  {
+   "text": "it",
+   "start": 27.679,
+   "end": 27.754,
+   "section": "S00"
+  },
+  {
+   "text": "to",
+   "start": 27.804,
+   "end": 27.854,
+   "section": "S00"
+  },
+  {
+   "text": "the",
+   "start": 27.879,
+   "end": 27.954,
+   "section": "S00"
+  },
+  {
+   "text": "surface.",
+   "start": 28.029,
+   "end": 28.59,
+   "section": "S00"
+  },
+  {
+   "text": "And",
+   "start": 29.84,
+   "end": 29.965,
+   "section": "S01"
+  },
+  {
+   "text": "it",
+   "start": 29.99,
+   "end": 30.04,
+   "section": "S01"
+  },
+  {
+   "text": "starts",
+   "start": 30.09,
+   "end": 30.415,
+   "section": "S01"
+  },
+  {
+   "text": "with",
+   "start": 30.44,
+   "end": 30.54,
+   "section": "S01"
+  },
+  {
+   "text": "a",
+   "start": 30.565,
+   "end": 30.615,
+   "section": "S01"
+  },
+  {
+   "text": "simple",
+   "start": 30.69,
+   "end": 30.965,
+   "section": "S01"
+  },
+  {
+   "text": "problem,",
+   "start": 31.015,
+   "end": 31.765,
+   "section": "S01"
+  },
+  {
+   "text": "because",
+   "start": 31.89,
+   "end": 32.14,
+   "section": "S01"
+  },
+  {
+   "text": "just",
+   "start": 32.215,
+   "end": 32.44,
+   "section": "S01"
+  },
+  {
+   "text": "as",
+   "start": 32.49,
+   "end": 32.59,
+   "section": "S01"
+  },
+  {
+   "text": "one",
+   "start": 32.665,
+   "end": 32.865,
+   "section": "S01"
+  },
+  {
+   "text": "third",
+   "start": 32.94,
+   "end": 33.29,
+   "section": "S01"
+  },
+  {
+   "text": "never",
+   "start": 33.39,
+   "end": 33.665,
+   "section": "S01"
+  },
+  {
+   "text": "ends",
+   "start": 33.74,
+   "end": 34.015,
+   "section": "S01"
+  },
+  {
+   "text": "in",
+   "start": 34.065,
+   "end": 34.165,
+   "section": "S01"
+  },
+  {
+   "text": "decimal,",
+   "start": 34.215,
+   "end": 35.015,
+   "section": "S01"
+  },
+  {
+   "text": "where",
+   "start": 35.14,
+   "end": 35.265,
+   "section": "S01"
+  },
+  {
+   "text": "it's",
+   "start": 35.315,
+   "end": 35.44,
+   "section": "S01"
+  },
+  {
+   "text": "0.333",
+   "start": 35.515,
+   "end": 37.115,
+   "section": "S01"
+  },
+  {
+   "text": "forever,",
+   "start": 37.19,
+   "end": 37.89,
+   "section": "S01"
+  },
+  {
+   "text": "one",
+   "start": 38.065,
+   "end": 38.315,
+   "section": "S01"
+  },
+  {
+   "text": "tenth",
+   "start": 38.39,
+   "end": 38.74,
+   "section": "S01"
+  },
+  {
+   "text": "never",
+   "start": 38.84,
+   "end": 39.115,
+   "section": "S01"
+  },
+  {
+   "text": "ends",
+   "start": 39.19,
+   "end": 39.415,
+   "section": "S01"
+  },
+  {
+   "text": "in",
+   "start": 39.465,
+   "end": 39.565,
+   "section": "S01"
+  },
+  {
+   "text": "binary,",
+   "start": 39.615,
+   "end": 40.315,
+   "section": "S01"
+  },
+  {
+   "text": "so",
+   "start": 40.49,
+   "end": 40.59,
+   "section": "S01"
+  },
+  {
+   "text": "a",
+   "start": 40.615,
+   "end": 40.64,
+   "section": "S01"
+  },
+  {
+   "text": "computer",
+   "start": 40.69,
+   "end": 41.265,
+   "section": "S01"
+  },
+  {
+   "text": "has",
+   "start": 41.315,
+   "end": 41.515,
+   "section": "S01"
+  },
+  {
+   "text": "to",
+   "start": 41.565,
+   "end": 41.64,
+   "section": "S01"
+  },
+  {
+   "text": "chop",
+   "start": 41.715,
+   "end": 41.915,
+   "section": "S01"
+  },
+  {
+   "text": "it",
+   "start": 41.94,
+   "end": 41.99,
+   "section": "S01"
+  },
+  {
+   "text": "off",
+   "start": 42.04,
+   "end": 42.215,
+   "section": "S01"
+  },
+  {
+   "text": "somewhere.",
+   "start": 42.265,
+   "end": 42.704,
+   "section": "S01"
+  },
+  {
+   "text": "That",
+   "start": 43.355,
+   "end": 43.555,
+   "section": "S01"
+  },
+  {
+   "text": "means",
+   "start": 43.605,
+   "end": 43.88,
+   "section": "S01"
+  },
+  {
+   "text": "the",
+   "start": 43.93,
+   "end": 44.005,
+   "section": "S01"
+  },
+  {
+   "text": "0.1",
+   "start": 44.08,
+   "end": 45.03,
+   "section": "S01"
+  },
+  {
+   "text": "inside",
+   "start": 45.105,
+   "end": 45.53,
+   "section": "S01"
+  },
+  {
+   "text": "a",
+   "start": 45.555,
+   "end": 45.58,
+   "section": "S01"
+  },
+  {
+   "text": "machine",
+   "start": 45.605,
+   "end": 46.105,
+   "section": "S01"
+  },
+  {
+   "text": "is",
+   "start": 46.18,
+   "end": 46.28,
+   "section": "S01"
+  },
+  {
+   "text": "very",
+   "start": 46.33,
+   "end": 46.58,
+   "section": "S01"
+  },
+  {
+   "text": "slightly",
+   "start": 46.655,
+   "end": 47.03,
+   "section": "S01"
+  },
+  {
+   "text": "wrong,",
+   "start": 47.08,
+   "end": 47.705,
+   "section": "S01"
+  },
+  {
+   "text": "which",
+   "start": 47.83,
+   "end": 47.98,
+   "section": "S01"
+  },
+  {
+   "text": "usually",
+   "start": 48.055,
+   "end": 48.43,
+   "section": "S01"
+  },
+  {
+   "text": "doesn't",
+   "start": 48.48,
+   "end": 48.73,
+   "section": "S01"
+  },
+  {
+   "text": "matter",
+   "start": 48.78,
+   "end": 49.08,
+   "section": "S01"
+  },
+  {
+   "text": "at",
+   "start": 49.105,
+   "end": 49.155,
+   "section": "S01"
+  },
+  {
+   "text": "all.",
+   "start": 49.205,
+   "end": 49.445,
+   "section": "S01"
+  },
+  {
+   "text": "So",
+   "start": 50.763,
+   "end": 50.913,
+   "section": "S02"
+  },
+  {
+   "text": "picture",
+   "start": 50.988,
+   "end": 51.338,
+   "section": "S02"
+  },
+  {
+   "text": "a",
+   "start": 51.388,
+   "end": 51.438,
+   "section": "S02"
+  },
+  {
+   "text": "Patriot",
+   "start": 51.513,
+   "end": 52.013,
+   "section": "S02"
+  },
+  {
+   "text": "missile",
+   "start": 52.063,
+   "end": 52.313,
+   "section": "S02"
+  },
+  {
+   "text": "battery",
+   "start": 52.363,
+   "end": 52.813,
+   "section": "S02"
+  },
+  {
+   "text": "in",
+   "start": 52.888,
+   "end": 52.988,
+   "section": "S02"
+  },
+  {
+   "text": "Saudi",
+   "start": 53.063,
+   "end": 53.338,
+   "section": "S02"
+  },
+  {
+   "text": "Arabia",
+   "start": 53.388,
+   "end": 54.113,
+   "section": "S02"
+  },
+  {
+   "text": "in",
+   "start": 54.213,
+   "end": 54.313,
+   "section": "S02"
+  },
+  {
+   "text": "February",
+   "start": 54.388,
+   "end": 54.813,
+   "section": "S02"
+  },
+  {
+   "text": "1991,",
+   "start": 54.863,
+   "end": 56.213,
+   "section": "S02"
+  },
+  {
+   "text": "whose",
+   "start": 56.338,
+   "end": 56.488,
+   "section": "S02"
+  },
+  {
+   "text": "clock",
+   "start": 56.563,
+   "end": 56.888,
+   "section": "S02"
+  },
+  {
+   "text": "counted",
+   "start": 56.963,
+   "end": 57.338,
+   "section": "S02"
+  },
+  {
+   "text": "tenths",
+   "start": 57.413,
+   "end": 57.688,
+   "section": "S02"
+  },
+  {
+   "text": "of",
+   "start": 57.713,
+   "end": 57.763,
+   "section": "S02"
+  },
+  {
+   "text": "a",
+   "start": 57.788,
+   "end": 57.813,
+   "section": "S02"
+  },
+  {
+   "text": "second,",
+   "start": 57.863,
+   "end": 58.613,
+   "section": "S02"
+  },
+  {
+   "text": "and",
+   "start": 58.738,
+   "end": 58.813,
+   "section": "S02"
+  },
+  {
+   "text": "which",
+   "start": 58.838,
+   "end": 59.013,
+   "section": "S02"
+  },
+  {
+   "text": "multiplied",
+   "start": 59.088,
+   "end": 59.713,
+   "section": "S02"
+  },
+  {
+   "text": "that",
+   "start": 59.763,
+   "end": 59.963,
+   "section": "S02"
+  },
+  {
+   "text": "count",
+   "start": 60.038,
+   "end": 60.388,
+   "section": "S02"
+  },
+  {
+   "text": "by",
+   "start": 60.463,
+   "end": 60.588,
+   "section": "S02"
+  },
+  {
+   "text": "its",
+   "start": 60.638,
+   "end": 60.788,
+   "section": "S02"
+  },
+  {
+   "text": "own",
+   "start": 60.863,
+   "end": 61.088,
+   "section": "S02"
+  },
+  {
+   "text": "chopped-off",
+   "start": 61.163,
+   "end": 61.763,
+   "section": "S02"
+  },
+  {
+   "text": "0.1.",
+   "start": 61.888,
+   "end": 62.863,
+   "section": "S02"
+  },
+  {
+   "text": "Because",
+   "start": 63.511,
+   "end": 63.836,
+   "section": "S02"
+  },
+  {
+   "text": "that",
+   "start": 63.886,
+   "end": 64.086,
+   "section": "S02"
+  },
+  {
+   "text": "stored",
+   "start": 64.161,
+   "end": 64.511,
+   "section": "S02"
+  },
+  {
+   "text": "value",
+   "start": 64.561,
+   "end": 64.961,
+   "section": "S02"
+  },
+  {
+   "text": "was",
+   "start": 65.011,
+   "end": 65.136,
+   "section": "S02"
+  },
+  {
+   "text": "short",
+   "start": 65.261,
+   "end": 65.536,
+   "section": "S02"
+  },
+  {
+   "text": "by",
+   "start": 65.586,
+   "end": 65.736,
+   "section": "S02"
+  },
+  {
+   "text": "about",
+   "start": 65.786,
+   "end": 66.061,
+   "section": "S02"
+  },
+  {
+   "text": "one",
+   "start": 66.136,
+   "end": 66.311,
+   "section": "S02"
+  },
+  {
+   "text": "part",
+   "start": 66.361,
+   "end": 66.611,
+   "section": "S02"
+  },
+  {
+   "text": "in",
+   "start": 66.661,
+   "end": 66.711,
+   "section": "S02"
+  },
+  {
+   "text": "a",
+   "start": 66.736,
+   "end": 66.786,
+   "section": "S02"
+  },
+  {
+   "text": "million,",
+   "start": 66.836,
+   "end": 67.561,
+   "section": "S02"
+  },
+  {
+   "text": "the",
+   "start": 67.686,
+   "end": 67.761,
+   "section": "S02"
+  },
+  {
+   "text": "clock",
+   "start": 67.836,
+   "end": 68.161,
+   "section": "S02"
+  },
+  {
+   "text": "fell",
+   "start": 68.236,
+   "end": 68.411,
+   "section": "S02"
+  },
+  {
+   "text": "further",
+   "start": 68.486,
+   "end": 68.811,
+   "section": "S02"
+  },
+  {
+   "text": "behind",
+   "start": 68.861,
+   "end": 69.236,
+   "section": "S02"
+  },
+  {
+   "text": "the",
+   "start": 69.261,
+   "end": 69.311,
+   "section": "S02"
+  },
+  {
+   "text": "longer",
+   "start": 69.361,
+   "end": 69.711,
+   "section": "S02"
+  },
+  {
+   "text": "it",
+   "start": 69.761,
+   "end": 69.836,
+   "section": "S02"
+  },
+  {
+   "text": "stayed",
+   "start": 69.886,
+   "end": 70.136,
+   "section": "S02"
+  },
+  {
+   "text": "on,",
+   "start": 70.186,
+   "end": 70.861,
+   "section": "S02"
+  },
+  {
+   "text": "and",
+   "start": 71.011,
+   "end": 71.086,
+   "section": "S02"
+  },
+  {
+   "text": "although",
+   "start": 71.136,
+   "end": 71.411,
+   "section": "S02"
+  },
+  {
+   "text": "the",
+   "start": 71.461,
+   "end": 71.536,
+   "section": "S02"
+  },
+  {
+   "text": "system",
+   "start": 71.611,
+   "end": 72.011,
+   "section": "S02"
+  },
+  {
+   "text": "was",
+   "start": 72.061,
+   "end": 72.186,
+   "section": "S02"
+  },
+  {
+   "text": "designed",
+   "start": 72.236,
+   "end": 72.636,
+   "section": "S02"
+  },
+  {
+   "text": "to",
+   "start": 72.686,
+   "end": 72.761,
+   "section": "S02"
+  },
+  {
+   "text": "run",
+   "start": 72.836,
+   "end": 73.111,
+   "section": "S02"
+  },
+  {
+   "text": "for",
+   "start": 73.161,
+   "end": 73.261,
+   "section": "S02"
+  },
+  {
+   "text": "only",
+   "start": 73.336,
+   "end": 73.636,
+   "section": "S02"
+  },
+  {
+   "text": "a",
+   "start": 73.686,
+   "end": 73.711,
+   "section": "S02"
+  },
+  {
+   "text": "few",
+   "start": 73.786,
+   "end": 73.961,
+   "section": "S02"
+  },
+  {
+   "text": "hours",
+   "start": 74.036,
+   "end": 74.436,
+   "section": "S02"
+  },
+  {
+   "text": "at",
+   "start": 74.486,
+   "end": 74.536,
+   "section": "S02"
+  },
+  {
+   "text": "one",
+   "start": 74.586,
+   "end": 74.761,
+   "section": "S02"
+  },
+  {
+   "text": "site,",
+   "start": 74.836,
+   "end": 75.461,
+   "section": "S02"
+  },
+  {
+   "text": "this",
+   "start": 75.636,
+   "end": 75.811,
+   "section": "S02"
+  },
+  {
+   "text": "one",
+   "start": 75.861,
+   "end": 75.961,
+   "section": "S02"
+  },
+  {
+   "text": "had",
+   "start": 76.011,
+   "end": 76.111,
+   "section": "S02"
+  },
+  {
+   "text": "been",
+   "start": 76.161,
+   "end": 76.311,
+   "section": "S02"
+  },
+  {
+   "text": "running",
+   "start": 76.361,
+   "end": 76.686,
+   "section": "S02"
+  },
+  {
+   "text": "for",
+   "start": 76.736,
+   "end": 76.861,
+   "section": "S02"
+  },
+  {
+   "text": "about",
+   "start": 76.911,
+   "end": 77.161,
+   "section": "S02"
+  },
+  {
+   "text": "100",
+   "start": 77.211,
+   "end": 77.686,
+   "section": "S02"
+  },
+  {
+   "text": "hours.",
+   "start": 77.736,
+   "end": 78.221,
+   "section": "S02"
+  },
+  {
+   "text": "By",
+   "start": 78.864,
+   "end": 79.039,
+   "section": "S02"
+  },
+  {
+   "text": "then",
+   "start": 79.089,
+   "end": 79.264,
+   "section": "S02"
+  },
+  {
+   "text": "the",
+   "start": 79.314,
+   "end": 79.364,
+   "section": "S02"
+  },
+  {
+   "text": "clock",
+   "start": 79.414,
+   "end": 79.714,
+   "section": "S02"
+  },
+  {
+   "text": "was",
+   "start": 79.739,
+   "end": 79.864,
+   "section": "S02"
+  },
+  {
+   "text": "behind",
+   "start": 79.914,
+   "end": 80.664,
+   "section": "S02"
+  },
+  {
+   "text": "by",
+   "start": 80.764,
+   "end": 80.889,
+   "section": "S02"
+  },
+  {
+   "text": "about",
+   "start": 80.939,
+   "end": 81.164,
+   "section": "S02"
+  },
+  {
+   "text": "a",
+   "start": 81.189,
+   "end": 81.239,
+   "section": "S02"
+  },
+  {
+   "text": "third",
+   "start": 81.339,
+   "end": 81.564,
+   "section": "S02"
+  },
+  {
+   "text": "of",
+   "start": 81.589,
+   "end": 81.639,
+   "section": "S02"
+  },
+  {
+   "text": "a",
+   "start": 81.664,
+   "end": 81.689,
+   "section": "S02"
+  },
+  {
+   "text": "second.",
+   "start": 81.739,
+   "end": 82.191,
+   "section": "S02"
+  },
+  {
+   "text": "But",
+   "start": 83.436,
+   "end": 83.536,
+   "section": "S03"
+  },
+  {
+   "text": "here's",
+   "start": 83.586,
+   "end": 83.836,
+   "section": "S03"
+  },
+  {
+   "text": "the",
+   "start": 83.886,
+   "end": 83.936,
+   "section": "S03"
+  },
+  {
+   "text": "puzzle,",
+   "start": 84.011,
+   "end": 84.586,
+   "section": "S03"
+  },
+  {
+   "text": "because",
+   "start": 84.686,
+   "end": 84.911,
+   "section": "S03"
+  },
+  {
+   "text": "a",
+   "start": 84.961,
+   "end": 85.011,
+   "section": "S03"
+  },
+  {
+   "text": "slow",
+   "start": 85.136,
+   "end": 85.436,
+   "section": "S03"
+  },
+  {
+   "text": "clock",
+   "start": 85.511,
+   "end": 85.836,
+   "section": "S03"
+  },
+  {
+   "text": "shouldn't",
+   "start": 85.911,
+   "end": 86.161,
+   "section": "S03"
+  },
+  {
+   "text": "matter",
+   "start": 86.211,
+   "end": 86.511,
+   "section": "S03"
+  },
+  {
+   "text": "at",
+   "start": 86.561,
+   "end": 86.611,
+   "section": "S03"
+  },
+  {
+   "text": "all,",
+   "start": 86.661,
+   "end": 87.236,
+   "section": "S03"
+  },
+  {
+   "text": "since",
+   "start": 87.411,
+   "end": 87.586,
+   "section": "S03"
+  },
+  {
+   "text": "the",
+   "start": 87.636,
+   "end": 87.711,
+   "section": "S03"
+  },
+  {
+   "text": "radar",
+   "start": 87.761,
+   "end": 88.186,
+   "section": "S03"
+  },
+  {
+   "text": "finds",
+   "start": 88.261,
+   "end": 88.511,
+   "section": "S03"
+  },
+  {
+   "text": "a",
+   "start": 88.536,
+   "end": 88.561,
+   "section": "S03"
+  },
+  {
+   "text": "missile",
+   "start": 88.611,
+   "end": 88.911,
+   "section": "S03"
+  },
+  {
+   "text": "from",
+   "start": 88.961,
+   "end": 89.061,
+   "section": "S03"
+  },
+  {
+   "text": "the",
+   "start": 89.086,
+   "end": 89.136,
+   "section": "S03"
+  },
+  {
+   "text": "time",
+   "start": 89.186,
+   "end": 89.486,
+   "section": "S03"
+  },
+  {
+   "text": "between",
+   "start": 89.536,
+   "end": 89.836,
+   "section": "S03"
+  },
+  {
+   "text": "two",
+   "start": 89.911,
+   "end": 90.061,
+   "section": "S03"
+  },
+  {
+   "text": "pulses,",
+   "start": 90.111,
+   "end": 91.086,
+   "section": "S03"
+  },
+  {
+   "text": "and",
+   "start": 91.236,
+   "end": 91.311,
+   "section": "S03"
+  },
+  {
+   "text": "if",
+   "start": 91.361,
+   "end": 91.461,
+   "section": "S03"
+  },
+  {
+   "text": "both",
+   "start": 91.536,
+   "end": 91.761,
+   "section": "S03"
+  },
+  {
+   "text": "times",
+   "start": 91.811,
+   "end": 92.161,
+   "section": "S03"
+  },
+  {
+   "text": "are",
+   "start": 92.211,
+   "end": 92.286,
+   "section": "S03"
+  },
+  {
+   "text": "slow",
+   "start": 92.386,
+   "end": 92.761,
+   "section": "S03"
+  },
+  {
+   "text": "by",
+   "start": 92.811,
+   "end": 92.911,
+   "section": "S03"
+  },
+  {
+   "text": "the",
+   "start": 92.936,
+   "end": 93.011,
+   "section": "S03"
+  },
+  {
+   "text": "same",
+   "start": 93.086,
+   "end": 93.286,
+   "section": "S03"
+  },
+  {
+   "text": "amount,",
+   "start": 93.311,
+   "end": 93.886,
+   "section": "S03"
+  },
+  {
+   "text": "the",
+   "start": 94.011,
+   "end": 94.111,
+   "section": "S03"
+  },
+  {
+   "text": "error",
+   "start": 94.186,
+   "end": 94.436,
+   "section": "S03"
+  },
+  {
+   "text": "cancels.",
+   "start": 94.486,
+   "end": 95.114,
+   "section": "S03"
+  },
+  {
+   "text": "It's",
+   "start": 95.764,
+   "end": 95.914,
+   "section": "S03"
+  },
+  {
+   "text": "like",
+   "start": 95.939,
+   "end": 96.064,
+   "section": "S03"
+  },
+  {
+   "text": "a",
+   "start": 96.089,
+   "end": 96.139,
+   "section": "S03"
+  },
+  {
+   "text": "watch",
+   "start": 96.214,
+   "end": 96.564,
+   "section": "S03"
+  },
+  {
+   "text": "that's",
+   "start": 96.614,
+   "end": 96.789,
+   "section": "S03"
+  },
+  {
+   "text": "an",
+   "start": 96.814,
+   "end": 96.889,
+   "section": "S03"
+  },
+  {
+   "text": "hour",
+   "start": 96.964,
+   "end": 97.214,
+   "section": "S03"
+  },
+  {
+   "text": "wrong,",
+   "start": 97.264,
+   "end": 97.864,
+   "section": "S03"
+  },
+  {
+   "text": "which",
+   "start": 97.989,
+   "end": 98.139,
+   "section": "S03"
+  },
+  {
+   "text": "can",
+   "start": 98.189,
+   "end": 98.314,
+   "section": "S03"
+  },
+  {
+   "text": "still",
+   "start": 98.389,
+   "end": 98.614,
+   "section": "S03"
+  },
+  {
+   "text": "time",
+   "start": 98.689,
+   "end": 98.914,
+   "section": "S03"
+  },
+  {
+   "text": "a",
+   "start": 98.939,
+   "end": 98.989,
+   "section": "S03"
+  },
+  {
+   "text": "race",
+   "start": 99.039,
+   "end": 99.289,
+   "section": "S03"
+  },
+  {
+   "text": "perfectly,",
+   "start": 99.339,
+   "end": 100.164,
+   "section": "S03"
+  },
+  {
+   "text": "because",
+   "start": 100.289,
+   "end": 100.539,
+   "section": "S03"
+  },
+  {
+   "text": "you",
+   "start": 100.589,
+   "end": 100.664,
+   "section": "S03"
+  },
+  {
+   "text": "only",
+   "start": 100.714,
+   "end": 100.964,
+   "section": "S03"
+  },
+  {
+   "text": "care",
+   "start": 101.039,
+   "end": 101.239,
+   "section": "S03"
+  },
+  {
+   "text": "about",
+   "start": 101.264,
+   "end": 101.489,
+   "section": "S03"
+  },
+  {
+   "text": "the",
+   "start": 101.514,
+   "end": 101.564,
+   "section": "S03"
+  },
+  {
+   "text": "difference.",
+   "start": 101.614,
+   "end": 102.11,
+   "section": "S03"
+  },
+  {
+   "text": "And",
+   "start": 103.358,
+   "end": 103.483,
+   "section": "S04"
+  },
+  {
+   "text": "the",
+   "start": 103.508,
+   "end": 103.583,
+   "section": "S04"
+  },
+  {
+   "text": "error",
+   "start": 103.658,
+   "end": 103.958,
+   "section": "S04"
+  },
+  {
+   "text": "did",
+   "start": 104.033,
+   "end": 104.183,
+   "section": "S04"
+  },
+  {
+   "text": "cancel",
+   "start": 104.258,
+   "end": 104.883,
+   "section": "S04"
+  },
+  {
+   "text": "until",
+   "start": 104.958,
+   "end": 105.158,
+   "section": "S04"
+  },
+  {
+   "text": "the",
+   "start": 105.183,
+   "end": 105.283,
+   "section": "S04"
+  },
+  {
+   "text": "old",
+   "start": 105.358,
+   "end": 105.608,
+   "section": "S04"
+  },
+  {
+   "text": "code",
+   "start": 105.683,
+   "end": 105.983,
+   "section": "S04"
+  },
+  {
+   "text": "was",
+   "start": 106.008,
+   "end": 106.133,
+   "section": "S04"
+  },
+  {
+   "text": "patched",
+   "start": 106.208,
+   "end": 106.608,
+   "section": "S04"
+  },
+  {
+   "text": "to",
+   "start": 106.658,
+   "end": 106.733,
+   "section": "S04"
+  },
+  {
+   "text": "handle",
+   "start": 106.783,
+   "end": 107.133,
+   "section": "S04"
+  },
+  {
+   "text": "fast",
+   "start": 107.233,
+   "end": 107.583,
+   "section": "S04"
+  },
+  {
+   "text": "ballistic",
+   "start": 107.633,
+   "end": 108.058,
+   "section": "S04"
+  },
+  {
+   "text": "missiles,",
+   "start": 108.108,
+   "end": 108.933,
+   "section": "S04"
+  },
+  {
+   "text": "when",
+   "start": 109.058,
+   "end": 109.158,
+   "section": "S04"
+  },
+  {
+   "text": "a",
+   "start": 109.183,
+   "end": 109.208,
+   "section": "S04"
+  },
+  {
+   "text": "more",
+   "start": 109.258,
+   "end": 109.433,
+   "section": "S04"
+  },
+  {
+   "text": "accurate",
+   "start": 109.533,
+   "end": 109.908,
+   "section": "S04"
+  },
+  {
+   "text": "way",
+   "start": 109.958,
+   "end": 110.233,
+   "section": "S04"
+  },
+  {
+   "text": "of",
+   "start": 110.283,
+   "end": 110.383,
+   "section": "S04"
+  },
+  {
+   "text": "converting",
+   "start": 110.433,
+   "end": 110.933,
+   "section": "S04"
+  },
+  {
+   "text": "the",
+   "start": 110.958,
+   "end": 111.008,
+   "section": "S04"
+  },
+  {
+   "text": "time",
+   "start": 111.083,
+   "end": 111.408,
+   "section": "S04"
+  },
+  {
+   "text": "was",
+   "start": 111.458,
+   "end": 111.583,
+   "section": "S04"
+  },
+  {
+   "text": "added,",
+   "start": 111.658,
+   "end": 112.358,
+   "section": "S04"
+  },
+  {
+   "text": "but",
+   "start": 112.483,
+   "end": 112.583,
+   "section": "S04"
+  },
+  {
+   "text": "it",
+   "start": 112.608,
+   "end": 112.658,
+   "section": "S04"
+  },
+  {
+   "text": "wasn't",
+   "start": 112.708,
+   "end": 113.008,
+   "section": "S04"
+  },
+  {
+   "text": "added",
+   "start": 113.083,
+   "end": 113.383,
+   "section": "S04"
+  },
+  {
+   "text": "in",
+   "start": 113.433,
+   "end": 113.533,
+   "section": "S04"
+  },
+  {
+   "text": "every",
+   "start": 113.608,
+   "end": 113.883,
+   "section": "S04"
+  },
+  {
+   "text": "place",
+   "start": 113.933,
+   "end": 114.233,
+   "section": "S04"
+  },
+  {
+   "text": "that",
+   "start": 114.283,
+   "end": 114.408,
+   "section": "S04"
+  },
+  {
+   "text": "needed",
+   "start": 114.458,
+   "end": 114.708,
+   "section": "S04"
+  },
+  {
+   "text": "it.",
+   "start": 114.758,
+   "end": 114.868,
+   "section": "S04"
+  },
+  {
+   "text": "So",
+   "start": 115.578,
+   "end": 115.728,
+   "section": "S04"
+  },
+  {
+   "text": "now",
+   "start": 115.778,
+   "end": 116.078,
+   "section": "S04"
+  },
+  {
+   "text": "the",
+   "start": 116.128,
+   "end": 116.203,
+   "section": "S04"
+  },
+  {
+   "text": "system",
+   "start": 116.278,
+   "end": 116.603,
+   "section": "S04"
+  },
+  {
+   "text": "was",
+   "start": 116.653,
+   "end": 116.728,
+   "section": "S04"
+  },
+  {
+   "text": "subtracting",
+   "start": 116.778,
+   "end": 117.353,
+   "section": "S04"
+  },
+  {
+   "text": "a",
+   "start": 117.403,
+   "end": 117.453,
+   "section": "S04"
+  },
+  {
+   "text": "sloppy",
+   "start": 117.553,
+   "end": 117.978,
+   "section": "S04"
+  },
+  {
+   "text": "time",
+   "start": 118.053,
+   "end": 118.428,
+   "section": "S04"
+  },
+  {
+   "text": "from",
+   "start": 118.478,
+   "end": 118.578,
+   "section": "S04"
+  },
+  {
+   "text": "an",
+   "start": 118.603,
+   "end": 118.678,
+   "section": "S04"
+  },
+  {
+   "text": "accurate",
+   "start": 118.753,
+   "end": 119.103,
+   "section": "S04"
+  },
+  {
+   "text": "one,",
+   "start": 119.153,
+   "end": 119.778,
+   "section": "S04"
+  },
+  {
+   "text": "which",
+   "start": 119.928,
+   "end": 120.078,
+   "section": "S04"
+  },
+  {
+   "text": "meant",
+   "start": 120.128,
+   "end": 120.278,
+   "section": "S04"
+  },
+  {
+   "text": "the",
+   "start": 120.328,
+   "end": 120.378,
+   "section": "S04"
+  },
+  {
+   "text": "whole",
+   "start": 120.453,
+   "end": 120.678,
+   "section": "S04"
+  },
+  {
+   "text": "third",
+   "start": 120.753,
+   "end": 120.953,
+   "section": "S04"
+  },
+  {
+   "text": "of",
+   "start": 120.978,
+   "end": 121.028,
+   "section": "S04"
+  },
+  {
+   "text": "a",
+   "start": 121.053,
+   "end": 121.103,
+   "section": "S04"
+  },
+  {
+   "text": "second",
+   "start": 121.178,
+   "end": 121.828,
+   "section": "S04"
+  },
+  {
+   "text": "suddenly",
+   "start": 122.003,
+   "end": 122.453,
+   "section": "S04"
+  },
+  {
+   "text": "appeared",
+   "start": 122.503,
+   "end": 122.953,
+   "section": "S04"
+  },
+  {
+   "text": "in",
+   "start": 122.978,
+   "end": 123.028,
+   "section": "S04"
+  },
+  {
+   "text": "the",
+   "start": 123.053,
+   "end": 123.128,
+   "section": "S04"
+  },
+  {
+   "text": "answer.",
+   "start": 123.178,
+   "end": 123.596,
+   "section": "S04"
+  },
+  {
+   "text": "Since",
+   "start": 124.303,
+   "end": 124.453,
+   "section": "S04"
+  },
+  {
+   "text": "a",
+   "start": 124.478,
+   "end": 124.528,
+   "section": "S04"
+  },
+  {
+   "text": "Scud",
+   "start": 124.603,
+   "end": 124.928,
+   "section": "S04"
+  },
+  {
+   "text": "flies",
+   "start": 125.003,
+   "end": 125.428,
+   "section": "S04"
+  },
+  {
+   "text": "at",
+   "start": 125.503,
+   "end": 125.553,
+   "section": "S04"
+  },
+  {
+   "text": "about",
+   "start": 125.578,
+   "end": 125.853,
+   "section": "S04"
+  },
+  {
+   "text": "Mach 5,",
+   "start": 125.903,
+   "end": 126.903,
+   "section": "S04"
+  },
+  {
+   "text": "that",
+   "start": 127.028,
+   "end": 127.178,
+   "section": "S04"
+  },
+  {
+   "text": "was",
+   "start": 127.203,
+   "end": 127.303,
+   "section": "S04"
+  },
+  {
+   "text": "enough",
+   "start": 127.328,
+   "end": 127.578,
+   "section": "S04"
+  },
+  {
+   "text": "to",
+   "start": 127.628,
+   "end": 127.703,
+   "section": "S04"
+  },
+  {
+   "text": "shift",
+   "start": 127.803,
+   "end": 128.053,
+   "section": "S04"
+  },
+  {
+   "text": "the",
+   "start": 128.103,
+   "end": 128.178,
+   "section": "S04"
+  },
+  {
+   "text": "radar's",
+   "start": 128.253,
+   "end": 128.778,
+   "section": "S04"
+  },
+  {
+   "text": "search",
+   "start": 128.878,
+   "end": 129.153,
+   "section": "S04"
+  },
+  {
+   "text": "window",
+   "start": 129.228,
+   "end": 129.653,
+   "section": "S04"
+  },
+  {
+   "text": "by",
+   "start": 129.703,
+   "end": 129.853,
+   "section": "S04"
+  },
+  {
+   "text": "687 metres,",
+   "start": 129.953,
+   "end": 132.103,
+   "section": "S04"
+  },
+  {
+   "text": "so",
+   "start": 132.278,
+   "end": 132.378,
+   "section": "S04"
+  },
+  {
+   "text": "it",
+   "start": 132.428,
+   "end": 132.478,
+   "section": "S04"
+  },
+  {
+   "text": "looked",
+   "start": 132.528,
+   "end": 132.728,
+   "section": "S04"
+  },
+  {
+   "text": "in",
+   "start": 132.753,
+   "end": 132.803,
+   "section": "S04"
+  },
+  {
+   "text": "the",
+   "start": 132.828,
+   "end": 132.878,
+   "section": "S04"
+  },
+  {
+   "text": "wrong",
+   "start": 132.928,
+   "end": 133.203,
+   "section": "S04"
+  },
+  {
+   "text": "place,",
+   "start": 133.253,
+   "end": 134.053,
+   "section": "S04"
+  },
+  {
+   "text": "and",
+   "start": 134.203,
+   "end": 134.278,
+   "section": "S04"
+  },
+  {
+   "text": "on",
+   "start": 134.303,
+   "end": 134.378,
+   "section": "S04"
+  },
+  {
+   "text": "25 February",
+   "start": 134.403,
+   "end": 135.803,
+   "section": "S04"
+  },
+  {
+   "text": "the",
+   "start": 135.903,
+   "end": 135.953,
+   "section": "S04"
+  },
+  {
+   "text": "battery",
+   "start": 136.003,
+   "end": 136.478,
+   "section": "S04"
+  },
+  {
+   "text": "never",
+   "start": 136.553,
+   "end": 136.828,
+   "section": "S04"
+  },
+  {
+   "text": "engaged",
+   "start": 136.878,
+   "end": 137.378,
+   "section": "S04"
+  },
+  {
+   "text": "the",
+   "start": 137.428,
+   "end": 137.478,
+   "section": "S04"
+  },
+  {
+   "text": "missile",
+   "start": 137.528,
+   "end": 137.953,
+   "section": "S04"
+  },
+  {
+   "text": "that",
+   "start": 138.003,
+   "end": 138.153,
+   "section": "S04"
+  },
+  {
+   "text": "struck",
+   "start": 138.203,
+   "end": 138.478,
+   "section": "S04"
+  },
+  {
+   "text": "an",
+   "start": 138.528,
+   "end": 138.628,
+   "section": "S04"
+  },
+  {
+   "text": "Army",
+   "start": 138.703,
+   "end": 138.953,
+   "section": "S04"
+  },
+  {
+   "text": "barracks.",
+   "start": 139.003,
+   "end": 139.481,
+   "section": "S04"
+  },
+  {
+   "text": "And",
+   "start": 141.329,
+   "end": 141.454,
+   "section": "S05"
+  },
+  {
+   "text": "it",
+   "start": 141.479,
+   "end": 141.529,
+   "section": "S05"
+  },
+  {
+   "text": "came",
+   "start": 141.579,
+   "end": 141.804,
+   "section": "S05"
+  },
+  {
+   "text": "painfully",
+   "start": 141.879,
+   "end": 142.379,
+   "section": "S05"
+  },
+  {
+   "text": "close,",
+   "start": 142.454,
+   "end": 143.104,
+   "section": "S05"
+  },
+  {
+   "text": "because",
+   "start": 143.229,
+   "end": 143.504,
+   "section": "S05"
+  },
+  {
+   "text": "Israeli",
+   "start": 143.579,
+   "end": 144.104,
+   "section": "S05"
+  },
+  {
+   "text": "data",
+   "start": 144.179,
+   "end": 144.454,
+   "section": "S05"
+  },
+  {
+   "text": "had",
+   "start": 144.504,
+   "end": 144.629,
+   "section": "S05"
+  },
+  {
+   "text": "flagged",
+   "start": 144.704,
+   "end": 145.029,
+   "section": "S05"
+  },
+  {
+   "text": "the",
+   "start": 145.079,
+   "end": 145.129,
+   "section": "S05"
+  },
+  {
+   "text": "drift",
+   "start": 145.179,
+   "end": 145.529,
+   "section": "S05"
+  },
+  {
+   "text": "two",
+   "start": 145.629,
+   "end": 145.804,
+   "section": "S05"
+  },
+  {
+   "text": "weeks",
+   "start": 145.854,
+   "end": 146.104,
+   "section": "S05"
+  },
+  {
+   "text": "earlier,",
+   "start": 146.154,
+   "end": 147.029,
+   "section": "S05"
+  },
+  {
+   "text": "and",
+   "start": 147.154,
+   "end": 147.229,
+   "section": "S05"
+  },
+  {
+   "text": "the",
+   "start": 147.254,
+   "end": 147.304,
+   "section": "S05"
+  },
+  {
+   "text": "corrected",
+   "start": 147.354,
+   "end": 147.804,
+   "section": "S05"
+  },
+  {
+   "text": "software",
+   "start": 147.879,
+   "end": 148.429,
+   "section": "S05"
+  },
+  {
+   "text": "arrived",
+   "start": 148.504,
+   "end": 148.954,
+   "section": "S05"
+  },
+  {
+   "text": "on",
+   "start": 148.979,
+   "end": 149.054,
+   "section": "S05"
+  },
+  {
+   "text": "26 February,",
+   "start": 149.079,
+   "end": 150.679,
+   "section": "S05"
+  },
+  {
+   "text": "one",
+   "start": 150.879,
+   "end": 151.154,
+   "section": "S05"
+  },
+  {
+   "text": "day",
+   "start": 151.204,
+   "end": 151.379,
+   "section": "S05"
+  },
+  {
+   "text": "too",
+   "start": 151.454,
+   "end": 151.604,
+   "section": "S05"
+  },
+  {
+   "text": "late.",
+   "start": 151.654,
+   "end": 151.957,
+   "section": "S05"
+  },
+  {
+   "text": "Even",
+   "start": 152.634,
+   "end": 152.909,
+   "section": "S05"
+  },
+  {
+   "text": "a",
+   "start": 152.959,
+   "end": 153.009,
+   "section": "S05"
+  },
+  {
+   "text": "reboot,",
+   "start": 153.084,
+   "end": 153.709,
+   "section": "S05"
+  },
+  {
+   "text": "which",
+   "start": 153.809,
+   "end": 153.959,
+   "section": "S05"
+  },
+  {
+   "text": "took",
+   "start": 154.009,
+   "end": 154.134,
+   "section": "S05"
+  },
+  {
+   "text": "about",
+   "start": 154.159,
+   "end": 154.409,
+   "section": "S05"
+  },
+  {
+   "text": "a",
+   "start": 154.434,
+   "end": 154.484,
+   "section": "S05"
+  },
+  {
+   "text": "minute",
+   "start": 154.534,
+   "end": 154.734,
+   "section": "S05"
+  },
+  {
+   "text": "and",
+   "start": 154.759,
+   "end": 154.834,
+   "section": "S05"
+  },
+  {
+   "text": "a",
+   "start": 154.859,
+   "end": 154.884,
+   "section": "S05"
+  },
+  {
+   "text": "half",
+   "start": 154.934,
+   "end": 155.159,
+   "section": "S05"
+  },
+  {
+   "text": "at",
+   "start": 155.184,
+   "end": 155.234,
+   "section": "S05"
+  },
+  {
+   "text": "most,",
+   "start": 155.284,
+   "end": 155.934,
+   "section": "S05"
+  },
+  {
+   "text": "would",
+   "start": 156.059,
+   "end": 156.134,
+   "section": "S05"
+  },
+  {
+   "text": "have",
+   "start": 156.159,
+   "end": 156.234,
+   "section": "S05"
+  },
+  {
+   "text": "reset",
+   "start": 156.284,
+   "end": 156.634,
+   "section": "S05"
+  },
+  {
+   "text": "the",
+   "start": 156.684,
+   "end": 156.734,
+   "section": "S05"
+  },
+  {
+   "text": "clock,",
+   "start": 156.784,
+   "end": 157.509,
+   "section": "S05"
+  },
+  {
+   "text": "although",
+   "start": 157.684,
+   "end": 157.934,
+   "section": "S05"
+  },
+  {
+   "text": "nobody",
+   "start": 158.009,
+   "end": 158.434,
+   "section": "S05"
+  },
+  {
+   "text": "can",
+   "start": 158.484,
+   "end": 158.634,
+   "section": "S05"
+  },
+  {
+   "text": "say",
+   "start": 158.709,
+   "end": 158.959,
+   "section": "S05"
+  },
+  {
+   "text": "whether",
+   "start": 159.009,
+   "end": 159.234,
+   "section": "S05"
+  },
+  {
+   "text": "the",
+   "start": 159.259,
+   "end": 159.309,
+   "section": "S05"
+  },
+  {
+   "text": "Patriot",
+   "start": 159.359,
+   "end": 159.884,
+   "section": "S05"
+  },
+  {
+   "text": "would",
+   "start": 159.934,
+   "end": 160.034,
+   "section": "S05"
+  },
+  {
+   "text": "then",
+   "start": 160.084,
+   "end": 160.259,
+   "section": "S05"
+  },
+  {
+   "text": "have",
+   "start": 160.309,
+   "end": 160.384,
+   "section": "S05"
+  },
+  {
+   "text": "hit",
+   "start": 160.434,
+   "end": 160.584,
+   "section": "S05"
+  },
+  {
+   "text": "the",
+   "start": 160.634,
+   "end": 160.684,
+   "section": "S05"
+  },
+  {
+   "text": "Scud.",
+   "start": 160.759,
+   "end": 161.132,
+   "section": "S05"
+  },
+  {
+   "text": "So",
+   "start": 161.84,
+   "end": 161.99,
+   "section": "S05"
+  },
+  {
+   "text": "that",
+   "start": 162.04,
+   "end": 162.215,
+   "section": "S05"
+  },
+  {
+   "text": "stray",
+   "start": 162.29,
+   "end": 162.59,
+   "section": "S05"
+  },
+  {
+   "text": "four",
+   "start": 162.665,
+   "end": 162.865,
+   "section": "S05"
+  },
+  {
+   "text": "on",
+   "start": 162.89,
+   "end": 162.965,
+   "section": "S05"
+  },
+  {
+   "text": "your",
+   "start": 162.99,
+   "end": 163.065,
+   "section": "S05"
+  },
+  {
+   "text": "screen",
+   "start": 163.115,
+   "end": 163.565,
+   "section": "S05"
+  },
+  {
+   "text": "is",
+   "start": 163.64,
+   "end": 163.74,
+   "section": "S05"
+  },
+  {
+   "text": "almost",
+   "start": 163.815,
+   "end": 164.215,
+   "section": "S05"
+  },
+  {
+   "text": "always",
+   "start": 164.29,
+   "end": 164.64,
+   "section": "S05"
+  },
+  {
+   "text": "harmless,",
+   "start": 164.69,
+   "end": 165.565,
+   "section": "S05"
+  },
+  {
+   "text": "but",
+   "start": 165.69,
+   "end": 165.79,
+   "section": "S05"
+  },
+  {
+   "text": "it",
+   "start": 165.815,
+   "end": 165.865,
+   "section": "S05"
+  },
+  {
+   "text": "comes",
+   "start": 165.915,
+   "end": 166.215,
+   "section": "S05"
+  },
+  {
+   "text": "from",
+   "start": 166.265,
+   "end": 166.365,
+   "section": "S05"
+  },
+  {
+   "text": "the",
+   "start": 166.39,
+   "end": 166.44,
+   "section": "S05"
+  },
+  {
+   "text": "same",
+   "start": 166.515,
+   "end": 166.79,
+   "section": "S05"
+  },
+  {
+   "text": "kind",
+   "start": 166.84,
+   "end": 167.04,
+   "section": "S05"
+  },
+  {
+   "text": "of",
+   "start": 167.065,
+   "end": 167.115,
+   "section": "S05"
+  },
+  {
+   "text": "chopped-off",
+   "start": 167.19,
+   "end": 167.665,
+   "section": "S05"
+  },
+  {
+   "text": "fraction.",
+   "start": 167.715,
+   "end": 168.231,
+   "section": "S05"
+  }
+ ],
+ "duration": 170.23
+}

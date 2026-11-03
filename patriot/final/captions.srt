@@ -1,0 +1,59 @@
+1
+00:00:00,900 --> 00:00:20,108
+If you type 0.1 plus 0.2 into most programming languages, the answer comes back as 0.3, then fifteen zeros, then a four, and in 1991 a flaw from the same family helped a missile get through an air defence system and kill 28 American soldiers.
+
+2
+00:00:20,408 --> 00:00:28,890
+But the strangest part is that the tiny error wasn't enough on its own, because it took an attempt to improve the software to bring it to the surface.
+
+3
+00:00:29,790 --> 00:00:43,004
+And it starts with a simple problem, because just as one third never ends in decimal, where it's 0.333 forever, one tenth never ends in binary, so a computer has to chop it off somewhere.
+
+4
+00:00:43,304 --> 00:00:49,746
+That means the 0.1 inside a machine is very slightly wrong, which usually doesn't matter at all.
+
+5
+00:00:50,646 --> 00:01:03,163
+So picture a Patriot missile battery in Saudi Arabia in February 1991, whose clock counted tenths of a second, and which multiplied that count by its own chopped-off 0.1.
+
+6
+00:01:03,463 --> 00:01:18,521
+Because that stored value was short by about one part in a million, the clock fell further behind the longer it stayed on, and although the system was designed to run for only a few hours at one site, this one had been running for about 100 hours.
+
+7
+00:01:18,821 --> 00:01:22,491
+By then the clock was behind by about a third of a second.
+
+8
+00:01:23,391 --> 00:01:35,414
+But here's the puzzle, because a slow clock shouldn't matter at all, since the radar finds a missile from the time between two pulses, and if both times are slow by the same amount, the error cancels.
+
+9
+00:01:35,714 --> 00:01:42,410
+It's like a watch that's an hour wrong, which can still time a race perfectly, because you only care about the difference.
+
+10
+00:01:43,310 --> 00:01:55,168
+And the error did cancel until the old code was patched to handle fast ballistic missiles, when a more accurate way of converting the time was added, but it wasn't added in every place that needed it.
+
+11
+00:01:55,468 --> 00:02:03,896
+So now the system was subtracting a sloppy time from an accurate one, which meant the whole third of a second suddenly appeared in the answer.
+
+12
+00:02:04,196 --> 00:02:19,781
+Since a Scud flies at about Mach 5, that was enough to shift the radar's search window by 687 metres, so it looked in the wrong place, and on 25 February the battery never engaged the missile that struck an Army barracks.
+
+13
+00:02:21,281 --> 00:02:32,257
+And it came painfully close, because Israeli data had flagged the drift two weeks earlier, and the corrected software arrived on 26 February, one day too late.
+
+14
+00:02:32,557 --> 00:02:41,433
+Even a reboot, which took about a minute and a half at most, would have reset the clock, although nobody can say whether the Patriot would then have hit the Scud.
+
+15
+00:02:41,733 --> 00:02:48,530
+So that stray four on your screen is almost always harmless, but it comes from the same kind of chopped-off fraction.
