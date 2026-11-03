@@ -201,7 +201,7 @@ function shotBack({ at, U, T, F, CUT, data, renderer }) {
       } else {
         const u = ramp(t, tBack0, tBack1, ease.inOut);
         v = { target: vB.target.map((a, i) => lerp(a, OPEN.target[i], u)), D: Math.exp(lerp(Math.log(vB.D), Math.log(OPEN.D), u)),
-              az: lerp(vB.az, OPEN.az, u), el: lerp(vB.el, OPEN.el, u), fov: 34 };
+              az: lerp(vB.az, OPEN.az, u), el: lerp(vB.el, OPEN.el, u), fov: 34, shiftY: OPEN.shiftY * u };
         if (t >= tBack1) { v = { ...OPEN }; }   // the props stay where they are, out of this frame
       }
       cue('s05end', t >= tBack0 ? 2 : 1, t);

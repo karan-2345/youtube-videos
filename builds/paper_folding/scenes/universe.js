@@ -217,7 +217,7 @@ export class Universe {
     this.spot.position.set(...this.spotLocal); this.spot.target.position.set(0, 0, 0);
     this.spot.shadow.camera.near = 0.3 * k; this.spot.shadow.camera.far = 6 * k; this.spot.shadow.camera.updateProjectionMatrix();
     const mid = (1 - close) * (1 - ramp(Math.log10(D), 4, 5.5));
-    this.key.intensity = 2.6 * mid + 2.0 * (st.end > 0 ? 1 : 0) * clamp01((D - 0.8) / 2); this.key.position.set(-0.5, 0.75, 0.6); this.key.target.position.set(0, 0, 0);
+    this.key.intensity = 2.6 * mid + 2.0 * (st.end > 0 ? 1 : 0) * clamp01((D - 1.4) / 2);   // zero at the opening distance (1.3 m), so the loop frame matches this.key.position.set(-0.5, 0.75, 0.6); this.key.target.position.set(0, 0, 0);
     this.fill.intensity = 0.06 + 0.4 * mid;
     const far = ramp(Math.log10(D), 3.5, 5);
     this.sunLight.intensity = 3.2 * far;
@@ -231,7 +231,8 @@ export class Universe {
       return px;
     };
     place(this.earth, this.dots.earth, this.P.earth, F.EARTH_R_M, D > 2.2e4);
-    this.earth.material.opacity = 1;
+    const eo = ramp(Math.log10(D), Math.log10(2.2e4), 4.85);            // the ground fades in under the clouds, no pop
+    this.earth.material.transparent = true; this.earth.material.opacity = eo; this.earth.visible = this.earth.visible && eo > 0.002;
     place(this.moon, this.dots.moon, this.P.moon, F.MOON_R_M, D > 1e5);
     place(this.sun, this.dots.sun, this.P.sun, F.SUN_R_M, D > 1e8);
     // galaxy

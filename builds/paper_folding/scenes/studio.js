@@ -49,7 +49,9 @@ export class Studio {
     const c = this.camera;
     c.position.set(tg[0] + D * ce * Math.sin(az), tg[1] + D * Math.sin(el), tg[2] + D * ce * Math.cos(az));
     c.near = D * 2e-3; c.far = D * 2e3; c.fov = view.fov || 34; c.aspect = 1080 / 1920;
-    if (view.shiftY ?? 150) c.setViewOffset(1080, 1920, 0, -(view.shiftY ?? 150), 1080, 1920); c.updateProjectionMatrix();
+    const sy = view.shiftY ?? 150;            // content moved down by sy px (below the type); cleared when 0, so no frame depends on the last
+    if (sy) c.setViewOffset(1080, 1920, 0, -sy, 1080, 1920); else c.clearViewOffset();
+    c.updateProjectionMatrix();
     c.up.set(0, 1, 0); c.lookAt(...tg);
     const fs = Math.max(400 * D, 6);
     this.floor.scale.set(fs, 1, fs); this.floor.position.set(tg[0], -(D < 20 ? Math.min(D * 1e-4, 0.002) : D * 3e-4), tg[2]);
@@ -270,18 +272,19 @@ export class Studio {
         const Lk = L0 / Math.pow(2, k), walk = 0.35, uc = ramp(u, walk, 1, ease.inOut);
         const b = Lk * (1 - uc / 2), e = Lk * (1 - uc);
         const th = 1e-4 * Math.pow(2, k);                              // true thickness: 0.1 mm per layer
-        this.strip.scale.set(b, th, TW); this.strip.position.set(b / 2, th / 2, 0);
         const done = fk >= 12;
+        const thb = done ? 2 * th : th;                               // after the last carry: one bundle of 4,096 layers
+        this.strip.scale.set(b, thb, TW); this.strip.position.set(b / 2, thb / 2, 0);
         this.top.visible = !done && uc > 0;
         this.top.scale.set(Math.max(1e-4, b - e), th, TW); this.top.position.set((b + e) / 2, th * 1.5, 0);
         // the walker: out to the far end, then carrying it back
         const wx = u < walk ? lerp(Lk * 0.5 * (k > 0 ? 1 : 0) + (k === 0 ? 0 : 0), Lk, ramp(u, 0, walk, ease.inOut)) : e;
-        const wxx = done ? 0.6 : (k === 0 && u < walk ? lerp(0, Lk, ramp(u, 0, walk)) : wx);
+        const wxx = done ? lerp(0, 0.6, ramp(t, tF12, tF12 + 0.8)) : (k === 0 && u < walk ? lerp(0, Lk, ramp(u, 0, walk)) : wx);
         this.walker.position.set(wxx, 0, -0.55);
         const dir = u < walk ? 1 : -1;
         this.walker.rotation.y = dir > 0 ? 0 : Math.PI;
-        this.walker.userData.walk(wxx * 2.2, done ? 0 : 1);
-        const Lshow = done ? L0 / 4096 : Lk;
+        this.walker.userData.walk(wxx * 2.2, done ? 1 - ramp(t, tF12 + 0.5, tF12 + 0.8) : 1);
+        const Lshow = done ? L0 / 4096 : (k === 11 ? b : Lk);          // the last carry: follow the bundle, no jump when it ends
         const D = keyed(t, [[tF0, 1.05 * L0], [tF12, 5.5]], { log: true, fn: (q) => q });
         view = { target: [Math.min(Lshow, D) * 0.5, 0.3, -0.2], D: Math.max(D, 5.5), az: -Math.PI / 2 + 0.06 + 0.5 * ramp(t, tF0, tF12), el: keyed(t, [[tF0, 1.25], [tF12, 0.75]]) };
         this.lineA.material.opacity = clamp01((view.D - 60) / 200);
@@ -306,7 +309,10 @@ export class Studio {
         this.lineA.geometry.setPositions([0, 0.002, off, xA, 0.002, off]); this.lineA.material.opacity = 1; this.lineA.material.linewidth = 10;
         this.lineB.geometry.setPositions([0, 0.002, -off, Math.max(xB, 0.01), 0.002, -off]); this.lineB.material.opacity = ramp(t, t2011, t2011 + 0.3); this.lineB.material.linewidth = 10;
         this.lineB.visible = t > t2011;
-        view = { target: [Math.max(xA, xB) * 0.5, 0, 0], D, az: -Math.PI / 2 + 0.06, el: keyed(t, [[tC0, 0.75], [t2011 + 0.2, 1.3]]), shiftY: 0 };
+        // continue from where the fold time-lapse left the camera, then settle into the overhead comparison
+        const bl = ramp(t, tC0, tC0 + 1.5);
+        const tA = [Math.min(L0 / 4096, 5.5) * 0.5, 0.3, -0.2], tB = [Math.max(xA, xB) * 0.5, 0, 0];
+        view = { target: tA.map((v, i) => lerp(v, tB[i], bl)), D, az: -Math.PI / 2 + 0.06 + 0.5 * (1 - bl), el: keyed(t, [[tC0, 0.75], [t2011 + 0.2, 1.3]]), shiftY: 150 * (1 - ramp(t, tC0, tC0 + 1.2)) };
         this.render(view, { lampScale: Math.max(1, D / 1.2) });
         const pA = this.screen([xA, 0, off]), pB = this.screen([xB, 0, -off]);
         T.put(lA, `${String(L0 / 1000).replace(/\.0$/, '')} km`, { x: pA.x + 105, y: pA.y, op: win(t, tC0 + 0.6, CUT[5] + 1) });

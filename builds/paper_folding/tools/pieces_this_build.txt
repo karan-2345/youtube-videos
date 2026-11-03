@@ -1,5 +1,7 @@
-# file                              offset  f0     f1
-frames/full/seg0.mp4                0       0      330
+# file                              offset  f0     f1     (global frames [f0, f1) = file frames [offset, offset + f1 - f0))
+frames/full/seg0.mp4                0       0      265
+frames/patches/r_265_320.mp4        0       265    320
+frames/full/seg0.mp4                320     320    330
 frames/patches/p_330_420.mp4        0       330    420
 frames/full/seg0.mp4                420     420    2308
 frames/full/seg1.mp4                0       2308   3908
@@ -8,6 +10,22 @@ frames/full2/s_4508_4591.mp4        0       4508   4591
 frames/full2/s_4591_5274.mp4        0       4591   5191
 frames/full2/s_5191_5274.mp4        0       5191   5274
 frames/full2/s_5274_6099.mp4        0       5274   6099
-frames/full2/s_6099_6924.mp4        0       6099   6924
-frames/full/seg3_fixed.mp4          0       6924   9053
-frames/patches/p_9053_9232.mp4      0       9053   9232
+frames/full2/s_6099_6924.mp4        0       6099   6276
+frames/patches/r_6276_6315.mp4      0       6276   6315
+frames/patches/r_6315_6353.mp4      0       6315   6353
+frames/patches/q_6327_6366.mp4      26      6353   6366
+frames/patches/q_6366_6405.mp4      0       6366   6405
+frames/patches/q_6405_6443.mp4      0       6405   6443
+frames/patches/p_6353_6496.mp4      90      6443   6496
+frames/patches/p_6496_6639.mp4      0       6496   6639
+frames/patches/p_6639_6782.mp4      0       6639   6782
+frames/patches/p_6782_6924.mp4      0       6782   6924
+frames/full/seg3_fixed.mp4          0       6924   7350
+frames/patches/r_7350_7395.mp4      0       7350   7395
+frames/full/seg3_fixed.mp4          471     7395   8318
+frames/patches/r_8318_8332.mp4      0       8318   8332
+frames/full/seg3_fixed.mp4          1408    8332   9020
+frames/patches/e_9020_9073.mp4      0       9020   9073
+frames/patches/e_9073_9126.mp4      0       9073   9126
+frames/patches/e_9126_9179.mp4      0       9126   9179
+frames/patches/e_9179_9232.mp4      0       9179   9232
