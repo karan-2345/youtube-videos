@@ -1,0 +1,9 @@
+.venv/
+models/
+web/node_modules/
+frames/
+cache/
+renders/
+audio/
+*.wav
+!final.mp4
