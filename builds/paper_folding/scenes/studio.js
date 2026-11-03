@@ -23,7 +23,7 @@ export class Studio {
     this.sheet = new Folder(s, { a: 0.297, b: 0.210, t: F.T, tex: this.ltex, maxFolds: 8 });
     this.gold = new Folder(s, { a: 0.08, b: 0.08, t: F.GOLD_T, metal: true, tex: this.ltex, maxFolds: 12, minH: 4e-6 });  // drawn >= 4 um thick (invisible either way) so its normals stay well-conditioned
     this.goldMats = [...new Set([...this.gold.base.material, ...this.gold.flap.material])];
-    for (const m of this.goldMats) { m.envMap = env; m.envMapIntensity = 1.0; }
+    for (const m of this.goldMats) { m.envMap = env; m.envMapIntensity = 1.5; }
     this.front = new THREE.DirectionalLight(0xffffff, 0); s.add(this.front, this.front.target);
     this.section = this._section();
     this.paperMat = new THREE.MeshStandardMaterial({ color: PAL.paper, roughness: 0.88 });
@@ -292,12 +292,12 @@ export class Studio {
         const grow = ramp(t, t16 - 1.2, t16 + 0.5, ease.inOut);
         const xA = keyed(t, [[tC0, 0.3], [t2011, L0]], { log: true });
         const xB = keyed(t, [[t2011 + 0.2, 1], [t16 + 0.6, L16]], { log: true });
-        const D = keyed(t, [[tC0, 5.5], [t2011 + 0.2, 1.3 * L0], [t16 + 0.9, 1.35 * L16], [CUT[5], 1.42 * L16]], { log: true });
+        const D = keyed(t, [[tC0, 5.5], [t2011 + 0.2, 1.3 * L0], [t16 + 0.9, 2.1 * L16], [CUT[5], 2.2 * L16]], { log: true });
         const off = Math.max(D * 0.012, 0.25);
         this.lineA.geometry.setPositions([0, 0.002, off, xA, 0.002, off]); this.lineA.material.opacity = 1; this.lineA.material.linewidth = 10;
         this.lineB.geometry.setPositions([0, 0.002, -off, Math.max(xB, 0.01), 0.002, -off]); this.lineB.material.opacity = ramp(t, t2011, t2011 + 0.3); this.lineB.material.linewidth = 10;
         this.lineB.visible = t > t2011;
-        view = { target: [Math.max(xA, xB) * 0.5, 0, 0], D, az: -Math.PI / 2 + 0.06, el: keyed(t, [[tC0, 0.75], [t2011 + 0.2, 1.3]]) };
+        view = { target: [Math.max(xA, xB) * 0.5, 0, 0], D, az: -Math.PI / 2 + 0.06, el: keyed(t, [[tC0, 0.75], [t2011 + 0.2, 1.3]]), shiftY: 0 };
         this.render(view, { lampScale: Math.max(1, D / 1.2) });
         const pA = this.screen([xA, 0, off]), pB = this.screen([xB, 0, -off]);
         T.put(lA, `${String(L0 / 1000).replace(/\.0$/, '')} km`, { x: pA.x + 105, y: pA.y, op: win(t, tC0 + 0.6, CUT[5] + 1) });

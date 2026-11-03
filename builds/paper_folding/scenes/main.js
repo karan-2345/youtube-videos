@@ -152,11 +152,11 @@ function shotBack({ at, U, T, F, CUT, data, renderer }) {
       // left: the stack, seen from the side; right: the strip, measured straight up beside it (same world, same scale rule)
       U.state = { n, strip: 0, cloud: 1, end: 0, lamp: 0.6, stackLine: 1 };
       const cx = (U.s7.x0 + U.s7.x1) / 2, cz = (U.s7.z0 + U.s7.z1) / 2;
-      const vl = { target: [cx, 0.5 * h, cz], D: 1.95 * h, az: 0, el: lerp(0.12, 0.02, ramp(lgh, 0, 6)), fov: 34 };
+      const vl = { target: [cx, 0.72 * h, cz], D: 3.4 * h, az: 0, el: lerp(0.12, 0.02, ramp(lgh, 0, 6)), fov: 34 };
       U.render(renderer, vl, [0, 0, 540, 1920]);
       const mpl = U.screen(U.P.moon);
       U.state = { n: 7, strip: L, stripX: 0.05, cloud: 1, end: 0, lamp: 0.6, stackLine: 0 };
-      const vr = { target: [0.05, smin(0.5 * L, 4.4e20), 0], D: smin(1.95 * L, 2.2e21), az: 0, el: lerp(0.12, 0.0, ramp(lgL, 2, 8)), fov: 34 };
+      const vr = { target: [0.05, smin(0.72 * L, 4.6e20), 0], D: smin(3.4 * L, 3.0e21), az: 0, el: lerp(0.12, 0.0, ramp(lgL, 2, 8)), fov: 34 };
       U.render(renderer, vr, [540, 0, 540, 1920]);
       const mpr = U.screen(U.P.moon);
       // divider: a dark gap between the halves
@@ -175,21 +175,21 @@ function shotBack({ at, U, T, F, CUT, data, renderer }) {
       T.put(moonL[1], 'Moon', { x: mpr.x - 70, y: mpr.y, op: op * clamp01(1.5 - Math.abs(lgL - 9.0)) * (mpr.x > 560 && mpr.x < 1060 ? 1 : 0) });
     } else {
       // the end: a hand on a roll of toilet paper, the strip down a long corridor; then back to the opening frame
-      const tBack0 = tEnd - 1.9, tBack1 = tEnd - 0.12;
+      const tBack0 = tEnd - 1.0, tBack1 = tEnd - 0.1;
       U.state = { n: 0, strip: 0, cloud: 0, end: 1, lamp: 1, endStrip: keyed(t, [[tSplitEnd, 6], [tCorr + 1.0, 60]], { log: true }),
                   handLift: 0.06 * ramp(t, tBack0 - 0.6, tBack0 + 0.6) };
       const vA = { target: [-0.6, 0.085, 0.12], D: 0.66, az: 0.75, el: 0.42, fov: 34 };
-      const vB = { target: [-6.5, 0.0, 0.12], D: 9.0, az: -1.42, el: 0.36, fov: 34 };
+      const vB = { target: [-12.0, 0.0, 0.12], D: 11.0, az: 1.5, el: 0.12, fov: 34 };
       let v;
       if (t < tBack0) {
-        const u = ramp(t, tRoll - 0.3, tCorr + 1.2);
+        const u = ramp(t, tRoll - 0.2, tBack0 + 0.05);
         v = { target: [lerp(vA.target[0], vB.target[0], u), lerp(vA.target[1], vB.target[1], u), 0.12],
               D: Math.exp(lerp(Math.log(vA.D), Math.log(vB.D), u)), az: lerp(vA.az, vB.az, u), el: lerp(vA.el, vB.el, u), fov: 34 };
       } else {
         const u = ramp(t, tBack0, tBack1, ease.inOut);
         v = { target: vB.target.map((a, i) => lerp(a, OPEN.target[i], u)), D: Math.exp(lerp(Math.log(vB.D), Math.log(OPEN.D), u)),
               az: lerp(vB.az, OPEN.az, u), el: lerp(vB.el, OPEN.el, u), fov: 34 };
-        if (t >= tBack1) { v = { ...OPEN }; U.state.end = 0; }
+        if (t >= tBack1) { v = { ...OPEN }; }   // the props stay where they are, out of this frame
       }
       U.render(renderer, v);
     }

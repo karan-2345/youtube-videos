@@ -9,3 +9,5 @@ audio/
 !final.mp4
 stills/t*/
 stills/test/
+frames_*.txt
+render_log.txt

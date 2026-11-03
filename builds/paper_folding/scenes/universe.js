@@ -32,6 +32,11 @@ export class Universe {
     this.floorMat = new THREE.MeshStandardMaterial({ color: PAL.floor, roughness: 0.92, bumpMap: ftex, bumpScale: 0.08, transparent: true });
     this.floor = new THREE.Mesh(new THREE.RingGeometry(1e-4, 1, 128, 80).rotateX(-Math.PI / 2), this.floorMat);
     this.floor.receiveShadow = true; L.add(this.floor);
+    { // the floor fades out towards its rim, so it never ends in a hard edge
+      const c = document.createElement('canvas'); c.width = c.height = 256; const x = c.getContext('2d');
+      const g = x.createRadialGradient(128, 128, 0, 128, 128, 128); g.addColorStop(0, '#fff'); g.addColorStop(0.45, '#fff'); g.addColorStop(1, '#000');
+      x.fillStyle = g; x.fillRect(0, 0, 256, 256); this.floorMat.alphaMap = new THREE.CanvasTexture(c);
+    }
     this.ftex = ftex;
     this.ltex = layerTexture();
     this.folder = new Folder(L, { a: 0.297, b: 0.210, t: F.T, tex: this.ltex, maxFolds: 8 });
@@ -52,11 +57,12 @@ export class Universe {
       new THREE.MeshStandardMaterial({ color: PAL.paper, roughness: 0.88 }));
     this.endStrip.receiveShadow = true; L.add(this.endStrip);
     this.endWalls = [];
-    for (const z of [-0.85, 1.05]) {
+    for (const z of [-1.3, 1.5]) {
       const w = new THREE.Mesh(new THREE.BoxGeometry(80, 2.6, 0.08), new THREE.MeshStandardMaterial({ color: 0x1d1c1a, roughness: 0.95 }));
       w.position.set(-0.6 - 40 - 1.2, 1.3, z); w.receiveShadow = true; L.add(w); this.endWalls.push(w);
     }
-    this.endGroup = [this.endRoll, this.endHand, this.endStrip, ...this.endWalls];
+    for (const w of this.endWalls) w.visible = false;
+    this.endGroup = [this.endRoll, this.endHand, this.endStrip];
 
     this.clouds = [];
     const r = rng(11), ctex = [cloudTexture(3), cloudTexture(5), cloudTexture(9)];
@@ -104,6 +110,7 @@ export class Universe {
     this.stackLine = line(0xf1eee7, 5);
     this.stripLine = line(0xf1eee7, 5);
     this.state = { n: 0, strip: 0, stripTip: 0, end: 0, cloud: 1, galaxyOp: 1 };
+    this.scene.fog = new THREE.Fog(PAL.bg, 1e9, 2e9);       // in units of D: the floor falls off into the dark, close up only
   }
 
   _galaxy() {
@@ -162,7 +169,7 @@ export class Universe {
     const fr = Math.min(80 * D, 3e5);
     this.floor.scale.setScalar(fr); this.floor.position.set(tg[0], -Math.min(2e-4 * D, 0.5), tg[2]);
     this.ftex.repeat.set(fr / 0.6, fr / 0.6);
-    this.floorMat.opacity = 1 - ramp(D, 1800, 5000);
+    this.floorMat.opacity = 1 - ramp(D, 1.2e4, 4e4);
     this.floor.visible = this.floorMat.opacity > 0.002;
 
     // the paper: folds 0-7 as hinged halves, then a column growing as 0.1 mm x 2^n
@@ -210,7 +217,7 @@ export class Universe {
     this.spot.position.set(...this.spotLocal); this.spot.target.position.set(0, 0, 0);
     this.spot.shadow.camera.near = 0.3 * k; this.spot.shadow.camera.far = 6 * k; this.spot.shadow.camera.updateProjectionMatrix();
     const mid = (1 - close) * (1 - ramp(Math.log10(D), 4, 5.5));
-    this.key.intensity = 2.6 * mid; this.key.position.set(-0.5, 0.75, 0.6); this.key.target.position.set(0, 0, 0);
+    this.key.intensity = 2.6 * mid + 2.0 * (st.end > 0 ? 1 : 0) * clamp01((D - 0.8) / 2); this.key.position.set(-0.5, 0.75, 0.6); this.key.target.position.set(0, 0, 0);
     this.fill.intensity = 0.06 + 0.4 * mid;
     const far = ramp(Math.log10(D), 3.5, 5);
     this.sunLight.intensity = 3.2 * far;
@@ -223,7 +230,7 @@ export class Universe {
       dot.position.set(...rel(P)); dot.material.opacity = show ? clamp01((3.2 - px) / 2) : 0; dot.visible = dot.material.opacity > 0.003;
       return px;
     };
-    place(this.earth, this.dots.earth, this.P.earth, F.EARTH_R_M, D > 1500);
+    place(this.earth, this.dots.earth, this.P.earth, F.EARTH_R_M, D > 2.2e4);
     this.earth.material.opacity = 1;
     place(this.moon, this.dots.moon, this.P.moon, F.MOON_R_M, D > 1e5);
     place(this.sun, this.dots.sun, this.P.sun, F.SUN_R_M, D > 1e8);
@@ -232,6 +239,8 @@ export class Universe {
     this.galaxy.position.set(...rel(this.P.galaxy)); this.galaxy.scale.setScalar(LY * k);
     this.galaxy.material.opacity = 0.26 * gop; this.galaxy.visible = gop > 0.003;
 
+    const fogOn = 1 - ramp(Math.log10(D), 1.3, 1.8);
+    this.scene.fog.near = fogOn > 0 ? 1.7 / fogOn : 1e9; this.scene.fog.far = fogOn > 0 ? 5.5 / fogOn : 2e9;
     renderer.setViewport(...vp); renderer.setScissor(...vp); renderer.setScissorTest(true);
     renderer.render(this.scene, cam);
     renderer.setScissorTest(false);
