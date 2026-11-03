@@ -1,0 +1,53 @@
+{
+  "video": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 60
+  },
+  "palette": {
+    "bg": "#0B0907",
+    "table": "#1E150F",
+    "table_grain": "#0E0906",
+    "maple": "#D8B98C",
+    "maple_grain": "#B08A5C",
+    "walnut": "#5B3B26",
+    "walnut_grain": "#2E1C11",
+    "inlay": "#D8C3A0",
+    "boxwood": "#E6CFA4",
+    "ebony": "#2A1F18",
+    "lamp": "#FFD9B0",
+    "ink": "#EFE6D6",
+    "ink_dim": "#A39885",
+    "ink_faint": "#6D6458",
+    "rule": "#3A3128",
+    "accent": "#E0502F"
+  },
+  "reuse_colors": [],
+  "fonts": {
+    "sans": "Inter",
+    "serif": "Inter",
+    "mono": "Inter"
+  },
+  "type_px": {
+    "title": 120,
+    "h1": 84,
+    "h2": 56,
+    "body": 44,
+    "label": 38,
+    "small": 30,
+    "caption": 84,
+    "credit": 36,
+    "tag": 32,
+    "number": 200
+  },
+  "layout": {
+    "safe_margin_px": 64,
+    "caption_band_px": 0
+  },
+  "timing": {
+    "fast": 0.5,
+    "med": 1.0,
+    "slow": 2.0,
+    "transition": 0.5
+  }
+}

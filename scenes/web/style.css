@@ -1,0 +1,35 @@
+@font-face { font-family: 'Inter'; src: url('../../assets/fonts/Inter-VariableFont_opsz,wght.ttf'); font-weight: 100 900; font-style: normal; }
+@font-face { font-family: 'Archivo'; src: url('../../assets/fonts/Archivo[wdth,wght].ttf'); font-weight: 100 900; font-stretch: 75% 125%; font-style: normal; }
+:root {
+  --bg: #0B0907;
+  --table: #1E150F;
+  --table-grain: #0E0906;
+  --maple: #D8B98C;
+  --maple-grain: #B08A5C;
+  --walnut: #5B3B26;
+  --walnut-grain: #2E1C11;
+  --inlay: #D8C3A0;
+  --boxwood: #E6CFA4;
+  --ebony: #2A1F18;
+  --lamp: #FFD9B0;
+  --ink: #EFE6D6;
+  --ink-dim: #A39885;
+  --ink-faint: #6D6458;
+  --rule: #3A3128;
+  --accent: #E0502F;
+  --type-title: 120px;
+  --type-h1: 84px;
+  --type-h2: 56px;
+  --type-body: 44px;
+  --type-label: 38px;
+  --type-small: 30px;
+  --type-caption: 84px;
+  --type-credit: 36px;
+  --type-tag: 32px;
+  --type-number: 200px;
+  --safe: 64px;
+  --caption-band: 0px;
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Inter', serif;
+  --font-mono: 'Inter', monospace;
+}

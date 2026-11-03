@@ -1,0 +1,29 @@
+<!doctype html>
+<!--
+  scenes/web/player.html?scene=<SceneId>
+  Hosts one web/three.js scene at exactly 1080x1920 (vertical Short). The capture harness
+  (tools/capture.py) calls window.setTime(t) and screenshots each frame, so every
+  pixel is a pure function of t: no requestAnimationFrame, no wall clock.
+-->
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="/scenes/web/style.css">
+<link rel="stylesheet" href="/scenes/web/overlay.css">
+<script type="importmap">
+{ "imports": {
+    "three": "/scenes/web/node_modules/three/build/three.module.js",
+    "three/addons/": "/scenes/web/node_modules/three/examples/jsm/",
+    "gsap": "/scenes/web/node_modules/gsap/index.js"
+} }
+</script>
+</head>
+<body>
+<canvas id="gl" width="1080" height="1920"></canvas>
+<div id="overlay"><svg id="leaders" width="1080" height="1920"></svg></div>
+<script type="module">
+import { boot } from '/scenes/web/runtime.js';
+boot().catch(e => { console.error('BOOT FAILED', e.stack || e); window.bootError = String(e.stack || e); });
+</script>
+</body>
+</html>

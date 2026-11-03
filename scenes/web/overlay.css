@@ -1,0 +1,21 @@
+/* Overlay typography for web/three.js scenes. Colours come from style.css (generated). */
+html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: var(--bg); }
+#gl { position: absolute; inset: 0; }
+#overlay { position: absolute; inset: 0; pointer-events: none; color: var(--ink);
+           font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+#leaders { position: absolute; inset: 0; overflow: visible; }
+
+/* Label card attached to an object by a leader line */
+.card { position: absolute; padding: 14px 20px 15px 18px; border-radius: 12px;
+        background: rgba(18, 26, 58, 0.86); border-left: 5px solid var(--accent, var(--ink));
+        box-shadow: 0 6px 30px rgba(0, 0, 0, 0.35); white-space: nowrap; will-change: transform, opacity; }
+.card .title { font-weight: 650; font-size: 30px; letter-spacing: 0.2px; color: var(--ink); }
+.card .stats { font-family: var(--font-mono); font-size: 23px; color: var(--ink-dim); margin-top: 6px; }
+.card .note  { font-size: 20px; color: var(--ink-dim); margin-top: 6px; font-style: italic; }
+
+/* Heads-up display chips (corners) */
+.hud { position: absolute; font-family: var(--font-mono); font-size: 22px; letter-spacing: 1.5px;
+       color: var(--ink-dim); text-transform: uppercase; }
+.hud b { color: var(--ink); font-weight: 600; letter-spacing: 0.5px; }
+.chip { position: absolute; padding: 10px 18px; border-radius: 999px; font-size: 24px; font-weight: 600;
+        background: rgba(18, 26, 58, 0.86); border: 2px solid var(--accent, var(--ink)); color: var(--ink); }
