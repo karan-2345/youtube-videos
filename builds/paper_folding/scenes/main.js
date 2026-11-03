@@ -34,7 +34,14 @@ export async function boot() {
   const CUT = [0, cut('S00', 'S01'), cut('S01', 'S02'), cut('S02', 'S03'), cut('S03', 'S04'), cut('S04', 'S05'), data.duration];
   const U = new Universe(renderer, F, data.table);
   U.scene.environment = env; U.scene.environmentIntensity = 0.025;
-  const S = new Studio(renderer, F, env);
+  // the studio shots (S01-S04) get their own renderer WITHOUT a logarithmic depth buffer: log depth writes gl_FragDepth,
+  // which turns off early depth rejection, and the CPU rasteriser then shades every hidden layer of the S03 cross-section
+  const renderer2 = new THREE.WebGLRenderer({ canvas: document.getElementById('gl2'), antialias: true, preserveDrawingBuffer: true });
+  renderer2.setPixelRatio(1); renderer2.setSize(W, H, false);
+  renderer2.toneMapping = THREE.ACESFilmicToneMapping; renderer2.outputColorSpace = THREE.SRGBColorSpace;
+  renderer2.shadowMap.enabled = true; renderer2.shadowMap.type = THREE.PCFShadowMap; renderer2.setClearColor(PAL.bg, 1);
+  const env2 = new THREE.PMREMGenerator(renderer2).fromScene(envScene, 0.03).texture;
+  const S = new Studio(renderer2, F, env2);
   const T = new Type();
   const ctx = { data, F, at, sec, CUT, U, S, T, renderer };
   const shots = [shotHook(ctx), S.shotRule(ctx), S.shotGold(ctx), S.shotCurve(ctx), S.shotTwelve(ctx), shotBack(ctx)];
@@ -43,6 +50,10 @@ export async function boot() {
     T.hideAll();
     renderer.setScissorTest(false); renderer.setViewport(0, 0, W, H); renderer.setClearColor(PAL.bg, 1); renderer.clear();
     let i = 0; while (i < shots.length - 1 && t >= CUT[i + 1]) i++;
+    const studio = i >= 1 && i <= 4;
+    document.getElementById('gl').style.visibility = studio ? 'hidden' : 'visible';
+    document.getElementById('gl2').style.visibility = studio ? 'visible' : 'hidden';
+    if (studio) { renderer2.setClearColor(PAL.bg, 1); renderer2.clear(); }
     shots[i](t);
     return true;
   };

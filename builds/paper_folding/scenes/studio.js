@@ -72,7 +72,7 @@ export class Studio {
   // ------------------------------------------------------------------ cross-section of a fold (S03)
   // Up to 64 layers folded once: layer i (inner to outer) bends round a half circle of radius r0 + (i + 0.5) p.
   _section() {
-    const g = new THREE.Group(), p = 0.0036, w = 0.0016, depth = 0.18, leg = 0.32, r0 = 0.0015, N = 32;
+    const g = new THREE.Group(), p = 0.0036, w = 0.0016, depth = 0.07, leg = 0.32, r0 = 0.0015, N = 32;   // shallow: the CPU rasteriser shades every hidden layer
     const white = new THREE.MeshStandardMaterial({ color: PAL.paper, roughness: 0.85 });
     const layers = [];
     for (let i = 0; i < N; i++) {
@@ -89,7 +89,7 @@ export class Studio {
         const m = new THREE.Mesh(new THREE.ExtrudeGeometry(sh, { depth, bevelEnabled: false }), white);
         legs.push(m); g.add(m);
       }
-      for (const m of [arc, ...legs]) { m.castShadow = true; m.receiveShadow = false; m.position.z = -depth; }
+      for (const m of [arc, ...legs]) { m.castShadow = i >= 7 && i % 4 === 3; m.receiveShadow = false; m.position.z = -depth; }   // outer layers make the whole silhouette
       g.add(arc);
       layers.push({ arc, legs, r });
     }
@@ -218,12 +218,14 @@ export class Studio {
       const sl = u0 * mult;
       this.strip.visible = t > sStart - 0.5;
       const sOp = ramp(t, sStart - 0.5, sStart);
-      this.strip.scale.set(sl, 0.0006, 0.04 * Math.max(sOp, 0.01)); this.strip.position.set(-0.32 + sl / 2, 0.0003, 0.12);
-      const D = keyed(t, [[t0, 0.42], [tTwice, 0.4], [tBig + 0.4, 0.55], [sStart, 0.6], [tEnd + 0.4, 0.6 + 0.62 * u0 * 64], [CUT[4], 0.62 + 0.64 * u0 * 64]], { log: true });
-      const tx = keyed(t, [[sStart, -0.035], [tEnd + 0.4, -0.32 + u0 * 32], [CUT[4], -0.32 + u0 * 32]]);
+      // the strip runs out from the front of the fold towards the camera; the camera rises with it to keep it all in frame
+      this.strip.scale.set(0.04 * Math.max(sOp, 0.01), 0.0006, sl); this.strip.position.set(0.1, 0.0003, -0.02 - sl / 2);
+      const follow = ramp(t, sStart - 0.3, sStart + 0.5);
+      const D = lerp(keyed(t, [[t0, 0.42], [tTwice, 0.4], [tBig + 0.4, 0.55], [CUT[4], 0.6]], { log: true }), smax(0.85, 1.9 * sl), follow);
+      const tx = lerp(-0.035, 0.0, follow), tz = lerp(0.05, -0.02 - 0.42 * sl, follow);
+      const el = lerp(keyed(t, [[t0, 0.25], [sStart, 0.3]]), lerp(0.75, 1.0, ramp(Math.log(mult), 0, Math.log(64))), follow);
       this.front.intensity = 1.6; this.front.position.set(0.3, 0.5, 1); this.front.target.position.set(0, 0, 0);
-      const el = keyed(t, [[t0, 0.25], [sStart, 0.3], [tEnd + 0.4, 0.95]]);
-      this.render({ target: [tx, keyed(t, [[t0, 0.05], [sStart, 0.05], [tEnd, 0.0]]), 0.05], D, az: keyed(t, [[t0, 0.18], [CUT[4], 0.05]]), el },
+      this.render({ target: [tx, lerp(0.05, 0, follow), tz], D, az: keyed(t, [[t0, 0.18], [CUT[4], 0.05]]), el, shiftY: 150 * (1 - follow) },
         { lampScale: Math.max(1, D / 0.7) });
       const step = Math.round(Math.log(mult) / Math.log(4));
       cue('s03step', step, t); cue('s03glow', (glowAll > 0.5 ? 1 : 0) + (glowNew > 0.5 ? 2 : 0), t);
