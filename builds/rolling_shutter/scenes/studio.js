@@ -67,6 +67,14 @@ export class Studio {
     this.back.visible = true;
     this.cam.layers.enableAll();
   }
+  // the studio seen from another camera (no rolling shutter): the true propeller, live
+  drawFrom(cam, rt, pass, ts, o = {}) {
+    this.pose(pass, ts);
+    cam.layers.enableAll();
+    this.r.setRenderTarget(rt); this.r.setClearColor(0x000000, 1); this.r.clear(); this.r.render(this.scene, cam);
+    this.comp.draw({ tBg: rt.texture, tProp: this.rtProp.texture, tCap: null, showLine: 0, outGain: o.gain ?? 1, exposure: o.exposure ?? 1 },
+      this.target ?? null, o.clear ?? true);
+  }
   // one frame of the studio view. o: { pass, scan (rows), ghostTs, ghost, live, belowGain, amberLen, amberAmt, prev (pass), line, disp }
   draw(o, target = null) {
     this.renderBg();
@@ -80,7 +88,7 @@ export class Studio {
       capRect: [SAFE.x, SAFE.y, SAFE.w, SAFE.h], rows: ROWS, scan: o.scan ?? 0, showLine: o.line ?? 1,
       belowGain: o.belowGain ?? 1, ghost: o.ghost ?? 0, live: o.live ?? 0, amberLen: o.amberLen ?? 1e6, amberAmt: o.amberAmt ?? 1,
       prevAmber: o.prevAmber ?? 1, track: o.track ?? 0,
-      exposure: o.exposure ?? 1, disp: o.disp || [540, 960, 1, 1], dispView: o.dispView || [540, 960], capGain: o.capGain ?? 1,
-    }, target, o.clear ?? true);
+      exposure: o.exposure ?? 1, cut: o.cut ?? 0, prevGain: o.prevGain ?? 1, outside: o.outside ?? 1, disp: o.disp || [540, 960, 1, 1], dispView: o.dispView || [540, 960], capGain: o.capGain ?? 1,
+    }, target ?? this.target ?? null, o.clear ?? true);
   }
 }

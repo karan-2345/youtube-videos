@@ -17,7 +17,7 @@ E2_EQUAL = 440 * 2 ** (-29 / 12)
 
 # Shots that are not the worked example (choices of this film, used by the simulation; see REPORT.md)
 VIDEO_SWEEP_S = 1 / 30           # S01, S04: a phone in video mode reads out in roughly one frame time
-CAR_KMH = 90                     # S01 car speed
+CAR_KMH = 120                    # S01 car speed
 FAN_RPM = 1200                   # S04 desk fan
 FAN_HZ = FAN_RPM / 60
 K_FAN = FAN_HZ * VIDEO_SWEEP_S

@@ -31,6 +31,10 @@ uniform float uOutGain;        // final multiply (0..1) for this layer
 uniform float uPrevAmber;      // amber on the earlier photo (0..1)
 uniform float uTrack;          // tint the tracked blade (live mask 1.0 vs 0.5) in the ghost
 uniform float uCapGain;        // 1 = photo, 0 = back to the unexposed view
+uniform float uOutside;        // brightness outside the sensor rect
+uniform float uPrevGain;
+uniform float uLinearOut;     // 1: write linear light (the phone screen, tone-mapped later with the room)
+uniform float uCut;            // 1 = only the captured rotor shows (alpha = mask): a cut-out photo over another view
 uniform vec2 uScreen;
 
 vec3 aces(vec3 x){ const float a=2.51,b=0.03,c=2.43,d=0.59,e=0.14; return clamp((x*(a*x+b))/(x*(c*x+d)+e),0.0,1.0); }
@@ -50,23 +54,27 @@ void main(){
   vec2 c = (q - uCapRect.xy) / uCapRect.zw;
   bool inCap = c.x >= 0.0 && c.y >= 0.0 && c.x <= 1.0 && c.y <= 1.0;
   float row = (uDir < 0.5 ? c.y : c.x) * uRows;
+  if (!inCap) col *= uOutside;
+  float cutA = 1.0;
   if (inCap && uHasPrev > 0.5 && row >= uScan) {                // an earlier photo still showing below the line
     vec4 pv = texture2D(tPrev, vec2(c.x, 1.0 - c.y));
-    col = mix(pv.rgb, amberOf(pv.rgb), uPrevAmber * smoothstep(0.55, 1.0, pv.a));
+    col = mix(col, mix(pv.rgb, amberOf(pv.rgb), uPrevAmber * smoothstep(0.55, 1.0, pv.a)), uPrevGain);
   }
   if (inCap && uHasCap > 0.5 && row < uScan) {
     vec4 cp = texture2D(tCap, vec2(c.x, 1.0 - c.y));            // bilinear at the 2x2 centre = box filter
     float behind = uScan - row;
     float a = uAmberAmt * smoothstep(0.55, 1.0, cp.a) * exp(-behind / max(uAmberLen, 1e-3));
     col = mix(col, mix(cp.rgb, amberOf(cp.rgb), a), uCapGain);
-  }
+    cutA = clamp(cp.a * 2.0, 0.0, 1.0);
+  } else { cutA = 0.0; }
+  if (!inCap) cutA = 0.0;
   // the live propeller as a pale ghost (desaturated, light)
   float gl = lum(pr.rgb / max(pr.a, 1e-3));
   vec3 pale = vec3(0.16 + 0.45 * clamp(gl, 0.0, 1.5));
   float tr = uTrack * smoothstep(0.7, 0.95, pr.a);
   pale = mix(pale, uAmber * (0.25 + 0.6 * clamp(gl, 0.0, 1.5)), tr);
   col = mix(col, pale, clamp(pr.a * (1.0 + uTrack), 0.0, 1.0) * uGhost);
-  col = toSRGB(aces(col * uExposure));
+  col = uLinearOut > 0.5 ? col * uExposure : toSRGB(aces(col * uExposure));
   // the scan line: a thin, crisp, bright amber line across the sensor at the current row
   if (uShowLine > 0.5) {
     float d; float span;
@@ -75,9 +83,10 @@ void main(){
     float dpx = d * uDisp.z;                                     // in screen px
     float core = 1.0 - smoothstep(uLineW * 0.5 - 0.5, uLineW * 0.5 + 0.5, dpx);
     vec3 lineCol = mix(vec3(1.0, 0.86, 0.62), toSRGB(uAmber), 0.35);
+    if (uLinearOut > 0.5) lineCol = pow(lineCol, vec3(2.2)) * 1.6;
     col = mix(col, lineCol, core * span * uShowLine);
   }
-  gl_FragColor = vec4(col * uOutGain, uDisp.w);
+  gl_FragColor = vec4(col * uOutGain, uDisp.w * mix(1.0, cutA, uCut));
 }`;
 
 export class Compositor {
@@ -94,7 +103,7 @@ export class Compositor {
         uExposure: { value: 1 }, uAmber: { value: AMBER.clone() }, uDisp: { value: new THREE.Vector4(540, 960, 1, 1) },
         uDispView: { value: new THREE.Vector2(540, 960) }, uLineW: { value: 3 }, uFadeTop: { value: 0 }, uOutGain: { value: 1 },
         uScreen: { value: new THREE.Vector2(W, H) },
-        uPrevAmber: { value: 1 }, uTrack: { value: 0 }, uCapGain: { value: 1 },
+        uPrevAmber: { value: 1 }, uTrack: { value: 0 }, uCapGain: { value: 1 }, uOutside: { value: 1 }, uCut: { value: 0 }, uPrevGain: { value: 1 }, uLinearOut: { value: 0 },
       },
     });
     this.scene = new THREE.Scene();
@@ -109,7 +118,7 @@ export class Compositor {
     const d = {
       tBg: null, tProp: null, tCap: null, tPrev: null, capRect: [0, 240, 1080, 1440], rows: 1440, scan: 0, dir: 0, showLine: 1,
       belowGain: 1, ghost: 0, live: 0, amberLen: 300, amberAmt: 1, exposure: 1, disp: [540, 960, 1, 1], dispView: [540, 960],
-      lineW: 3, outGain: 1, screen: [W, H], prevAmber: 1, track: 0, capGain: 1, ...p,
+      lineW: 3, outGain: 1, screen: [W, H], prevAmber: 1, track: 0, capGain: 1, outside: 1, cut: 0, prevGain: 1, linearOut: 0, view: [W, H], ...p,
     };
     u.tBg.value = d.tBg; u.tProp.value = d.tProp; u.tCap.value = d.tCap; u.tPrev.value = d.tPrev;
     u.uHasCap.value = d.tCap ? 1 : 0; u.uHasPrev.value = d.tPrev ? 1 : 0;
@@ -119,10 +128,12 @@ export class Compositor {
     u.uDisp.value.set(...d.disp); u.uDispView.value.set(...d.dispView); u.uLineW.value = d.lineW; u.uOutGain.value = d.outGain;
     u.uScreen.value.set(...d.screen);
     u.uPrevAmber.value = d.prevAmber; u.uTrack.value = d.track; u.uCapGain.value = d.capGain;
+    u.uOutside.value = d.outside; u.uPrevGain.value = d.prevGain; u.uLinearOut.value = d.linearOut; u.uCut.value = d.cut; u.uView.value.set(...d.view);
     const r = this.r;
     r.setRenderTarget(target);
     const ac = r.autoClear;
     if (clear) { r.setClearColor(0x0b0b0c, 1); r.clear(); }
+    if (!target) r.setViewport(0, 0, W, H); 
     r.autoClear = false;
     r.render(this.scene, this.cam);
     r.autoClear = ac;

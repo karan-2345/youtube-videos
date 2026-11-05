@@ -4,7 +4,7 @@ import { W, H, SAFE, makeRenderer, makeEnvironment } from './engine.js';
 import { Compositor } from './comp.js';
 import { Studio, ROWS, HUB_Y } from './studio.js';
 import { Overlay } from './overlay.js';
-import { buildShots } from './shots.js';
+import { buildShots, trap } from './shots.js';
 
 export async function boot() {
   const data = await (await fetch('/cache/data.json')).json();
@@ -18,7 +18,35 @@ export async function boot() {
   const studio = new Studio(renderer, env, comp);
   const ov = new Overlay(document.getElementById('ov'), document.getElementById('svg'));
   const ctx = { THREE, renderer, env, comp, studio, ov, data, F: data.facts, W, H, SAFE, ROWS, HUB_Y };
+  ctx.out = null;
   const { shots, cues } = buildShots(ctx);
+  // scan-line wipes: the earlier shot's frozen frame stays below the line, the new shot appears above it
+  const rtScreen = new THREE.WebGLRenderTarget(W, H, { colorSpace: THREE.NoColorSpace });
+  const wipeMat = new THREE.ShaderMaterial({ transparent: true, depthTest: false, depthWrite: false,
+    uniforms: { tPrev: { value: rtScreen.texture }, uY: { value: 0 }, uAmber: { value: new THREE.Color('#ffae42') } },
+    vertexShader: 'varying vec2 vUv; void main(){ vUv = uv; gl_Position = vec4(position.xy, 0.0, 1.0); }',
+    fragmentShader: `varying vec2 vUv; uniform sampler2D tPrev; uniform float uY; uniform vec3 uAmber;
+      vec3 toSRGB(vec3 c){ return mix(c*12.92, 1.055*pow(c, vec3(1.0/2.4))-0.055, step(0.0031308, c)); }
+      void main(){ float y = (1.0 - vUv.y) * 1920.0; float d = abs(y - uY);
+        float core = 1.0 - smoothstep(1.0, 2.0, d);
+        vec3 lineCol = mix(vec3(1.0, 0.86, 0.62), toSRGB(uAmber), 0.35);
+        if (y < uY - 2.0) { gl_FragColor = vec4(0.0); return; }
+        vec4 p = texture2D(tPrev, vUv);
+        gl_FragColor = vec4(mix(p.rgb, lineCol, core), 1.0); }` });
+  const wipeScene = new THREE.Scene(); const wq = new THREE.Mesh(new THREE.PlaneGeometry(2, 2), wipeMat); wq.frustumCulled = false; wipeScene.add(wq);
+  const ocam = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
+  const byId = Object.fromEntries(shots.map((s) => [s.id, s]));
+  let prevKey = null;
+  const renderPrev = (from, at) => {
+    const key = from + '@' + at;
+    if (prevKey === key) return;
+    ctx.out = rtScreen; studio.target = rtScreen;
+    ov.suspend = true;
+    byId[from].render(at);
+    ov.suspend = false;
+    ctx.out = null; studio.target = null;
+    prevKey = key;
+  };
   window.cueList = () => cues;
   window.shotList = () => shots.map((s) => [s.id, s.t0, s.t1]);
   window.setTime = async (t) => {
@@ -26,7 +54,17 @@ export async function boot() {
     const s = shots.find((x) => t >= x.t0 && t < x.t1) || shots[shots.length - 1];
     renderer.setRenderTarget(null);
     renderer.setClearColor(0x0b0b0c, 1); renderer.clear();
+    let wp = null;
+    for (const w of [s.wipe, s.wipe2]) if (w && t >= w.a && t < w.b) wp = w;
+    if (wp) renderPrev(wp.from, wp.at ?? byId[wp.from].t1 - 1 / 60);
+    renderer.setRenderTarget(null);
     s.render(t);
+    if (wp) {
+      wipeMat.uniforms.uY.value = 240 + 1440 * trap((t - wp.a) / (wp.b - wp.a), 0.25);
+      renderer.setRenderTarget(null); const ac = renderer.autoClear; renderer.autoClear = false;
+      renderer.render(wipeScene, ocam); renderer.autoClear = ac;
+      ov.clip('a', 0, wipeMat.uniforms.uY.value);
+    }
     ov.end();
     const px = new Uint8Array(4);
     g.readPixels(0, 0, 1, 1, g.RGBA, g.UNSIGNED_BYTE, px);     // wait for the GPU before the screenshot
@@ -55,5 +93,6 @@ export async function boot() {
     }
     console.log('readback bands row:meanX ' + res.join(' '));
   };
+  window.shotAt = async (t, flag) => { window.SHOWSCREEN = flag; await window.setTime(t); };
   window.ready = true;
 }

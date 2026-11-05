@@ -158,7 +158,7 @@ export function rotorMaterial() {
 }
 export function makePropeller({ blades = 3, R = 1 } = {}) {
   const g = new THREE.Group();
-  const blade = bladeGeometry({ R });
+  const blade = bladeGeometry({ R: 1 }).scale(R, R, R);   // built at unit size, then scaled
   const parts = [];
   const bl = (b) => tagged(blade.clone().rotateZ(-b * Math.PI * 2 / blades), b);
   const pieces = [];

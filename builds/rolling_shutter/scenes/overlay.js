@@ -15,7 +15,8 @@ export class Overlay {
   begin() { this.used.clear(); for (const g of Object.values(this.groups)) g.d.style.clipPath = 'none'; }
   clip(name, y0, y1) { this.group(name).d.style.clipPath = `inset(${y0}px 0px ${1920 - y1}px 0px)`; }
   // text centred on (x, y) (y = the middle of the cap height)
-  text(key, str, { x = 540, y = 960, size = 96, op = 1, color = '#f2f0ec', group = 'a', align = 'center', scale = 1 } = {}) {
+  text(key, str, o = {}) { if (this.suspend) return; this._text(key, str, o); }
+  _text(key, str, { x = 540, y = 960, size = 96, op = 1, color = '#f2f0ec', group = 'a', align = 'center', scale = 1 } = {}) {
     let e = this.els.get(key);
     if (!e) { e = document.createElement('div'); e.className = 't'; this.els.set(key, e); }
     const g = this.group(group);
@@ -29,7 +30,8 @@ export class Overlay {
     this.used.add(key);
   }
   // a ring: track + filled arc (fraction f, clockwise from 12 o'clock)
-  ring(key, { x, y, r, w = 10, f = 0, op = 1, color = '#f2f0ec', track = 'rgba(242,240,236,0.16)', group = 'a' }) {
+  ring(key, o) { if (this.suspend) return; this._ring(key, o); }
+  _ring(key, { x, y, r, w = 10, f = 0, op = 1, color = '#f2f0ec', track = 'rgba(242,240,236,0.16)', group = 'a' }) {
     let e = this.els.get(key);
     const g = this.group(group);
     if (!e) {
