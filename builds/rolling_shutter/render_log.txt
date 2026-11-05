@@ -1,1 +1,2 @@
 frames: 9066 on 4 workers
+render wall 7458 s, 1.22 frames/s
