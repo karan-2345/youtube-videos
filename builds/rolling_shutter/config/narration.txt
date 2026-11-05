@@ -1,0 +1,18 @@
+# Narration, word for word from the brief. One line per sentence: <id> <text>
+# Section = the part of the id before the dot. Pauses: 0.4 s between sentences, 0.8 s between sections.
+# "@pause S05.03 1.0" adds the scripted pause after that sentence.
+S00.01 When you film a spinning propeller on your phone, the blades bend like bananas and some of them float away from the hub, even though the propeller is perfectly straight, and that's because your phone doesn't take a picture the way you think it does.
+S00.02 And once you see how it really works, you'll be able to read how fast something is spinning just from the shape of the bend.
+S01.01 Because you'd expect a photo to catch one single instant, but most phone cameras read the picture one row at a time, starting at the top of the sensor and sweeping down to the bottom.
+S01.02 That sweep only takes a small fraction of a second, but it does mean the top of your photo is slightly older than the bottom.
+S02.01 So now put a propeller under that sweep, and imagine one blade pointing straight up, because the first rows catch it there, but by the time the sweep has moved down a little, the blade has already turned, so the next rows catch it further round.
+S02.02 And when each row is stacked on the one before, a straight blade turns into a curve, even though at every moment it was perfectly straight.
+S02.03 For example, a propeller at 2,400 revolutions a minute turns 40 times every second, so if your phone takes a seventieth of a second to sweep, the blade has gone more than halfway round before the picture is finished.
+S03.01 And that also explains the pieces floating in mid-air, because a blade can turn so far during the sweep that it comes back across rows further down, so it gets caught a second time in a completely different place.
+S03.02 Which means those detached blades are just the same blade seen at later moments.
+S04.01 So you can test this yourself with a desk fan, because if you film it and then turn your phone sideways, the bend changes, since the sweep is now crossing the fan in a different direction.
+S04.02 And the same thing happens with guitar strings, which can look like slow wavy snakes on film, when really they're just vibrating faster than the sweep can follow.
+S05.01 And here's the part that makes it more than a glitch, because the whole shape depends on just one number, which is how many turns the propeller makes during a single sweep.
+S05.02 So one person who modelled this took a real photo of a propeller and worked backwards, finding that it had made about two and a half turns per sweep, which was then enough to un-bend the picture back towards a straight propeller.
+S05.03 So the next time your phone bends a fan, you're looking at a rough stopwatch, because if you know how long the sweep takes, the shape of the bend tells you how fast it was turning.
+@pause S05.03 1.0
