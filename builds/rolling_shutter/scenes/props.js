@@ -97,12 +97,12 @@ export function makeCar() {
 export function makeDesk(env) {
   const scene = new THREE.Scene();
   scene.environment = env; scene.environmentIntensity = 2.2;
-  const back = new THREE.Mesh(new THREE.PlaneGeometry(20, 20), new THREE.MeshStandardMaterial({ color: 0x0d0d0e, roughness: 0.95 }));
+  const back = new THREE.Mesh(new THREE.PlaneGeometry(20, 20), new THREE.MeshStandardMaterial({ color: 0x060607, roughness: 0.95 }));
   back.position.z = -1.6; back.material.envMapIntensity = 0.12; scene.add(back);
   
   const desk = new THREE.Mesh(new THREE.PlaneGeometry(20, 6).rotateX(-Math.PI / 2), new THREE.MeshStandardMaterial({ color: 0x141415, roughness: 0.7 }));
   desk.position.y = -0.42; desk.material.envMapIntensity = 0.3; scene.add(desk);
-  const key = new THREE.SpotLight(0xfff4ea, 1.1, 0, 0.5, 1, 2); key.position.set(-1.2, 1.6, 2.4); key.target.position.set(0, -0.1, -0.6);
+  const key = new THREE.SpotLight(0xfff4ea, 0.45, 0, 0.5, 1, 2); key.position.set(-1.2, 1.6, 2.4); key.target.position.set(0, -0.1, -0.6);
   scene.add(key, key.target);
   // the fan: the same three-blade rotor at desk-fan size, in a wire guard on a stand
   const fan = makePropeller({ R: 0.15 });

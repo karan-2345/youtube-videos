@@ -234,7 +234,7 @@ export function buildShots(ctx) {
     const SV = [520, 1150];
     const screenRT = rtFloat(SV[0], SV[1], 0);
     dk.screenMat.map = screenRT.texture; dk.screenMat.color.setScalar(1.0); dk.screenMat.needsUpdate = true;
-    const phonePos = new THREE.Vector3(0.01, -0.075, 1.17);
+    const phonePos = new THREE.Vector3(0.0, -0.109, 1.2);   // framed so phone and fan both sit inside the middle 3:4, above the captions
     const fanC = new THREE.Vector3(0, 0.0, 0);   // the phone's camera (on its centre line) aims at the fan's hub
     const setPhone = (roll) => {
       dk.phone.position.copy(phonePos);
@@ -277,7 +277,7 @@ export function buildShots(ctx) {
         // pose the live world (the same fan, the phone at its current roll)
         dk.fan.spin(2 * Math.PI * F.FAN_HZ * tsOf(t)); setPhone(roll);
         const push = ramp(t, t0, tG);
-        wcam.position.set(0.012, lerp(0.03, 0.02, push), lerp(1.72, 1.6, push)); wcam.lookAt(0.0, -0.075, 0.4);
+        wcam.position.set(0.012, 0.03, lerp(1.98, 1.93, push)); wcam.lookAt(0.012, -0.199, 0);
         renderer.setRenderTarget(rtW); renderer.setClearColor(0, 1); renderer.clear(); renderer.render(dk.scene, wcam);
         comp.draw({ tBg: rtW.texture, tProp: pview.empty.texture, tCap: null, showLine: 0 }, ctx.out, true);
       } else {
