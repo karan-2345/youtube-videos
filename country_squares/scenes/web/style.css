@@ -1,0 +1,27 @@
+@font-face { font-family: 'Inter'; src: url('../../assets/fonts/Inter-VariableFont_opsz,wght.ttf'); font-weight: 100 900; font-style: normal; }
+@font-face { font-family: 'Archivo Captions'; src: url('../../assets/fonts/Archivo-Captions800.ttf'); font-weight: 800; font-style: normal; }
+:root {
+  --bg: #0B1020;
+  --bg-glow: #141B33;
+  --grid: #1B2440;
+  --land0: #EDE4D3;
+  --land1: #D8C7A6;
+  --land2: #B9C3A5;
+  --land3: #A9B9C7;
+  --ghost: #3A4360;
+  --ink: #F3EFE7;
+  --ink-dim: #A3ABBF;
+  --ink-faint: #5F6884;
+  --edge: #0B1020;
+  --accent: #FF5A36;
+  --type-title: 96px;
+  --type-h1: 72px;
+  --type-h2: 54px;
+  --type-label: 40px;
+  --type-small: 30px;
+  --type-caption: 84px;
+  --type-number: 150px;
+  --font-sans: 'Inter', sans-serif;
+}
+html, body { margin: 0; padding: 0; background: var(--bg); overflow: hidden; }
+canvas { display: block; }

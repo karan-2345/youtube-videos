@@ -1,0 +1,42 @@
+{
+  "video": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 60
+  },
+  "palette": {
+    "bg": "#0B1020",
+    "bg_glow": "#141B33",
+    "grid": "#1B2440",
+    "land0": "#EDE4D3",
+    "land1": "#D8C7A6",
+    "land2": "#B9C3A5",
+    "land3": "#A9B9C7",
+    "ghost": "#3A4360",
+    "ink": "#F3EFE7",
+    "ink_dim": "#A3ABBF",
+    "ink_faint": "#5F6884",
+    "edge": "#0B1020",
+    "accent": "#FF5A36"
+  },
+  "type_px": {
+    "title": 96,
+    "h1": 72,
+    "h2": 54,
+    "label": 40,
+    "small": 30,
+    "caption": 84,
+    "number": 150
+  },
+  "layout": {
+    "safe_margin_px": 64,
+    "safe_34_y": [
+      240,
+      1680
+    ],
+    "caption_y": [
+      1290,
+      1470
+    ]
+  }
+}
