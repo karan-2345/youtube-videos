@@ -1,7 +1,7 @@
 # Top 5 Realistic Shaders for MCPE (November 2026): Hinglish Voiceover
 
 Video: `Top5_Realistic_MCPE_Shaders_Nov2026_NO_AUDIO.mp4`, 1080p30, **5:13**. Voice 0:00 se 5:05 tak, last 8 sec end screen.
-Script: **683 words**, ~140 wpm (aaram se, normal YouTube speed). Koi bhi line 165 wpm se tez nahi. Har line ke aage woh time hai jahan video us line ko expect karta hai.
+Script: **682 words**, ~140 wpm (aaram se, normal YouTube speed). Koi bhi line 165 wpm se tez nahi. Har line ke aage woh time hai jahan video us line ko expect karta hai.
 
 ## Padhne se pehle
 
@@ -52,7 +52,7 @@ Script: **683 words**, ~140 wpm (aaram se, normal YouTube speed). Koi bhi line 1
 
 `2:00` Number 3: Definitive Vibrant Visuals, by Aleeee.
 `2:03` Yahan biome decide karta hai temperature.
-`2:06` Garam biomes warm glow karte hain, thande wale neele pad jaate hain.
+`2:06` Garam biomes warm glow karte hain, thande neele pad jaate hain.
 `2:10` Metal ki har cheez asli metal jaisi dikhti hai: armour, tools, yahan tak ki iron aur copper golems bhi.
 `2:17` Paani pe realistic caustics, candles aur light blocks se coloured light, aur agar phone struggle kare, toh ek Low version bhi hai jismein wavy water nahi hai.
 `2:28` Ye Android, iOS, Windows, Xbox aur PS5, sab pe chalta hai.
