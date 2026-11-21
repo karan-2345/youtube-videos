@@ -1,0 +1,34 @@
+@font-face { font-family: 'Inter'; src: url('../../assets/fonts/Inter-VariableFont_opsz,wght.ttf'); font-weight: 100 900; font-style: normal; }
+:root {
+  --bg: #0F0C0B;
+  --bg-glow: #2A1D18;
+  --skin: #C98262;
+  --epidermis: #F1CDB0;
+  --dermis: #DA7C74;
+  --dermis-fibre: #F0A69C;
+  --fat: #F2D58A;
+  --fat-edge: #D9B45E;
+  --ink: #1B2130;
+  --cell: #F5EEDC;
+  --cell-nucleus: #9B82C8;
+  --steel: #C9CED6;
+  --laser: #6CFF7A;
+  --lymph: #BFE3EA;
+  --fur: #F1EDE6;
+  --pink: #EFA3AE;
+  --ink-text: #F2EBDD;
+  --ink-dim: #A99E8E;
+  --accent: #E0502F;
+  --type-title: 120px;
+  --type-h1: 84px;
+  --type-h2: 56px;
+  --type-body: 44px;
+  --type-label: 46px;
+  --type-small: 30px;
+  --type-caption: 84px;
+  --type-credit: 36px;
+  --type-tag: 32px;
+  --type-number: 200px;
+  --safe: 64px;
+  --font-sans: 'Inter', sans-serif;
+}

@@ -26,4 +26,4 @@ So when scientists killed those cells in tattooed mice, the tattoos didn't fade,
 ## S03 · Why removal is so slow
 @scene S03_Laser
 And that's why lasers take so many sessions to remove a tattoo, since they have to shatter the ink small enough for those cells to carry it away.
-@pause 0.6
+@pause 1.2
