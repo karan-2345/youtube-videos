@@ -188,7 +188,34 @@ def flow(seed=13, dur=1.0):
     return _norm(x * np.sin(np.pi * t / dur) ** 1.2, 0.4)
 
 
-SOUNDS = {"swish": swish, "buzz": buzz, "punch": punch, "gulp": gulp, "fizz": fizz, "squish": squish, "pop": pop,
+def rustle(seed=14, dur=2.4):
+    """Dead skin flaking off (time-lapse): a soft, dry papery flutter that swells and fades."""
+    n = int(dur * SR)
+    r = _rng(seed)
+    t = np.arange(n) / SR
+    x = _bp(r.normal(0, 1, n), 2500, 9000) * (r.random(n) > 0.6) + 0.3 * _bp(r.normal(0, 1, n), 800, 3000)
+    flutter = 0.5 + 0.5 * np.abs(np.sin(2 * np.pi * 11 * t + 3 * np.sin(2 * np.pi * 1.3 * t)))
+    return _norm(x * flutter * np.sin(np.pi * t / dur) ** 1.5, 0.35)
+
+
+def zip_(seed=15, dur=0.9):
+    """The cut line running round the star: a quick rising train of fine ticks."""
+    n = int(dur * SR)
+    out = np.zeros(n)
+    r = _rng(seed)
+    t, k = 0.0, 0
+    while t < dur - 0.02:
+        i = int(t * SR)
+        m = int(0.008 * SR)
+        tt = np.arange(m) / SR
+        f = 2500 + 3500 * t / dur
+        out[i:i + m] += np.sin(2 * np.pi * f * tt) * np.exp(-tt / 0.0025) * r.uniform(0.6, 1)
+        t += 0.028 - 0.016 * t / dur
+        k += 1
+    return _norm(out, 0.35)
+
+
+SOUNDS = {"rustle": rustle, "zip": zip_, "swish": swish, "buzz": buzz, "punch": punch, "gulp": gulp, "fizz": fizz, "squish": squish, "pop": pop,
           "ding": ding, "whir": whir, "zap": zap, "zapbig": zapbig, "shimmer": shimmer, "flow": flow}
 
 

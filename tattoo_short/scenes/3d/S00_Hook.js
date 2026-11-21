@@ -10,15 +10,18 @@ export async function setup({ renderer, data }) {
   const st = C.stage(renderer, pal);
   const camera = C.makeCamera();
   const arm = C.makeArm(pal);
-  const flakes = C.makeFlakes(pal, 420, 5, C.armSpots, { size: 0.085 });
+  const flakes = C.makeFlakes(pal, 420, 5, C.armSpots, { size: 0.11 });
   const block = C.makeBlock(pal);
   st.scene.add(arm.group, flakes.mesh, block.group);
 
   const drift = { p: C.CAM.arm.p.clone().lerp(C.CAM.push.p, 0.1), t: C.CAM.arm.t.clone().lerp(C.CAM.push.t, 0.1) };
   const liftT0 = a.withit - 0.1, liftT1 = end - 0.45;
 
+  const cues = [[a.sheds - 0.15, 'rustle', -12, a.why - a.sheds + 0.6], [a.tattoo - 0.4, 'zip', -12, a.withit - a.tattoo + 0.35],
+                [liftT0, 'swish', -8]];
+
   return {
-    scene: st.scene, camera,
+    scene: st.scene, camera, cues,
     post: { ss: 1.0, samples: 1, msaa: 4, bg: pal.bg, grain: 0.03, vignette: 0.3, exposure: 1.05 },
     blurSamples: (t) => (t > liftT0 && t < liftT1 ? 2 : 1),
     update(t) {

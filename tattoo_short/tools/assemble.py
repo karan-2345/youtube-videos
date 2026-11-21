@@ -127,7 +127,7 @@ def write_captions(cues: list[dict], name: str, out_dir: Path = FINAL, caps_dir:
     srt_path.write_text("\n".join(srt), encoding="utf-8")
 
     hi = _ass_color(style.PALETTE["accent"], 1.0)
-    ink = _ass_color(style.PALETTE["ink"], 1.0)
+    ink = _ass_color(style.PALETTE["ink_text"], 1.0)       # ivory ("ink" is the tattoo ink in this palette)
     y = sum(style.CAPTION_Y) // 2
     ev = []
     groups = _chunks(words or [])
@@ -227,7 +227,7 @@ def premix(voice: Path, total: float, starts: dict, timings: dict, name: str, ou
     lv, ls, lm = lufs(voice), lufs(sfx_path), lufs(mus_path)
     MUSIC_BELOW, SFX_BELOW = 16.0, 10.0
     gm = 10 ** ((lv - MUSIC_BELOW - lm) / 20)
-    gs = 10 ** ((lv - SFX_BELOW - ls) / 20)
+    gs = 10 ** ((lv - SFX_BELOW - ls) / 20) if ls > -60 else 1.0     # a silent SFX track is left alone
     out = out_dir / f"{name}_premix.wav"
     fc = (f"[0:a]aresample={sr},asplit=2[v][vsc];"
           f"[2:a]volume={gm:.4f}[m];[m][vsc]sidechaincompress=threshold=0.02:ratio=5:attack=40:release=700[md];"

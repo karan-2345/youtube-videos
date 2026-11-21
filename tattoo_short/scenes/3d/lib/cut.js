@@ -407,11 +407,17 @@ export function makeArm(pal) {
 /** Skin flakes peeling off a surface (time-lapse shedding). spots(i, r) -> {p, n} picks where flake i sits. */
 export function makeFlakes(pal, count, seed, spots, { size = 0.05 } = {}) {
   const r = rng(seed);
-  const geo = new THREE.PlaneGeometry(1, 0.72, 4, 3);
-  const pos = geo.attributes.position;                // a slight curl
-  for (let i = 0; i < pos.count; i++) pos.setZ(i, 0.12 * (pos.getX(i) ** 2 + pos.getY(i) ** 2));
+  // an irregular, slightly curled flake of dead skin (one shape, turned differently for each instance)
+  const geo = new THREE.CircleGeometry(0.5, 11);
+  const pos = geo.attributes.position, rs = rng(seed + 1);
+  const jag = Array.from({ length: 12 }, () => 0.55 + 0.45 * rs());
+  for (let i = 1; i < pos.count; i++) {
+    const k = (i - 1) % 11, x = pos.getX(i) * jag[k], y = pos.getY(i) * jag[k] * 0.75;
+    pos.setXYZ(i, x, y, 0.35 * (x * x + y * y));
+  }
   geo.computeVertexNormals();
-  const mat = new THREE.MeshStandardMaterial({ color: new THREE.Color('#D39A7C'), roughness: 1, side: THREE.DoubleSide });
+  const mat = new THREE.MeshStandardMaterial({ color: new THREE.Color('#D7A688'), roughness: 1, side: THREE.DoubleSide,
+                                               transparent: true, opacity: 0.82, depthWrite: false });
   const mesh = new THREE.InstancedMesh(geo, mat, count);
   mesh.frustumCulled = false;
   const items = [];

@@ -48,3 +48,7 @@ in web search results. **Re-read the paper's abstract on the laptop before STOP 
    conclusive (vidIQ ran out of credits before the channel's full list could be pulled). Search the channel for
    "tattoo" on YouTube to be sure. Our angle is different anyway: a 30-40 s Short built around the mouse experiment,
    ending on why lasers need so many sessions.
+7. **Where the mice were tattooed.** The S02 inset shows a lab mouse with a tattooed tail band, which is the usual
+   way lab mice are tattooed. The search results didn't say which body part the 2018 study used, so check the
+   paper's methods on the laptop. If it wasn't the tail, move the band in `makeMouse` (`scenes/3d/lib/cut.js`).
+   The narration doesn't depend on it.
