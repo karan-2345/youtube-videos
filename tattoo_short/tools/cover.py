@@ -28,12 +28,12 @@ def build() -> Path:
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", f"{t:.3f}", "-i",
                     str(ROOT / "renders" / "scenes" / f"{scene}.mp4"), "-frames:v", "1", str(raw)], check=True)
     img = Image.open(raw).convert("RGB")
-    font = ImageFont.truetype(str(ROOT / "assets" / "fonts" / "Inter-VariableFont_opsz,wght.ttf"), 132)
+    font = ImageFont.truetype(str(ROOT / "assets" / "fonts" / "Inter-VariableFont_opsz,wght.ttf"), 116)
     try:
         font.set_variation_by_name("ExtraBold")
     except Exception:
         font.set_variation_by_axes([32, 800])
-    y0 = style.SAFE_34_Y[0] + 40
+    y0 = style.SAFE_34_Y[0] + 14
     shadow = Image.new("RGBA", img.size, (0, 0, 0, 0))
     sd = ImageDraw.Draw(shadow)
     text = Image.new("RGBA", img.size, (0, 0, 0, 0))
@@ -45,7 +45,7 @@ def build() -> Path:
         sd.text((x, y + 8), line, font=font, fill=(0, 0, 0, 200))
         col = style.PALETTE["accent"] if i == ACCENT_LINE else style.PALETTE["ink_text"]
         td.text((x, y), line, font=font, fill=col)
-        y += 150
+        y += 130
     shadow = shadow.filter(ImageFilter.GaussianBlur(14))
     img = Image.alpha_composite(Image.alpha_composite(img.convert("RGBA"), shadow), text).convert("RGB")
     out = out_dir / "cover.png"

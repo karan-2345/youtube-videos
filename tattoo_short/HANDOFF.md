@@ -13,6 +13,23 @@ Everything rebuilds on the laptop with the commands in `README.md`.
 | S02_Relay 9.4 s | "So when scientists killed those cells in tattooed mice, the tattoos didn't fade, because new cells swallowed the spilled ink in the same spot." | A circular inset shows a TATTOOED MOUSE (ink band on its tail). The cells burst one by one and spill their grains, which stay put; the tail band is STILL THERE. NEW CELLS crawl in from other directions and swallow the same grains in the same places. |
 | S03_Laser 10.0 s | "And that's why lasers take so many sessions to remove a tattoo, since they have to shatter the ink small enough for those cells to carry it away." | A laser hand-piece pulses over the star, SESSION 1 to 7 (WEEKS APART), and the star fades a little each time. Close up, one pulse shatters the grains into dust; the cells crawl down to the LYMPH VESSEL and the dust flows away. The block drops back into the arm and the camera returns to the opening shot (loop). |
 
+### Final (2026-11-21)
+
+`final/` (in git): `tattoo_short.mp4` (captions burned in), `tattoo_short_clean.mp4`, `tattoo_short.srt`,
+`cover.png`, `upload.md`. The silent version, the stems and the scene renders are in `renders/` (not in git, rebuilt
+by `build.py`).
+- Measured: **33.13 s**, 1080 x 1920 @ 60, **-13.8 LUFS** integrated (ebur128 on the final file), -2.2 dBTP,
+  LRA 2.9 LU. Linear loudnorm gain of +5.8 dB after the look-ahead limiter trimmed peaks above -7.7 dBFS.
+- Mix: voice -22.4 LUFS; SFX 10 LU under the voice; music 16 LU under it, ducked under the voice.
+- Captions: the text is identical to the script (checked). Word captions in Archivo Captions, ivory with the
+  spoken word in cinnabar.
+- Loop: the last frame matches the first (the forearm and star). Mean difference 1.34 / 255, no 60 px block above
+  2.24 / 255.
+- Renders (SwiftShader, 3 workers, 0.6 frames/s): S00 551 s, S01 869 s, S02 972 s, S03 1033 s (about 57 min).
+- Checked by eye: 10 frames of the captioned final, every scene's key beats in stills, the mouse inset close up,
+  the cover full frame and its 3:4 crop. Audio checked by measurement only, not by listening.
+- Cover: S00 at 5.8 s (the block lifting out of the arm), with "WHY DON'T / TATTOOS / WASH OFF?" in Inter ExtraBold.
+
 ## Decisions
 
 - **Look "Cut-away"** (ours, not a copy of another channel's characters or style). One object, one slice, one idea:
