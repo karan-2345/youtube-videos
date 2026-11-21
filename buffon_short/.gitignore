@@ -1,0 +1,11 @@
+scenes/web/node_modules/
+renders/frames/
+renders/stills/
+renders/cache/
+renders/scene.mp4
+renders/render.log
+renders/final/stems/
+renders/final/*.ass
+audio/
+__pycache__/
+renders/final/_*.wav
