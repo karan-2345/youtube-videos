@@ -1,6 +1,17 @@
 # HANDOFF: "The Leaning Tower of Pisa should have fallen over" (Pisa Short)
 
-## Status 2026-11-21: final being built
+## Status 2026-11-21: final delivered
+
+`renders/final/pisa_short.mp4` (captions burned in) and `pisa_short_clean.mp4` (no captions), with
+`captions/pisa_short.srt`, `cover.png` and `upload.md` (titles, description with sources, Reels caption, pinned
+comment). Measured on the final file:
+
+- 1080 x 1920, 60 fps, 4130 frames, 68.83 s; H.264 + AAC 48 kHz stereo; 71.8 MB (clean 70.8 MB).
+- Loudness -14.0 LUFS integrated, true peak -1.9 dBTP, LRA 2.2 LU (stems: voice -22.1, sfx -31.2, music -19.4
+  LUFS before the mix; music ducked 6 dB and effects 5 dB under the voice).
+- Captions match `config/narration.py` word for word (18 cues, years shown as digits).
+- Loop: the last frame matches the first (same camera, lean, tourists; mean pixel difference 4/255).
+- Render: 5504 s on 2 workers (0.75 frames/s); assembly about 9 minutes.
 
 The user asked for a Short that "everyone can watch" (not only science fans), picked the Pisa idea, and asked for the
 best possible animation and a hook that grabs in the first seconds. The voice is Kokoro `af_heart` (as before).
