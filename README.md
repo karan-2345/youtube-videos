@@ -5,3 +5,5 @@ atom in the universe playing chess since the Big Bang would fall short. Built wi
 count comes from our own legal move generator (`config/chess.py`), checked against the published perft tables.
 
 Status, decisions and file map: `HANDOFF.md`. Run everything with `.venv\Scripts\python build.py <command>`.
+
+Also in this repo: `buffon_short/`, the Buffon's needle Short ("You can calculate pi without a single circle", 69 s). See its `README.md`.
