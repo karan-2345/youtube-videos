@@ -1,0 +1,22 @@
+{
+ "palette": {
+  "bg": "#1A1410",
+  "sky_top": "#36639A",
+  "sky_mid": "#A9B4BE",
+  "sky_low": "#F2C38A",
+  "sun": "#FFD7A1",
+  "marble": "#ECE5D7",
+  "marble_shade": "#B9AE9C",
+  "grass": "#5F7A35",
+  "grass_light": "#86A048",
+  "sand": "#98835F",
+  "clay": "#6E7C86",
+  "clay_firm": "#48525A",
+  "sand_deep": "#7A6A50",
+  "water": "#7EC8F2",
+  "ink": "#F7F1E6",
+  "ink_dim": "#D9CDB8",
+  "ink_faint": "#9C917F",
+  "accent": "#E5482C"
+ }
+}
