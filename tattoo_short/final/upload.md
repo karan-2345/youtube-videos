@@ -1,7 +1,7 @@
 # Upload: Why tattoos don't wash off
 
 Video: `tattoo_short.mp4` (33.1 s, 1080 x 1920, 60 fps, captions burned in). For a platform that adds its own
-captions use `tattoo_short_clean.mp4` + `captions/tattoo_short.srt`. Cover: `cover.png` (3:4-safe).
+captions use `tattoo_short_clean.mp4` + `tattoo_short.srt`. Cover: `cover.png` (3:4-safe).
 
 ## Title (pick one; the first is recommended)
 

@@ -34,6 +34,14 @@ def build() -> Path:
     except Exception:
         font.set_variation_by_axes([32, 800])
     y0 = style.SAFE_34_Y[0] + 14
+    # a soft dark band behind the title: the bath's waterline runs between lines 1 and 2, and the cinnabar line
+    # needs more contrast than bare skin gives it
+    band_end = y0 + 130 * len(LINES) + 140
+    scrim = Image.new("L", img.size, 0)
+    for yy in range(band_end):
+        f = 1.0 - max(0.0, (yy - (band_end - 260)) / 260)
+        scrim.paste(int(150 * f * f * (3 - 2 * f)), (0, yy, style.WIDTH, yy + 1))
+    img = Image.composite(Image.new("RGB", img.size, (12, 9, 8)), img, scrim)
     shadow = Image.new("RGBA", img.size, (0, 0, 0, 0))
     sd = ImageDraw.Draw(shadow)
     text = Image.new("RGBA", img.size, (0, 0, 0, 0))
