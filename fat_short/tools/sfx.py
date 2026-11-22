@@ -381,44 +381,44 @@ def cue_sheet() -> list:
     add(A["melt"] - 0.12, "melt", -12, 2)
     for k, dt in enumerate((0.35, 0.55, 0.7, 0.85)):
         add(A["melt"] + dt, "drip", -16, 10 + k)
-    add(A["away"] + 0.12, "xstamp", -9, 1)
+    add(A["away"] + 0.12, "xstamp", -11, 1)
     add(A["muscle_or"] - 0.15, "rewind", -16, 2)
     add(A["muscle_or"] + 0.12, "stretch", -12, 3)
-    add(A["muscle"] + 0.15, "xstamp", -9, 2)
+    add(A["muscle"] + 0.15, "xstamp", -11, 2)
     add(A["sweat_and"] - 0.2, "rewind", -16, 3)
     for k in range(9):
         add(A["sweat"] - 0.1 + 0.07 * k, "bead", -18, 20 + k)
-    add(A["either"] + 0.05, "xstamp", -9, 3)
+    add(A["either"] + 0.05, "xstamp", -11, 3)
     add(A["because"] - 0.15, "whoosh_long", -12, 4)
     add(A["because"] + 0.2, "shimmer_long", -15, 5)
     # ---- breaths (the big ones, the panting, the jog, and the quiet ones at the end)
     for k, b in enumerate(BR):
         kind = b.get("kind")
         if kind == "big":
-            add(b["in0"], "inhale", -14, 40 + k); add(b["ex0"], "exhale_big", -10, 40 + k)
+            add(b["in0"], "inhale", -15, 40 + k); add(b["ex0"], "exhale_big", -13, 40 + k)
         elif kind == "pant":
             add(b["ex0"], "exhale_short", -17, 40 + k); add(b["in0"], "inhale_short", -23, 40 + k)
         elif kind == "jog":
             add(b["ex0"], "exhale", -17, 40 + k)
         elif kind == "end" or (kind == "calm" and A["right_now"] - 0.5 < b["ex0"] < D - 1.5):
             add(b["ex0"], "exhale", -20 if kind == "calm" else -15, 40 + k)
-    add(A["breathe_out"] + 0.05, "shimmer", -12, 6)
-    add(A["breathe_out"] + 0.1, "chime", -11, 1)
+    add(A["breathe_out"] + 0.05, "shimmer", -15, 6)
+    add(A["breathe_out_e"] + 0.05, "chime", -13, 1)
     # ---- survey
-    add(A["survey"] - 0.25, "whoosh_long", -13, 7)
+    add(A["survey"] - 0.25, "whoosh_long", -16, 7)
     for k, key in enumerate(("doctors", "dietitians", "trainers")):
         add(A[key] - 0.05, "pop", -14, 30 + k)
     add(A["where"] - 0.05, "pop", -15, 34)
     add(A["only"] + 0.2, "dim", -13, 8)
     for k in range(3):
-        add(A["three"] - 0.12 + 0.11 * k, "chime", -14 - k, 2 + k)
+        add(A["three"] - 0.12 + 0.11 * k, "chime", -19 - k, 2 + k)
     # ---- into the fat: the molecule
     add(A["right_e"] + 0.15, "whoosh", -11, 9)
-    add(A["atoms"] + 0.28, "whoomp", -9, 1)
+    add(A["atoms"] + 0.28, "whoomp", -13, 1)
     add(A["atoms"] + 0.5, "glass", -15, 1)
-    add(A["carbon"] - 0.05, "blipC", -13, 1)
-    add(A["hydrogen"] - 0.05, "blipH", -13, 2)
-    add(A["oxygen"] - 0.05, "blipO", -13, 3)
+    add(A["carbon"] - 0.05, "blipC", -19, 1)
+    add(A["hydrogen"] - 0.05, "blipH", -19, 2)
+    add(A["oxygen"] - 0.05, "blipO", -19, 3)
     add(A["energy"] - 0.6, "swirl", -15, 4)
     add(A["breaks"], "burst", -9, 1)
     add(A["with_oxygen"] - 0.2, "swirl", -16, 5)
@@ -427,18 +427,20 @@ def cue_sheet() -> list:
     add(A["water"] - 0.2, "snaps_w", -14, 4)
     add(A["water"] + 0.4, "bubbles", -16, 5)
     add(A["which"] + 0.2, "whoosh_fast", -14, 10)
+    add(A["numbers"] - 0.6, "whoosh_fast", -17, 13)
     # ---- water on the body
     for k, key in enumerate(("sweat2", "tears", "pee")):
         add(A[key] + 0.1, "drip", -14, 50 + k)
         add(A[key] + 0.25, "drip", -19, 60 + k)
     # ---- 10 kg
-    add(A["ten"] - 0.3, "thud", -8, 1)
-    add(A["ten"] - 0.15, "blorp", -15, 2)
+    add(A["numbers"] + 0.2, "whoosh_fast", -16, 12)
+    add(A["ten"] - 0.05, "thud", -15, 1)
+    add(A["ten"] + 0.05, "blorp", -15, 2)
     add(A["eight"] - 0.05, "sizzle", -13, 1)
     add(A["eight"] + 0.2, "shimmer_long", -14, 7)
     add(A["one6"] + 0.1, "slosh", -12, 1)
     # ---- the twist
-    add(A["wont"] + 0.1, "xstamp", -9, 4)
+    add(A["wont"] + 0.1, "xstamp", -11, 4)
     add(A["burns"] - 0.1, "shimmer", -16, 8)
     # strides: one foot down every half stride while jogging
     t = J["t0"] + 0.25
@@ -449,8 +451,8 @@ def cue_sheet() -> list:
             add(t, "step", -20 + 6 * w, 70 + k % 6)
         t += 1 / (2 * J["hz"])
         k += 1
-    add(A["moveW"] + 0.05, "chime", -12, 6)
-    add(A["dizzy"] - 0.25, "dizzy", -11, 1)
+    add(A["moveW_e"] + 0.02, "chime", -15, 6)
+    add(A["dizzy"] + 0.15, "dizzy", -18, 1)
     # ---- the end: back into the lump, and round again
     add(A["breathe_out3"] + 0.4, "whoosh_long", -16, 11)
     add(D - 0.15, "blorp", -14, 1)            # the same jiggle the video starts with (heard across the loop)

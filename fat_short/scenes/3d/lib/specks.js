@@ -157,7 +157,7 @@ export function buildSpecks(P, B, F, breath, rnd, episodes) {
             .addScaledVector(fwd, (0.42 * Math.pow(g, 0.55)) * p.sp)
             .addScaledVector(p.spread, 0.11 * g * p.sp)
             .add(tmp2.set(Math.sin(g * 2.1 + p.ph) * 0.02 * g, 0.05 * g + 0.035 * g * g, Math.cos(g * 1.8 + p.ph) * 0.02 * g));
-          a = Math.max(0, 1 - g / 2.6) * (0.75 + 0.25 * Math.sin(t * 9 + p.ph));
+          a = Math.max(0, 1 - g / (p.e.life ?? 2.6)) * (0.75 + 0.25 * Math.sin(t * 9 + p.ph));
           s = p.size * (1 + 0.3 * g);
         }
       }

@@ -74,8 +74,9 @@ node tools/capture.js eval 7.8 "dbg.cam(7.8)"   # inspect scene state at a time 
 
 Python 3 with numpy, scipy, soundfile, pillow, kokoro-onnx; Kokoro model files in `/home/user/models`
 (`kokoro-v1.0.onnx`, `voices-v1.0.bin`, from github.com/thewh1teagle/kokoro-onnx/releases/model-files-v1.0);
-Node 22 with Playwright (preinstalled) and `npm ci` in each `scenes/web` for three.js; ffmpeg with libass. The cloud
-environment's setup script installs these; if something is missing, `kit/setup.sh` does it by hand.
+Node 22 with Playwright (preinstalled) and `npm ci` in each `scenes/web` for three.js; ffmpeg with libass. Start
+cloud sessions on the personal environment **"youtube-videos"**: its setup script installs these. If something is
+missing anyway, `bash kit/setup.sh` does it by hand (about a minute).
 
 ## Git
 

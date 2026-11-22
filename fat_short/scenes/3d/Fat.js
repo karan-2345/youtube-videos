@@ -54,8 +54,8 @@ export async function setup(ctx) {
   const breath = new Breath(cyc);
 
   const specks = buildSpecks(P, B, F, breath, rng(17), [
-    { n: 2600, b0: A.because + 0.15, b1: A.every - 0.2, travel: 0.95, size: 8, gain: 1 },        // the hook
-    { n: 1400, b0: A.burns - 0.1, b1: A.panting - 0.6, travel: 0.8, size: 14, gain: 1.2 },       // jogging (wide shot)
+    { n: 2600, b0: A.because + 0.15, b1: A.every - 0.2, travel: 0.95, size: 10, gain: 1.15 },    // the hook
+    { n: 1400, b0: A.burns - 0.1, b1: A.move - 0.5, travel: 0.8, size: 14, gain: 1.2, life: 0.8 },  // jogging (wide shot)
     { n: 520, b0: A.right_now - 0.6, b1: A.breathe_out3 - 0.6, travel: 1.1, size: 9, gain: 1 },  // the end
   ]);
   scene.add(specks.pts);
@@ -138,9 +138,9 @@ export async function setup(ctx) {
   const cloud = buildCloud(P, BLOCK, SPLIT, rng(31));
   scene.add(cloud.pts);
   const puddleGeo = new THREE.SphereGeometry(1, 64, 24, 0, Math.PI * 2, 0, Math.PI / 2);
-  const puddle = new THREE.Mesh(puddleGeo, new THREE.MeshPhysicalMaterial({ color: new THREE.Color('#2F86E0'),
-    roughness: 0.04, metalness: 0, clearcoat: 1, clearcoatRoughness: 0.02, envMap: studio.env, envMapIntensity: 0.9,
-    emissive: new THREE.Color('#1E6FD0'), emissiveIntensity: 0.3, transparent: true, opacity: 0.9 }));
+  const puddle = new THREE.Mesh(puddleGeo, new THREE.MeshPhysicalMaterial({ color: new THREE.Color('#0F4FA0'),
+    roughness: 0.05, metalness: 0, clearcoat: 0.6, clearcoatRoughness: 0.05, envMap: studio.env, envMapIntensity: 0.55,
+    emissive: new THREE.Color('#1E6FD0'), emissiveIntensity: 0.1, transparent: true, opacity: 0.88 }));
   puddle.position.set(BLOCK.at.x, 0.0, BLOCK.at.z); puddle.renderOrder = 5;
   scene.add(puddle);
 
@@ -218,13 +218,18 @@ export async function setup(ctx) {
     const midT = new THREE.Vector3(0.12, 1.45, 0.06), midP = orbit(midT, 2.6, 0.32, 0.05, new THREE.Vector3());
     const pb = ramp(t, A.because - 0.05, A.leaves + 0.5, ease.inOut);
     pos.lerpVectors(close, midP, pb); tgt.lerpVectors(closeT, midT, pb);
+    const face = ramp(t, A.breathe_out - 0.6, A.breathe_out + 0.5, ease.inOut) * (1 - ramp(t, A.survey - 0.2, A.doctors + 0.3, ease.inOut));
+    if (face > 0) {
+      const fT = new THREE.Vector3(0.2, 1.5, 0.1), fP = orbit(fT, 1.95, 0.4, 0.04, new THREE.Vector3());
+      pos.lerp(fP, face); tgt.lerp(fT, face);
+    }
     if (t < A.breathe_out_e + 0.6) return { pos, tgt, fov };
     // survey: crane up and back over the crowd
     const crowdT = new THREE.Vector3(0.3, 0.2, -5.6), crowdP = new THREE.Vector3(3.2, 15.5, 13.5);
     const drift = new THREE.Vector3(0.6 * Math.sin(t * 0.15), 0, 0);
     const cr = ramp(t, A.survey - 0.2, A.doctors + 0.3, ease.inOut);
-    const midP2 = midP.clone().add(new THREE.Vector3(0.05 * (t - 9), 0, 0));
-    pos.lerpVectors(midP2, crowdP.clone().add(drift), cr); tgt.lerpVectors(midT, crowdT, cr);
+    const fT2 = new THREE.Vector3(0.2, 1.5, 0.1), fP2 = orbit(fT2, 1.95, 0.4, 0.04, new THREE.Vector3());
+    pos.lerpVectors(fP2, crowdP.clone().add(drift), cr); tgt.lerpVectors(fT2, crowdT, cr);
     if (t < A.right_e + 0.25) return { pos, tgt, fov };
     // the dive: down into the hero's lump
     const dv = ramp(t, A.right_e + 0.2, A.atoms + 0.32, ease.inOut);
@@ -243,7 +248,7 @@ export async function setup(ctx) {
     pos.copy(molT).add(new THREE.Vector3(Math.sin(ma) * mz, 0.2, Math.cos(ma) * mz));
     tgt.copy(molT).add(new THREE.Vector3(0, 0.1, 0));
     pos.y += 0.1;
-    const upT = ramp(t, A.co2 - 0.3, A.breathe_out2_e + 0.2) * 0.32 - ramp(t, A.water - 0.4, A.which + 0.2) * 0.62;
+    const upT = ramp(t, A.co2 - 0.3, A.breathe_out2_e + 0.2) * 0.16 - ramp(t, A.water - 0.4, A.which + 0.2) * 0.46;
     pos.y += upT; tgt.y += upT;
     if (t < A.which + 0.55) return { pos, tgt, fov };
     // water on the body: head and torso
@@ -275,7 +280,8 @@ export async function setup(ctx) {
       return { pos, tgt, fov };
     }
     // end: upper body with the breath, then down into the lump = the first frame
-    const eT = new THREE.Vector3(0.12, 1.45, 0.06), eP = orbit(eT, 2.6, 0.3, 0.05, new THREE.Vector3());
+    const ek = ramp(t, A.end, A.breathe_out3, ease.inOut);
+    const eT = new THREE.Vector3(0.12, 1.45 + 0.05 * ek, 0.06), eP = orbit(eT, 2.6 - 0.5 * ek, 0.3 + 0.12 * ek, 0.05, new THREE.Vector3());
     const ein = ramp(t, A.end - 0.3, A.end + 0.9, ease.inOut);
     pos.copy(twP).lerp(eP, ein); tgt.copy(twT).lerp(eT, ein);
     const home = ramp(t, A.breathe_out3 + 0.35, D, ease.inOut);
@@ -388,7 +394,7 @@ export async function setup(ctx) {
         t, spin: 0.35 * Math.sin((t - A.atoms) * 0.25) + (t - A.atoms) * 0.12, hl,
         o2In: ramp(t, A.energy - 0.6, A.apart + 0.3, ease.linear), burst: ramp(t, A.breaks, A.apart_e + 0.25, ease.linear),
         mix: ramp(t, A.apart, A.breathe_in_e + 0.4, ease.linear), co2Form: ramp(t, A.pieces, A.co2_e + 0.2, ease.linear),
-        h2oForm: ramp(t, A.water - 0.25, A.water_e + 0.45, ease.linear), rise: ramp(t, A.gas - 0.2, A.which + 0.6, ease.in),
+        h2oForm: ramp(t, A.water - 0.25, A.water_e + 0.45, ease.linear), rise: ramp(t, A.co2_e - 0.1, A.water + 0.3, ease.inOut),
         fall: ramp(t, A.water_e + 0.2, A.which + 0.6, ease.in), fatGlow: 0.22 + 0.6 * ramp(t, A.breaks, A.apart),
       });
       molHaze.update(t);
@@ -420,20 +426,23 @@ export async function setup(ctx) {
     bladder.scale.set(0.045, 0.038, 0.035).multiplyScalar(0.7 + 0.3 * bl);
 
     // ---- the block
-    const blk = ramp(t, A.ten - 0.35, A.ten + 0.15, ease.out) * (1 - ramp(t, A.twist - 0.2, A.twist + 0.2));
+    const drop = ramp(t, A.numbers + 0.25, A.ten - 0.05, ease.in);
+    const blk = (drop > 0 ? 1 : 0) * (1 - ramp(t, A.twist - 0.2, A.twist + 0.2));
     block.visible = blk > 0.001 && t < A.twist + 0.3;
     blockShadow.visible = block.visible;
     const cut = ramp(t, A.eight - 0.05, A.lungs_e - 0.1, ease.inOut);
     const toWater = ramp(t, A.one6 + 0.1, A.into_water_e - 0.2, ease.inOut);
     if (block.visible) {
-      const pp = blk < 1 ? 1 + 0.15 * Math.sin(blk * Math.PI) : 1;
+      const land = clamp01((t - (A.ten - 0.05)) / 0.45);
+      const pp = land > 0 && land < 1 ? 1 + 0.12 * Math.sin(land * Math.PI * 2.5) * (1 - land) : 1;
+      block.position.y = BLOCK.at.y + 0.7 * (1 - drop);
       const sl = 1 - ease.in(toWater);
-      block.scale.set(blk * pp * (1 + 0.25 * toWater), blk * pp * sl, blk * pp * (1 + 0.25 * toWater));
+      block.scale.set(blk * (2 - pp) * (1 + 0.25 * toWater), blk * pp * sl, blk * (2 - pp) * (1 + 0.25 * toWater));
       block.visible = block.visible && sl > 0.02;
       bm.U.uCut.value = cut > 0 ? lerp(BLOCK.h + 0.02, SPLIT, cut) : 10;
       bm.U.uWater.value = toWater; bm.U.uWaterY.value = SPLIT + 0.01;
       bm.U.uTime.value = t;
-      blockShadow.material.uniforms.uAmt.value = blk;
+      blockShadow.material.uniforms.uAmt.value = blk * (0.3 + 0.7 * drop);
     }
     // the last 1.6 kg: the slab slumps and becomes a pool of water
     const pw = ramp(t, A.one6 + 0.1, A.into_water_e - 0.1, ease.inOut) * (1 - ramp(t, A.twist - 0.2, A.twist + 0.2));
@@ -539,7 +548,7 @@ export async function setup(ctx) {
     const wl = [['wSweat', 'brow', A.sweat2, 820, 330], ['wTears', 'eyeL', A.tears, 860, 470], ['wPee', 'bladder', A.pee, 850, 1150],
       ['wBreath', 'mouth', A.breath, 860, 620]];
     wl.forEach(([k, anc, t0, lx, ly]) => {
-      const op = t > A.which + 0.5 ? showAt(t, t0 - 0.05, A.numbers - 0.45, 0.2, 0.3) : 0;
+      const op = t > A.which + 0.5 ? showAt(t, t0 - 0.05, A.numbers - 0.95, 0.2, 0.3) : 0;
       placeT(ov[k], lx, ly, op, { anchor: 'c' });
       if (op > 0) {
         const p = toScreen(B.anchor(anc, tmpV2), camera);
@@ -584,8 +593,9 @@ export async function setup(ctx) {
     blurSamples: (t) => (Q.blur === '0' ? 1 : fast.some(([a, b]) => t > a && t < b) ? 3 : 1),
     look: (t) => {
       const flash = ramp(t, A.right_e + 0.55, A.atoms + 0.3, ease.in) * (1 - ramp(t, A.atoms + 0.34, A.atoms + 0.9, ease.out));
-      const wipe = Math.max(ramp(t, A.which + 0.25, A.which + 0.55) * (1 - ramp(t, A.which + 0.56, A.which + 0.95)), 0);
-      return { fade: Math.max(flash, wipe), exposure: 1.0, bloom: Q.nobloom ? 0 : 0.16 + 0.1 * flash, fadeColor: t < A.split ? P.fat_glow : P.bg };
+      const wipe = Math.max(ramp(t, A.which + 0.25, A.which + 0.55) * (1 - ramp(t, A.which + 0.56, A.which + 0.95)),
+        ramp(t, A.numbers - 0.6, A.numbers - 0.36) * (1 - ramp(t, A.numbers - 0.34, A.numbers + 0.05)), 0);
+      return { fade: Math.max(flash, wipe), exposure: 1.0, bloom: Q.nobloom ? 0 : 0.16 + 0.1 * flash, fadeColor: t < A.split ? P.fat_glow : P.bg_low };
     },
   };
 }
