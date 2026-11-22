@@ -360,7 +360,7 @@ export async function setup(ctx) {
     specks.mat.uniforms.uPx.value = post.ss;
     vapor.mat.uniforms.uPx.value = post.ss;
     specks.pts.visible = !inMol;
-    if (!inMol) specks.update(t, { gain: 1 });
+    if (!inMol) specks.update(t, { gain: 1 - ramp(t, D - 1.0, D - 0.15) });   // the last plume is gone by the loop point
     vapor.pts.visible = !inMol && bodyOn > 0.01;
     if (vapor.pts.visible) vapor.update(t, bodyOn * (1 - ramp(t, A.numbers - 0.3, A.numbers + 0.3) + ramp(t, A.into_water, A.twist)));
 
@@ -470,7 +470,10 @@ export async function setup(ctx) {
     studio.FU.uGrid.value = 0.6 * jog;
     studio.FU.uScroll.value = (t - A.because2) * 1.6 * (t > A.because2 ? 1 : 0) * 0 + integJog(t);
     studio.U.uWarmAmt.value = inMol ? 0.06 : 0.0;
-    studio.floor.visible = studio.shadow.visible = !inMol && t > A.because;
+    // the floor fades in with the body and out with it again, so frame 0 and the last frame match (no pop)
+    const floorOn = ramp(t, A.because - 0.1, A.leaves + 0.1, ease.inOut) * (1 - ramp(t, D - 0.9, D - 0.15, ease.inOut));
+    studio.FU.uAlpha.value = floorOn; studio.shadow.material.uniforms.uAmt.value = floorOn;
+    studio.floor.visible = studio.shadow.visible = !inMol && floorOn > 0.001;
     studio.motes.visible = true;
 
     // ---- camera

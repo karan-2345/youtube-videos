@@ -62,6 +62,11 @@ node tools/capture.js eval 7.8 "dbg.cam(7.8)"   # inspect scene state at a time 
   come after transparent objects needs `transparent: true`.
 - `Math.hypot` is slow in V8 hot loops; write `Math.sqrt(dx*dx+...)`.
 - Anything that moves must be periodic over the video length (or end where it started) for a seamless loop.
+- Never switch a big backdrop piece (a floor, a sky) on or off with `.visible` mid-shot: it pops. Fade it, and fade it
+  back out before the loop point. Before the full render, compare a still at the last frame with one at t = 0
+  (mean pixel difference should be a few levels, not 10+).
+- To fix a few seconds of a finished render, re-render only those frames (`node tools/capture.js range f0 f1 out.mp4`,
+  end exclusive) and splice them into `renders/scene.mp4` with ffmpeg trim + concat at crf 12, then re-run assemble.
 - Keep effects under the voice: SFX are normalised 8 LU under it and ducked 5 dB; music 12 LU under and ducked 6 dB.
 - The render is slow (SwiftShader on 4 CPUs): about 0.8 frames/s per worker at ss=1, roughly half that at ss=1.5.
   Always review stills, then a fast preview video, before the full render (1.5 to 2 h).
@@ -91,4 +96,4 @@ pull request unless asked. No model names or IDs in commits or files.
 | How fast are you moving right now? | (deleted, see git history) | | done |
 | You can calculate pi without a single circle (Buffon's needle) | `buffon_short/` | 69 s | uploaded |
 | The Leaning Tower of Pisa should have fallen over | `pisa_short/` | 69 s | delivered 2026-11-21 |
-| Where does the fat go when you lose weight? | `fat_short/` | 64.5 s | see its `HANDOFF.md` |
+| Where does the fat go when you lose weight? | `fat_short/` | 64.5 s | delivered 2026-11-22 |

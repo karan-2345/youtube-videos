@@ -1,6 +1,13 @@
 # HANDOFF: "Where does the fat go when you lose weight?" (fat Short)
 
-## Status 2026-11-22: final being rendered
+## Status 2026-11-22: delivered
+
+Finals in `renders/final/`: `fat_short.mp4` (captions burned in), `fat_short_clean.mp4`, `captions/fat_short.srt`,
+`cover.png`, `upload.md`. Measured: 1080 x 1920, 60 fps, 3872 frames, 64.53 s; -13.9 LUFS integrated, true peak
+-1.6 dBTP, LRA 2.1 LU; SRT text equals `config/narration.py` word for word. Full render: 2 workers, 1 h 56 min.
+After the full render the last frame's background was darker than frame 0 (the floor was switched on at "because"
+and never off) and the floor popped on at 6.05 s; the floor now fades in with the body and out before the loop
+point, the last breath's specks fade out too, and frames 354-429 and 3808-3871 were re-rendered and spliced in.
 
 The user gave the hook and the idea ("a glowing piece of fat breaking into tiny specks that drift out with each
 breath") from the list proposed on 2026-11-21, and asked for the same care as the Pisa Short. The voice is Kokoro
