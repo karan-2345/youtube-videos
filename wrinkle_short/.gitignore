@@ -1,0 +1,8 @@
+# big or generated: rebuilt by build.py (models and node_modules may be symlinks to the tattoo Short's copies)
+assets/models
+scenes/web/node_modules
+renders/
+audio/
+narration.md
+__pycache__/
+*.pyc

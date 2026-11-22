@@ -1,0 +1,61 @@
+{
+  "video": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 60
+  },
+  "palette": {
+    "bg": "#0F0C0B",
+    "bg_glow": "#2A1D18",
+    "skin": "#C98262",
+    "epidermis": "#F1CDB0",
+    "dermis": "#DA7C74",
+    "dermis_fibre": "#F0A69C",
+    "fat": "#F2D58A",
+    "fat_edge": "#D9B45E",
+    "ink": "#1B2130",
+    "cell": "#F5EEDC",
+    "cell_nucleus": "#9B82C8",
+    "steel": "#C9CED6",
+    "laser": "#6CFF7A",
+    "lymph": "#BFE3EA",
+    "water": "#8CCFE6",
+    "nerve": "#F2C14E",
+    "vessel": "#C7323C",
+    "nail": "#EBC7BB",
+    "glass": "#D6EEF5",
+    "rubber": "#25272B",
+    "road": "#3B3E44",
+    "fur": "#F1EDE6",
+    "pink": "#EFA3AE",
+    "ink_text": "#F2EBDD",
+    "ink_dim": "#A99E8E",
+    "accent": "#E0502F"
+  },
+  "fonts": {
+    "sans": "Inter"
+  },
+  "type_px": {
+    "title": 120,
+    "h1": 84,
+    "h2": 56,
+    "body": 44,
+    "label": 46,
+    "small": 30,
+    "caption": 84,
+    "credit": 36,
+    "tag": 32,
+    "number": 200
+  },
+  "layout": {
+    "safe_margin_px": 64,
+    "safe_34_y": [
+      240,
+      1680
+    ],
+    "caption_y": [
+      1330,
+      1490
+    ]
+  }
+}
