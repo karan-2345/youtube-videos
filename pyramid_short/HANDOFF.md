@@ -2,7 +2,7 @@
 
 ## Status
 
-STATUS_LINE
+**Delivered 2026-11-23.** Final `renders/final/pyramid_short.mp4`: 1080x1920, 60 fps, 4156 frames, 69.27 s; -14.0 LUFS integrated, true peak -2.1 dBTP; SRT text equals `narration.py` (204 words); loop seam (last vs first frame) mean difference 3.4 levels. Full render 9174 s (2 workers, 0.45 frames/s). The user hasn't said yet whether it's uploaded.
 
 The user asked for "more like the Leaning Tower of Pisa" (a famous landmark with a hidden story), was offered six
 landmark ideas, and picked the pyramid one: the man pouring water on the sand in Djehutihotep's tomb painting and the
