@@ -1,6 +1,10 @@
 # HANDOFF: "Why fingers wrinkle in water" (vertical Short, YouTube Shorts + Instagram Reels)
 
-## Status 2026-11-22: final built, waiting for the user's review
+## Status 2026-11-23: v2 built (new finger), waiting for the user's review
+
+v1 (2026-11-22) was approved apart from the finger: the user found it sausage-like, with no fingerprint, no lines and
+no nail. v2 rebuilds the finger (see Decisions) and re-renders every scene; the script, voice, timing and sound are
+unchanged.
 
 Built in a cloud session (Linux, no GPU) from the approved script v1 ("Okay approved"). As with the tattoo Short,
 the look test and the sample-scene checkpoint were skipped. Everything rebuilds on the laptop with the commands in
@@ -8,11 +12,11 @@ the look test and the sample-scene checkpoint were skipped. Everything rebuilds 
 
 | Scene | Narration | What happens |
 |---|---|---|
-| S00_Hook 5.35 s | "When your fingers wrinkle in the bath, it isn't just your skin soaking up water." | A fingertip dips into the bath. MINUTES LATER its pad has buckled into folds. It lifts out (NOT JUST WATER), a glowing cut line runs round a patch of the pad, and a small block of skin lifts off toward us. |
+| S00_Hook 5.35 s | "When your fingers wrinkle in the bath, it isn't just your skin soaking up water." | A finger hangs over the bath, seen from the nail side. As it dips, the camera swings round to the pad: MINUTES LATER the pad (fingerprint and all) has buckled into folds. It lifts out (NOT JUST WATER), a glowing cut line runs round a patch of the pad, and a small block of skin lifts off toward us. |
 | S01_Nerves 8.15 s | "Instead, your nerves tell the blood vessels under the skin to tighten, so the fingertip shrinks and its skin buckles into folds." | The block settles into the standard view and its folds rewind flat. The NERVE fires pulses up to the BLOOD VESSELS (a loop under every future valley). The vessels tighten, the dermis sinks a little, and the skin buckles into FOLDS, with the valleys right over the loops. |
 | S02_Test 6.88 s | "And that's why a finger with a damaged nerve doesn't wrinkle, which doctors have even used as a nerve test." | Two fingers dip side by side with their nerves shown x-ray style. The right one's nerve is broken (DAMAGED NERVE, an X). The left finger wrinkles and the right one stays smooth (NO WRINKLES): THE WRINKLE TEST. |
-| S03_Treads 7.88 s | "So the wrinkles might be on purpose, working like tire treads to grip wet things, although scientists still argue about that." | A wrinkled fingertip presses a wet glass marble and squeezes the water out of the contact. Below, a treaded tyre rolls on a wet road, throwing spray (LIKE TIRE TREADS?). Then STILL DEBATED. |
-| S04_Same 8.62 s | "And the folds even come back in the same pattern every time, because the blood vessels underneath stay in the same place." | The folds of SOAK 1 are traced in cinnabar. The finger lifts out and dries smooth, dips again (SOAK 2) and the new folds land on the same lines (SAME PATTERN). An x-ray shows the BLOOD VESSELS running under the valleys. The finger rises back to the opening shot (loop). |
+| S03_Treads 7.88 s | "So the wrinkles might be on purpose, working like tire treads to grip wet things, although scientists still argue about that." | A wrinkled fingertip, turned three-quarters so the nail shows, presses a wet glass marble and squeezes the water out of the contact. Below, a treaded tyre rolls on a wet road, throwing spray (LIKE TIRE TREADS?). Then STILL DEBATED. |
+| S04_Same 8.62 s | "And the folds even come back in the same pattern every time, because the blood vessels underneath stay in the same place." | The folds of SOAK 1 are traced in cinnabar. The finger lifts out and dries smooth, dips again (SOAK 2) and the new folds land on the same lines (SAME PATTERN). An x-ray shows the BLOOD VESSELS running under the valleys. The finger rises and the camera swings back round to the nail side, the opening shot (loop). |
 
 ### Final (2026-11-22)
 
@@ -39,6 +43,16 @@ by `build.py`).
 - **Same look as the tattoo Short ("Cut-away")**: the real thing first, then a block cut out of it, on the dark warm
   backdrop, with cinnabar as the one accent. New colours for this topic (water, nerve yellow, vessel red, glass,
   rubber, road) are in `config/style.py`.
+- **A real finger, not a capsule (v2).** `lib/finger.js` builds the skin from one shape function (`surfR`): a slightly
+  square rounded tip, a fuller pad, a flatter back, a waist before the end joint and knuckles at both joints. The
+  nail is its own thin plate (pink bed, pale lunula, thin ivory free edge that stands a little off the tip, clearcoat)
+  and the skin folds over its base and sides. The shader draws fingerprint ridges (a whorl on the pad, ridges across
+  the middle segment, faded out when they get smaller than a few pixels), the palm-side creases of both joints (uneven
+  and wavy, so the finger doesn't look like sausage links) and wrinkles over the knuckles. The fold pattern, the valley
+  lines, the cut and the water rings all use the same shape function, so they still sit on the skin.
+- **The nail is on screen.** The opening (and the loop end) look at the finger from the nail side, 150 degrees round
+  from the pad, and the camera orbits round the finger's axis to the pad (`orbitPath`); the marble shot turns the
+  finger 1.4 rad. S02 stays front-on because the test is about the pads.
 - **One fold pattern everywhere.** The finger's folds come from a fixed formula (`foldW` in `lib/finger.js`, with a
   GLSL twin), so SOAK 2 really does land on SOAK 1's lines, and the block's vessel loops sit right under its valleys.
   The picture agrees with the claim instead of faking it.
@@ -54,7 +68,7 @@ by `build.py`).
 
 - `config/narration.src.md` script (the one source of the words), `research/notes.md` claims, sources and FLAGs,
   `research/beat_plan.md` the original plan.
-- `scenes/3d/lib/finger.js` finger (fold shader), water, fold block (vessels, nerve, pulses), x-ray nerve, marble,
+- `scenes/3d/lib/finger.js` finger (shape, nail, fold and skin-detail shaders), water, fold block (vessels, nerve, pulses), x-ray nerve, marble,
   tyre, pad cut, camera poses. `scenes/3d/lib/cut.js` is the tattoo Short's stage, block and label code.
   `scenes/3d/S0x_*.js` one timeline per scene, every event on a phrase anchor (`scenes/3d/export.py`).
 
