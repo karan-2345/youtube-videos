@@ -88,6 +88,16 @@ missing anyway, `bash kit/setup.sh` does it by hand (about a minute).
 Work on the branch the session names, commit with the attribution lines the session gives, push, and never open a
 pull request unless asked. No model names or IDs in commits or files.
 
+## Where we left off (2026-11-23)
+
+- The fat Short was delivered on 2026-11-22 (video, cover, upload notes); the user hasn't said yet whether it's
+  uploaded. Its decisions, measurements and what was simplified are in `fat_short/HANDOFF.md`; Pisa's are in
+  `pisa_short/HANDOFF.md`.
+- Next: whichever idea the user picks. Four are waiting in `IDEAS.md`; the user may also bring their own hook, which
+  is used word for word.
+- The user wants every new chat to carry on from here without re-explaining. If something in a new chat needs
+  explaining anyway, write it into this file before finishing.
+
 ## Shorts made so far
 
 | Short | Folder | Length | Status |
