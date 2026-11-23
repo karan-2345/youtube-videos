@@ -1,6 +1,6 @@
 # HANDOFF: "Why fingers wrinkle in water" (vertical Short, YouTube Shorts + Instagram Reels)
 
-## Status 2026-11-23: v2 built (new finger), waiting for the user's review
+## Status 2026-11-23: v2 delivered (new finger), waiting for the user's review
 
 v1 (2026-11-22) was approved apart from the finger: the user found it sausage-like, with no fingerprint, no lines and
 no nail. v2 rebuilds the finger (see Decisions) and re-renders every scene; the script, voice, timing and sound are
@@ -18,25 +18,25 @@ the look test and the sample-scene checkpoint were skipped. Everything rebuilds 
 | S03_Treads 7.88 s | "So the wrinkles might be on purpose, working like tire treads to grip wet things, although scientists still argue about that." | A wrinkled fingertip, turned three-quarters so the nail shows, presses a wet glass marble and squeezes the water out of the contact. Below, a treaded tyre rolls on a wet road, throwing spray (LIKE TIRE TREADS?). Then STILL DEBATED. |
 | S04_Same 8.62 s | "And the folds even come back in the same pattern every time, because the blood vessels underneath stay in the same place." | The folds of SOAK 1 are traced in cinnabar. The finger lifts out and dries smooth, dips again (SOAK 2) and the new folds land on the same lines (SAME PATTERN). An x-ray shows the BLOOD VESSELS running under the valleys. The finger rises and the camera swings back round to the nail side, the opening shot (loop). |
 
-### Final (2026-11-22)
+### Final (v2, 2026-11-23)
 
 `final/` (in git): `wrinkle_short.mp4` (captions burned in), `wrinkle_short_clean.mp4`, `wrinkle_short.srt`,
 `cover.png`, `upload.md`. The silent version, the stems and the scene renders are in `renders/` (not in git, rebuilt
 by `build.py`).
 - Measured: **34.88 s**, 1080 x 1920 @ 60, **-13.8 LUFS** integrated (ebur128 on the final file), -1.8 dBTP,
-  LRA 2.2 LU. Linear loudnorm gain of +5.75 dB after the look-ahead limiter trimmed peaks above -7.7 dBFS.
+  LRA 2.2 LU. Linear loudnorm gain of +5.75 dB after the look-ahead limiter trimmed peaks above -7.7 dBFS. The sound
+  is the same as v1; only the picture changed.
 - Mix: voice -22.4 LUFS; SFX 10 LU under the voice; music 16 LU under it, ducked under the voice.
 - Captions: the text is identical to the script (checked). Word captions in Archivo Captions, ivory with the
   spoken word in cinnabar.
-- Loop: the last frame matches the first (the fingertip over the bath). Mean difference 1.40 / 255. The worst 60 px
-  block is 8.3 / 255, all of it in the water's ripple rings, which move all the time, so the jump doesn't show.
-- Renders (SwiftShader, 3 workers): S00 722 s, S01 2426 s, S02 805 s, S03 557 s, S04 1054 s (about 93 min; S01 was
-  slow because other work shared the CPU).
-- Checked by eye: every scene's key beats in stills before the render, 12 frames per scene video after it, 14 frames
-  of the captioned final, one caption frame at full size, the cover. Audio checked by measurement only, not by
-  listening.
-- Cover: S00 at 2.65 s (the wrinkled fingertip under water) with "WHY DO FINGERS / WRINKLE / IN WATER?" in Inter
-  ExtraBold over a soft dark band (the bath's waterline runs between the first two lines).
+- Loop: the last frame matches the first (the nail side of the fingertip over the bath). Mean difference
+  1.34 / 255; the worst 60 px block is 4.1 / 255, in the water's ripple rings.
+- Renders (SwiftShader, 3 workers): S00 760 s, S01 2006 s, S02 861 s, S03 496 s, S04 1029 s (about 86 min).
+- Checked by eye: the finger in stills from every scene before the render, 12 frames per scene video after it,
+  14 frames of the captioned final, the cover. Audio checked by measurement only, not by listening.
+- Cover: S00 at 2.65 s (the wrinkled pad under water, fingerprint whorl in the middle) with "WHY DO FINGERS /
+  WRINKLE / IN WATER?" in Inter ExtraBold over a soft dark band (the bath's waterline runs between the first two
+  lines).
 
 ## Decisions
 

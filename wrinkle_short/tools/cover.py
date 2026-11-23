@@ -14,7 +14,7 @@ sys.path.insert(0, str(ROOT))
 
 from config import style  # noqa: E402
 
-FRAME = ("S00_Hook", 2.65)                # the pruned fingertip under water, between the two labels
+FRAME = ("S00_Hook", 2.65)                # the wrinkled pad under water (fingerprint whorl), between the two labels
 LINES = ["WHY DO FINGERS", "WRINKLE", "IN WATER?"]
 ACCENT_LINE = 1
 
