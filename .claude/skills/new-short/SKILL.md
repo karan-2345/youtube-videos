@@ -33,10 +33,13 @@ re-explain anything. Keep the user posted in a line or two as each stage finishe
 - Build the scene in `scenes/3d/<Scene>.js` (+ `lib/`). Reuse what earlier Shorts built when it fits:
   `fat_short/scenes/3d/lib/` has a glass human body with lungs and skinning, an SDF mesher, a live metaball lump,
   ball-and-stick molecules, breath and particle systems and a studio; `pisa_short` has a diorama world with soil
-  cross-sections and a procedural building; `buffon_short` has a table-top physics scene.
+  cross-sections and a procedural building; `buffon_short` has a table-top physics scene; `pyramid_short/scenes/3d/lib/`
+  has instanced people with a small walking/hauling rig and a dissolve, a desert (dunes, sand shader, sky, a pyramid),
+  a procedural Egyptian wall painting, a lab table-top with a deformable sand tray, and a macro grain pile.
 - Frame 0 must already move and show the promise; top text sits in y 240 to 700; captions use y 1330 to 1470;
   keep numbers inside the 3:4 crop (y 240 to 1680).
-- Check that every `A.xxx` in the scene exists in `scene.json` (else black frames).
+- Check that every `A.xxx` in the scene exists in `scene.json` (else black frames), that no anchor shares a beat's
+  name, and that `window.shaderErrors()` (pyramid_short) is empty at a time in each set.
 - Review stills on contact sheets (`Q="ss=1" node tools/capture.js stills ...`, `python3 tools/sheet.py name.png t...`),
   fix, repeat. Then a fast preview video of the whole thing and look at frames from it, especially the hook.
 

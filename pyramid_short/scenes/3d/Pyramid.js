@@ -150,7 +150,7 @@ export async function setup({ renderer, data, overlay, W, H: HH }) {
   // ---------------------------------------------------------------- lab
   const lab = buildLab(P, renderer);
   SETS.lab.add(lab.group);
-  const key = new THREE.SpotLight(col('#FFF1DE'), 9, 6, 0.6, 0.7, 1.2);
+  const key = new THREE.SpotLight(col('#FFF1DE'), 6.5, 6, 0.6, 0.7, 1.2);
   key.position.set(-0.6, 1.4, 0.9); key.castShadow = true; key.shadow.mapSize.set(2048, 2048); key.shadow.bias = -0.0015; key.shadow.normalBias = 0.004; key.castShadow = !Q.has('nolabshadow');
   key.target.position.set(0, 0, 0);
   SETS.lab.add(key, key.target);
@@ -243,8 +243,8 @@ export async function setup({ renderer, data, overlay, W, H: HH }) {
         [tWipe0, [-0.7, 3.7, 17.0], [-0.7, 3.6, 0], 32],
         [tWipe1 + 0.3, [2.5, 4.8, 18.5], [1.5, 3.2, 0], 34],
         [A.while - 0.2, [-14.0, 16.0, 24.0], [14.0, 1.5, -1.0], 40],
-        [A.front1 - 0.2, [8.6, 1.8, 0.1], [3.4, 1.35, 0.35], 34],
-        [A.ritual + 1.0, [7.8, 1.65, 0.05], [3.4, 1.45, 0.35], 30],
+        [A.front1 - 0.2, [8.2, 2.4, -0.75], [3.3, 1.2, 0.4], 34],
+        [A.ritual + 1.0, [7.5, 2.2, -0.7], [3.3, 1.3, 0.4], 30],
       ] : [
         [A.so_man - 0.12, [0.9, 4.6, 3.3], [5.4, 0.6, -0.1], 38],
         [A.end, [1.4, 4.3, 3.0], [5.6, 0.6, -0.1], 35],
@@ -282,7 +282,7 @@ export async function setup({ renderer, data, overlay, W, H: HH }) {
     }
     if (name === 'pyramid') {
       const u = clamp01((t - A.end) / (A.same - A.end));
-      const p = V3(lerp(-60, -20, u), lerp(16, 20, u), lerp(200, 185, u)), tg = V3(PYR.x - 40, 52, PYR.z);
+      const p = V3(PYR.x - lerp(150, 135, u), lerp(14, 18, u), PYR.z + lerp(640, 610, u)), tg = V3(PYR.x - 20, 50, PYR.z);
       return { pos: p, tgt: tg, fov: lerp(36, 33, u) };
     }
     if (name === 'team') {
@@ -436,6 +436,7 @@ export async function setup({ renderer, data, overlay, W, H: HH }) {
 
   // ================================================================== update
   const tmp = new THREE.Vector3();
+  const colMid = new THREE.Vector3();
   function update(t, opt = {}) {
     const ft = opt.frameT ?? t;
     const shot = shotAt(ft);
@@ -539,6 +540,7 @@ export async function setup({ renderer, data, overlay, W, H: HH }) {
     const cm = jarMouth(IDX.colPourer, xc + 3.25, bigSled.top, 0.4, 0.8 + 0.1 * Math.sin(t * 1.7));
     const cl = V3(xc + 4.6, 0.02, 0.4);
     colStream.userData.set(cm, cl, V3(cm.x + 0.5, cm.y + 0.1, cm.z));
+    colMid.copy(cm).lerp(cl, 0.6).add(V3(0.15, 0, 0));
     colStream.material.uniforms.uT.value = t;
     // wet tracks in the sand
     const T = sandU.uTracks.value;
@@ -600,11 +602,11 @@ export async function setup({ renderer, data, overlay, W, H: HH }) {
     const count = Math.round(172 * ramp(t, A.men170 - 0.05, A.pulling + 0.1, ease.inOut));
     const lit = t < A.statue + 0.3 ? 1 : 1 - ramp(t, A.statue + 0.3, A.statue + 0.8);
     const pour = Math.max(fadeWin(t, A.pouring - 0.3, A.p_that + 0.4, 0.3), 0);
-    const flow = Math.max(fadeWin(t, A.pouring - 0.4, A.old, 0.3), 0) * 1.0;
+    const flow = Math.max(fadeWin(t, A.painting0 - 0.45, A.old, 0.3), 0);
     for (const u of [wallMat.userData.u, sheetMat.uniforms]) {
       u.uCount.value = count; u.uLitAll.value = lit; u.uPour.value = pour * 0.8; u.uFlow.value = flow; u.uT.value = t;
     }
-    sheetMat.uniforms.uGain.value = 0.82;
+    sheetMat.uniforms.uGain.value = 2.4;
     const fl = 1 + 0.06 * Math.sin(t * 13.0) + 0.04 * Math.sin(t * 23.7 + 1) + 0.03 * Math.sin(t * 7.1);
     torch.intensity = 60 * fl; torch2.intensity = 28 * (2 - fl);
   }
@@ -676,7 +678,7 @@ export async function setup({ renderer, data, overlay, W, H: HH }) {
     // "while one man pours water in front of it": a leader to the jar
     const wOn = name === 'colossus' ? fadeWin(t, A.pours - 0.1, A.which + 0.1) : 0;
     if (wOn > 0) {
-      const p = toScreen(V3(Xc(t) + 4.3, 0.6, 0.4), camera);
+      const p = toScreen(colMid, camera);
       const lx = Math.min(940, Math.max(140, p.x + 160)), ly = Math.max(760, p.y - 380);
       setLine(leaders.water, [{ x: p.x, y: p.y - 10 }, { x: lx, y: ly + 40 }], wOn);
       place(el.water, lx, ly, wOn);

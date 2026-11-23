@@ -43,7 +43,7 @@ export function buildLab(P, renderer) {
   const U = {
     uSledX: { value: -0.25 }, uSledZ: { value: 0 }, uHeap: { value: 0 }, uGroove: { value: 0 }, uSink: { value: 0 }, uMud: { value: 0 },
     uWet: { value: 0 }, uWetC: { value: new THREE.Vector2(0, 0) }, uWetR: { value: 0 }, uStart: { value: -0.25 }, uLevel: { value: 1 },
-    cSand: { value: new THREE.Color('#D9B47C') }, cWet: { value: new THREE.Color(P.sand_wet) }, cMud: { value: new THREE.Color('#3E2C1E') },
+    cSand: { value: new THREE.Color('#CDA56E') }, cWet: { value: new THREE.Color(P.sand_wet) }, cMud: { value: new THREE.Color('#3E2C1E') },
   };
   // ---- table and room
   const tableMat = new THREE.MeshStandardMaterial({ color: new THREE.Color('#2B211B'), roughness: 0.55 });

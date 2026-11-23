@@ -72,6 +72,16 @@ node tools/capture.js eval 7.8 "dbg.cam(7.8)"   # inspect scene state at a time 
   Always review stills, then a fast preview video, before the full render (1.5 to 2 h).
 - `rm` with wildcards on renders can be blocked by the sandbox: write to a fresh directory instead.
 - `.gitignore` in each Short keeps frames, stills, caches, stems and audio out of git; finals under 100 MB are committed.
+- An anchor must never share a name with a beat (`mud`, `lab`, `end`...): `anchors()` writes the beats' start times
+  into the same dict and silently overwrites it. A `ramp(t, a, b)` with a > b is 1 before a, not 0: check every ramp
+  whose ends come from two different anchors.
+- In GLSL `pow(x, 2.)` with x < 0 is undefined (NaN on SwiftShader): write `x * x`. A shader that fails to compile
+  does NOT print an error in the capture log (only "program not valid"); `window.shaderErrors()` in
+  `pyramid_short/scenes/3d/Pyramid.js` lists every failed program: run it with `capture.js eval <t>` after a change.
+- `node tools/capture.js preview 5 renders/preview/preview.mp4 3` (pyramid_short) renders every 5th frame with the
+  voice, about 20 minutes: the cheapest whole-film motion check.
+- Keep the music in whole phrases over the video: lock the tempo to a scene clock that is a whole number of bars
+  (pyramid_short: 8 strides = 4 bars), and wrap the reverb tail and the SFX tail round onto the start.
 - The root of the repo (chess Short, `config/`, `scenes/`, `tools/`, `HANDOFF.md`, `ENVIRONMENT.md`) is an older
   Windows-era project. Leave it alone.
 
@@ -90,11 +100,14 @@ pull request unless asked. No model names or IDs in commits or files.
 
 ## Where we left off (2026-11-23)
 
-- The fat Short was delivered on 2026-11-22 (video, cover, upload notes); the user hasn't said yet whether it's
-  uploaded. Its decisions, measurements and what was simplified are in `fat_short/HANDOFF.md`; Pisa's are in
-  `pisa_short/HANDOFF.md`.
-- Next: whichever idea the user picks. Four are waiting in `IDEAS.md`; the user may also bring their own hook, which
-  is used word for word.
+- The pyramid Short ("water on the sand") was delivered on 2026-11-23; see `pyramid_short/HANDOFF.md`. The fat Short
+  (2026-11-22) and Pisa (2026-11-21) were delivered before it; the user hasn't said whether they're uploaded.
+- The user asked for "more like the Leaning Tower of Pisa": famous landmarks with a hidden story land well. Five more
+  landmark ideas are in `IDEAS.md` (Venice is the closest to Pisa), plus the four older ones.
+- Next: whichever idea the user picks; the user may also bring their own hook, which is used word for word. If the
+  user's message still has a template placeholder instead of a hook, ask which idea (offer the list).
+- Web pages (Wikipedia, phys.org, university sites) could not be fetched from the cloud sessions on 2026-11-23 (DNS
+  blocked); WebSearch summaries worked. Say so in facts.py when a source was read only through search.
 - The user wants every new chat to carry on from here without re-explaining. If something in a new chat needs
   explaining anyway, write it into this file before finishing.
 
@@ -107,3 +120,4 @@ pull request unless asked. No model names or IDs in commits or files.
 | You can calculate pi without a single circle (Buffon's needle) | `buffon_short/` | 69 s | uploaded |
 | The Leaning Tower of Pisa should have fallen over | `pisa_short/` | 69 s | delivered 2026-11-21 |
 | Where does the fat go when you lose weight? | `fat_short/` | 64.5 s | delivered 2026-11-22 |
+| How the Egyptians moved stones heavier than a car (water on the sand) | `pyramid_short/` | 69.3 s | delivered 2026-11-23 |
