@@ -6,18 +6,60 @@
 // vessels can be placed exactly under the valleys.
 import * as THREE from 'three';
 import { rng, ramp, ease, clamp01, lerp } from '/scenes/web/runtime.js';
-import { BLK, vec, canvasTex, skinTile, layerTex, glowTex } from './cut.js';
+import { BLK, vec, canvasTex, skinTile, layerTex, glowTex, NOISE_GLSL } from './cut.js';
 
-// ---------------------------------------------------------------- the fingertip
-// Lathe around y, tip at y = 0, pad facing +z (angle a = 0), flattened front-to-back by FING.sz.
-export const FING = { R: 0.55, sz: 0.86, len: 4.6 };
+// ---------------------------------------------------------------- the finger
+// Tip at y = 0, pointing down; the pad faces +z (angle a = 0) and the nail is on the back (a = pi). One unit is about
+// 14 mm: the end joint's crease sits at y = FING.dip, the middle joint's at FING.pip.
+// The skin is star-shaped round the y axis, p(a, y) = r(a, y) * (sin a, ., FING.sz * cos a), so the shader can get a
+// back from any point (fingerA) and the fold pattern lands in the same place on every soak.
+export const FING = { R: 0.55, sz: 0.86, len: 4.6, dip: 1.92, pip: 3.5 };
+export const NAIL = { phi: 0.82, y0: 0.13, y1: 1.16 };     // half-width (radians round the back), free edge, base
+const TIP = 0.62, TIP_P = 2.3;                            // the tip's rounding: a little squarer than a half-circle
 const K = 9.0;                                         // folds per radian around the finger
 export function foldW(a, y) { return a * K + 0.9 * Math.sin(y * 2.3 + a * 1.7) + 0.4 * Math.sin(y * 4.1 - a * 3.3); }
+const gauss = (x, m, s) => Math.exp(-(((x - m) / s) ** 2));
+const sstep = (e0, e1, x) => { const t = clamp01((x - e0) / (e1 - e0)); return t * t * (3 - 2 * t); };
+const wrapPi = (x) => x - 2 * Math.PI * Math.round(x / (2 * Math.PI));
+
+/** Side-to-side half-width along the finger: a rounded tip, a slight waist, the joints a little wider. */
 export function fingerR(y) {
-  const R = FING.R;
-  if (y < R) return Math.sqrt(Math.max(0, R * R - (R - y) ** 2));
-  return R * (1 + 0.025 * (y - R) + 0.04 * Math.exp(-(((y - 2.25) / 0.35) ** 2)));
+  const yy = Math.max(0, y);
+  const w = 0.525 + 0.012 * yy - 0.012 * gauss(yy, 1.5, 0.28) + 0.03 * gauss(yy, FING.dip + 0.06, 0.24)
+          - 0.012 * gauss(yy, 2.75, 0.4) + 0.05 * gauss(yy, FING.pip + 0.1, 0.3) + 0.03 * sstep(FING.pip + 0.1, 4.5, yy);
+  const d = Math.max(0, (TIP - yy) / TIP);
+  return w * Math.pow(Math.max(0, 1 - Math.pow(d, TIP_P)), 1 / TIP_P);
 }
+const nailProx = (s) => NAIL.y1 - 0.06 * s * s - 0.2 * s ** 4;    // the cuticle: an arc with rounded corners
+const nailDist = (s) => NAIL.y0 + 0.05 * s * s + 0.12 * s ** 6;    // the free edge, its corners rounded off
+
+/** Radius factor before the nail folds: a fuller pad in front, a flatter back, knuckles on the back. */
+function shapeK(a, y) {
+  const c = Math.cos(a), front = Math.max(0, c), back = Math.max(0, -c);
+  const pad = 0.1 * gauss(y, 0.72, 0.42) + 0.06 * gauss(y, 2.7, 0.45) + 0.05 * gauss(y, 4.3, 0.4)
+            - 0.035 * gauss(y, FING.dip - 0.04, 0.12) - 0.03 * gauss(y, FING.pip - 0.08, 0.14);
+  const knuckle = 0.035 * gauss(y, FING.dip + 0.06, 0.18) + 0.05 * gauss(y, FING.pip + 0.08, 0.22);
+  return 1 + pad * front * front - 0.12 * Math.pow(back, 1.5) + knuckle * back * back;
+}
+/** The skin round the nail: the fold over its base, the folds along its sides, the bed it lies in. */
+function nailFoldK(a, y) {
+  const s = Math.abs(wrapPi(a - Math.PI)) / NAIL.phi, sc = Math.min(s, 1);
+  const yp = nailProx(sc), yd = nailDist(sc);
+  let k = 0.05 * gauss(y, yp + 0.03, 0.055) * sstep(1.2, 0.85, s);
+  k += 0.05 * gauss(s, 1.04, 0.11) * sstep(yd + 0.06, yd + 0.3, y) * sstep(yp + 0.1, yp - 0.05, y);
+  k -= 0.03 * sstep(1.02, 0.9, s) * sstep(yd - 0.05, yd + 0.05, y) * sstep(yp + 0.02, yp - 0.04, y);
+  return k;
+}
+/** The skin's distance from the axis at (a, y), before the front-to-back squash. */
+export function surfR(a, y) { return fingerR(y) * (shapeK(a, y) + nailFoldK(a, y)); }
+/** A point on the skin; off > 0 lifts it off the surface. */
+export function surfP(a, y, off = 0) {
+  const r = surfR(a, y) + off;
+  return vec(r * Math.sin(a), y, r * FING.sz * Math.cos(a));
+}
+/** How far the middle of the pad stands out in front (z) at height y. */
+export const padZ = (y) => surfR(0, y) * FING.sz;
+
 const FOLD_GLSL = `
 uniform float uW;
 float foldW(float a, float y){ return a * ${K.toFixed(1)} + 0.9 * sin(y * 2.3 + a * 1.7) + 0.4 * sin(y * 4.1 - a * 3.3); }
@@ -28,6 +70,82 @@ float fingerDisp(vec3 p){
   float a = fingerA(p);
   return uW * padMask(a, p.y) * 0.032 * (pow(foldS(a, p.y), 0.75) - 0.56);
 }`;
+
+// Skin detail drawn in the fragment shader: fingerprint ridges, the joints' creases, the knuckles' wrinkles.
+const g1 = (v) => v.toFixed(3);
+const DETAIL_GLSL = `
+const float SP = 0.031;                     // ridge spacing (about 0.45 mm)
+float fpPhase(vec2 q, float yb){
+  vec2 w = q + 0.022 * vec2(sin(q.y * 9.1 + 2.0 * sin(q.x * 7.3)), sin(q.x * 8.7 + 1.7 * sin(q.y * 6.1)));
+  if (q.y > yb) return (w.y + 0.05 * sin(w.x * 2.3) + 0.03 * w.x * w.x) / SP;      // across the middle segment
+  vec2 c = (w - vec2(0.03, 0.8)) * vec2(1.0, 0.8);                                   // a whorl on the pad
+  return length(c) / SP + atan(c.y, c.x) / 6.2831853;
+}
+vec3 fpGrad(vec2 q, float yb){
+  float e = 0.0015;
+  float p0 = fpPhase(q, yb);
+  float dx = fpPhase(q + vec2(e, 0.0), yb) - p0, dy = fpPhase(q + vec2(0.0, e), yb) - p0;
+  dx -= floor(dx + 0.5); dy -= floor(dy + 0.5);          // the spiral's seam jumps by one whole ridge
+  return vec3(dx / e, dy / e, p0);
+}
+void crease(float y, float yc, float depth, float sig, float m, inout vec2 g, inout float sh){
+  float d = (y - yc) / sig; float e = exp(-d * d) * m;
+  g.y += depth * 2.0 * d / sig * e;
+  sh += e * min(1.0, depth / 0.008);
+}`;
+
+const DETAIL_FRAG = `
+vec2 fpG = vec2(0.0);
+float fpShade = 0.0;
+{
+  vec2 q = vec2(vA * vWd, vY);
+  float pf = max(length(dFdx(q)), length(dFdy(q)));            // scene units per pixel
+  float a2 = vA * vA;
+  // fingerprint ridges on the palm side
+  float yb = ${g1(FING.dip)} + 0.03 * a2;
+  float fm = smoothstep(1.75, 1.15, abs(vA)) * step(vY, ${g1(FING.pip + 0.9)});
+  vec3 pg = fpGrad(q, yb);
+  float fw = length(pg.xy) * pf;
+  float brk = smoothstep(0.55, 0.8, snoise(vec3(q * 24.0, 4.2)));
+  float amp = fm * (1.0 - smoothstep(0.16, 0.36, fw)) * (1.0 - 0.75 * brk) * (vY > yb ? 0.45 : 1.0);
+  fpG += -0.002 * 3.14159265 * sin(6.2831853 * pg.z) * pg.xy * amp;
+  fpShade += 0.05 * amp * (0.5 - 0.5 * cos(6.2831853 * pg.z));
+  // creases across the palm side of both joints
+  vec2 cg = vec2(0.0); float cs = 0.0;
+  float fmC = smoothstep(1.5, 0.9, abs(vA));
+  float wb = 0.012 * sin(vA * 5.3 + 0.7) + 0.006 * sin(vA * 11.0 + 2.0);
+  float vr1 = 0.55 + 0.45 * sin(vA * 3.1 + 1.0), vr2 = 0.55 + 0.45 * sin(vA * 2.3 - 0.6);
+  crease(vY, ${g1(FING.dip)} + 0.03 * a2 + wb, 0.008 * vr1, 0.011, fmC, cg, cs);
+  crease(vY, ${g1(FING.dip - 0.085)} + 0.02 * a2 - wb, 0.004, 0.009, fmC * smoothstep(0.9, 0.2, abs(vA + 0.2)), cg, cs);
+  crease(vY, ${g1(FING.pip - 0.06)} + 0.03 * a2 - wb, 0.009 * vr2, 0.012, fmC, cg, cs);
+  crease(vY, ${g1(FING.pip + 0.06)} + 0.025 * a2 + 0.7 * wb, 0.007 * vr1, 0.011, fmC * smoothstep(1.3, 0.6, abs(vA - 0.15)), cg, cs);
+  // wrinkles over the knuckles on the back
+  float ph = vA - sign(vA) * 3.14159265;
+  float bm = smoothstep(1.25, 0.55, abs(ph));
+  for (int k = 0; k < 4; k++) { float fk = float(k) - 1.5;
+    crease(vY, ${g1(FING.dip + 0.04)} + 0.05 * fk + 0.045 * ph * ph + 0.01 * sin(ph * 7.0 + fk * 2.1),
+           0.004 * (1.0 - abs(fk) / 3.0), 0.008, bm, cg, cs); }
+  for (int k = 0; k < 6; k++) { float fk = float(k) - 2.5;
+    crease(vY, ${g1(FING.pip + 0.1)} + 0.06 * fk + 0.06 * ph * ph + 0.012 * sin(ph * 6.0 + fk * 1.7),
+           0.006 * (1.0 - abs(fk) / 4.0), 0.01, bm, cg, cs); }
+  fpG += cg * (1.0 - smoothstep(0.006, 0.014, pf));               // thinner than about two pixels: shade only
+  fpShade += min(0.3, 0.26 * cs);
+  // colour: a lighter palm side, a pinker fingertip, darker knuckles
+  float fr = smoothstep(-0.2, 0.7, cos(vA));
+  diffuseColor.rgb *= mix(vec3(0.93, 0.9, 0.88), vec3(1.03, 0.99, 0.97), fr);
+  diffuseColor.rgb *= mix(vec3(1.0), vec3(1.07, 0.9, 0.88), 0.6 * fr * (1.0 - smoothstep(0.05, 0.9, vY)));
+  float kn = (1.0 - fr) * (0.6 * exp(-pow((vY - ${g1(FING.dip + 0.06)}) / 0.2, 2.0)) + exp(-pow((vY - ${g1(FING.pip + 0.1)}) / 0.26, 2.0)));
+  diffuseColor.rgb *= mix(vec3(1.0), vec3(0.93, 0.85, 0.83), 0.7 * kn);
+  float pn = (1.0 - fr) * smoothstep(1.2, 0.75, abs(ph)) * smoothstep(0.05, 0.3, vY) * smoothstep(1.45, 1.15, vY);
+  diffuseColor.rgb *= mix(vec3(1.0), vec3(0.98, 0.86, 0.84), 0.6 * pn);
+  diffuseColor.rgb *= 1.0 - fpShade;
+}`;
+
+const DETAIL_NORMAL = `
+{ vec3 tv = normalize(vAxis);
+  vec3 tu = normalize(cross(tv, normal));
+  vec3 tv2 = cross(normal, tu);
+  normal = normalize(normal - (fpG.x * tu + fpG.y * tv2)); }`;
 
 /** Valley lines of the fold pattern, as curves on (or under) the pad: inset > 0 goes under the skin. */
 export function valleyCurves({ inset = 0, lift = 0.0, y0 = 0.4, y1 = 1.55, amax = 1.2 } = {}) {
@@ -40,8 +158,7 @@ export function valleyCurves({ inset = 0, lift = 0.0, y0 = 0.4, y1 = 1.55, amax 
       for (let it = 0; it < 40; it++) { const m = (lo + hi) / 2; if (foldW(m, y) < 2 * k) lo = m; else hi = m; }
       const a = (lo + hi) / 2;
       if (Math.abs(a) > amax) continue;
-      const r = fingerR(y) - inset + lift;
-      pts.push(vec(r * Math.sin(a), y, r * FING.sz * Math.cos(a)));
+      pts.push(surfP(a, y, lift - inset));
     }
     if (pts.length > 10) out.push({ k, curve: new THREE.CatmullRomCurve3(pts) });
   }
@@ -50,7 +167,7 @@ export function valleyCurves({ inset = 0, lift = 0.0, y0 = 0.4, y1 = 1.55, amax 
 
 function fingerMaterial(pal, u) {
   const map = skinTile(pal, 21);
-  map.repeat.set(2.5, 3.5);
+  map.repeat.set(3, 3.5);                               // a whole number of tiles round, so the seam doesn't show
   const m = new THREE.MeshPhysicalMaterial({
     color: 0xffffff, map, roughness: 0.56, sheen: 0.5,
     sheenColor: new THREE.Color('#ff9c86'), sheenRoughness: 0.45, transparent: true, opacity: 1,
@@ -60,7 +177,8 @@ function fingerMaterial(pal, u) {
     sh.vertexShader = sh.vertexShader
       .replace('#include <common>', `#include <common>
 ${FOLD_GLSL}
-varying float vS; varying float vPad;`)
+attribute vec2 aFing;
+varying float vS; varying float vPad; varying float vA; varying float vY; varying float vWd; varying vec3 vAxis;`)
       .replace('#include <beginnormal_vertex>', `
 vec3 objectNormal;
 {
@@ -76,54 +194,145 @@ vec3 objectNormal;
 }`)
       .replace('#include <begin_vertex>', `
 vec3 transformed = position + normalize(normal) * fingerDisp(position);
-{ float a = fingerA(position); vS = foldS(a, position.y); vPad = padMask(a, position.y); }`);
+{ float a = fingerA(position); vS = foldS(a, position.y); vPad = padMask(a, position.y); }
+vA = aFing.x; vWd = aFing.y; vY = position.y;
+vAxis = (modelViewMatrix * vec4(0.0, 1.0, 0.0, 0.0)).xyz;`);
     sh.fragmentShader = sh.fragmentShader
       .replace('#include <common>', `#include <common>
-uniform float uW; varying float vS; varying float vPad;`)
+uniform float uW; varying float vS; varying float vPad; varying float vA; varying float vY; varying float vWd; varying vec3 vAxis;
+${NOISE_GLSL}
+${DETAIL_GLSL}`)
       .replace('#include <color_fragment>', `#include <color_fragment>
 { float pw = uW * vPad;
   diffuseColor.rgb = mix(diffuseColor.rgb, diffuseColor.rgb * vec3(1.05, 0.96, 0.95) + vec3(0.05, 0.04, 0.04), 0.7 * pw);
-  diffuseColor.rgb *= 1.0 - 0.5 * pw * (1.0 - pow(vS, 0.75)); }`);
+  diffuseColor.rgb *= 1.0 - 0.5 * pw * (1.0 - pow(vS, 0.75)); }
+${DETAIL_FRAG}`)
+      .replace('#include <normal_fragment_maps>', `#include <normal_fragment_maps>
+${DETAIL_NORMAL}`);
   };
-  m.customProgramCacheKey = () => 'finger';
+  m.customProgramCacheKey = () => 'finger2';
   return m;
 }
 
-export function makeFinger(pal) {
-  const pts = [];
-  const N = 280;
+/** The skin: a grid round the axis (seam down the middle of the back, under the nail) closing to a point at the tip. */
+function fingerGeometry() {
+  const M = 320, N = 360, row = M + 1;
+  const pos = new Float32Array(row * (N + 1) * 3), uv = new Float32Array(row * (N + 1) * 2);
+  const fa = new Float32Array(row * (N + 1) * 2);
   for (let i = 0; i <= N; i++) {
-    const y = FING.len * Math.pow(i / N, 1.7);
-    pts.push(new THREE.Vector2(Math.max(fingerR(y), i ? 1e-4 : 0), y));
+    const y = FING.len * Math.pow(i / N, 1.6), w = fingerR(y);
+    for (let j = 0; j <= M; j++) {
+      const a = -Math.PI + 2 * Math.PI * j / M, k = i * row + j;
+      const r = i === 0 ? 0 : surfR(a, y);
+      pos.set([r * Math.sin(a), y, r * FING.sz * Math.cos(a)], k * 3);
+      uv.set([j / M, y / FING.len], k * 2);
+      fa.set([a, w], k * 2);
+    }
   }
-  const geo = new THREE.LatheGeometry(pts, 220);
-  const uv = geo.attributes.uv, gp = geo.attributes.position;
-  for (let i = 0; i < uv.count; i++) uv.setY(i, gp.getY(i) / FING.len);     // texture by length, not by profile index
-  geo.scale(1, 1, FING.sz);
+  const idx = [];
+  for (let i = 0; i < N; i++) for (let j = 0; j < M; j++) {
+    const v00 = i * row + j, v01 = v00 + 1, v10 = v00 + row, v11 = v10 + 1;
+    idx.push(v00, v01, v11, v00, v11, v10);
+  }
+  const geo = new THREE.BufferGeometry();
+  geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+  geo.setAttribute('uv', new THREE.BufferAttribute(uv, 2));
+  geo.setAttribute('aFing', new THREE.BufferAttribute(fa, 2));
+  geo.setIndex(idx);
+  geo.computeVertexNormals();
+  const n = geo.attributes.normal;
+  for (let i = 0; i <= N; i++) {                         // the seam's two columns share one normal; the tip points down
+    const k0 = i * row, k1 = k0 + M;
+    if (i === 0) { for (let j = 0; j <= M; j++) n.setXYZ(k0 + j, 0, -1, 0); continue; }
+    const v = new THREE.Vector3(n.getX(k0) + n.getX(k1), n.getY(k0) + n.getY(k1), n.getZ(k0) + n.getZ(k1)).normalize();
+    n.setXYZ(k0, v.x, v.y, v.z); n.setXYZ(k1, v.x, v.y, v.z);
+  }
+  return geo;
+}
+
+/** The nail bed's surface: the back without the folds, following the tip's rounding only part of the way. */
+function nailBedR(a, y) {
+  const yy = y > 0.5 ? y : 0.5 - (0.5 - y) * 0.55;
+  return fingerR(yy) * shapeK(a, yy);
+}
+
+/** The nail: a thin plate with a lunula, a pink bed and a pale free edge that stands a little off the fingertip. */
+function makeNail(pal) {
+  const NS = 36, NT = 44, TH = 0.008, row = NS + 1, layer = row * (NT + 1);
+  const lift = (s, t) => (0.008 + 0.018 * (1 - s * s)) * lerp(1, 0.25, sstep(0.82, 1, t))
+                       * lerp(1, 0.35, sstep(0.75, 1, Math.abs(s)) * sstep(0.08, 0.3, t));
+  const P = (s, t, dz) => {
+    const a = Math.PI + s * NAIL.phi, y = lerp(nailDist(s), nailProx(s), t);
+    const r = nailBedR(a, y) + lift(s, t) + dz;
+    return new THREE.Vector3(r * Math.sin(a), y, r * FING.sz * Math.cos(a));
+  };
+  const pts = [], uv = [];
+  for (const dz of [0, -TH]) for (let j = 0; j <= NT; j++) for (let i = 0; i <= NS; i++) {
+    pts.push(P(-1 + 2 * i / NS, j / NT, dz));
+    uv.push(i / NS, j / NT);
+  }
+  const V = (L, i, j) => L * layer + j * row + i;
+  const idx = [];
+  for (let j = 0; j < NT; j++) for (let i = 0; i < NS; i++) {
+    idx.push(V(0, i, j), V(0, i + 1, j), V(0, i + 1, j + 1), V(0, i, j), V(0, i + 1, j + 1), V(0, i, j + 1));
+    idx.push(V(1, i, j), V(1, i + 1, j + 1), V(1, i + 1, j), V(1, i, j), V(1, i, j + 1), V(1, i + 1, j + 1));
+  }
+  // the rim, wound to face outward (away from the plate's middle)
+  const ring = [];
+  for (let i = 0; i < NS; i++) ring.push([i, 0]);
+  for (let j = 0; j < NT; j++) ring.push([NS, j]);
+  for (let i = NS; i > 0; i--) ring.push([i, NT]);
+  for (let j = NT; j > 0; j--) ring.push([0, j]);
+  const mid = P(0, 0.5, -TH / 2);
+  for (let k = 0; k < ring.length; k++) {
+    const [i0, j0] = ring[k], [i1, j1] = ring[(k + 1) % ring.length];
+    const a = V(0, i0, j0), b = V(0, i1, j1), c = V(1, i1, j1), d = V(1, i0, j0);
+    const nrm = pts[b].clone().sub(pts[a]).cross(pts[d].clone().sub(pts[a]));
+    const out = pts[a].clone().add(pts[b]).multiplyScalar(0.5).sub(mid);
+    if (nrm.dot(out) >= 0) idx.push(a, b, c, a, c, d); else idx.push(a, c, b, a, d, c);
+  }
+  const geo = new THREE.BufferGeometry().setFromPoints(pts);
+  geo.setAttribute('uv', new THREE.Float32BufferAttribute(uv, 2));
+  geo.setIndex(idx);
+  geo.computeVertexNormals();
+  const tex = canvasTex(256, 512, (g, w, h) => {
+    g.fillStyle = '#E29E90'; g.fillRect(0, 0, w, h);                       // the pink bed under the plate
+    const side = g.createLinearGradient(0, 0, w, 0);
+    side.addColorStop(0, 'rgba(196,128,110,0.3)'); side.addColorStop(0.18, 'rgba(196,128,110,0)');
+    side.addColorStop(0.82, 'rgba(196,128,110,0)'); side.addColorStop(1, 'rgba(196,128,110,0.3)');
+    g.fillStyle = side; g.fillRect(0, 0, w, h);
+    g.filter = 'blur(6px)';
+    g.fillStyle = 'rgba(244,218,210,0.6)';                               // the lunula, at the base (canvas top)
+    g.beginPath(); g.ellipse(w / 2, -h * 0.04, w * 0.3, h * 0.17, 0, 0, Math.PI * 2); g.fill();
+    g.filter = 'blur(2px)';
+    const smile = (x) => h * (0.91 + 0.025 * ((x / w) * 2 - 1) ** 2);      // where the plate leaves the skin
+    g.strokeStyle = 'rgba(212,146,128,0.35)'; g.lineWidth = 6;           // the darker band just before it
+    g.beginPath(); for (let x = 0; x <= w; x += 8) g[x ? 'lineTo' : 'moveTo'](x, smile(x) - 6); g.stroke();
+    g.fillStyle = 'rgba(236,220,206,0.9)';                                              // the free edge
+    g.beginPath(); g.moveTo(0, h);
+    for (let x = 0; x <= w; x += 8) g.lineTo(x, smile(x));
+    g.lineTo(w, h); g.closePath(); g.fill();
+    g.filter = 'none';
+    const r = rng(5);                                                     // faint lengthwise ridges
+    for (let i = 0; i < 26; i++) {
+      const x = r() * w;
+      g.strokeStyle = `rgba(255,240,232,${0.025 + r() * 0.045})`; g.lineWidth = 1 + r() * 2;
+      g.beginPath(); g.moveTo(x, 0); g.lineTo(x + (r() - 0.5) * 6, h); g.stroke();
+    }
+  });
+  const mat = new THREE.MeshPhysicalMaterial({ map: tex, roughness: 0.2, clearcoat: 1, clearcoatRoughness: 0.03,
+                                              envMapIntensity: 4.5, transparent: true });
+  return { mesh: new THREE.Mesh(geo, mat), mat };
+}
+
+export function makeFinger(pal) {
   const u = { uW: { value: 0 } };
   const mat = fingerMaterial(pal, u);
-  const mesh = new THREE.Mesh(geo, mat);
-  // the nail, on the back (-z), from just above the tip
-  const ng = new THREE.PlaneGeometry(1, 1, 24, 24);
-  const np = ng.attributes.position;
-  for (let i = 0; i < np.count; i++) {
-    const x = np.getX(i), yy = np.getY(i);
-    const y = lerp(0.2, 1.25, yy + 0.5);
-    const r = fingerR(y) + 0.014 + 0.012 * (1 - Math.abs(x) * 2);
-    const a = Math.PI + x * 1.45 * (0.85 + 0.15 * Math.min(1, (y - 0.2) * 3));
-    np.setXYZ(i, r * Math.sin(a), y, r * FING.sz * Math.cos(a));
-  }
-  ng.computeVertexNormals();
-  const nailTex = canvasTex(64, 256, (g, w, h) => {
-    const gr = g.createLinearGradient(0, 0, 0, h);
-    gr.addColorStop(0, pal.nail); gr.addColorStop(0.8, pal.nail); gr.addColorStop(0.86, '#F6EEE6'); gr.addColorStop(1, '#FBF6F0');
-    g.fillStyle = gr; g.fillRect(0, 0, w, h);
-  });
-  const nailMat = new THREE.MeshPhysicalMaterial({ map: nailTex, roughness: 0.18, clearcoat: 1, clearcoatRoughness: 0.1,
-                                                  side: THREE.DoubleSide, transparent: true });
-  const nail = new THREE.Mesh(ng, nailMat);
+  const mesh = new THREE.Mesh(fingerGeometry(), mat);
+  const nail = makeNail(pal);
+  const nailMat = nail.mat;
   const group = new THREE.Group();
-  group.add(mesh, nail);
+  group.add(mesh, nail.mesh);
   return {
     group, mesh, u,
     set({ wrinkle = 0, opacity = 1 } = {}) {
@@ -274,9 +483,10 @@ vec3 objectNormal;
         const under = f ? -f.tipY : -1;
         r.visible = !!f && under > 0.02;
         if (!r.visible) return;
-        const rad = (fingerR(Math.min(under / (f.s ?? 1), FING.len)) + 0.01) * (f.s ?? 1);
-        r.position.set(f.x, 0.005, f.z ?? 0);
-        r.scale.set(rad, rad * FING.sz, 1);
+        const s = f.s ?? 1, yl = Math.min(under / s, FING.len);
+        const zf = padZ(yl), zb = surfR(Math.PI, yl) * FING.sz;
+        r.position.set(f.x, 0.005, (f.z ?? 0) + s * (zf - zb) / 2);
+        r.scale.set((fingerR(yl) + 0.01) * s, ((zf + zb) / 2 + 0.01) * s, 1);
       });
       let k = 0;
       for (const f of fingers) {
@@ -556,8 +766,33 @@ export function makeTire(pal) {
 }
 
 // ---------------------------------------------------------------- shared poses (the cuts between scenes line up)
+/** A camera pose on a circle round the finger's axis: deg from the pad (+z) toward +x. */
+export function orbitPose(deg, dist, h, target) {
+  const a = deg * Math.PI / 180;
+  return { p: vec(dist * Math.sin(a), h, dist * Math.cos(a)), t: target };
+}
+/** Like cut.js setCam, but the camera swings round the finger's axis instead of cutting across it. */
+export function orbitCam(camera, A, B, u) {
+  const a0 = Math.atan2(A.p.x, A.p.z), a1 = a0 + wrapPi(Math.atan2(B.p.x, B.p.z) - a0);
+  const a = lerp(a0, a1, u), r = lerp(Math.hypot(A.p.x, A.p.z), Math.hypot(B.p.x, B.p.z), u);
+  camera.position.set(r * Math.sin(a), lerp(A.p.y, B.p.y, u), r * Math.cos(a));
+  const t = A.t.clone().lerp(B.t, u);
+  camera.lookAt(t);
+  camera.updateMatrixWorld();
+  return t;
+}
+/** cut.js camPath with orbiting moves. */
+export function orbitPath(camera, t, keys) {
+  if (t <= keys[0][0]) return orbitCam(camera, keys[0][1], keys[0][1], 0);
+  for (let i = 1; i < keys.length; i++) {
+    if (t <= keys[i][0]) return orbitCam(camera, keys[i - 1][1], keys[i][1], ramp(t, keys[i - 1][0], keys[i][0], ease.inOut));
+  }
+  const last = keys[keys.length - 1][1];
+  return orbitCam(camera, last, last, 0);
+}
+
 export const CAMW = {
-  c0:    { p: vec(1.1, 0.95, 6.4), t: vec(0.0, 0.35, 0.0) },      // the finger above the water (S00 start = S04 end)
+  c0:    orbitPose(150, 6.5, 1.75, vec(0.0, 0.8, 0.0)),             // the finger above the water from behind: the nail (S00 start = S04 end)
   pad:   { p: vec(0.75, -0.15, 4.3), t: vec(0.0, -0.5, 0.0) },    // close on the pad under water
   out:   { p: vec(0.6, 1.35, 4.6), t: vec(0.0, 1.1, 0.3) },       // the wet finger lifted out, the cut
   lift:  { p: vec(0.95, 1.65, 6.3), t: vec(0.1, 1.05, 1.5) },     // the block lifted off the pad (S00 end = S01 start)
@@ -572,7 +807,7 @@ const PAD_Y = 0.8, S_PAD = 0.3;
 /** The block's pose: u 0 = flat on the pad, 1 = lifted off (S00 end), 2 = the standard view (S01). */
 export function liftPose(block, u) {
   const g = block.group, s = block.inner.scale;
-  const r0 = fingerR(PAD_Y) * FING.sz;
+  const r0 = padZ(PAD_Y);
   if (u <= 1) {
     const e = ease.inOut(clamp01(u));
     s.set(lerp(S_PAD, 0.5, e), lerp(0.03, 0.5, Math.pow(e, 0.8)), lerp(S_PAD, 0.5, e));
@@ -589,8 +824,8 @@ export function liftPose(block, u) {
 
 /** The glowing cut line round the block's footprint on the pad (in the finger's own frame). */
 export function makePadCut() {
-  const a0 = (BLK.w * S_PAD / 2) / fingerR(PAD_Y), h = BLK.d * S_PAD / 2;
-  const on = (a, y) => { const r = fingerR(y) + 0.012; return vec(r * Math.sin(a), y, r * FING.sz * Math.cos(a)); };
+  const a0 = (BLK.w * S_PAD / 2) / surfR(0, PAD_Y), h = BLK.d * S_PAD / 2;
+  const on = (a, y) => surfP(a, y, 0.012);
   const corners = [[-a0, PAD_Y + h], [a0, PAD_Y + h], [a0, PAD_Y - h], [-a0, PAD_Y - h], [-a0, PAD_Y + h]];
   const path = new THREE.CurvePath();
   for (let i = 0; i < 4; i++) {
@@ -603,7 +838,7 @@ export function makePadCut() {
   const total = geo.index.count;
   const holeMat = new THREE.MeshStandardMaterial({ color: '#4a1512', roughness: 0.9, transparent: true, opacity: 0 });
   const hole = new THREE.Mesh(new THREE.PlaneGeometry(BLK.w * S_PAD * 0.98, BLK.d * S_PAD * 0.98), holeMat);
-  hole.position.set(0, PAD_Y, fingerR(PAD_Y) * FING.sz + 0.004);
+  hole.position.set(0, PAD_Y, padZ(PAD_Y) + 0.004);
   const group = new THREE.Group();
   group.add(mesh, hole);
   return {

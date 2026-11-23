@@ -15,6 +15,7 @@ export async function setup({ renderer, data, overlay }) {
   const tire = F.makeTire(pal);
   const FS = 0.9, MY = 1.15;
   finger.group.scale.setScalar(FS);
+  finger.group.rotation.y = 1.4;                    // three-quarter: the folded pad and the nail both show
   marble.group.position.y = MY;
   tire.group.position.y = -1.45;
   tire.group.rotation.y = -0.6;                     // three-quarter: the tread and its grooves face us

@@ -47,8 +47,8 @@ export async function setup({ renderer, data, overlay }) {
       const tipY = tipAt(t);
       const follow = padCam(Math.min(tipY, 0.2));
       const back = ramp(t, tBack, end - 0.25, ease.inOut);
-      C.setCam(camera, follow, F.CAMW.c0, back);
-      st.frame(camera, F.CAMW.c0.t);
+      F.orbitCam(camera, follow, F.CAMW.c0, back);
+      st.frame(camera, follow.t.clone().lerp(F.CAMW.c0.t, back));
       finger.group.position.y = tipY;
       const wr = Math.max(1 - ramp(t, ...tDry, ease.inOut), ramp(t, ...tWet, ease.inOut)) * (1 - ramp(t, tBack + 0.2, end - 0.5, ease.inOut));
       const xr = ramp(t, ...tX, ease.inOut) * (1 - ramp(t, tBack - 0.3, tBack + 0.3));
@@ -60,7 +60,7 @@ export async function setup({ renderer, data, overlay }) {
       if (n !== soakN) { soak.el.textContent = `Soak ${n}`; soakN = n; }
       soak.show(540, 300, C.env(t, -1, tWet[1] - 0.15, 0.25, 0.2));
       same.show(540, 300, C.env(t, tWet[1] - 0.1, tX[0] + 0.2, 0.25, 0.3));
-      const vp = finger.group.localToWorld(C.vec(0.0, 0.95, F.fingerR(0.95) * F.FING.sz - 0.06));
+      const vp = finger.group.localToWorld(C.vec(0.0, 0.95, F.padZ(0.95) - 0.06));
       vlab.show(780, 420, C.env(t, a.vessels, tBack, 0.3, 0.3), camera, vp);
     },
   };

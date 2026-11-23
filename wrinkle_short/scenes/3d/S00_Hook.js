@@ -31,7 +31,7 @@ export async function setup({ renderer, data, overlay }) {
     post: { ss: 1.0, samples: 1, msaa: 4, bg: pal.bg, grain: 0.03, vignette: 0.3, exposure: 1.05 },
     blurSamples: (t) => ((t > tDip[0] && t < tDip[1]) || t > tLift[0] ? 2 : 1),
     update(t) {
-      const target = C.camPath(camera, t, [[0, F.CAMW.c0], [tDip[1] + 0.1, F.CAMW.c0], [a.bath + 0.3, F.CAMW.pad],
+      const target = F.orbitPath(camera, t, [[0, F.CAMW.c0], [tDip[1] + 0.1, F.CAMW.c0], [a.bath + 0.3, F.CAMW.pad],
         [tOut[0], F.CAMW.pad], [tOut[1] + 0.1, F.CAMW.out], [tLift[0], F.CAMW.out], [tLift[1], F.CAMW.lift]]);
       st.frame(camera, target);
       const tipY = lerp(lerp(0.6, -1.15, ramp(t, ...tDip, ease.inOut)), F.LIFT_TIP, ramp(t, ...tOut, ease.inOut));
