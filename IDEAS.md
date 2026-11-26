@@ -1,6 +1,6 @@
 # IDEAS.md: Shorts not made yet
 
-Proposed to the user on 2026-11-21 (made since: Pisa, then the fat one). Each has a flowing storytelling hook in the
+Proposed to the user on 2026-11-21 (made since: Pisa, then the fat one; the pyramid Short came from the user). Each has a flowing storytelling hook in the
 house style; check every fact before writing the full script.
 
 **The man who sold ice to the tropics**

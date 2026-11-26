@@ -65,6 +65,11 @@ node tools/capture.js eval 7.8 "dbg.cam(7.8)"   # inspect scene state at a time 
 - Never switch a big backdrop piece (a floor, a sky) on or off with `.visible` mid-shot: it pops. Fade it, and fade it
   back out before the loop point. Before the full render, compare a still at the last frame with one at t = 0
   (mean pixel difference should be a few levels, not 10+).
+- A vertical frame is narrow (about 21 degrees across): a crew, a boat or a line of people must face or recede from
+  the camera, not cross the frame; check every close-up on a still before the preview.
+- Wikipedia can't be fetched from the cloud sandbox; check facts with web search against the primary sources.
+- `STEP=2 OUT=renders/preview/preview.mp4 Q="ss=1&blur=0" node tools/capture.js render --workers 2` renders every
+  other frame (a 66 s preview in about 17 minutes).
 - To fix a few seconds of a finished render, re-render only those frames (`node tools/capture.js range f0 f1 out.mp4`,
   end exclusive) and splice them into `renders/scene.mp4` with ffmpeg trim + concat at crf 12, then re-run assemble.
 - Keep effects under the voice: SFX are normalised 8 LU under it and ducked 5 dB; music 12 LU under and ducked 6 dB.
@@ -90,9 +95,9 @@ pull request unless asked. No model names or IDs in commits or files.
 
 ## Where we left off (2026-11-23)
 
-- The fat Short was delivered on 2026-11-22 (video, cover, upload notes); the user hasn't said yet whether it's
-  uploaded. Its decisions, measurements and what was simplified are in `fat_short/HANDOFF.md`; Pisa's are in
-  `pisa_short/HANDOFF.md`.
+- The pyramid Short was delivered on 2026-11-26 (the user's idea, from Meta's Page assistant: their Pisa reel did
+  about 20x better than their other science reels, so more history/engineering wonders are a good bet). The fat Short
+  was delivered on 2026-11-22. Decisions, measurements and simplifications are in each Short's `HANDOFF.md`.
 - Next: whichever idea the user picks. Four are waiting in `IDEAS.md`; the user may also bring their own hook, which
   is used word for word.
 - The user wants every new chat to carry on from here without re-explaining. If something in a new chat needs
@@ -107,3 +112,4 @@ pull request unless asked. No model names or IDs in commits or files.
 | You can calculate pi without a single circle (Buffon's needle) | `buffon_short/` | 69 s | uploaded |
 | The Leaning Tower of Pisa should have fallen over | `pisa_short/` | 69 s | delivered 2026-11-21 |
 | Where does the fat go when you lose weight? | `fat_short/` | 64.5 s | delivered 2026-11-22 |
+| How was the Great Pyramid built? (Merer's diary) | `pyramid_short/` | 66 s | delivered 2026-11-26 |
