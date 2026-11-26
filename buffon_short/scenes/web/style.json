@@ -1,0 +1,15 @@
+{
+ "palette": {
+  "bg": "#0B0907",
+  "oak": "#7A4C2B",
+  "oak_light": "#A87346",
+  "oak_dark": "#3A2212",
+  "crack": "#120A05",
+  "steel": "#D9DEE3",
+  "lamp": "#FFD9B0",
+  "ink": "#EFE6D6",
+  "ink_dim": "#A39885",
+  "ink_faint": "#6D6458",
+  "accent": "#E0502F"
+ }
+}

@@ -5,3 +5,8 @@ atom in the universe playing chess since the Big Bang would fall short. Built wi
 count comes from our own legal move generator (`config/chess.py`), checked against the published perft tables.
 
 Status, decisions and file map: `HANDOFF.md`. Run everything with `.venv\Scripts\python build.py <command>`.
+
+Also in this repo: `buffon_short/`, the Buffon's needle Short ("You can calculate pi without a single circle", 69 s). See its `README.md`.
+Also in this repo: `pisa_short/`, the Leaning Tower of Pisa Short ("The Leaning Tower of Pisa should have fallen over", 69 s). See its `README.md`.
+Also in this repo: `fat_short/`, the fat-loss Short ("When you lose weight, the fat doesn't melt away...", 64.5 s). See its `README.md`.
+Also in this repo: `pyramid_short/`, the Great Pyramid Short ("The Great Pyramid was the tallest thing people built for 3,800 years...", 66 s). See its `README.md`. **New chats: read `CLAUDE.md` first.**
