@@ -7,7 +7,7 @@
 > -> and their skeletons (Eiffel's frame) -> which links to Eiffel's own tower -> a monument that shows its own
 > history (colour line) -> a hidden recipe (Pantheon) -> a hidden fix (pennies) -> a hidden shape that fights the
 > wind -> back to the arrow (loop).
-> Draft length: 405 words, about 2:25 at the chess Short's pace (445 words = 2:42). Not yet measured with TTS.
+> Draft length: 423 words, about 2:30 at the chess Short's pace (445 words = 2:42). Not yet measured with TTS.
 
 ## S00 · The arrow
 @scene S00_Arrow
@@ -34,8 +34,9 @@ Meanwhile, the Washington Monument changes colour about a third of the way up, b
 
 ## S05 · The recipe
 @scene S05_Recipe
-But some secrets are in the material itself, because the Romans built the Pantheon's dome with heavy stone at the bottom and lighter and lighter volcanic rock toward the top.
-And the square hollows and the open hole in the roof take out even more weight, which is why, after nearly nineteen hundred years, it's still the biggest unreinforced concrete dome on Earth.
+But the oldest secret here is a giant concrete roof without a single steel bar inside it, and it's been standing over Rome for nearly nineteen hundred years.
+That's because the Romans mixed the Pantheon's dome like a recipe, with heavy stone at the bottom and lighter and lighter volcanic rock toward the top.
+And the square hollows and the open hole in the roof take out even more weight, so today it's still the biggest unreinforced concrete dome on Earth.
 
 ## S06 · The pennies
 @scene S06_Pennies
