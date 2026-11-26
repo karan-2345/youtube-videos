@@ -132,7 +132,7 @@ export async function setup(ctx) {
     return Math.min(coursesAt(t) - 1.5, GP.N * ramp(t, A.forty, A.pyramid2_e + 0.4, ease.linear)) + (t > A.pyramid2_e + 0.4 ? 2 : 0);
   };
   const stripAt = (t) => (t < A.ropes - 0.25 ? 1.05 * ramp(t, A.took - 0.15, A.cairo_e + 0.35, ease.linear) : 1.05 * (1 - ramp(t, A.ropes - 0.25, D - 0.7, ease.inOut)));
-  const rampAt = (t) => (t < T_CUT ? 0 : coursesAt(t) * h * (1 - ramp(t, A.along, A.pyramid2_e + 0.1)));
+  const rampAt = (t) => (t < T_CUT ? 0 : coursesAt(t) * h * (1 - ramp(t, A.along - 0.1, A.canals + 0.4)));
 
   // ================================================================== people
   const FM = figureMaterials(P);
@@ -221,8 +221,9 @@ export async function setup(ctx) {
   const rations = buildRations(P);
   const bench = new THREE.Mesh(new THREE.BoxGeometry(1.9, 0.55, 0.8), new THREE.MeshStandardMaterial({ color: col(P.mud), roughness: 0.95 }));
   bench.castShadow = true; bench.receiveShadow = true;
-  const RAT = V(400, heightAt(400, 300), 300);
-  bench.position.copy(RAT).add(V(0, 0.27, 0)); rations.group.position.copy(RAT).add(V(0.1, 0.55, 0));
+  const RAT = V(420, heightAt(420, 318), 318), RAT_D = V(0.8, 0, 0.6), RAT_YAW = Math.atan2(0.8, 0.6);
+  bench.position.copy(RAT).add(V(0, 0.27, 0)); rations.group.position.copy(RAT).add(V(0, 0.55, 0));
+  bench.rotation.y = RAT_YAW; rations.group.rotation.y = RAT_YAW;
   scene.add(bench, rations.group);
   const ufo = buildUFO();
   scene.add(ufo.group);
@@ -461,7 +462,7 @@ export async function setup(ctx) {
       const u = ramp(t, 15.4, 18.4, ease.inOut);
       const zs = 214 - 1.1 * (15.4 - T_CUT), ys = rampY(zs);
       const p0 = V(RAMP_X - 0.6, ys + 3.8, zs + 10.6), p1 = V(400, 215, 590);
-      pos = lerpV(p0, p1, u); pos.y = lerp(p0.y, p1.y, Math.pow(u, 0.75));
+      pos = lerpV(p0, p1, ease.in(u) * 0.6 + u * 0.4); pos.y = lerp(p0.y, p1.y, ease.out(u));
       tgt = lerpV(V(RAMP_X - 1.3, ys + 1.6, zs - 100), V(-25, 22, 150), u);
       fov = lerp(40, 36, u); near = 0.2; focus = lerpV(V(RAMP_X, 0, 200), V(0, 0, 150), u); fr = lerp(60, 340, u);
     } else if (t < A.one - 0.05) {                          // M3a: the ramp, seen whole, rising to the pyramid
@@ -471,7 +472,7 @@ export async function setup(ctx) {
     } else if (t < 21.5) {                                  // M3b: at the landing, a block is set in its place
       const u = ramp(t, A.one - 0.05, 21.5, ease.out);
       const top = rampH;
-      pos = lerpV(V(RAMP_X - 15, top + 6.5, 96), V(RAMP_X - 17, top + 5, 92), u); tgt = V(RAMP_X - 8.5, top + 0.2, 77);
+      pos = lerpV(V(RAMP_X - 17, top + 3.6, 90), V(RAMP_X - 18.5, top + 2.6, 86), u); tgt = V(RAMP_X - 6, top + 0.9, 76);
       fov = 40; near = 0.2; focus = V(RAMP_X - 6, top, 78); fr = 26;
     } else if (t < 23.95) {                                 // M4: the time-lapse, wide
       const u = ramp(t, 21.5, 23.95, ease.inOut);
@@ -507,16 +508,16 @@ export async function setup(ctx) {
     } else if (t < 43.6) {                                  // B3: up the canal; behind it, the pyramid is finished
       const bp = boatPos(t);
       const u = ramp(t, 40.75, 43.6, ease.inOut);
-      pos = lerpV(bp.p.clone().add(V(20, 5, 9)), V(560, 150, 250), u); pos.y = lerp(bp.p.y + 5, 150, Math.pow(u, 1.4));
-      tgt = lerpV(bp.p.clone().add(V(-40, 4, -2)), V(30, 62, 10), u);
+      pos = bp.p.clone().add(V(24 + 30 * u, 4.5 + 26 * u * u, 7 + 6 * u));
+      tgt = lerpV(V(160, 22, 22), V(20, 58, 6), u);
       fov = 38; near = 0.5; focus = lerpV(bp.p, V(150, 0, 30), u); fr = lerp(60, 420, u);
     } else if (t < A.so3) {                                 // C1: dive to the casing joint; the credit card
       const u = ramp(t, 43.6, A.joints - 0.1, ease.inOut);
       const end = jointP.clone().addScaledVector(faceN, 0.3).add(V(0.018, 0, 0));
-      const start = V(560, 150, 250);
+      const start = boatPos(43.6).p.clone().add(V(54, 35, 13));
       const dir = start.clone().sub(end); const L0 = dir.length(); dir.normalize();
       pos = end.clone().addScaledVector(dir, Math.exp(lerp(Math.log(L0), Math.log(1e-4), u)));
-      tgt = lerpV(V(30, 62, 10), jointP.clone().add(V(0.018, 0, 0)), ease.out(clamp01(u * 1.15)));
+      tgt = lerpV(V(20, 58, 6), jointP.clone().add(V(0.018, 0, 0)), ease.out(clamp01(u * 1.15)));
       up = Y.clone().lerp(upSlope, ramp(t, 44.4, A.joints - 0.1, ease.inOut)).normalize();
       fov = lerp(38, 30, u); near = lerp(0.5, 0.004, ease.in(u)); focus = jointP; fr = lerp(300, 4, u);
       if (t > A.joints - 0.1) pos.add(V(-0.012 * ramp(t, A.joints, A.so3), 0, 0));
@@ -540,9 +541,11 @@ export async function setup(ctx) {
       fov = 38; near = 0.3; focus = V(410, -27, 260); fr = 90;
     } else if (t < A.buried - 0.05) {                       // W2: bread and beer
       const u = ramp(t, A.because3 + 0.55, A.buried - 0.05, ease.inOut);
-      const c = RAT.clone().add(V(0.2, 0.55, 0));
-      pos = lerpV(c.clone().add(V(1.0, 1.0, 2.9)), c.clone().add(V(0.25, 0.75, 2.35)), u); tgt = c.clone().add(V(0.0, 0.22, 0));
-      fov = 34; near = 0.05; focus = c; fr = 8;
+      const c = RAT.clone().add(V(0, 0.55, 0));
+      const side = V(RAT_D.z, 0, -RAT_D.x);
+      pos = c.clone().addScaledVector(RAT_D, lerp(5.0, 4.5, u)).addScaledVector(side, lerp(0.32, 0.16, u)).add(V(0, 0.34, 0));
+      tgt = c.clone().addScaledVector(RAT_D, -20).addScaledVector(side, 0.14).add(V(0, 0.34 + 20 * Math.tan(0.07), 0));
+      fov = 38; near = 0.05; focus = c; fr = 10;
     } else if (t < A.end - 0.1) {                           // W3: their tombs, below the king's pyramid
       const u = ramp(t, A.buried - 0.05, A.end - 0.1, ease.inOut);
       pos = lerpV(V(390, -8, 250), V(370, -2, 235), u); tgt = lerpV(V(280, -10, 190), V(120, 40, 60), u);
@@ -585,7 +588,7 @@ export async function setup(ctx) {
     title: T('HOW DID THEY<br>BUILD THIS?', 'title'),
     h146: T('146 m', 'mid'), tallest: T('TALLEST THING ON EARTH', 'label'),
     y3800: T('3,800', 'big'), yLab: T('YEARS', 'label'),
-    how: T('BUT HOW?', 'mid'), howSub: T('NOBODY WROTE IT DOWN', 'label'),
+    how: T('BUT HOW?', 'mid'), howSub: T('NOBODY WROTE IT DOWN?', 'label'),
     diary: T('THE DIARY OF MERER', 'mid2'), found: T('FOUND IN 2013 · 4,500 YEARS OLD', 'label'),
     merer: T('MERER', 'small'), mererSub: T('INSPECTOR · HIS CREW', 'label'),
     blocks: T('2,300,000', 'big'), blocksLab: T('STONE BLOCKS', 'label'),
@@ -792,10 +795,10 @@ export async function setup(ctx) {
     sunNow.copy(SUN).applyAxisAngle(AXIS, 2 * Math.PI * dd);
     const day = THREE.MathUtils.smoothstep(sunNow.y, -0.06, 0.12);
     sun.intensity = 5.2 * THREE.MathUtils.smoothstep(sunNow.y, -0.01, 0.15);
-    hemi.intensity = 0.12 + 0.78 * day;
+    hemi.intensity = 0.38 + 0.52 * day;
     bounce.intensity = 0.5 * day;
-    sky.material.uniforms.uDay.value = 0.05 + 0.95 * day;
-    scene.fog.color.set('#E9CFA6').multiplyScalar(0.12 + 0.88 * day);
+    sky.material.uniforms.uDay.value = 0.12 + 0.88 * day;
+    scene.fog.color.set('#E9CFA6').multiplyScalar(0.3 + 0.7 * day);
 
     // story state
     const b = bAt(t), courses = coursesAt(t);
@@ -803,8 +806,9 @@ export async function setup(ctx) {
     pyr.U.uShine.value = win(t, A.shone - 0.1, A.until2 + 0.2, 0.3);
     setRamp(rampAt(t));
     const done = t < T_CUT || t > A.pyramid2_e - 0.3;
-    for (const q of queens) { q.group.visible = done; q.setCore(q.N); q.setCasing(t < T_CUT || t > A.pyramid2_e ? q.N : 0); q.setStrip(stripAt(t)); }
-    temple.visible = done;
+    const qOn = t < T_CUT || t > 34.45;
+    for (const q of queens) { q.group.visible = qOn; q.setCore(q.N); q.setCasing(q.N); q.setStrip(stripAt(t)); }
+    temple.visible = qOn;
 
     // camera
     const C = cam(ft);

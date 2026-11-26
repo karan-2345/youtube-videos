@@ -298,25 +298,51 @@ export function buildCard() {
 // ------------------------------------------------------------------ bread and beer
 export function buildRations(P) {
   const g = new THREE.Group();
-  const bread = stoneMaterial(P, '#C08A4A', { rough: 0.85, scale: 14 });
-  const crust = std('#9B6430', 0.85);
-  const jarM = stoneMaterial(P, '#A5653C', { rough: 0.75, scale: 6 });
+  const crusty = (base, dark) => {
+    const m = std(base, 0.82);
+    m.onBeforeCompile = (sh) => {
+      sh.uniforms.cDark = { value: new THREE.Color(dark) };
+      sh.vertexShader = sh.vertexShader.replace('#include <common>', '#include <common>\nvarying vec3 vB;').replace('#include <begin_vertex>', '#include <begin_vertex>\nvB = position;');
+      sh.fragmentShader = sh.fragmentShader.replace('#include <common>', `#include <common>\nvarying vec3 vB; uniform vec3 cDark;\n${NOISE}`)
+        .replace('#include <color_fragment>', `#include <color_fragment>
+          vec2 q = vec2(atan(vB.z, vB.x) * 3., vB.y * 18.);
+          float n = fbm(q * 1.5), cr = smoothstep(0.55, 0.8, fbm(q * 4. + 3.));
+          float top = smoothstep(0.0, 0.14, vB.y);
+          diffuseColor.rgb = mix(diffuseColor.rgb, cDark, 0.35 * top + 0.35 * cr) * (0.85 + 0.25 * n);`);
+    };
+    return m;
+  };
+  const bread = crusty('#D6A25E', '#7E4A22'), flatB = crusty('#C98F4C', '#8A5428');
+  const jarM = stoneMaterial(P, '#B0704A', { rough: 0.7, scale: 9 });
   const mudM = std('#5E4532', 0.95);
+  // a woven reed mat
+  const mat = new THREE.MeshStandardMaterial({ color: new THREE.Color('#C7A46C'), roughness: 0.95 });
+  mat.onBeforeCompile = (sh) => {
+    sh.vertexShader = sh.vertexShader.replace('#include <common>', '#include <common>\nvarying vec3 vR;').replace('#include <begin_vertex>', '#include <begin_vertex>\nvR = position;');
+    sh.fragmentShader = sh.fragmentShader.replace('#include <common>', '#include <common>\nvarying vec3 vR;')
+      .replace('#include <color_fragment>', `#include <color_fragment>
+        vec2 q = vR.xz * 60.; float w = step(0.5, fract(floor(q.x) * 0.5 + floor(q.y) * 0.5));
+        float s = w > 0.5 ? sin(fract(q.x) * 3.14) : sin(fract(q.y) * 3.14);
+        diffuseColor.rgb *= 0.72 + 0.3 * s;`);
+  };
+  const reed = new THREE.Mesh(new THREE.BoxGeometry(1.7, 0.012, 0.72), mat); reed.position.y = 0.006; g.add(reed);
   const loaves = [], jars = [];
-  // conical loaves baked in bell-shaped moulds (bedja), and round flat ones
+  // tall conical loaves baked in bell-shaped moulds (bedja), and round flat ones
   for (let i = 0; i < 4; i++) {
-    const l = new THREE.Mesh(new THREE.ConeGeometry(0.11, 0.3, 16), i % 2 ? bread : crust);
-    l.position.set(-0.55 + i * 0.17, 0.15, 0.1 * (i % 2)); l.rotation.z = (i - 1.5) * 0.06; g.add(l); loaves.push(l);
+    const prof = [[0, 0], [0.1, 0.0], [0.11, 0.03], [0.085, 0.14], [0.05, 0.24], [0.015, 0.29], [0, 0.295]].map(([r, y]) => new THREE.Vector2(r, y));
+    const l = new THREE.Mesh(new THREE.LatheGeometry(prof, 20), bread);
+    l.position.set(-0.62 + i * 0.2, 0.012, -0.12 + 0.12 * (i % 2)); l.rotation.set((i - 1.5) * 0.05, i, (i - 1.5) * 0.07); g.add(l); loaves.push(l);
   }
-  for (let i = 0; i < 2; i++) {
-    const f = new THREE.Mesh(new THREE.SphereGeometry(0.13, 16, 8), bread); f.scale.y = 0.42; f.position.set(-0.4 + i * 0.3, 0.05, 0.3); g.add(f); loaves.push(f);
-  }
-  // beer jars: tall, with mud stoppers
-  const prof = [[0, 0], [0.08, 0.0], [0.15, 0.12], [0.17, 0.32], [0.14, 0.5], [0.07, 0.6], [0.075, 0.66], [0, 0.66]].map(([r, y]) => new THREE.Vector2(r, y));
   for (let i = 0; i < 3; i++) {
-    const j = new THREE.Mesh(new THREE.LatheGeometry(prof, 18), jarM);
-    j.position.set(0.25 + i * 0.36, 0, -0.08 + (i % 2) * 0.16);
-    const st = new THREE.Mesh(new THREE.SphereGeometry(0.085, 12, 8), mudM); st.scale.y = 0.6; st.position.y = 0.67; j.add(st);
+    const f = new THREE.Mesh(new THREE.SphereGeometry(0.12, 18, 10), flatB); f.scale.y = 0.38;
+    f.position.set(-0.5 + i * 0.22, 0.05, 0.2 + 0.02 * i); g.add(f); loaves.push(f);
+  }
+  // beer jars: tall, round-bellied, with mud stoppers
+  const prof = [[0, 0.02], [0.05, 0.0], [0.12, 0.08], [0.155, 0.24], [0.14, 0.42], [0.075, 0.54], [0.065, 0.6], [0.08, 0.62], [0, 0.62]].map(([r, y]) => new THREE.Vector2(r, y));
+  for (let i = 0; i < 3; i++) {
+    const j = new THREE.Mesh(new THREE.LatheGeometry(prof, 22), jarM);
+    j.position.set(0.28 + i * 0.3, 0.012, -0.1 + (i % 2) * 0.18); j.rotation.z = (i - 1) * 0.03;
+    const st = new THREE.Mesh(new THREE.SphereGeometry(0.08, 12, 8), mudM); st.scale.y = 0.55; st.position.y = 0.63; j.add(st);
     g.add(j); jars.push(j);
   }
   shadowed(g);

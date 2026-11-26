@@ -325,7 +325,7 @@ export function buildSky(P, U) {
         float cl = smoothstep(0.55, 0.86, fbm(uv * 1.1 + 4.)) * smoothstep(0.02, 0.14, h) * (1. - smoothstep(0.35, 0.8, h));
         c = mix(c, mix(vec3(1.0, 0.94, 0.86), sunCol, 0.45), cl * 0.5);
         // night for the time-lapse
-        vec3 night = mix(vec3(0.015, 0.025, 0.06), vec3(0.04, 0.06, 0.13), smoothstep(-0.1, 0.5, h));
+        vec3 night = mix(vec3(0.05, 0.07, 0.14), vec3(0.08, 0.11, 0.24), smoothstep(-0.1, 0.5, h));
         float stars = step(0.9975, h21(floor(d.xz / (abs(d.y) + 0.3) * 300.))) * smoothstep(0.05, 0.3, h);
         night += stars * 0.8;
         c = mix(night, c, uDay);
