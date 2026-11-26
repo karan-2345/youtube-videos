@@ -1,6 +1,12 @@
 # HANDOFF: "How was the Great Pyramid built?" (pyramid Short)
 
-## Status 2026-11-26: final being rendered
+## Status 2026-11-26: delivered
+
+Finals in `renders/final/`: `pyramid_short.mp4` (captions burned in), `pyramid_short_clean.mp4`,
+`captions/pyramid_short.srt`, `cover.png` ("THE BUILDER'S DIARY"), `upload.md`. Measured: 1080 x 1920, 60 fps, 3960
+frames, 66.0 s; -14.0 LUFS integrated, true peak -1.8 dBTP, LRA 2.5 LU; SRT text equals `config/narration.py`; last
+frame vs first frame: mean difference 1.8 levels (seamless loop). Full render: 2 workers, 66 min at ss=1.5 with
+motion blur on the fast moves. The sound is checked by measurement only.
 
 The user asked for a Short on the Great Pyramid (from an idea Meta's Page assistant suggested after the Pisa reel
 did 20x better than the others: "tallest for 3,800 years, 2.3 million stones, no cranes, can't fit a credit card
