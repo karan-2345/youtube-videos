@@ -88,6 +88,9 @@ node tools/capture.js eval 7.8 "dbg.cam(7.8)"   # inspect scene state at a time 
 - A mesh moved in `onBeforeRender` (a sky dome following the camera) must update its own matrixWorld and
   modelViewMatrix there, or it lags a frame and far sets see past it (a black sky). Compute cameras after the objects
   they follow are posed, and call `scene.updateMatrixWorld(true)` before `localToWorld`.
+- Measure the loop seam on the exact last frame (`-vf select=eq(n\,N-1)`), not with `-sseof -0.05`: that lands about 3
+  frames early and reads 2-3x too high. Compare it with an ordinary frame step (frames 0 -> 1).
+- 3 capture workers at ss=1.5 worked in the ice Short (1.15 frames/s, a 69 s film in 1 h) with no lost contexts.
 - `half` is a reserved word in GLSL ES (shader fails, only "program not valid" in the log).
 - `ice_short/scenes/3d/lib/` has: a Gerstner sea with a ship's wake and shore foam, a sailing ship with a cutaway
   hold, 1800s figurine people (top hats, turbans, laugh/amazed poses), a harbour town, melting ice blocks, an antique
@@ -108,16 +111,15 @@ missing anyway, `bash kit/setup.sh` does it by hand (about a minute).
 Work on the branch the session names, commit with the attribution lines the session gives, push, and never open a
 pull request unless asked. No model names or IDs in commits or files.
 
-## Where we left off (2026-11-23)
+## Where we left off (2026-11-27)
 
-- The pyramid Short ("water on the sand") was delivered on 2026-11-23; see `pyramid_short/HANDOFF.md`. The fat Short
-  (2026-11-22) and Pisa (2026-11-21) were delivered before it; the user hasn't said whether they're uploaded.
-- The user asked for "more like the Leaning Tower of Pisa": famous landmarks with a hidden story land well. Five more
-  landmark ideas are in `IDEAS.md` (Venice is the closest to Pisa), plus the four older ones.
-- Next: whichever idea the user picks; the user may also bring their own hook, which is used word for word. If the
-  user's message still has a template placeholder instead of a hook, ask which idea (offer the list).
-- Web pages (Wikipedia, phys.org, university sites) could not be fetched from the cloud sessions on 2026-11-23 (DNS
-  blocked); WebSearch summaries worked. Say so in facts.py when a source was read only through search.
+- The Ice King Short (`ice_short/`, Frederic Tudor) was delivered on 2026-11-27; see `ice_short/HANDOFF.md`. Pyramid
+  (2026-11-23), fat (2026-11-22) and Pisa (2026-11-21) were delivered before it; the user hasn't said which are uploaded.
+- Next: whichever idea the user picks from `IDEAS.md` (three older ideas and five landmarks; Venice is the closest to
+  Pisa), or the user's own hook, used word for word. If the user's message still has a template placeholder instead
+  of a hook, ask which idea (offer the list).
+- Web pages (Wikipedia, phys.org, university sites) could not be fetched from the cloud sessions (DNS blocked);
+  WebSearch summaries worked. Say so in facts.py when a source was read only through search.
 - The user wants every new chat to carry on from here without re-explaining. If something in a new chat needs
   explaining anyway, write it into this file before finishing.
 
@@ -131,3 +133,4 @@ pull request unless asked. No model names or IDs in commits or files.
 | The Leaning Tower of Pisa should have fallen over | `pisa_short/` | 69 s | delivered 2026-11-21 |
 | Where does the fat go when you lose weight? | `fat_short/` | 64.5 s | delivered 2026-11-22 |
 | How the Egyptians moved stones heavier than a car (water on the sand) | `pyramid_short/` | 69.3 s | delivered 2026-11-23 |
+| The man who sold ice to the tropics (the Ice King) | `ice_short/` | 69.0 s | delivered 2026-11-27 |

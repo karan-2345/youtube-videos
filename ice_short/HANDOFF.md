@@ -2,7 +2,7 @@
 
 ## Status
 
-STATUS_LINE
+**Delivered 2026-11-27.** Final `renders/final/ice_short.mp4`: 1080x1920, 60 fps, 4142 frames, 69.03 s; -13.9 LUFS integrated, true peak -2.1 dBTP (linear) / -1.5 dBFS sample peak; SRT text equals `narration.py` (201 words); loop seam (frame 4141 -> 0) mean difference 3.8 levels, the same as an ordinary frame step. Full render 3608 s on 3 workers (1.15 frames/s); the first 90 frames were re-rendered with motion blur and spliced in. The user hasn't said yet whether it's uploaded.
 
 The user picked idea 3 from `IDEAS.md` ("the man who sold ice to the tropics") and gave the hook, used word for word.
 Voice: Kokoro `af_heart`, speed 0.95.
