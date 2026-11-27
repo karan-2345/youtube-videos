@@ -642,7 +642,7 @@ export async function setup({ renderer, data, overlay: ov, W, H: HH }) {
     scene, camera, update,
     post: Q.has('nopost') ? null : { ss: SS, msaa: Number(Q.get('msaa') ?? 0), samples: 1, shutter: 0.5, grain: 0.022, vignette: 0.3, exposure: 1.0, bloom: 0.14, bloomThreshold: 1.1, bg: P.bg },
     blurSamples(t) {
-      for (const [a, b] of [[4.2, 6.9], [D - 4.6, D]]) if (t > a && t < b) return Math.max(1, Number(Q.get('blur') ?? 3));
+      for (const [a, b] of [[-1, 1.5], [4.2, 6.9], [D - 4.6, D + 1]]) if (t > a && t < b) return Math.max(1, Number(Q.get('blur') ?? 3));
       return 1;
     },
     look(t) { return {}; },
