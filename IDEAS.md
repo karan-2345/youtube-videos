@@ -1,13 +1,7 @@
 # IDEAS.md: Shorts not made yet
 
-Proposed to the user on 2026-11-21 (made since: Pisa, then the fat one). Each has a flowing storytelling hook in the
+Proposed to the user on 2026-11-21 (made since: Pisa, the fat one, and the Ice King as `ice_short/`). Each has a flowing storytelling hook in the
 house style; check every fact before writing the full script.
-
-**The man who sold ice to the tropics**
-> "In 1806 a young man from Boston tried to sell frozen pond water on a tropical island, and everyone laughed at him,
-> but thirty years later he was shipping ice halfway around the world to India."
-- Surprise: he went broke and was jailed for debt before it worked; people called him the Ice King (Frederic Tudor).
-- 3D: ice blocks packed in sawdust inside a sailing ship, shrinking as the voyage goes on.
 
 **The box that made everything cheap**
 > "Almost everything you own crossed an ocean inside a plain metal box, and before a trucking man named Malcolm McLean

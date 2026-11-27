@@ -15,8 +15,8 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from config import style  # noqa: E402
 
-T_FRAME = 0.6                        # the hook: the team hauling the block, the man pouring water (cover camera, no type)
-LINES = [("WET", style.PALETTE["ink"]), ("SAND", style.PALETTE["water"])]
+T_FRAME = 0.4                        # the hook: the brig with her hold full of ice, sailing for Martinique
+LINES = [("ICE", style.PALETTE["ink"]), ("KING", style.PALETTE["cool"])]
 
 
 def build() -> Path:

@@ -36,6 +36,8 @@ re-explain anything. Keep the user posted in a line or two as each stage finishe
   cross-sections and a procedural building; `buffon_short` has a table-top physics scene; `pyramid_short/scenes/3d/lib/`
   has instanced people with a small walking/hauling rig and a dissolve, a desert (dunes, sand shader, sky, a pyramid),
   a procedural Egyptian wall painting, a lab table-top with a deformable sand tray, and a macro grain pile.
+  `ice_short/scenes/3d/lib/` has a Gerstner sea, a sailing ship with a cutaway hold, 1800s people, a harbour town,
+  melting ice, an antique globe with real coastlines, and rooms (a ship's hold, a cell, a winter pond, a desk).
 - Frame 0 must already move and show the promise; top text sits in y 240 to 700; captions use y 1330 to 1470;
   keep numbers inside the 3:4 crop (y 240 to 1680).
 - Check that every `A.xxx` in the scene exists in `scene.json` (else black frames), that no anchor shares a beat's

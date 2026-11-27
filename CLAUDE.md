@@ -82,6 +82,16 @@ node tools/capture.js eval 7.8 "dbg.cam(7.8)"   # inspect scene state at a time 
   voice, about 20 minutes: the cheapest whole-film motion check.
 - Keep the music in whole phrases over the video: lock the tempo to a scene clock that is a whole number of bars
   (pyramid_short: 8 strides = 4 bars), and wrap the reverb tail and the SFX tail round onto the start.
+- Keep every set within a few km of the origin. Sets 40 km out (pyramid-style offsets) broke all shader noise in the
+  ice Short (float precision: the pond went blank white, sawdust lost its grain). Put interiors below the sea instead
+  (y = -1000), since only one set is visible at a time.
+- A mesh moved in `onBeforeRender` (a sky dome following the camera) must update its own matrixWorld and
+  modelViewMatrix there, or it lags a frame and far sets see past it (a black sky). Compute cameras after the objects
+  they follow are posed, and call `scene.updateMatrixWorld(true)` before `localToWorld`.
+- `half` is a reserved word in GLSL ES (shader fails, only "program not valid" in the log).
+- `ice_short/scenes/3d/lib/` has: a Gerstner sea with a ship's wake and shore foam, a sailing ship with a cutaway
+  hold, 1800s figurine people (top hats, turbans, laugh/amazed poses), a harbour town, melting ice blocks, an antique
+  globe with real coastlines (`tools/landmap.py`), and formant-synth crowd laughter / "ooh" in `tools/sfx.py`.
 - The root of the repo (chess Short, `config/`, `scenes/`, `tools/`, `HANDOFF.md`, `ENVIRONMENT.md`) is an older
   Windows-era project. Leave it alone.
 
