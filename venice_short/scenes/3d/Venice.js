@@ -314,8 +314,8 @@ export async function setup({ renderer, data, overlay: O, W, H: HH }) {
   // spores (secret beat): fluffy white specks that drift down, land and die
   const SPN = 26, sporeR = mulberry(61);
   const spores = Array.from({ length: SPN }, () => ({ x: -2 + sporeR() * 7, z: -6.5 - sporeR() * 3.5, t0: A.fungi2 - 0.3 + sporeR() * 0.9, sp: 0.6 + sporeR() * 0.5, ph: sporeR() * 6 }));
-  const sporeG = new THREE.IcosahedronGeometry(0.07, 1);
-  const sporeMat = new THREE.MeshStandardMaterial({ color: col('#F4F1E8'), emissive: col('#B8B2A0'), emissiveIntensity: 0.5, roughness: 0.9, transparent: true });
+  const sporeG = new THREE.IcosahedronGeometry(0.13, 1);
+  const sporeMat = new THREE.MeshStandardMaterial({ color: col('#F4F1E8'), emissive: col('#E8E2D0'), emissiveIntensity: 1.2, roughness: 0.9, transparent: true });
   const sporeIM = new THREE.InstancedMesh(sporeG, sporeMat, SPN); sporeIM.frustumCulled = false; sporeIM.renderOrder = 8;
   const sporeCol = new THREE.Color(); scene.add(sporeIM);
   for (let i = 0; i < SPN; i++) sporeIM.setColorAt(i, col('#ffffff'));
@@ -328,7 +328,7 @@ export async function setup({ renderer, data, overlay: O, W, H: HH }) {
     standsOn: el('STANDS ON A FOREST', 'sub'),
     millions: el('MILLIONS OF<br>TREE TRUNKS', 'mid2'),
     scaleNote: el('POSTS DRAWN BIGGER · NOT TO SCALE', 'label'),
-    thousand: el('1,000+ YEARS', 'big'),
+    thousand: el('1,000+ YEARS', 'mid'),
     thousandSub: el('IN THE MUD', 'sub'),
     shouldHave: el('WHAT SHOULD<br>HAVE HAPPENED', 'mid2 red'),
     still: el('STILL HOLDING<br>THE CITY UP', 'mid2 mint'),
@@ -438,7 +438,7 @@ export async function setup({ renderer, data, overlay: O, W, H: HH }) {
     if (n === 'rig') return keys(t, [[A.hammer2 - 0.3, [RIG.x - 9.5, 2.6, RIG.z + 11], [RIG.x + 2, 1.8, RIG.z - 6]],
       [A.between - 0.4, [RIG.x - 8.0, 1.8, RIG.z + 9.5], [RIG.x + 2.5, 0.8, RIG.z - 7]]]);
     if (n === 'top') return keys(t, [[A.between - 0.4, [2.5, 9.5, -8], [1, MUD_TOP, -13.5]], [A.then - 0.15, [2.2, 7.5, -9.0], [1, MUD_TOP, -13.8]]]);
-    if (n === 'build') return keys(t, [[A.then - 0.15, [-5, 3.5, 24], [0, -1.5, -17]], [A.built2, [-6, 4.5, 30], [0, 3, -19]],
+    if (n === 'build') return keys(t, [[A.then - 0.15, [-4, -0.6, 17], [0, -2.6, -14]], [A.stone - 0.1, [-5, 0.6, 22], [0, -1.0, -16]], [A.stone + 0.5, [-6, 4.5, 30], [0, 3, -19]],
       [A.this_church, [-9, 7.5, 40], [0, 12, -19]]]);
     if (n === 'salute') return keys(t, [[A.this_church, [-9, 7.5, 40], [0, 12, -19]], [A.salute_name + 0.6, [-13, 9, 31], [0, 14, -19]],
       [A.standing, [-11, 5, 30], [0, 10, -19]], [A.more_than, [-4, -4.5, 19], [0, -6.5, -19]], [A.wood_rots - 0.3, [-3, -5, 16], [0, -6.5, -19]]]);
@@ -592,7 +592,7 @@ export async function setup({ renderer, data, overlay: O, W, H: HH }) {
         const [a, b, c, d, e] = o2.seeds[i];
         let x, y, z, al = 1;
         if (sn === 'fence') {
-          x = (a - 0.5) * 6; y = 0.1 + b * 2.4; z = (c - 0.5) * 4;
+          x = (a - 0.5) * 6; y = 0.1 + b * 2.4; z = -2.2 + c * 2.8;
           x += 0.25 * Math.sin(t * 0.8 + e * 9); y += 0.15 * Math.sin(t * 1.1 + d * 7);
           // drawn into the post's foot where the fungi feed
           const pull = clamp01((t - A.eat - d * 2.2) / 1.4) * (i % 3 === 0 ? 1 : 0);
@@ -659,10 +659,10 @@ export async function setup({ renderer, data, overlay: O, W, H: HH }) {
     if (sn === 'hook') {
       show(L.venice, T, -1, A.millions - 0.1, 540, top, { rise: 0 });
       show(L.standsOn, T, -1, A.millions - 0.1, 540, top + 105, { rise: 0 });
-      show(L.millions, T, A.millions - 0.05, A.thousand - 0.1, 540, top + 20);
-      show(L.scaleNote, T, A.millions + 0.2, A.thousand - 0.1, 540, 1690, { rise: 0 });
+      show(L.millions, T, A.millions - 0.05, A.thousand - 0.35, 540, top + 20);
+      show(L.scaleNote, T, A.millions + 0.2, A.thousand - 0.35, 540, 1690, { rise: 0 });
       show(L.thousand, T, A.thousand - 0.05, A.should, 540, top + 10);
-      show(L.thousandSub, T, A.thousand + 0.2, A.should, 540, top + 115);
+      show(L.thousandSub, T, A.thousand + 0.2, A.should, 540, top + 95);
       show(L.shouldHave, T, A.rotted - 0.1, A.but, 540, top + 30);
       show(L.still, T, A.still - 0.05, A.because + 0.1, 540, top + 30);
     }
@@ -672,8 +672,8 @@ export async function setup({ renderer, data, overlay: O, W, H: HH }) {
       if (show(L.noRock, T, A.no_rock - 0.05, A.only_water + 0.1, 540, 1150)) {
         const s = scr(V3(0, BOTTOM + 0.5, -12)); O.place(xMark, s.x, Math.min(s.y, 1600), { anchor: 'c', opacity: fade(T, A.no_rock, A.only_water + 0.1) });
       }
-      { const s = scr(V3(-6, -1.5, -6)); show(L.waterL, T, A.only_water - 0.05, A.so1, s.x, s.y, { anchor: 'c' }); }
-      { const s = scr(V3(-4.5, -5.0, -6)); show(L.mudL, T, A.soft - 0.05, A.so1, s.x, s.y, { anchor: 'c' }); }
+      { const s = scr(V3(-6, -1.5, -6)); show(L.waterL, T, A.only_water - 0.05, A.so1, 300, Math.max(560, Math.min(1600, s.y)), { anchor: 'c' }); }
+      { const s = scr(V3(-4.5, -5.0, -6)); show(L.mudL, T, A.soft - 0.05, A.so1, 300, Math.max(560, Math.min(1600, s.y)), { anchor: 'c' }); }
     }
     if (sn === 'forest') {
       show(L.forests, T, A.forests - 0.15, A.sharpened - 0.1, 540, top);

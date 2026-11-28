@@ -112,7 +112,7 @@ export function buildGlass(P) {
           float fleck = smoothstep(0.93, 0.97, vnoise(vec2(u, y) * 6.0));
           c = mix(vec3(0.28, 0.25, 0.2), vec3(0.42, 0.38, 0.3), strata);
           a = 0.035 + 0.03 * strata + 0.06 * smoothstep(0.6, 0.85, n);
-          c = mix(c, vec3(0.8, 0.77, 0.7), fleck); a += fleck * 0.15;
+          c = mix(c, vec3(0.6, 0.57, 0.5), fleck * 0.3); a += fleck * 0.02;
           // the canal bed line
           float bed = 1. - smoothstep(0.0, 0.12, abs(y - uMudTop - 0.03 * sin(u * 0.7)));
           c = mix(c, vec3(0.2, 0.18, 0.14), bed); a = max(a, bed * 0.55);
@@ -160,7 +160,7 @@ export function buildTankWalls() {
   // the block's outside: dark plinth faces under the tank and the outer sides of the back wall
   const plinthMat = new THREE.MeshStandardMaterial({ color: new THREE.Color('#2A2620'), roughness: 0.9 });
   const plinth = new THREE.Mesh(new THREE.BoxGeometry(2 * TX + 0.6, 1.2, TZ + 0.6), plinthMat);
-  plinth.position.set(0, BOTTOM - 0.6, -TZ / 2);
+  plinth.position.set(0, BOTTOM - 0.65, -TZ / 2);
   g.add(plinth);
   return g;
 }
@@ -321,10 +321,10 @@ export function buildSilt(N, D, seed = 11) {
         vec3 p = position + vec3(0.6 * sin(w * uT * 2. + aPh), 0.25 * sin(w * uT * 3. + aPh * 1.7), 0.3 * cos(w * uT + aPh));
         vec4 mv = viewMatrix * vec4(p, 1.);
         gl_Position = projectionMatrix * mv;
-        gl_PointSize = uSize * (p.y < uMudTop ? 1.4 : 2.0) * 1080. * 0.035 / -mv.z;
+        gl_PointSize = min(uSize * (p.y < uMudTop ? 1.0 : 1.6) * 1080. * 0.035 / -mv.z, 5.0);
         vec3 base = p.y < uMudTop ? vec3(0.55, 0.48, 0.36) : vec3(0.7, 0.85, 0.75);
         vC = applyMedium(base, p);
-        vA = uA * (0.08 + 0.08 * sin(aPh * 3.0)) * smoothstep(0.0, -0.3, p.y);
+        vA = uA * (0.06 + 0.06 * sin(aPh * 3.0)) * smoothstep(0.0, -0.3, p.y);
       }`,
     fragmentShader: `varying vec3 vC; varying float vA;
       void main(){ vec2 q = gl_PointCoord - 0.5; float d = dot(q, q); if (d > 0.25) discard; gl_FragColor = vec4(vC, vA * (1. - d * 4.)); }`,
