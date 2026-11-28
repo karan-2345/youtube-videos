@@ -1,0 +1,60 @@
+{
+  "video": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 60
+  },
+  "palette": {
+    "bg": "#0F0C0B",
+    "bg_glow": "#2A1D18",
+    "sea_deep": "#04161C",
+    "sea": "#0B3A46",
+    "caustic": "#9FE3E8",
+    "sand": "#C7B08A",
+    "sand_dark": "#7E6A4C",
+    "rock": "#5E5249",
+    "weed": "#3E7A5A",
+    "shrimp": "#E06A43",
+    "shrimp_band": "#F6D9BE",
+    "claw_flesh": "#F0A69C",
+    "plunger": "#F2C14E",
+    "fish": "#D9C9A0",
+    "fish_spot": "#4E9CC6",
+    "jet": "#BDF1FF",
+    "bubble": "#E4FAFF",
+    "shock": "#F2EBDD",
+    "flash": "#FFF4D6",
+    "sun": "#FFB24A",
+    "steel": "#56626C",
+    "sonar": "#62F2A0",
+    "ink_text": "#F2EBDD",
+    "ink_dim": "#A99E8E",
+    "accent": "#E0502F"
+  },
+  "fonts": {
+    "sans": "Inter"
+  },
+  "type_px": {
+    "title": 120,
+    "h1": 84,
+    "h2": 56,
+    "body": 44,
+    "label": 46,
+    "small": 30,
+    "caption": 84,
+    "credit": 36,
+    "tag": 32,
+    "number": 200
+  },
+  "layout": {
+    "safe_margin_px": 64,
+    "safe_34_y": [
+      240,
+      1680
+    ],
+    "caption_y": [
+      1330,
+      1490
+    ]
+  }
+}
