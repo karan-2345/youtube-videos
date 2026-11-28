@@ -1,6 +1,6 @@
 # HANDOFF: "The pistol shrimp's snap" (vertical Short, YouTube Shorts + Instagram Reels)
 
-## Status 2026-11-28: v1 built, waiting for the user's review
+## Status 2026-11-28: v1 delivered, waiting for the user's review
 
 The user picked the pistol shrimp from four topics and approved script v1 ("Approved, build it") on 2026-11-28.
 Built in a cloud session (Linux, no GPU). As with the other two Shorts, there was no separate look test or sample
@@ -14,9 +14,24 @@ scene: stills of every scene were checked before the full render.
 | S03_Flash 8.10 s | "And as it collapses, it even flashes with light, which means that for an instant it's nearly as hot as the surface of the Sun." | Extreme close-up: the bubble shrinks to a point and flashes (FLASH OF LIGHT, slowed down, brightened). The flash slides left, the Sun's surface glows on the right, and two bars rise: 4,700 °C+ vs 5,500 °C: NEARLY AS HOT AS THE SUN, ESTIMATED. |
 | S04_Sonar 9.33 s | "So when thousands of these shrimp snap at once, their crackle can drown out navy sonar, which really happened in World War Two." | The camera rises off the burrow over a SHRIMP COLONY flickering with snaps, then tilts up to a submarine pinging overhead. Its SONAR screen fills with crackle until the contact is DROWNED OUT (WORLD WAR II). The camera dives back to the burrow as a new fish swims in: the opening frame (loop). |
 
-### Final
+### Final (v1, 2026-11-28)
 
-Filled in after the render (see the commit that adds `final/`).
+`final/` (in git): `shrimp_short.mp4` (captions burned in), `shrimp_short_clean.mp4`, `shrimp_short.srt`, `cover.png`,
+`upload.md`. The silent version, the stems and the scene renders are in `renders/` (not in git, rebuilt by
+`build.py`).
+- Measured: **33.03 s**, 1080 x 1920 @ 60, **-13.9 LUFS** integrated (ebur128 on the final file), -2.0 dBTP,
+  LRA 1.9 LU. Linear loudnorm gain of +5.66 dB after the look-ahead limiter trimmed peaks above -7.7 dBFS.
+- Mix: voice -22.4 LUFS; SFX and music set from measured loudness under the voice, music ducked under the voice.
+- Captions: the text is identical to the script (checked). Word captions in Archivo Captions, ivory with the
+  spoken word in cinnabar.
+- Loop: the last frame matches the first (the shrimp at its burrow, the fish about to swim in). Mean difference
+  1.65 / 255; the worst 60 px block is 4.6 / 255 (marine snow and film grain).
+- Renders (SwiftShader, 3 workers, 1.9-3.1 frames/s): S00 145 s, S01 197 s, S02 129 s (re-framed once), S03 157 s,
+  S04 239 s (about 15 min; much lighter than the finger Short). `build.py final` about 3.5 min.
+- Checked by eye: stills of every scene's key beats before the render, 12 frames per scene video after it, 14 frames
+  of the captioned final, the cover. Audio checked by measurement only, not by listening.
+- Cover: S00 at 1.745 s (the snap: the shut claw, the jet, the shock wave, the fish) with "THIS SHRIMP / NEVER
+  TOUCHES / ITS PREY" in Inter ExtraBold over a soft dark band.
 
 ## Decisions
 

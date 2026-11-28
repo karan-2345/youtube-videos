@@ -33,8 +33,8 @@ export async function setup({ renderer, data, overlay }) {
                 [t0 + 0.05, 'bubbles', -15]];
 
   const side = { p: shrimp.clawPoint(1.36, -0.45, 2.85), t: shrimp.clawPoint(1.04, -0.01, 0) };
-  const wide = { p: L.bub.clone().add(S.vec(0.3, 0.05, 3.4)), t: L.bub.clone().lerp(fishP, 0.32).add(S.vec(0.0, 0.0, 0)) };
-  const wide2 = { p: L.bub.clone().add(S.vec(0.45, 0.0, 3.6)), t: L.bub.clone().lerp(fishP, 0.55).add(S.vec(0.0, -0.08, 0)) };
+  const wide = { p: L.bub.clone().add(S.vec(0.5, 0.05, 3.5)), t: L.bub.clone().lerp(fishP, 0.45) };
+  const wide2 = { p: L.bub.clone().add(S.vec(0.95, -0.05, 3.7)), t: L.bub.clone().lerp(fishP, 0.75).add(S.vec(0.0, -0.12, 0)) };
   const px = (v) => { const p = v.clone().project(camera); return { x: (p.x + 1) / 2 * 1080, y: (1 - p.y) / 2 * 1920 }; };
 
   return {
