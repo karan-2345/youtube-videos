@@ -1,0 +1,42 @@
+1
+00:00:00,700 --> 00:00:03,297
+Your skin sheds its outer
+layer every few weeks,
+
+2
+00:00:03,297 --> 00:00:05,462
+so why doesn't your tattoo shed with it?
+
+3
+00:00:05,767 --> 00:00:08,408
+It's because the needle
+puts the ink deeper,
+
+4
+00:00:08,408 --> 00:00:12,550
+where immune cells called macrophages
+swallow it but can't digest it,
+
+5
+00:00:12,550 --> 00:00:14,170
+so they just hold on to it.
+
+6
+00:00:14,467 --> 00:00:19,371
+So when scientists killed those cells in
+tattooed mice, the tattoos didn't fade,
+
+7
+00:00:19,371 --> 00:00:23,110
+because new cells swallowed the
+spilled ink in the same spot.
+
+8
+00:00:23,417 --> 00:00:26,918
+And that's why lasers take so
+many sessions to remove a tattoo,
+
+9
+00:00:26,918 --> 00:00:31,420
+since they have to shatter the ink small
+enough for those cells to carry it away.

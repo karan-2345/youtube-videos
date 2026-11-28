@@ -1,0 +1,8 @@
+# big or generated: rebuilt by build.py
+assets/models/
+scenes/web/node_modules/
+renders/
+audio/
+narration.md
+__pycache__/
+*.pyc
