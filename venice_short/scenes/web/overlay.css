@@ -1,0 +1,42 @@
+/* On-screen type: Inter ExtraBold, centred, short uppercase labels (the chess Short's look). Colours: style.css. */
+html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: var(--bg); }
+#gl { position: absolute; inset: 0; }
+#overlay { position: absolute; inset: 0; pointer-events: none; color: var(--ink);
+           font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+#leaders { position: absolute; inset: 0; overflow: visible; }
+
+.t { white-space: nowrap; text-align: center; font-weight: 800; font-feature-settings: 'tnum' 1, 'case' 1;
+     text-shadow: 0 0 28px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.75), 0 2px 6px rgba(0, 0, 0, 0.8); will-change: transform, opacity; }
+.huge  { font-size: 250px; line-height: 1; letter-spacing: -0.02em; }
+.big   { font-size: 168px; line-height: 1; letter-spacing: -0.03em; }
+.mid   { font-size: 100px; line-height: 1.05; letter-spacing: -0.02em; }
+.small { font-size: 64px; line-height: 1.1; letter-spacing: -0.01em; }
+.label { font-size: 40px; line-height: 1.2; letter-spacing: 0.03em; color: var(--ink-dim); text-transform: uppercase; }
+.dim   { color: var(--ink-faint); }
+.acc   { color: var(--accent); }
+.ghost { opacity: 0; }
+.strike { position: relative; }
+.strike::after { content: ''; position: absolute; left: var(--s0, 0); top: 52%; height: 14px; border-radius: 7px;
+                 width: var(--sw, 0px); background: var(--accent); box-shadow: 0 0 18px rgba(224, 80, 47, 0.6); }
+
+/* the fat Short: verdict badges on the myths, a mint "right answer", a soft dark plate behind top text */
+.mint { color: var(--good); }
+.red  { color: var(--accent); }
+.badge { position: relative; display: inline-block; }
+.xmark { width: 150px; height: 150px; position: relative; }
+.xmark::before, .xmark::after { content: ''; position: absolute; left: 50%; top: 50%; width: 170px; height: 26px;
+  border-radius: 13px; background: var(--accent); box-shadow: 0 0 30px rgba(229, 72, 44, 0.75), 0 4px 10px rgba(0, 0, 0, 0.6); }
+.xmark::before { transform: translate(-50%, -50%) rotate(45deg); }
+.xmark::after  { transform: translate(-50%, -50%) rotate(-45deg); }
+.check { width: 150px; height: 150px; position: relative; }
+.check::before { content: ''; position: absolute; left: 22px; top: 18px; width: 58px; height: 108px; border: solid var(--good);
+  border-width: 0 26px 26px 0; border-radius: 6px; transform: rotate(40deg);
+  box-shadow: 8px 8px 24px -6px rgba(82, 227, 154, 0.6); }
+.plate { position: absolute; left: 0; top: 0; width: 1080px; height: 760px; opacity: 0;
+  background: linear-gradient(to bottom, rgba(3, 6, 10, 0.72) 0%, rgba(3, 6, 10, 0.45) 55%, rgba(3, 6, 10, 0) 100%); }
+.sub { font-size: 46px; line-height: 1.15; letter-spacing: 0.02em; color: var(--ink-dim); text-transform: uppercase; }
+.dotc { display: inline-block; width: 34px; height: 34px; border-radius: 50%; margin-right: 18px; vertical-align: -3px;
+  box-shadow: inset -6px -8px 12px rgba(0, 0, 0, 0.45), 0 0 14px rgba(255, 255, 255, 0.15); }
+
+.title { font-size: 132px; line-height: 1; letter-spacing: -0.03em; }
+.mid2  { font-size: 84px; line-height: 1.05; letter-spacing: -0.02em; }
