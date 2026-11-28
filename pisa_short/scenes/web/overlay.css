@@ -1,0 +1,20 @@
+/* On-screen type: Inter ExtraBold, centred, short uppercase labels (the chess Short's look). Colours: style.css. */
+html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: var(--bg); }
+#gl { position: absolute; inset: 0; }
+#overlay { position: absolute; inset: 0; pointer-events: none; color: var(--ink);
+           font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+#leaders { position: absolute; inset: 0; overflow: visible; }
+
+.t { white-space: nowrap; text-align: center; font-weight: 800; font-feature-settings: 'tnum' 1, 'case' 1;
+     text-shadow: 0 0 28px rgba(0, 0, 0, 0.85), 0 2px 6px rgba(0, 0, 0, 0.7); will-change: transform, opacity; }
+.huge  { font-size: 250px; line-height: 1; letter-spacing: -0.02em; }
+.big   { font-size: 168px; line-height: 1; letter-spacing: -0.03em; }
+.mid   { font-size: 100px; line-height: 1.05; letter-spacing: -0.02em; }
+.small { font-size: 64px; line-height: 1.1; letter-spacing: -0.01em; }
+.label { font-size: 40px; line-height: 1.2; letter-spacing: 0.03em; color: var(--ink-dim); text-transform: uppercase; }
+.dim   { color: var(--ink-faint); }
+.acc   { color: var(--accent); }
+.ghost { opacity: 0; }
+.strike { position: relative; }
+.strike::after { content: ''; position: absolute; left: var(--s0, 0); top: 52%; height: 14px; border-radius: 7px;
+                 width: var(--sw, 0px); background: var(--accent); box-shadow: 0 0 18px rgba(224, 80, 47, 0.6); }

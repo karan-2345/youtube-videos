@@ -1,0 +1,94 @@
+1
+00:00:00,350 --> 00:00:03,148
+You can calculate pi without a single
+circle,
+
+2
+00:00:03,148 --> 00:00:05,946
+just by dropping needles onto a wooden
+floor,
+
+3
+00:00:05,946 --> 00:00:09,926
+and one mathematician who tried it got six
+decimal places right,
+
+4
+00:00:09,926 --> 00:00:14,154
+but the numbers he wrote down show that he
+almost certainly cheated.
+
+5
+00:00:14,604 --> 00:00:15,845
+So before we catch him,
+
+6
+00:00:15,845 --> 00:00:19,300
+let's see how a falling needle can know
+anything about a circle.
+
+7
+00:00:19,750 --> 00:00:22,440
+With needles as long as the boards are
+wide,
+
+8
+00:00:22,440 --> 00:00:25,008
+one lying across them always hits a crack,
+
+9
+00:00:25,008 --> 00:00:27,759
+while one lying along them almost never
+does.
+
+10
+00:00:28,209 --> 00:00:31,454
+And since it can point any way around a
+full circle,
+
+11
+00:00:31,454 --> 00:00:34,449
+the chance of a crossing is exactly two
+over pi,
+
+12
+00:00:34,449 --> 00:00:38,131
+so twice the drops over the crossings
+slowly turns into pi.
+
+13
+00:00:38,581 --> 00:00:41,759
+But it's slow, because after 3,000 drops,
+
+14
+00:00:41,759 --> 00:00:45,319
+an honest run usually gets only one
+decimal place right.
+
+15
+00:00:45,769 --> 00:00:47,990
+And that's what gives Lazzarini away,
+
+16
+00:00:47,990 --> 00:00:52,793
+because his answer is exactly 355 over
+113,
+
+17
+00:00:52,793 --> 00:00:55,854
+a fraction for pi that's over a thousand
+years old,
+
+18
+00:00:55,854 --> 00:01:01,137
+and his 3,408 drops are just the right
+number to land on it.
+
+19
+00:01:01,587 --> 00:01:06,143
+So he most likely stopped the moment he
+hit it, which means the trick is real,
+
+20
+00:01:06,143 --> 00:01:08,188
+but his six decimal places weren't.

@@ -1,0 +1,18 @@
+{
+ "palette": {
+  "bg": "#06090C",
+  "sea_top": "#3C78B8",
+  "sea_mid": "#9CC4E2",
+  "sea_low": "#F3D6A6",
+  "sun": "#FFD9A8",
+  "deep": "#0E4A60",
+  "shallow": "#2FB7B0",
+  "ice": "#BFEFFF",
+  "ink": "#F7F3EC",
+  "ink_dim": "#D9D2C4",
+  "ink_faint": "#8E8578",
+  "accent": "#E5482C",
+  "cool": "#7FE0FF",
+  "good": "#52E39A"
+ }
+}
